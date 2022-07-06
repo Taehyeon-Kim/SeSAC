@@ -1,24 +1,183 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Movie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="극한직업" translatesAutoresizingMaskIntoConstraints="NO" id="qcu-W9-WZX">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="3u4-OV-ySt">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="PHP-VO-G2i">
+                                <rect key="frame" x="96" y="57" width="259" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qca-sg-WPC">
+                                        <rect key="frame" x="0.0" y="0.0" width="85" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="TV 프로그램">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EFn-UK-0un">
+                                        <rect key="frame" x="98" y="0.0" width="34" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="영화">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhl-QM-gNO">
+                                        <rect key="frame" x="145" y="0.0" width="114" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="내가 찜한 콘텐츠">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7HN-jv-7zm">
+                                <rect key="frame" x="12" y="40" width="64" height="63.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="M2J-6o-tC8"/>
+                                    <constraint firstAttribute="width" constant="64" id="vWC-QQ-3jD"/>
+                                </constraints>
+                                <imageReference key="image" image="moon.stars.fill" catalog="system" renderingMode="hierarchical">
+                                    <hierarchicalColors>
+                                        <color red="0.99215686270000003" green="1" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color systemColor="secondaryLabelColor"/>
+                                        <color systemColor="tertiaryLabelColor"/>
+                                    </hierarchicalColors>
+                                </imageReference>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="미리보기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCt-J2-yej">
+                                <rect key="frame" x="20.5" y="499.5" width="334.5" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LeR-q0-XR7">
+                                <rect key="frame" x="14.5" y="529" width="346" height="110"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="어벤져스엔드게임" translatesAutoresizingMaskIntoConstraints="NO" id="Pjm-sd-8VE">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="110" id="nCk-TJ-Sld"/>
+                                            <constraint firstAttribute="height" constant="110" id="oMW-Kv-5Ke"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="부산행" translatesAutoresizingMaskIntoConstraints="NO" id="bPv-gC-iQh">
+                                        <rect key="frame" x="118" y="0.0" width="110" height="110"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="110" id="mG8-Jd-Ph8"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="알라딘" translatesAutoresizingMaskIntoConstraints="NO" id="oz6-UQ-wwC">
+                                        <rect key="frame" x="236" y="0.0" width="110" height="110"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="110" id="EKf-x3-khA"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="sgy-0E-8Ch">
+                                <rect key="frame" x="12" y="418.5" width="351" height="61"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uta-SP-OSY">
+                                        <rect key="frame" x="0.0" y="4.5" width="116.5" height="52"/>
+                                        <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="check" imagePlacement="top" title="내가 찜한 콘텐츠" imagePadding="8">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="default"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hik-pc-Ro9">
+                                        <rect key="frame" x="131" y="17.5" width="97" height="26"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="play_normal"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQy-uU-tWQ">
+                                        <rect key="frame" x="251" y="0.0" width="100" height="61"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="bzr-Hp-1xD"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="info" imagePlacement="top" title="정보" imagePadding="8"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3u4-OV-ySt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1HA-R7-bVd"/>
+                            <constraint firstItem="PHP-VO-G2i" firstAttribute="leading" secondItem="7HN-jv-7zm" secondAttribute="trailing" constant="20" id="Bot-J6-v1X"/>
+                            <constraint firstItem="LeR-q0-XR7" firstAttribute="centerX" secondItem="3u4-OV-ySt" secondAttribute="centerX" id="DEl-l4-0WX"/>
+                            <constraint firstAttribute="bottom" secondItem="3u4-OV-ySt" secondAttribute="bottom" id="GTX-ew-M3x"/>
+                            <constraint firstItem="3u4-OV-ySt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Gj0-HP-qJE"/>
+                            <constraint firstItem="gCt-J2-yej" firstAttribute="top" secondItem="sgy-0E-8Ch" secondAttribute="bottom" constant="20" id="L8y-RS-lqL"/>
+                            <constraint firstAttribute="trailing" secondItem="sgy-0E-8Ch" secondAttribute="trailing" constant="12" id="LkJ-hG-Zqa"/>
+                            <constraint firstAttribute="trailing" secondItem="3u4-OV-ySt" secondAttribute="trailing" id="MJl-zi-VmG"/>
+                            <constraint firstItem="sgy-0E-8Ch" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="12" id="Rkl-kp-Sf9"/>
+                            <constraint firstAttribute="trailing" secondItem="gCt-J2-yej" secondAttribute="trailing" constant="20" id="UKj-CY-GNP"/>
+                            <constraint firstAttribute="bottom" secondItem="qcu-W9-WZX" secondAttribute="bottom" id="bOm-sC-B2L"/>
+                            <constraint firstItem="PHP-VO-G2i" firstAttribute="centerY" secondItem="7HN-jv-7zm" secondAttribute="centerY" id="cKd-if-8qz"/>
+                            <constraint firstItem="qcu-W9-WZX" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="gwg-ss-XYZ"/>
+                            <constraint firstItem="gCt-J2-yej" firstAttribute="leading" secondItem="LeR-q0-XR7" secondAttribute="leading" constant="6" id="h8p-zf-OlA"/>
+                            <constraint firstAttribute="bottom" secondItem="LeR-q0-XR7" secondAttribute="bottom" constant="28" id="iYA-YN-8qk"/>
+                            <constraint firstAttribute="trailing" secondItem="PHP-VO-G2i" secondAttribute="trailing" constant="20" id="jP0-6S-EKR"/>
+                            <constraint firstItem="7HN-jv-7zm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="40" id="kE5-g8-xzu"/>
+                            <constraint firstItem="LeR-q0-XR7" firstAttribute="top" secondItem="gCt-J2-yej" secondAttribute="bottom" constant="8" id="mFU-JH-XDR"/>
+                            <constraint firstItem="qcu-W9-WZX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="oNz-vC-cXo"/>
+                            <constraint firstItem="7HN-jv-7zm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="12" id="uMh-Vt-lxi"/>
+                            <constraint firstItem="qcu-W9-WZX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="yQg-lI-Ieb"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outletCollection property="posterImageViews" destination="Pjm-sd-8VE" collectionClass="NSMutableArray" id="0xH-0T-f8M"/>
+                        <outletCollection property="posterImageViews" destination="bPv-gC-iQh" collectionClass="NSMutableArray" id="oPU-qZ-q91"/>
+                        <outletCollection property="posterImageViews" destination="oz6-UQ-wwC" collectionClass="NSMutableArray" id="gRI-eb-zid"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="132" y="115.59220389805098"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="375" height="667"/>
+        <image name="check" width="18" height="13"/>
+        <image name="info" width="22" height="22"/>
+        <image name="moon.stars.fill" catalog="system" width="124" height="128"/>
+        <image name="play_normal" width="97" height="26"/>
+        <image name="극한직업" width="240" height="361"/>
+        <image name="부산행" width="240" height="361"/>
+        <image name="알라딘" width="240" height="361"/>
+        <image name="어벤져스엔드게임" width="240" height="361"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
