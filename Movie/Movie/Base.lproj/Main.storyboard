@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -111,6 +112,9 @@
                                         <rect key="frame" x="131" y="17.5" width="97" height="26"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="play_normal"/>
+                                        <connections>
+                                            <action selector="playButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gES-Ly-Dlh"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQy-uU-tWQ">
                                         <rect key="frame" x="251" y="0.0" width="100" height="61"/>
@@ -124,6 +128,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="7Qr-M5-peG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="3u4-OV-ySt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1HA-R7-bVd"/>
@@ -150,6 +155,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundImageView" destination="qcu-W9-WZX" id="og7-eq-zmT"/>
                         <outletCollection property="posterImageViews" destination="Pjm-sd-8VE" collectionClass="NSMutableArray" id="0xH-0T-f8M"/>
                         <outletCollection property="posterImageViews" destination="bPv-gC-iQh" collectionClass="NSMutableArray" id="oPU-qZ-q91"/>
                         <outletCollection property="posterImageViews" destination="oz6-UQ-wwC" collectionClass="NSMutableArray" id="gRI-eb-zid"/>
