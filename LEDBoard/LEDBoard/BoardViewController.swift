@@ -74,7 +74,12 @@ class BoardViewController: UIViewController {
     
     
     @IBAction func colorChangeButtonDidTapped(_ sender: UIButton) {
-        
+        print(userTextField.isFirstResponder)
+    }
+    
+    
+    @IBAction func textFieldDidTapped(_ sender: UITextField) {
+        print("textField - DidEndOnExit")
     }
     
     @IBAction func tapGestureDidTapped(_ sender: UITapGestureRecognizer) {
@@ -96,7 +101,7 @@ class BoardViewController: UIViewController {
 }
 
 extension BoardViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        view.endEditing(true)
-    }
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+////        view.endEditing(true)
+//    }
 }
