@@ -172,13 +172,96 @@
                     <view key="view" contentMode="scaleToFill" id="Cw1-l0-H6q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TAEFLIX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVU-Np-CJZ">
+                                <rect key="frame" x="40" y="40" width="295" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OyK-od-WyK">
+                                <rect key="frame" x="40" y="183.5" width="295" height="300"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jrx-Qi-aTY">
+                                        <rect key="frame" x="0.0" y="0.0" width="295" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="DwI-zh-lxF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qY1-eY-jrv">
+                                        <rect key="frame" x="0.0" y="50" width="295" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="BJH-en-4A6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UT4-7T-44T">
+                                        <rect key="frame" x="0.0" y="100" width="295" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="qKY-N9-PIU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rxi-dp-7ag">
+                                        <rect key="frame" x="0.0" y="150" width="295" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Ia3-Ly-xbD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dll-t8-ckZ">
+                                        <rect key="frame" x="0.0" y="200" width="295" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="rcJ-pG-e3j"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8A0-CF-V9z">
+                                        <rect key="frame" x="0.0" y="250" width="295" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="ffl-rx-BqX"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCZ-DF-Lcg">
+                                <rect key="frame" x="40" y="503.5" width="67" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JYb-wB-nxS">
+                                <rect key="frame" x="286" y="503.5" width="51" height="31"/>
+                            </switch>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6td-gQ-gWk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JYb-wB-nxS" firstAttribute="top" secondItem="OyK-od-WyK" secondAttribute="bottom" constant="20" id="1Lm-Ue-LyK"/>
+                            <constraint firstItem="XVU-Np-CJZ" firstAttribute="top" secondItem="6td-gQ-gWk" secondAttribute="top" constant="40" id="Fyb-eH-bOv"/>
+                            <constraint firstItem="6td-gQ-gWk" firstAttribute="trailing" secondItem="OyK-od-WyK" secondAttribute="trailing" constant="40" id="evY-5k-Rrk"/>
+                            <constraint firstItem="fCZ-DF-Lcg" firstAttribute="top" secondItem="OyK-od-WyK" secondAttribute="bottom" constant="20" id="f9A-i6-6Kf"/>
+                            <constraint firstItem="XVU-Np-CJZ" firstAttribute="leading" secondItem="6td-gQ-gWk" secondAttribute="leading" constant="40" id="ffV-8d-SGl"/>
+                            <constraint firstItem="6td-gQ-gWk" firstAttribute="trailing" secondItem="XVU-Np-CJZ" secondAttribute="trailing" constant="40" id="hzD-hV-4jW"/>
+                            <constraint firstItem="OyK-od-WyK" firstAttribute="centerX" secondItem="Cw1-l0-H6q" secondAttribute="centerX" id="sIR-da-g1v"/>
+                            <constraint firstItem="fCZ-DF-Lcg" firstAttribute="leading" secondItem="OyK-od-WyK" secondAttribute="leading" id="spq-Uw-UOv"/>
+                            <constraint firstItem="JYb-wB-nxS" firstAttribute="trailing" secondItem="OyK-od-WyK" secondAttribute="trailing" id="udL-sf-FHt"/>
+                            <constraint firstItem="OyK-od-WyK" firstAttribute="leading" secondItem="6td-gQ-gWk" secondAttribute="leading" constant="40" id="xrA-RP-m2C"/>
+                            <constraint firstItem="OyK-od-WyK" firstAttribute="centerY" secondItem="Cw1-l0-H6q" secondAttribute="centerY" id="yLb-mG-PPi"/>
+                            <constraint firstItem="JYb-wB-nxS" firstAttribute="leading" relation="lessThanOrEqual" secondItem="fCZ-DF-Lcg" secondAttribute="trailing" constant="179" id="z0U-Rm-HPk"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DD0-iW-RN3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="986" y="120"/>
+            <point key="canvasLocation" x="846" y="116"/>
         </scene>
     </scenes>
     <resources>
