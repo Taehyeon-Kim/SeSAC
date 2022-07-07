@@ -20,6 +20,7 @@ class BoardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.userTextField.delegate = self
         self.designTextField()
         self.designButton(buttonOutletVariableName: sendButton, for: "글자 버튼", highlightedTitle: "글자 바뀜", backgroundColor: .red)
         self.designButton(buttonOutletVariableName: textColorButton, for: "색상 버튼", highlightedTitle: "색상 바뀜", backgroundColor: .blue)
@@ -85,6 +86,12 @@ class BoardViewController: UIViewController {
     
     
     @IBAction func exampleButtonDidTapped(_ sender: UIButton) {
+        view.endEditing(true)
+    }
+}
+
+extension BoardViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         view.endEditing(true)
     }
 }
