@@ -31,6 +31,7 @@ class SignUpViewController: UIViewController {
         self.configureTextField(referralCodeTextField, placeholderText: "추천 코드 입력")
         self.configureButton(signUpButton, title: "회원가입", titleColor: .black, backgroundColor: .white, cornerRadius: 8)
         self.configureButton(additionalInputButton, title: "추가 정보 입력", titleColor: .lightGray, backgroundColor: .clear)
+        self.configureToggleButton()
     }
     
     private func configureLabel() {
@@ -67,5 +68,12 @@ class SignUpViewController: UIViewController {
         button.setTitleColor(titleColor, for: .normal)
         button.backgroundColor = backgroundColor
         button.layer.cornerRadius = cornerRadius
+    }
+    
+    private func configureToggleButton() {
+        self.toggleButton.onTintColor = .red
+        self.toggleButton.thumbTintColor = .black
+        self.toggleButton.backgroundColor = .white
+        self.toggleButton.layer.cornerRadius = self.toggleButton.bounds.height / 2
     }
 }
