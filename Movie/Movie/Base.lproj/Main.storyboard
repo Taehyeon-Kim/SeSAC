@@ -258,6 +258,12 @@
                             <constraint firstItem="JYb-wB-nxS" firstAttribute="leading" relation="lessThanOrEqual" secondItem="fCZ-DF-Lcg" secondAttribute="trailing" constant="179" id="z0U-Rm-HPk"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="additionalInputButton" destination="fCZ-DF-Lcg" id="LGk-a0-miH"/>
+                        <outlet property="titleLabel" destination="XVU-Np-CJZ" id="qiS-Tt-q4A"/>
+                        <outlet property="toggleButton" destination="JYb-wB-nxS" id="MDm-A7-C5A"/>
+                        <outletCollection property="userInputTextFields" destination="Jrx-Qi-aTY" collectionClass="NSMutableArray" id="7Ba-lF-6T2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DD0-iW-RN3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
