@@ -165,6 +165,21 @@
             </objects>
             <point key="canvasLocation" x="132" y="115.59220389805098"/>
         </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="VkT-cP-1in">
+            <objects>
+                <viewController id="aUZ-nY-Hpj" customClass="SignUpViewController" customModule="Movie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cw1-l0-H6q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6td-gQ-gWk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DD0-iW-RN3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="986" y="120"/>
+        </scene>
     </scenes>
     <resources>
         <image name="background" width="375" height="667"/>

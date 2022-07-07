@@ -13,6 +13,7 @@
 		BD42402B2874B4B700D1CF66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD4240292874B4B700D1CF66 /* Main.storyboard */; };
 		BD42402D2874B4BB00D1CF66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD42402C2874B4BB00D1CF66 /* Assets.xcassets */; };
 		BD4240302874B4BB00D1CF66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD42402E2874B4BB00D1CF66 /* LaunchScreen.storyboard */; };
+		BD7D3A622876F73800DEF52A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7D3A612876F73800DEF52A /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BD42402C2874B4BB00D1CF66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD42402F2874B4BB00D1CF66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD4240312874B4BB00D1CF66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD7D3A612876F73800DEF52A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				BD4240232874B4B700D1CF66 /* AppDelegate.swift */,
 				BD4240252874B4B700D1CF66 /* SceneDelegate.swift */,
 				BD4240272874B4B700D1CF66 /* ViewController.swift */,
+				BD7D3A612876F73800DEF52A /* SignUpViewController.swift */,
 				BD4240292874B4B700D1CF66 /* Main.storyboard */,
 				BD42402C2874B4BB00D1CF66 /* Assets.xcassets */,
 				BD42402E2874B4BB00D1CF66 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				BD4240282874B4B700D1CF66 /* ViewController.swift in Sources */,
 				BD4240242874B4B700D1CF66 /* AppDelegate.swift in Sources */,
+				BD7D3A622876F73800DEF52A /* SignUpViewController.swift in Sources */,
 				BD4240262874B4B700D1CF66 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
