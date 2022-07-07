@@ -76,4 +76,8 @@ class SignUpViewController: UIViewController {
         self.toggleButton.backgroundColor = .white
         self.toggleButton.layer.cornerRadius = self.toggleButton.bounds.height / 2
     }
+    
+    @IBAction func signUpButtonDidTapped(_ sender: UIButton) {
+        view.endEditing(true)
+    }
 }
