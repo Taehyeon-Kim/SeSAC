@@ -260,9 +260,13 @@
                     </view>
                     <connections>
                         <outlet property="additionalInputButton" destination="fCZ-DF-Lcg" id="LGk-a0-miH"/>
+                        <outlet property="emailTextField" destination="Jrx-Qi-aTY" id="6ts-Ax-vlu"/>
+                        <outlet property="locationTextField" destination="rxi-dp-7ag" id="cXm-wV-Zv9"/>
+                        <outlet property="nicknameTextField" destination="UT4-7T-44T" id="nL1-3Y-gOE"/>
+                        <outlet property="passwordTextField" destination="qY1-eY-jrv" id="0Ad-7O-eTP"/>
+                        <outlet property="referralCodeTextField" destination="Dll-t8-ckZ" id="p0q-Y8-wS5"/>
                         <outlet property="titleLabel" destination="XVU-Np-CJZ" id="qiS-Tt-q4A"/>
                         <outlet property="toggleButton" destination="JYb-wB-nxS" id="MDm-A7-C5A"/>
-                        <outletCollection property="userInputTextFields" destination="Jrx-Qi-aTY" collectionClass="NSMutableArray" id="7Ba-lF-6T2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DD0-iW-RN3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
