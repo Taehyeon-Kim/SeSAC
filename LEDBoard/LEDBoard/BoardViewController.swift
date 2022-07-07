@@ -9,12 +9,11 @@ import UIKit
 
 class BoardViewController: UIViewController {
 
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var userTextField: UITextField!
-    
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var textColorButton: UIButton!
     @IBOutlet weak var resultLabel: UILabel!
-    
     @IBOutlet var buttonList: [UIButton]!
     
     override func viewDidLoad() {
@@ -79,9 +78,8 @@ class BoardViewController: UIViewController {
     }
     
     @IBAction func tapGestureDidTapped(_ sender: UITapGestureRecognizer) {
-        print("super view tapped")
-        view.backgroundColor = .red
-        view.endEditing(true) // 모든 편집이 끝났다. 본질적으로 키보드를 내리는 코드는 아니다.
+        view.endEditing(true)
+        self.containerView.isHidden.toggle()
     }
     
     
