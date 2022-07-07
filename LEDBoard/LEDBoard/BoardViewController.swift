@@ -19,7 +19,6 @@ class BoardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.userTextField.delegate = self
         self.designTextField()
         self.designButton(buttonOutletVariableName: sendButton, for: "글자 버튼", highlightedTitle: "글자 바뀜", backgroundColor: .red)
         self.designButton(buttonOutletVariableName: textColorButton, for: "색상 버튼", highlightedTitle: "색상 바뀜", backgroundColor: .blue)
@@ -31,12 +30,6 @@ class BoardViewController: UIViewController {
         self.userTextField.keyboardType = .emailAddress
     }
     
-    // buttonOutletVariableName: 외부 매개변수, Argument Label
-    // buttonName: 내부 매개변수, Parameter Name
-    // buttonName(Parameter): UIButton(Argument)
-    // 앞에 있는 이름을 Parameter라고 함.
-    // 실제로 들어가는 값을 Argument라고 부름.
-    // 외부 매개변수의 경우 실제 들어가는 값의 이름이기 때문에 Argument Label이라고 부름.
     func designButton(buttonOutletVariableName buttonName: UIButton, for title: String, highlightedTitle: String, backgroundColor: UIColor) {
         buttonName.setTitle(title, for: .normal)
         buttonName.setTitle(highlightedTitle, for: .highlighted)
@@ -49,15 +42,6 @@ class BoardViewController: UIViewController {
     }
     
     func studyOutletCollection() {
-        let buttonArray: [UIButton] = [sendButton, textColorButton]
-        
-        // 1. 반복문
-        for button in buttonArray {
-            button.backgroundColor = .blue
-            button.layer.cornerRadius = 4
-        }
-        
-        // 2. 아웃렛 컬렉션
         for button in buttonList {
             button.backgroundColor = .blue
             button.layer.cornerRadius = 4
@@ -66,16 +50,10 @@ class BoardViewController: UIViewController {
     
     @IBAction func sendButtonDidTapped(_ sender: UIButton) {
         resultLabel.text = userTextField.text
-        resultLabel.text = (userTextField.text ?? "") + "\(Int.random(in: 0...100))"
-        
-        print(userTextField.text?.count)
-        print(sendButton.currentTitle)
     }
     
     
-    @IBAction func colorChangeButtonDidTapped(_ sender: UIButton) {
-        print(userTextField.isFirstResponder)
-    }
+    @IBAction func colorChangeButtonDidTapped(_ sender: UIButton) {}
     
     
     @IBAction func textFieldDidTapped(_ sender: UITextField) {
@@ -84,24 +62,11 @@ class BoardViewController: UIViewController {
     
     @IBAction func tapGestureDidTapped(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
-        
-        if containerView.isHidden {
-            containerView.isHidden = false
-        } else {
-            containerView.isHidden = true
-        }
-        
-//        self.containerView.isHidden.toggle()
+        self.containerView.isHidden.toggle()
     }
     
     
     @IBAction func exampleButtonDidTapped(_ sender: UIButton) {
         view.endEditing(true)
     }
-}
-
-extension BoardViewController: UITextFieldDelegate {
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-////        view.endEditing(true)
-//    }
 }
