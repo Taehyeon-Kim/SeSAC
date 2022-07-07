@@ -79,7 +79,14 @@ class BoardViewController: UIViewController {
     
     @IBAction func tapGestureDidTapped(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
-        self.containerView.isHidden.toggle()
+        
+        if containerView.isHidden {
+            containerView.isHidden = false
+        } else {
+            containerView.isHidden = true
+        }
+        
+//        self.containerView.isHidden.toggle()
     }
     
     
