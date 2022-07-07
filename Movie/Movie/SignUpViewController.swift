@@ -15,17 +15,22 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var nicknameTextField: UITextField!
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var referralCodeTextField: UITextField!
+    @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var additionalInputButton: UIButton!
     @IBOutlet weak var toggleButton: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.backgroundColor = .black
         self.configureLabel()
         self.configureTextField(emailTextField, placeholderText: "이메일 주소 또는 전화번호")
         self.configureTextField(passwordTextField, placeholderText: "비밀번호", isSecureTextEntry: true, forKeyboard: .numberPad)
         self.configureTextField(nicknameTextField, placeholderText: "닉네임")
         self.configureTextField(locationTextField, placeholderText: "위치")
         self.configureTextField(referralCodeTextField, placeholderText: "추천 코드 입력")
+        self.configureButton(signUpButton, title: "회원가입", titleColor: .black, backgroundColor: .white, cornerRadius: 8)
+        self.configureButton(additionalInputButton, title: "추가 정보 입력", titleColor: .lightGray, backgroundColor: .clear)
     }
     
     private func configureLabel() {
@@ -49,5 +54,18 @@ class SignUpViewController: UIViewController {
         textField.borderStyle = .none
         textField.layer.cornerRadius = 8
         textField.backgroundColor = .darkGray
+    }
+    
+    private func configureButton(
+        _ button: UIButton,
+        title: String,
+        titleColor: UIColor,
+        backgroundColor: UIColor,
+        cornerRadius: CGFloat = 0.0
+    ) {
+        button.setTitle(title, for: .normal)
+        button.setTitleColor(titleColor, for: .normal)
+        button.backgroundColor = backgroundColor
+        button.layer.cornerRadius = cornerRadius
     }
 }

@@ -265,6 +265,7 @@
                         <outlet property="nicknameTextField" destination="UT4-7T-44T" id="nL1-3Y-gOE"/>
                         <outlet property="passwordTextField" destination="qY1-eY-jrv" id="0Ad-7O-eTP"/>
                         <outlet property="referralCodeTextField" destination="Dll-t8-ckZ" id="p0q-Y8-wS5"/>
+                        <outlet property="signUpButton" destination="8A0-CF-V9z" id="Lef-Dp-eSV"/>
                         <outlet property="titleLabel" destination="XVU-Np-CJZ" id="qiS-Tt-q4A"/>
                         <outlet property="toggleButton" destination="JYb-wB-nxS" id="MDm-A7-C5A"/>
                     </connections>
