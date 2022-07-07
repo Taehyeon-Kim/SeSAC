@@ -77,6 +77,10 @@ class SignUpViewController: UIViewController {
         self.toggleButton.layer.cornerRadius = self.toggleButton.bounds.height / 2
     }
     
+    @IBAction func tapGestureDidTapped(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
     @IBAction func signUpButtonDidTapped(_ sender: UIButton) {
         view.endEditing(true)
     }

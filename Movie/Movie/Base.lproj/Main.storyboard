@@ -246,6 +246,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6td-gQ-gWk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="JYb-wB-nxS" firstAttribute="top" secondItem="OyK-od-WyK" secondAttribute="bottom" constant="20" id="1Lm-Ue-LyK"/>
                             <constraint firstItem="XVU-Np-CJZ" firstAttribute="top" secondItem="6td-gQ-gWk" secondAttribute="top" constant="40" id="Fyb-eH-bOv"/>
@@ -259,6 +260,9 @@
                             <constraint firstItem="OyK-od-WyK" firstAttribute="leading" secondItem="6td-gQ-gWk" secondAttribute="leading" constant="40" id="xrA-RP-m2C"/>
                             <constraint firstItem="JYb-wB-nxS" firstAttribute="leading" relation="lessThanOrEqual" secondItem="fCZ-DF-Lcg" secondAttribute="trailing" constant="179" id="z0U-Rm-HPk"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="f6c-fx-zGR" appends="YES" id="KD7-1W-9qq"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="additionalInputButton" destination="fCZ-DF-Lcg" id="LGk-a0-miH"/>
@@ -273,6 +277,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DD0-iW-RN3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="f6c-fx-zGR">
+                    <connections>
+                        <action selector="tapGestureDidTapped:" destination="aUZ-nY-Hpj" id="kxY-ML-nUn"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="846" y="116"/>
         </scene>
