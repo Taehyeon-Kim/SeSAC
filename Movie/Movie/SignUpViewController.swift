@@ -28,7 +28,7 @@ class SignUpViewController: UIViewController {
         self.configureTextField(passwordTextField, placeholderText: "비밀번호", isSecureTextEntry: true, forKeyboard: .numberPad)
         self.configureTextField(nicknameTextField, placeholderText: "닉네임")
         self.configureTextField(locationTextField, placeholderText: "위치")
-        self.configureTextField(referralCodeTextField, placeholderText: "추천 코드 입력")
+        self.configureTextField(referralCodeTextField, placeholderText: "추천 코드 입력", forKeyboard: .numberPad)
         self.configureButton(signUpButton, title: "회원가입", titleColor: .black, backgroundColor: .white, cornerRadius: 8)
         self.configureButton(additionalInputButton, title: "추가 정보 입력", titleColor: .lightGray, backgroundColor: .clear)
         self.configureToggleButton()
@@ -83,5 +83,27 @@ class SignUpViewController: UIViewController {
     
     @IBAction func signUpButtonDidTapped(_ sender: UIButton) {
         view.endEditing(true)
+        
+        guard let email = emailTextField.text,
+              let password = passwordTextField.text,
+              let referralCode = referralCodeTextField.text
+        else { return }
+        
+        // 이메일, 비밀번호 필드 조건 체크
+        if email.isEmpty || password.isEmpty {
+            print("이메일 또는 비밀번호를 반드시 입력해주세요.")
+        }
+        
+        // 비밀번호 필드 조건 체크
+        if password.count < 6 {
+            print("비밀번호를 6자리 이상 입력해주세요.")
+        }
+        
+        // 추천 코드 조건 체크
+        if let code = Int(referralCode) {
+            print("추천코드 \(code) 확인 성공")
+        } else {
+            print("코드의 형식이 올바르지 않습니다.")
+        }
     }
 }
