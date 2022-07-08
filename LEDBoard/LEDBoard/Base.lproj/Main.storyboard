@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,82 +17,85 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="bxZ-4G-vQu">
-                                <rect key="frame" x="68" y="186" width="600" height="148"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <string key="text">LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelbelLabelLabelLabelLabelLabelbelLabelLabelLabelLabelLabelbelLabelLabelLabelLabelLabelbelLabelLabelLabelLabelLabelbelLabelLabelLabelLabelLabel</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ts8-6y-P8i">
-                                <rect key="frame" x="97" y="44" width="702" height="82"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ts8-6y-P8i">
+                                <rect key="frame" x="74" y="30" width="748" height="60"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYn-jV-Gv2">
-                                        <rect key="frame" x="594" y="20" width="88" height="42"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYn-jV-Gv2">
+                                        <rect key="frame" x="644" y="8" width="88" height="44"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="88" id="63R-HR-G2S"/>
+                                            <constraint firstAttribute="height" constant="44" id="Aqs-GO-7K6"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="텍스트 변경"/>
                                         <connections>
                                             <action selector="colorChangeButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dHR-cR-MRq"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DKf-N0-0N6">
-                                        <rect key="frame" x="20" y="20" width="394" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DKf-N0-0N6">
+                                        <rect key="frame" x="16" y="8" width="544" height="44"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="textFieldDidTapped:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="ch3-Pz-HtN"/>
                                         </connections>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3C-zh-2s3">
-                                        <rect key="frame" x="480" y="20" width="88" height="42"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3C-zh-2s3">
+                                        <rect key="frame" x="576" y="8" width="60" height="44"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="vTi-TJ-DUj"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="전송"/>
                                         <connections>
                                             <action selector="sendButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kp5-Kg-vdv"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="e3C-zh-2s3" firstAttribute="height" secondItem="LYn-jV-Gv2" secondAttribute="height" id="4DT-Yh-545"/>
+                                    <constraint firstAttribute="bottom" secondItem="DKf-N0-0N6" secondAttribute="bottom" constant="8" id="9O9-Jd-j03"/>
+                                    <constraint firstItem="DKf-N0-0N6" firstAttribute="leading" secondItem="ts8-6y-P8i" secondAttribute="leading" constant="16" id="M7y-0o-dBO"/>
+                                    <constraint firstAttribute="height" constant="60" id="Rmq-fi-Fje"/>
+                                    <constraint firstItem="LYn-jV-Gv2" firstAttribute="centerY" secondItem="ts8-6y-P8i" secondAttribute="centerY" id="aaF-3C-iBI"/>
+                                    <constraint firstItem="LYn-jV-Gv2" firstAttribute="leading" secondItem="e3C-zh-2s3" secondAttribute="trailing" constant="8" id="f5C-AC-64p"/>
+                                    <constraint firstItem="e3C-zh-2s3" firstAttribute="leading" secondItem="DKf-N0-0N6" secondAttribute="trailing" constant="16" id="lUB-ub-Ir8"/>
+                                    <constraint firstItem="DKf-N0-0N6" firstAttribute="top" secondItem="ts8-6y-P8i" secondAttribute="top" constant="8" id="ol1-5h-W7p"/>
+                                    <constraint firstAttribute="trailing" secondItem="LYn-jV-Gv2" secondAttribute="trailing" constant="16" id="vUU-nU-zVw"/>
+                                    <constraint firstItem="e3C-zh-2s3" firstAttribute="centerY" secondItem="LYn-jV-Gv2" secondAttribute="centerY" id="zHb-Zf-Rb5"/>
+                                </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oe4-XD-uUV">
-                                <rect key="frame" x="741" y="186" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="임시"/>
-                                <connections>
-                                    <action selector="exampleButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bm1-j2-CvA"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZn-qr-nGa">
-                                <rect key="frame" x="741" y="303" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="임시"/>
-                                <connections>
-                                    <action selector="exampleButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rp2-39-4WD"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgX-TJ-qji">
-                                <rect key="frame" x="741" y="245" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="임시"/>
-                                <connections>
-                                    <action selector="exampleButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zzu-19-1Tg"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxZ-4G-vQu">
+                                <rect key="frame" x="66.5" y="157" width="763" height="100"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="l7y-Lo-W2L"/>
+                                </constraints>
+                                <string key="text">labellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabel</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <color key="textColor" systemColor="systemYellowColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" name="PointColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="ts8-6y-P8i" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="5d5-2E-5nT"/>
+                            <constraint firstItem="bxZ-4G-vQu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Abf-gL-dDi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bxZ-4G-vQu" secondAttribute="trailing" constant="20" id="PZA-y0-ETq"/>
+                            <constraint firstItem="bxZ-4G-vQu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="VnF-Ra-yj9"/>
+                            <constraint firstItem="ts8-6y-P8i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="hEt-e2-hSe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ts8-6y-P8i" secondAttribute="trailing" constant="30" id="ikz-oh-ldz"/>
+                            <constraint firstItem="bxZ-4G-vQu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ttX-b3-zeM"/>
+                        </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="4Ux-cq-Jbf" appends="YES" id="30x-OG-ep3"/>
                         </connections>
@@ -115,15 +117,15 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="88" y="59"/>
+            <point key="canvasLocation" x="87.723214285714278" y="57.971014492753625"/>
         </scene>
     </scenes>
     <resources>
-        <namedColor name="PointColor">
-            <color red="1" green="0.9570000171661377" blue="0.13500000536441803" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
