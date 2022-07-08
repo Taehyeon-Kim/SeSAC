@@ -1,4 +1,4 @@
-# Movie App (배달의 민족 따라잡기)
+# Delivery App (배달의 민족 따라잡기)
 
 <img src = "../Resources/README_Asset/baemin-main-iphone11.png" width = "300">
 
