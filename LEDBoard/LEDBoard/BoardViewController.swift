@@ -19,14 +19,19 @@ class BoardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.configureInitialUI()
         self.designTextField()
-        self.designButton(buttonOutletVariableName: sendButton, for: "글자 버튼", highlightedTitle: "글자 바뀜", backgroundColor: .red)
-        self.designButton(buttonOutletVariableName: textColorButton, for: "색상 버튼", highlightedTitle: "색상 바뀜", backgroundColor: .blue)
+        self.designButton(buttonOutletVariableName: sendButton, for: "전송", highlightedTitle: "완료", backgroundColor: .red)
+        self.designButton(buttonOutletVariableName: textColorButton, for: "색상 변경", highlightedTitle: "색상 바뀜", backgroundColor: .blue)
+    }
+    
+    func configureInitialUI() {
+        containerView.layer.cornerRadius = 8
+        resultLabel.text = ""
     }
     
     func designTextField() {
         self.userTextField.placeholder = "내용을 작성해주세요."
-        self.userTextField.text = "안녕하세요."
         self.userTextField.keyboardType = .emailAddress
     }
     
@@ -50,6 +55,7 @@ class BoardViewController: UIViewController {
     
     @IBAction func sendButtonDidTapped(_ sender: UIButton) {
         resultLabel.text = userTextField.text
+        view.endEditing(true)
     }
     
     
