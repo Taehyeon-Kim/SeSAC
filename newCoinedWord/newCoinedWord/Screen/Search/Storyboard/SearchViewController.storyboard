@@ -56,28 +56,28 @@
                                     <constraint firstItem="F34-eW-bpV" firstAttribute="top" secondItem="mjh-R0-MIz" secondAttribute="top" id="yUA-Wt-V4A"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JQb-Yo-WQT">
-                                <rect key="frame" x="16" y="124" width="292" height="31"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="JQb-Yo-WQT">
+                                <rect key="frame" x="16" y="124" width="163" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRZ-oG-kSq">
-                                        <rect key="frame" x="0.0" y="0.0" width="67" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="윰차"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbT-pa-AzB">
-                                        <rect key="frame" x="75" y="0.0" width="67" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <rect key="frame" x="34" y="0.0" width="30" height="30"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="실매"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q6r-Z5-gqZ">
-                                        <rect key="frame" x="150" y="0.0" width="67" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <rect key="frame" x="68" y="0.0" width="52" height="30"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="만만잘부"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YrA-1y-FIa">
-                                        <rect key="frame" x="225" y="0.0" width="67" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <rect key="frame" x="124" y="0.0" width="39" height="30"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="꾸안꾸"/>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -113,6 +113,16 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hB9-yD-dW8" secondAttribute="trailing" id="xEW-Ma-2D7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="1Z9-YM-dwE" id="wvI-ce-UGt"/>
+                        <outlet property="searchButton" destination="F34-eW-bpV" id="y7s-RR-NMh"/>
+                        <outlet property="searchContainerView" destination="mjh-R0-MIz" id="9p2-if-bG0"/>
+                        <outlet property="searchTextField" destination="W4F-GF-jXQ" id="F4L-wj-79f"/>
+                        <outletCollection property="hashTagButtons" destination="wRZ-oG-kSq" collectionClass="NSMutableArray" id="qzD-Hc-pen"/>
+                        <outletCollection property="hashTagButtons" destination="wbT-pa-AzB" collectionClass="NSMutableArray" id="It8-VG-Qdx"/>
+                        <outletCollection property="hashTagButtons" destination="q6r-Z5-gqZ" collectionClass="NSMutableArray" id="aHt-4d-wHO"/>
+                        <outletCollection property="hashTagButtons" destination="YrA-1y-FIa" collectionClass="NSMutableArray" id="Acf-JB-AVX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
