@@ -28,6 +28,7 @@ final class SearchViewController: UIViewController {
     
     private func initialConfiguration() {
         hashTagButtons.forEach { $0.isHidden = true }
+        descriptionLabel.text = ""
     }
     
     private func configureContainerView() {
@@ -51,7 +52,25 @@ final class SearchViewController: UIViewController {
         }
     }
     
+    private func showSearchResult() {
+        guard searchTextField.hasText,
+              let text = searchTextField.text
+        else { return }
+        
+        descriptionLabel.text = text
+    }
+    
     @IBAction func tapGestureDidTapped(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
+    
+    @IBAction func textFieldDidEndOnExit(_ sender: UITextField) {
+        showSearchResult()
+    }
+    
+    @IBAction func searchButtonDidTapped(_ sender: Any) {
+        showSearchResult()
+        view.endEditing(true)
+    }
+    
 }

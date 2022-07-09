@@ -25,6 +25,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="338" height="44"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="textFieldDidEndOnExit:" destination="Y6W-OH-hqX" eventType="editingDidEndOnExit" id="pKT-pw-OsL"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F34-eW-bpV">
                                         <rect key="frame" x="338" y="0.0" width="44" height="44"/>
@@ -42,6 +45,9 @@
                                                 </hierarchicalColors>
                                             </imageReference>
                                         </state>
+                                        <connections>
+                                            <action selector="searchButtonDidTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="pTE-AQ-gDt"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
