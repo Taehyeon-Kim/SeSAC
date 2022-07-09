@@ -50,4 +50,8 @@ final class SearchViewController: UIViewController {
             hashTagButtons[index].contentEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         }
     }
+    
+    @IBAction func tapGestureDidTapped(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
 }
