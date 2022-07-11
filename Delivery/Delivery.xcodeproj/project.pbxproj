@@ -14,6 +14,7 @@
 		BD42404D2874B51900D1CF66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD42404C2874B51900D1CF66 /* Assets.xcassets */; };
 		BD4240502874B51900D1CF66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD42404E2874B51900D1CF66 /* LaunchScreen.storyboard */; };
 		BD9CB691287C302300FAA96D /* BaeminMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9CB690287C302300FAA96D /* BaeminMainViewController.swift */; };
+		BD9CB693287C383E00FAA96D /* BaeminMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9CB692287C383E00FAA96D /* BaeminMenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		BD42404F2874B51900D1CF66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD4240512874B51900D1CF66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD9CB690287C302300FAA96D /* BaeminMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaeminMainViewController.swift; sourceTree = "<group>"; };
+		BD9CB692287C383E00FAA96D /* BaeminMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaeminMenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				BD42404E2874B51900D1CF66 /* LaunchScreen.storyboard */,
 				BD4240512874B51900D1CF66 /* Info.plist */,
 				BD9CB690287C302300FAA96D /* BaeminMainViewController.swift */,
+				BD9CB692287C383E00FAA96D /* BaeminMenuViewController.swift */,
 			);
 			path = Delivery;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			files = (
 				BD4240482874B51800D1CF66 /* ViewController.swift in Sources */,
 				BD9CB691287C302300FAA96D /* BaeminMainViewController.swift in Sources */,
+				BD9CB693287C383E00FAA96D /* BaeminMenuViewController.swift in Sources */,
 				BD4240442874B51800D1CF66 /* AppDelegate.swift in Sources */,
 				BD4240462874B51800D1CF66 /* SceneDelegate.swift in Sources */,
 			);
