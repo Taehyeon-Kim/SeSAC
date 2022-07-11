@@ -17,29 +17,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="slU-FB-TnD">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="slU-FB-TnD">
                                 <rect key="frame" x="62" y="259.5" width="290" height="377"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="LCx-8b-zcz">
-                                        <rect key="frame" x="0.0" y="0.0" width="290" height="119"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LCx-8b-zcz">
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="122.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t1f-Wt-KH5">
-                                                <rect key="frame" x="0.0" y="0.0" width="90" height="119"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="122.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3C-Pc-lgH">
-                                                        <rect key="frame" x="0.0" y="90" width="90" height="29"/>
+                                                        <rect key="frame" x="0.0" y="93.5" width="93.5" height="29"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9c-b5-Gkz">
-                                                        <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="93.5" height="93.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="d9c-b5-Gkz" secondAttribute="height" multiplier="1:1" id="K23-E3-dN1"/>
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="sesac_slime1"/>
+                                                        <connections>
+                                                            <action selector="emotionButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fpP-e3-RfJ"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -54,22 +57,25 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ly8-1c-LhR">
-                                                <rect key="frame" x="100" y="0.0" width="90" height="119"/>
+                                                <rect key="frame" x="98.5" y="0.0" width="93" height="122.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1by-Oc-bKe">
-                                                        <rect key="frame" x="0.0" y="90" width="90" height="29"/>
+                                                        <rect key="frame" x="0.0" y="93.5" width="93" height="29"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7jw-8A-q12">
-                                                        <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7jw-8A-q12">
+                                                        <rect key="frame" x="0.0" y="0.0" width="93" height="93.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="7jw-8A-q12" secondAttribute="height" multiplier="1:1" id="8nL-Nz-rKW"/>
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" image="sesac_slime1"/>
+                                                        <state key="normal" image="sesac_slime2"/>
+                                                        <connections>
+                                                            <action selector="emotionButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yil-HY-UvV"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -84,22 +90,25 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KuJ-TI-xF6">
-                                                <rect key="frame" x="200" y="0.0" width="90" height="119"/>
+                                                <rect key="frame" x="196.5" y="0.0" width="93.5" height="122.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGR-3t-r3S">
-                                                        <rect key="frame" x="0.0" y="90" width="90" height="29"/>
+                                                        <rect key="frame" x="0.0" y="93.5" width="93.5" height="29"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29J-q4-3ew">
-                                                        <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29J-q4-3ew">
+                                                        <rect key="frame" x="0.0" y="0.0" width="93.5" height="93.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="29J-q4-3ew" secondAttribute="height" multiplier="1:1" id="Z91-jb-JXV"/>
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" image="sesac_slime1"/>
+                                                        <state key="normal" image="sesac_slime3"/>
+                                                        <connections>
+                                                            <action selector="emotionButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QyO-YB-aRq"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -115,26 +124,29 @@
                                             </view>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="LpI-fK-Jht">
-                                        <rect key="frame" x="0.0" y="129" width="290" height="119"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LpI-fK-Jht">
+                                        <rect key="frame" x="0.0" y="127.5" width="290" height="122"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tml-HD-PqF">
-                                                <rect key="frame" x="0.0" y="0.0" width="90" height="119"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="122"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="she-PK-hFG">
-                                                        <rect key="frame" x="0.0" y="90" width="90" height="29"/>
+                                                        <rect key="frame" x="0.0" y="93" width="93.5" height="29"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mec-Ou-w9Y">
-                                                        <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mec-Ou-w9Y">
+                                                        <rect key="frame" x="0.0" y="0.0" width="93.5" height="93"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="mec-Ou-w9Y" secondAttribute="height" multiplier="1:1" id="SMp-Ya-7nS"/>
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" image="sesac_slime1"/>
+                                                        <state key="normal" image="sesac_slime4"/>
+                                                        <connections>
+                                                            <action selector="emotionButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6DX-BW-bzP"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -149,22 +161,25 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pMd-8g-AM7">
-                                                <rect key="frame" x="100" y="0.0" width="90" height="119"/>
+                                                <rect key="frame" x="98.5" y="0.0" width="93" height="122"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCO-Th-Bcq">
-                                                        <rect key="frame" x="0.0" y="90" width="90" height="29"/>
+                                                        <rect key="frame" x="0.0" y="93" width="93" height="29"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayK-ce-XBL">
-                                                        <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayK-ce-XBL">
+                                                        <rect key="frame" x="0.0" y="0.0" width="93" height="93"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="ayK-ce-XBL" secondAttribute="height" multiplier="1:1" id="L5r-JX-j1u"/>
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" image="sesac_slime1"/>
+                                                        <state key="normal" image="sesac_slime5"/>
+                                                        <connections>
+                                                            <action selector="emotionButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q7X-YF-3ip"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -179,22 +194,25 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ie-o1-Lwz">
-                                                <rect key="frame" x="200" y="0.0" width="90" height="119"/>
+                                                <rect key="frame" x="196.5" y="0.0" width="93.5" height="122"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l39-bl-qx4">
-                                                        <rect key="frame" x="0.0" y="90" width="90" height="29"/>
+                                                        <rect key="frame" x="0.0" y="93" width="93.5" height="29"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ase-Oe-yAt">
-                                                        <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ase-Oe-yAt">
+                                                        <rect key="frame" x="0.0" y="0.0" width="93.5" height="93"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="Ase-Oe-yAt" secondAttribute="height" multiplier="1:1" id="Zas-aB-lO2"/>
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" image="sesac_slime1"/>
+                                                        <state key="normal" image="sesac_slime6"/>
+                                                        <connections>
+                                                            <action selector="emotionButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AyG-nz-WKG"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -210,26 +228,29 @@
                                             </view>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yce-6J-Uas">
-                                        <rect key="frame" x="0.0" y="258" width="290" height="119"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="yce-6J-Uas">
+                                        <rect key="frame" x="0.0" y="254.5" width="290" height="122.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F4I-hA-0ph">
-                                                <rect key="frame" x="0.0" y="0.0" width="90" height="119"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="122.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MfQ-W4-w8O">
-                                                        <rect key="frame" x="0.0" y="90" width="90" height="29"/>
+                                                        <rect key="frame" x="0.0" y="93.5" width="93.5" height="29"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mg3-Ff-Iym">
-                                                        <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mg3-Ff-Iym">
+                                                        <rect key="frame" x="0.0" y="0.0" width="93.5" height="93.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="mg3-Ff-Iym" secondAttribute="height" multiplier="1:1" id="IxP-ks-6K5"/>
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" image="sesac_slime1"/>
+                                                        <state key="normal" image="sesac_slime7"/>
+                                                        <connections>
+                                                            <action selector="emotionButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9CZ-x2-S6W"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -244,22 +265,25 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C9Y-a7-EjK">
-                                                <rect key="frame" x="100" y="0.0" width="90" height="119"/>
+                                                <rect key="frame" x="98.5" y="0.0" width="93" height="122.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3dY-NG-QdM">
-                                                        <rect key="frame" x="0.0" y="90" width="90" height="29"/>
+                                                        <rect key="frame" x="0.0" y="93.5" width="93" height="29"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gpc-Rv-N5r">
-                                                        <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gpc-Rv-N5r">
+                                                        <rect key="frame" x="0.0" y="0.0" width="93" height="93.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="Gpc-Rv-N5r" secondAttribute="height" multiplier="1:1" id="dKP-ta-YhL"/>
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" image="sesac_slime1"/>
+                                                        <state key="normal" image="sesac_slime8"/>
+                                                        <connections>
+                                                            <action selector="emotionButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yha-oH-EuE"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -274,22 +298,25 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DLk-AT-k9l">
-                                                <rect key="frame" x="200" y="0.0" width="90" height="119"/>
+                                                <rect key="frame" x="196.5" y="0.0" width="93.5" height="122.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpi-YL-9lB">
-                                                        <rect key="frame" x="0.0" y="90" width="90" height="29"/>
+                                                        <rect key="frame" x="0.0" y="93.5" width="93.5" height="29"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mND-Q9-4Kr">
-                                                        <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mND-Q9-4Kr">
+                                                        <rect key="frame" x="0.0" y="0.0" width="93.5" height="93.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="mND-Q9-4Kr" secondAttribute="height" multiplier="1:1" id="3aA-1t-qIJ"/>
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" image="sesac_slime1"/>
+                                                        <state key="normal" image="sesac_slime9"/>
+                                                        <connections>
+                                                            <action selector="emotionButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A4G-Q8-zcl"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -324,6 +351,18 @@
                             <color key="tintColor" systemColor="labelColor"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outletCollection property="emotionIconButtons" destination="d9c-b5-Gkz" collectionClass="NSMutableArray" id="e92-V6-bgz"/>
+                        <outletCollection property="emotionTitleLabels" destination="b3C-Pc-lgH" collectionClass="NSMutableArray" id="ftp-WF-RnJ"/>
+                        <outletCollection property="emotionTitleLabels" destination="1by-Oc-bKe" collectionClass="NSMutableArray" id="c3B-Nh-BIw"/>
+                        <outletCollection property="emotionTitleLabels" destination="oGR-3t-r3S" collectionClass="NSMutableArray" id="Kff-eh-ujw"/>
+                        <outletCollection property="emotionTitleLabels" destination="she-PK-hFG" collectionClass="NSMutableArray" id="mMd-q0-3oS"/>
+                        <outletCollection property="emotionTitleLabels" destination="WCO-Th-Bcq" collectionClass="NSMutableArray" id="xLq-HA-orK"/>
+                        <outletCollection property="emotionTitleLabels" destination="l39-bl-qx4" collectionClass="NSMutableArray" id="R8n-y8-HaV"/>
+                        <outletCollection property="emotionTitleLabels" destination="MfQ-W4-w8O" collectionClass="NSMutableArray" id="3A6-TI-jjY"/>
+                        <outletCollection property="emotionTitleLabels" destination="3dY-NG-QdM" collectionClass="NSMutableArray" id="7zS-Wj-fwi"/>
+                        <outletCollection property="emotionTitleLabels" destination="cpi-YL-9lB" collectionClass="NSMutableArray" id="ImK-lj-EVZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -355,6 +394,14 @@
     <resources>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
         <image name="sesac_slime1" width="278" height="258"/>
+        <image name="sesac_slime2" width="278" height="258"/>
+        <image name="sesac_slime3" width="278" height="258"/>
+        <image name="sesac_slime4" width="278" height="258"/>
+        <image name="sesac_slime5" width="278" height="258"/>
+        <image name="sesac_slime6" width="278" height="258"/>
+        <image name="sesac_slime7" width="278" height="258"/>
+        <image name="sesac_slime8" width="278" height="258"/>
+        <image name="sesac_slime9" width="278" height="258"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
