@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD35DAB8287D21B100182697 /* SegmentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD35DAB7287D21B100182697 /* SegmentedViewController.swift */; };
 		BD9CB678287BA57700FAA96D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9CB677287BA57700FAA96D /* AppDelegate.swift */; };
 		BD9CB67A287BA57700FAA96D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9CB679287BA57700FAA96D /* SceneDelegate.swift */; };
 		BD9CB67C287BA57700FAA96D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9CB67B287BA57700FAA96D /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD35DAB7287D21B100182697 /* SegmentedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedViewController.swift; sourceTree = "<group>"; };
 		BD9CB674287BA57700FAA96D /* SeSACWeek2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACWeek2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD9CB677287BA57700FAA96D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD9CB679287BA57700FAA96D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				BD9CB677287BA57700FAA96D /* AppDelegate.swift */,
 				BD9CB679287BA57700FAA96D /* SceneDelegate.swift */,
 				BD9CB67B287BA57700FAA96D /* ViewController.swift */,
+				BD35DAB7287D21B100182697 /* SegmentedViewController.swift */,
 				BD9CB67D287BA57700FAA96D /* Main.storyboard */,
 				BD9CB680287BA57900FAA96D /* Assets.xcassets */,
 				BD9CB682287BA57900FAA96D /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				BD9CB67C287BA57700FAA96D /* ViewController.swift in Sources */,
 				BD9CB678287BA57700FAA96D /* AppDelegate.swift in Sources */,
 				BD9CB67A287BA57700FAA96D /* SceneDelegate.swift in Sources */,
+				BD35DAB8287D21B100182697 /* SegmentedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

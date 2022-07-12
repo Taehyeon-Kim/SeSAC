@@ -13,7 +13,7 @@
         <!--설정-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SeSACWeek2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -231,17 +231,42 @@
             </objects>
             <point key="canvasLocation" x="1926.0869565217392" y="2196.4285714285711"/>
         </scene>
-        <!--View Controller-->
+        <!--Segmented View Controller-->
         <scene sceneID="lgi-iT-2aZ">
             <objects>
-                <viewController id="Jpi-oc-GFP" sceneMemberID="viewController">
+                <viewController id="Jpi-oc-GFP" customClass="SegmentedViewController" customModule="SeSACWeek2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LG1-FS-FjF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="iw5-Iq-sTJ">
+                                <rect key="frame" x="111" y="155" width="193" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title="Third"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentControlValueChanged:" destination="Jpi-oc-GFP" eventType="valueChanged" id="eHN-t1-7Lz"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caP-xX-EWG">
+                                <rect key="frame" x="64" y="378" width="255" height="97"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="LlK-yt-msf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="gY6-et-mHh"/>
+                    <connections>
+                        <outlet property="resultLabel" destination="caP-xX-EWG" id="z7V-7A-Kgk"/>
+                        <outlet property="segmentControl" destination="iw5-Iq-sTJ" id="cZC-cJ-omN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YNc-Vs-tWV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -366,7 +391,7 @@
                     <navigationItem key="navigationItem" id="MnZ-EW-blz"/>
                     <connections>
                         <outlet property="emotionFirstButton" destination="dy3-N1-JXA" id="KUR-5N-zz4"/>
-                        <outlet property="emotionFirstLabel" destination="io0-Wx-tzo" id="xzs-rI-ozA"/>
+                        <outlet property="emotionFirstLabel" destination="io0-Wx-tzo" id="hRn-37-sPP"/>
                         <outlet property="emotionSecondLabel" destination="OAi-g9-DSp" id="bAs-uz-7ms"/>
                     </connections>
                 </viewController>
