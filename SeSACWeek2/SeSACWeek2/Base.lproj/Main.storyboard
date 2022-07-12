@@ -83,9 +83,6 @@
                     <navigationItem key="navigationItem" title="설정" prompt="ㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹ" id="JUC-FH-CKi">
                         <barButtonItem key="backBarButtonItem" title=" " id="of8-mt-ybY"/>
                     </navigationItem>
-                    <connections>
-                        <outlet property="purpleView" destination="f8c-gn-SGi" id="dpQ-wp-3vr"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -253,7 +250,7 @@
         <!--View Controller-->
         <scene sceneID="fAv-B5-pB1">
             <objects>
-                <viewController id="oth-u7-6C9" sceneMemberID="viewController">
+                <viewController id="oth-u7-6C9" customClass="ViewController" customModule="SeSACWeek2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0NG-8A-tHQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
