@@ -41,7 +41,7 @@ extension ViewController {
 
     private func configureUI() {
         for (index, emotionTitleLabel) in emotionTitleLabels.enumerated() {
-            emotionTitleLabel.text = titles[index] + "\(emotionCount[index])"
+            emotionTitleLabel.text = self.configureEmotionTitleLabel(for: index)
         }
     }
     
@@ -54,6 +54,10 @@ extension ViewController {
     @IBAction func emotionButtonDidTapped(_ sender: UIButton) {
         let index = sender.tag
         self.emotionCount[index] += 1
-        emotionTitleLabels[index].text = titles[index] + "\(self.emotionCount[index])"
+        emotionTitleLabels[index].text = self.configureEmotionTitleLabel(for: index)
+    }
+    
+    private func configureEmotionTitleLabel(for index: Int) -> String {
+        return self.titles[index] + "\(self.emotionCount[index])"
     }
 }
