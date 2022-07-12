@@ -18,3 +18,4 @@
 
 `week2`
 - [Day6, 220711](https://github.com/Taehyeon-Kim/SeSAC/issues/28)
+- [Day7, 220712](https://github.com/Taehyeon-Kim/SeSAC/issues/36)
