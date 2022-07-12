@@ -364,6 +364,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MnZ-EW-blz"/>
+                    <connections>
+                        <outlet property="emotionFirstButton" destination="dy3-N1-JXA" id="KUR-5N-zz4"/>
+                        <outlet property="emotionFirstLabel" destination="io0-Wx-tzo" id="xzs-rI-ozA"/>
+                        <outlet property="emotionSecondLabel" destination="OAi-g9-DSp" id="bAs-uz-7ms"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Utk-yI-Oqg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
