@@ -7,6 +7,7 @@
 - [IBOutlet Collection 연결 시 weak 수식어를 사용하지 않는 이유](https://github.com/Taehyeon-Kim/SeSAC/issues/27)
 - [Alpha vs Opacity](https://github.com/Taehyeon-Kim/SeSAC/issues/30)
 - [Image Rendering Mode, Original vs Template](https://github.com/Taehyeon-Kim/SeSAC/issues/31)
+- [Raw Strings](https://github.com/Taehyeon-Kim/SeSAC/issues/41)
 
 ## TIL
 
