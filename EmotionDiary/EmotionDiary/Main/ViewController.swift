@@ -31,6 +31,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureUI()
+        self.configureButtonTags()
     }
 }
 
@@ -41,6 +42,12 @@ extension ViewController {
     private func configureUI() {
         for (index, emotionTitleLabel) in emotionTitleLabels.enumerated() {
             emotionTitleLabel.text = titles[index] + "\(emotionCount[index])"
+        }
+    }
+    
+    private func configureButtonTags() {
+        for (index, button) in emotionIconButtons.enumerated() {
+            button.tag = index
         }
     }
 
