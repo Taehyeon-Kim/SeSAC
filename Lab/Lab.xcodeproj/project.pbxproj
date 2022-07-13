@@ -27,6 +27,7 @@
 		BD7D3A9D2877C65100DEF52A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD7D3A9F2877C65100DEF52A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD7D3AA62877C67500DEF52A /* AutoLayout.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AutoLayout.storyboard; sourceTree = "<group>"; };
+		BD9B9351287EB31F00D6777D /* Formatted.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Formatted.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +47,7 @@
 				BD71B35C287DCF770058E8C6 /* RawStrings.playground */,
 				BD71B35D287E478D0058E8C6 /* Day8.playground */,
 				BD71B35E287E67000058E8C6 /* Class+Struct.playground */,
+				BD9B9351287EB31F00D6777D /* Formatted.playground */,
 			);
 			path = Playground;
 			sourceTree = "<group>";
