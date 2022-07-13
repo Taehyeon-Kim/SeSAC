@@ -100,3 +100,63 @@ sayHello(nickname: "고래밥", gender: 4)
 // 오버로딩의 개념
 print("안녕하세요", separator: "123", terminator: "456")
 print("안녕히가세요", separator: "123", terminator: "456")
+
+
+// 열거형(ex. 남/여/안함 -> 블랙/파란/흰)
+// 실질적인 데이터로 사용하기 위해서 자료형 지정(상속 관계는 아님, 선언을 해주었다.)
+enum Gender: String {
+    case man
+    case woman
+    case nothing
+}
+
+var gender: Gender = Gender.man // "남성" "여자" "선택안함" // 10 21 23
+
+
+//if gender == 0 {
+//    print("남성입니다")
+//} else if gender == 1 {
+//    print("여성입니다")
+//} else if gender == 2 {
+//    print("아직 선택하지 않았습니다")
+//}
+
+// 문법상으로 제약하는 것과 의미상으로 제한을 두는 것은 엄연히 다르다.
+// iOS에서는 Enum을 통해서 Case를 나눌 수 있는데
+// 다른 플랫폼과 소통하기 위해서는 결국 통일된 자료형을 사용해야 한다.
+// 간결하고 가독성 있게 코드를 작성할 수 있다.
+switch gender {
+case .man:      print("남성입니다.")
+case .woman:    print("여성입니다.")
+case .nothing:  print("아직 선택하지 않았습니다.")
+}
+
+gender.rawValue
+
+enum HTTPCode: Int {
+    case OK
+    case NO_PAGE
+    case NOT_FOUND = 404
+    case SERVER_ERROR
+    
+    func showStatus() -> String {
+        switch self {
+        case .OK:           return "정상입니다."
+        case .NO_PAGE:      return "페이지를 찾을 수 없음"
+        case .NOT_FOUND:    return "잘못된 문제"
+        case .SERVER_ERROR: return "긴급 점검"
+        }
+    }
+}
+
+var networkStatus: HTTPCode = .OK
+
+switch networkStatus {
+case .OK: print("정상", networkStatus.rawValue)
+case .NO_PAGE: print("잘못된 URL 주소", networkStatus.rawValue)
+default: print("기타", networkStatus.rawValue)
+}
+
+// 다음과 같이 한 번에 처리 가능
+let result = networkStatus.showStatus()
+print(result)
