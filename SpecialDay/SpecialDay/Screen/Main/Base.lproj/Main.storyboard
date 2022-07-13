@@ -180,6 +180,21 @@
                             <constraint firstItem="PVB-Kb-Hzo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="eBo-l9-b4A"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="datePicker" destination="0KC-Rr-wWc" id="pfr-RR-DML"/>
+                        <outletCollection property="dDayLabels" destination="ECf-8q-CNy" collectionClass="NSMutableArray" id="ghO-56-AZU"/>
+                        <outletCollection property="dDayLabels" destination="NcU-OZ-FDz" collectionClass="NSMutableArray" id="y9W-hp-q0z"/>
+                        <outletCollection property="dDayLabels" destination="gfK-5f-fK1" collectionClass="NSMutableArray" id="26a-Zg-nER"/>
+                        <outletCollection property="dDayLabels" destination="3gR-58-hPN" collectionClass="NSMutableArray" id="tkt-bR-X85"/>
+                        <outletCollection property="backgroundImageViews" destination="3jG-oH-F9A" collectionClass="NSMutableArray" id="0R7-AJ-AgB"/>
+                        <outletCollection property="backgroundImageViews" destination="6aa-N6-zV9" collectionClass="NSMutableArray" id="42J-lE-uQN"/>
+                        <outletCollection property="backgroundImageViews" destination="y90-e6-TXz" collectionClass="NSMutableArray" id="Nns-gp-eZ9"/>
+                        <outletCollection property="backgroundImageViews" destination="9wz-oz-94H" collectionClass="NSMutableArray" id="GE0-MW-OEd"/>
+                        <outletCollection property="dateLabels" destination="ybR-fN-7Sl" collectionClass="NSMutableArray" id="zqf-ZC-fu7"/>
+                        <outletCollection property="dateLabels" destination="frp-EM-WKU" collectionClass="NSMutableArray" id="AGV-lO-t9T"/>
+                        <outletCollection property="dateLabels" destination="upU-fM-ha1" collectionClass="NSMutableArray" id="8O4-Yo-JGz"/>
+                        <outletCollection property="dateLabels" destination="UFG-LN-gv2" collectionClass="NSMutableArray" id="HhQ-Fq-V79"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
