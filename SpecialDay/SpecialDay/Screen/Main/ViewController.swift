@@ -23,6 +23,7 @@ struct SpecialDay {
 class ViewController: UIViewController {
     
     private var specialDays: [SpecialDay] = SpecialDay.sampleData
+    private lazy var dateFormatter = DateFormatter()
 
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet var backgroundImageViews: [UIImageView]!
@@ -31,7 +32,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureUI()
+        self.configureUI()
+        self.configureDateFormatter()
     }
     
     // UI 관련 코드가 너무 길어졌다...
@@ -50,6 +52,19 @@ class ViewController: UIViewController {
             dDayLabels[index].font = .boldSystemFont(ofSize: 24)
             dateLabels[index].text = specialDay.date
             dateLabels[index].textColor = .white
+        }
+    }
+    
+    private func configureDateFormatter() {
+        self.dateFormatter.locale = Locale(identifier: "ko_KR")
+        self.dateFormatter.dateFormat = "yyyy년 MM월 dd일"
+    }
+    
+    @IBAction func dateValueChanged(_ sender: UIDatePicker) {
+        for index in 0..<specialDays.count {
+            guard let calculatedDate = datePicker.calendar.date(byAdding: .day, value: 100 * (index + 1), to: self.datePicker.date) else { return }
+            let newDate = dateFormatter.string(from: calculatedDate)
+            dateLabels[index].text = newDate
         }
     }
 }
