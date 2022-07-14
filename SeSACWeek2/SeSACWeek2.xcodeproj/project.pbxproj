@@ -10,12 +10,15 @@
 		BD35DAB8287D21B100182697 /* SegmentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD35DAB7287D21B100182697 /* SegmentedViewController.swift */; };
 		BD9B9355287FA6B600D6777D /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD9B9354287FA6B600D6777D /* Setting.storyboard */; };
 		BD9B9357287FA81800D6777D /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD9B9356287FA81800D6777D /* Search.storyboard */; };
+		BD9B935A287FAEEB00D6777D /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = BD9B9359287FAEEB00D6777D /* SideMenu */; };
 		BD9CB678287BA57700FAA96D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9CB677287BA57700FAA96D /* AppDelegate.swift */; };
 		BD9CB67A287BA57700FAA96D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9CB679287BA57700FAA96D /* SceneDelegate.swift */; };
 		BD9CB67C287BA57700FAA96D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9CB67B287BA57700FAA96D /* ViewController.swift */; };
 		BD9CB67F287BA57700FAA96D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD9CB67D287BA57700FAA96D /* Main.storyboard */; };
 		BD9CB681287BA57900FAA96D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD9CB680287BA57900FAA96D /* Assets.xcassets */; };
 		BD9CB684287BA57900FAA96D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD9CB682287BA57900FAA96D /* LaunchScreen.storyboard */; };
+		BDD82015287FAF4900B712BE /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = BDD82014287FAF4900B712BE /* FSCalendar */; };
+		BDD82018287FAFC900B712BE /* TextFieldEffects in Frameworks */ = {isa = PBXBuildFile; productRef = BDD82017287FAFC900B712BE /* TextFieldEffects */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDD82018287FAFC900B712BE /* TextFieldEffects in Frameworks */,
+				BD9B935A287FAEEB00D6777D /* SideMenu in Frameworks */,
+				BDD82015287FAF4900B712BE /* FSCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +106,11 @@
 			dependencies = (
 			);
 			name = SeSACWeek2;
+			packageProductDependencies = (
+				BD9B9359287FAEEB00D6777D /* SideMenu */,
+				BDD82014287FAF4900B712BE /* FSCalendar */,
+				BDD82017287FAFC900B712BE /* TextFieldEffects */,
+			);
 			productName = SeSACWeek2;
 			productReference = BD9CB674287BA57700FAA96D /* SeSACWeek2.app */;
 			productType = "com.apple.product-type.application";
@@ -128,6 +139,11 @@
 				Base,
 			);
 			mainGroup = BD9CB66B287BA57700FAA96D;
+			packageReferences = (
+				BD9B9358287FAEEB00D6777D /* XCRemoteSwiftPackageReference "SideMenu" */,
+				BDD82013287FAF4900B712BE /* XCRemoteSwiftPackageReference "FSCalendar" */,
+				BDD82016287FAFC900B712BE /* XCRemoteSwiftPackageReference "TextFieldEffects" */,
+			);
 			productRefGroup = BD9CB675287BA57700FAA96D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -378,6 +394,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BD9B9358287FAEEB00D6777D /* XCRemoteSwiftPackageReference "SideMenu" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jonkykong/SideMenu.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		BDD82013287FAF4900B712BE /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		BDD82016287FAFC900B712BE /* XCRemoteSwiftPackageReference "TextFieldEffects" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/raulriera/TextFieldEffects.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BD9B9359287FAEEB00D6777D /* SideMenu */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD9B9358287FAEEB00D6777D /* XCRemoteSwiftPackageReference "SideMenu" */;
+			productName = SideMenu;
+		};
+		BDD82014287FAF4900B712BE /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDD82013287FAF4900B712BE /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
+		BDD82017287FAFC900B712BE /* TextFieldEffects */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDD82016287FAFC900B712BE /* XCRemoteSwiftPackageReference "TextFieldEffects" */;
+			productName = TextFieldEffects;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BD9CB66C287BA57700FAA96D /* Project object */;
 }

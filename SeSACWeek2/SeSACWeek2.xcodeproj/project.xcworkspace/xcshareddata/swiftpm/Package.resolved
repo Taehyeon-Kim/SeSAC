@@ -1,0 +1,32 @@
+{
+  "pins" : [
+    {
+      "identity" : "fscalendar",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/WenchaoD/FSCalendar.git",
+      "state" : {
+        "revision" : "0fbdec5172fccb90f707472eeaea4ffe095278f6",
+        "version" : "2.8.4"
+      }
+    },
+    {
+      "identity" : "sidemenu",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jonkykong/SideMenu.git",
+      "state" : {
+        "revision" : "8bd4fd128923cf5494fa726839af8afe12908ad9",
+        "version" : "6.5.0"
+      }
+    },
+    {
+      "identity" : "textfieldeffects",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/raulriera/TextFieldEffects.git",
+      "state" : {
+        "revision" : "7e563d4d6d755bb1ab6c1c049f8c215d7c489100",
+        "version" : "1.7.0"
+      }
+    }
+  ],
+  "version" : 2
+}
