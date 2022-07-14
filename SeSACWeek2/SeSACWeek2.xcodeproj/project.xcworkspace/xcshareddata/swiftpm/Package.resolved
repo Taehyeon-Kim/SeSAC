@@ -10,6 +10,15 @@
       }
     },
     {
+      "identity" : "iqkeyboardmanager",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/hackiftekhar/IQKeyboardManager.git",
+      "state" : {
+        "revision" : "1e442766a41e2948df25559eb03ab752c6d3aad0",
+        "version" : "6.5.0"
+      }
+    },
+    {
       "identity" : "sidemenu",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/jonkykong/SideMenu.git",

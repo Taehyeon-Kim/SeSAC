@@ -19,6 +19,7 @@
 		BD9CB684287BA57900FAA96D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD9CB682287BA57900FAA96D /* LaunchScreen.storyboard */; };
 		BDD82015287FAF4900B712BE /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = BDD82014287FAF4900B712BE /* FSCalendar */; };
 		BDD82018287FAFC900B712BE /* TextFieldEffects in Frameworks */ = {isa = PBXBuildFile; productRef = BDD82017287FAFC900B712BE /* TextFieldEffects */; };
+		BDD8201C287FBF8500B712BE /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BDD8201B287FBF8500B712BE /* IQKeyboardManagerSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDD82018287FAFC900B712BE /* TextFieldEffects in Frameworks */,
+				BDD8201C287FBF8500B712BE /* IQKeyboardManagerSwift in Frameworks */,
 				BD9B935A287FAEEB00D6777D /* SideMenu in Frameworks */,
 				BDD82015287FAF4900B712BE /* FSCalendar in Frameworks */,
 			);
@@ -110,6 +112,7 @@
 				BD9B9359287FAEEB00D6777D /* SideMenu */,
 				BDD82014287FAF4900B712BE /* FSCalendar */,
 				BDD82017287FAFC900B712BE /* TextFieldEffects */,
+				BDD8201B287FBF8500B712BE /* IQKeyboardManagerSwift */,
 			);
 			productName = SeSACWeek2;
 			productReference = BD9CB674287BA57700FAA96D /* SeSACWeek2.app */;
@@ -143,6 +146,7 @@
 				BD9B9358287FAEEB00D6777D /* XCRemoteSwiftPackageReference "SideMenu" */,
 				BDD82013287FAF4900B712BE /* XCRemoteSwiftPackageReference "FSCalendar" */,
 				BDD82016287FAFC900B712BE /* XCRemoteSwiftPackageReference "TextFieldEffects" */,
+				BDD8201A287FBF8500B712BE /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = BD9CB675287BA57700FAA96D /* Products */;
 			projectDirPath = "";
@@ -420,6 +424,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		BDD8201A287FBF8500B712BE /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = exactVersion;
+				version = 6.5.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -437,6 +449,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BDD82016287FAFC900B712BE /* XCRemoteSwiftPackageReference "TextFieldEffects" */;
 			productName = TextFieldEffects;
+		};
+		BDD8201B287FBF8500B712BE /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDD8201A287FBF8500B712BE /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
