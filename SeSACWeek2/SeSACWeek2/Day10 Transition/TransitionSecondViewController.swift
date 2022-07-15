@@ -1,5 +1,5 @@
 //
-//  TransitionFirstViewController.swift
+//  TransitionSecondViewController.swift
 //  SeSACWeek2
 //
 //  Created by taekki on 2022/07/15.
@@ -7,40 +7,34 @@
 
 import UIKit
 
-class TransitionFirstViewController: UIViewController {
+class TransitionSecondViewController: UIViewController {
 
-    @IBOutlet weak var randomNumberLabel: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(#function)
+        print("TransitionSecondViewController", #function)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print(#function)
-        
-        randomNumberLabel.text = "\(Int.random(in:  1...100))"
+        print("TransitionSecondViewController", #function)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print(#function)
+        print("TransitionSecondViewController", #function)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        print(#function)
+        print("TransitionSecondViewController", #function)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        print(#function)
+        print("TransitionSecondViewController", #function)
     }
     
     deinit {
-        print("TransitionFirstViewController - deinit")
+        print("TransitionSecondViewController - deinit")
     }
-    
-    @IBAction func unwindTransitionFirstVC(_ sender: UIStoryboardSegue) {}
 }
