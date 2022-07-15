@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BD35DAB8287D21B100182697 /* SegmentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD35DAB7287D21B100182697 /* SegmentedViewController.swift */; };
+		BD6A3D052880E84600578A03 /* Transition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD6A3D042880E84600578A03 /* Transition.storyboard */; };
+		BD6A3D072880EFE500578A03 /* TransitionFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6A3D062880EFE500578A03 /* TransitionFirstViewController.swift */; };
 		BD9B9355287FA6B600D6777D /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD9B9354287FA6B600D6777D /* Setting.storyboard */; };
 		BD9B9357287FA81800D6777D /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD9B9356287FA81800D6777D /* Search.storyboard */; };
 		BD9B935A287FAEEB00D6777D /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = BD9B9359287FAEEB00D6777D /* SideMenu */; };
@@ -24,6 +26,8 @@
 
 /* Begin PBXFileReference section */
 		BD35DAB7287D21B100182697 /* SegmentedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedViewController.swift; sourceTree = "<group>"; };
+		BD6A3D042880E84600578A03 /* Transition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Transition.storyboard; sourceTree = "<group>"; };
+		BD6A3D062880EFE500578A03 /* TransitionFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionFirstViewController.swift; sourceTree = "<group>"; };
 		BD9B9354287FA6B600D6777D /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		BD9B9356287FA81800D6777D /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		BD9CB674287BA57700FAA96D /* SeSACWeek2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACWeek2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,13 +55,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BD9B9353287FA69600D6777D /* Storyboard */ = {
+		BD6A3D032880E82D00578A03 /* Day10 Transition */ = {
+			isa = PBXGroup;
+			children = (
+				BD6A3D042880E84600578A03 /* Transition.storyboard */,
+				BD6A3D062880EFE500578A03 /* TransitionFirstViewController.swift */,
+			);
+			path = "Day10 Transition";
+			sourceTree = "<group>";
+		};
+		BD9B9353287FA69600D6777D /* Day9 */ = {
 			isa = PBXGroup;
 			children = (
 				BD9B9354287FA6B600D6777D /* Setting.storyboard */,
 				BD9B9356287FA81800D6777D /* Search.storyboard */,
 			);
-			path = Storyboard;
+			path = Day9;
 			sourceTree = "<group>";
 		};
 		BD9CB66B287BA57700FAA96D = {
@@ -79,7 +92,8 @@
 		BD9CB676287BA57700FAA96D /* SeSACWeek2 */ = {
 			isa = PBXGroup;
 			children = (
-				BD9B9353287FA69600D6777D /* Storyboard */,
+				BD6A3D032880E82D00578A03 /* Day10 Transition */,
+				BD9B9353287FA69600D6777D /* Day9 */,
 				BD9CB677287BA57700FAA96D /* AppDelegate.swift */,
 				BD9CB679287BA57700FAA96D /* SceneDelegate.swift */,
 				BD9CB67B287BA57700FAA96D /* ViewController.swift */,
@@ -163,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD9CB684287BA57900FAA96D /* LaunchScreen.storyboard in Resources */,
+				BD6A3D052880E84600578A03 /* Transition.storyboard in Resources */,
 				BD9CB681287BA57900FAA96D /* Assets.xcassets in Resources */,
 				BD9CB67F287BA57700FAA96D /* Main.storyboard in Resources */,
 				BD9B9355287FA6B600D6777D /* Setting.storyboard in Resources */,
@@ -178,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD9CB67C287BA57700FAA96D /* ViewController.swift in Sources */,
+				BD6A3D072880EFE500578A03 /* TransitionFirstViewController.swift in Sources */,
 				BD9CB678287BA57700FAA96D /* AppDelegate.swift in Sources */,
 				BD9CB67A287BA57700FAA96D /* SceneDelegate.swift in Sources */,
 				BD35DAB8287D21B100182697 /* SegmentedViewController.swift in Sources */,
