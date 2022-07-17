@@ -10,7 +10,7 @@ import UIKit
 struct SpecialDay {
     var dDay: String
     var date: String
-    var backgroundImageName: String
+    let backgroundImageName: String
     
     static let sampleData: [SpecialDay]  = [
         SpecialDay(dDay: "D+100", date: "2021년 03월 27일", backgroundImageName: "bgImage1"),
@@ -22,9 +22,10 @@ struct SpecialDay {
 
 class ViewController: UIViewController {
     
+    private var currentDate: Date?
     private var specialDays: [SpecialDay] = SpecialDay.sampleData
     private lazy var dateFormatter = DateFormatter()
-
+    
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet var backgroundImageViews: [UIImageView]!
     @IBOutlet var dDayLabels: [UILabel]!
@@ -32,26 +33,38 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.initialize()
+    }
+    
+    private func initialize() {
+        self.currentDate = self.datePicker.date
         self.configureUI()
         self.configureDateFormatter()
     }
     
-    // UI 관련 코드가 너무 길어졌다...
     private func configureUI() {
+        self.configureBackgroundImageViews()
+        self.configureLabels()
+        self.updateDate()
+    }
+    
+    private func configureBackgroundImageViews() {
         for (index, specialDay) in specialDays.enumerated() {
-            let dimmedView = UIView()
-            dimmedView.frame = backgroundImageViews.first?.frame ?? CGRect.zero
-            dimmedView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
-            backgroundImageViews[index].image = UIImage(named: specialDay.backgroundImageName)
-            backgroundImageViews[index].layer.opacity = 0.95
-            backgroundImageViews[index].insertSubview(dimmedView, aboveSubview: backgroundImageViews[index])
-            backgroundImageViews[index].contentMode = .scaleAspectFill
-            backgroundImageViews[index].layer.cornerRadius = 10
-            dDayLabels[index].text = specialDay.dDay
-            dDayLabels[index].textColor = .white
-            dDayLabels[index].font = .boldSystemFont(ofSize: 24)
-            dateLabels[index].text = specialDay.date
-            dateLabels[index].textColor = .white
+            self.backgroundImageViews[index].image = UIImage(named: specialDay.backgroundImageName)
+            self.backgroundImageViews[index].contentMode = .scaleAspectFill
+            self.backgroundImageViews[index].layer.cornerRadius = 10
+            self.backgroundImageViews[index].addDimmedView()
+        }
+    }
+    
+    private func configureLabels() {
+        for (index, specialDay) in specialDays.enumerated() {
+            self.dDayLabels[index].text = specialDay.dDay
+            self.dDayLabels[index].textColor = .white
+            self.dDayLabels[index].font = .boldSystemFont(ofSize: 24)
+            self.dateLabels[index].text = specialDay.date
+            self.dateLabels[index].textColor = .white
         }
     }
     
@@ -61,11 +74,26 @@ class ViewController: UIViewController {
     }
     
     @IBAction func dateValueChanged(_ sender: UIDatePicker) {
+        self.updateDate()
+    }
+    
+    private func updateDate() {
         for index in 0..<specialDays.count {
-            guard let calculatedDate = datePicker.calendar.date(byAdding: .day, value: 100 * (index + 1), to: self.datePicker.date) else { return }
+            guard let calculatedDate = datePicker.calendar.date(byAdding: .day,
+                                                                value: 100 * (index + 1),
+                                                                to: self.datePicker.date)
+            else { return }
             let newDate = dateFormatter.string(from: calculatedDate)
             dateLabels[index].text = newDate
         }
     }
 }
 
+extension UIView {
+    func addDimmedView() {
+        let dimmedView = UIView()
+        dimmedView.frame = self.frame
+        dimmedView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
+        self.insertSubview(dimmedView, aboveSubview: self)
+    }
+}
