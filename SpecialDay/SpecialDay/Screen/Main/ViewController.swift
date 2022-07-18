@@ -38,12 +38,12 @@ class ViewController: UIViewController {
     private func initialize() {
         self.configureUI()
         self.configureDateFormatter()
+        self.updateDate(self.datePicker.date)
     }
     
     private func configureUI() {
         self.configureBackgroundImageViews()
         self.configureLabels()
-        self.updateDate()
     }
     
     // preferredDatePickerStyle이상에서만 동작하기 때문에 작성해줌.
@@ -70,7 +70,6 @@ class ViewController: UIViewController {
             self.dDayLabels[index].text = specialDay.dDay
             self.dDayLabels[index].textColor = .white
             self.dDayLabels[index].font = .boldSystemFont(ofSize: 24)
-            self.dateLabels[index].text = specialDay.date
             self.dateLabels[index].textColor = .white
         }
     }
@@ -81,17 +80,17 @@ class ViewController: UIViewController {
     }
     
     @IBAction func dateValueChanged(_ sender: UIDatePicker) {
-        self.updateDate()
+        self.updateDate(sender.date)
     }
     
-    private func updateDate() {
+    private func updateDate(_ date: Date) {
         for index in 0..<specialDays.count {
             guard let calculatedDate = datePicker.calendar.date(byAdding: .day,
                                                                 value: 100 * (index + 1),
-                                                                to: self.datePicker.date)
+                                                                to: date)
             else { return }
             let newDate = dateFormatter.string(from: calculatedDate)
-            dateLabels[index].text = newDate
+            self.dateLabels[index].text = newDate
         }
     }
 }
