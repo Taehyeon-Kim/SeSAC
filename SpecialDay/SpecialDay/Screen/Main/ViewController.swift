@@ -21,8 +21,6 @@ struct SpecialDay {
 }
 
 class ViewController: UIViewController {
-    
-    private var currentDate: Date?
     private var specialDays: [SpecialDay] = SpecialDay.sampleData
     private lazy var dateFormatter = DateFormatter()
     
@@ -38,7 +36,6 @@ class ViewController: UIViewController {
     }
     
     private func initialize() {
-        self.currentDate = self.datePicker.date
         self.configureUI()
         self.configureDateFormatter()
     }
@@ -47,6 +44,16 @@ class ViewController: UIViewController {
         self.configureBackgroundImageViews()
         self.configureLabels()
         self.updateDate()
+    }
+    
+    // preferredDatePickerStyle이상에서만 동작하기 때문에 작성해줌.
+    @available(iOS 13.4, *)
+    private func configureDatePicker() {
+        if #available(iOS 14.0, *) {
+            self.datePicker.preferredDatePickerStyle = .inline
+        } else {
+            self.datePicker.preferredDatePickerStyle = .wheels
+        }
     }
     
     private func configureBackgroundImageViews() {
