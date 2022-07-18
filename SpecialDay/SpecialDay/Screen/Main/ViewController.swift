@@ -23,6 +23,7 @@ struct SpecialDay {
 class ViewController: UIViewController {
     private var specialDays: [SpecialDay] = SpecialDay.sampleData
     private lazy var dateFormatter = DateFormatter()
+    private var currentDate: Date = Date()
     
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet var backgroundImageViews: [UIImageView]!
@@ -38,7 +39,10 @@ class ViewController: UIViewController {
     private func initialize() {
         self.configureUI()
         self.configureDateFormatter()
-        self.updateDate(self.datePicker.date)
+        if #available(iOS 13.4, *) {
+            self.configureDatePicker()
+        }
+        self.updateDate()
     }
     
     private func configureUI() {
@@ -80,10 +84,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func dateValueChanged(_ sender: UIDatePicker) {
-        self.updateDate(sender.date)
+        UserDefaults.standard.set(sender.date, forKey: "currentDate")
+        self.updateDate()
     }
     
-    private func updateDate(_ date: Date) {
+    private func updateDate() {
+        let date = UserDefaults.standard.object(forKey: "currentDate") as! Date
+        self.currentDate = date
+        self.datePicker.date = date
+        
         for index in 0..<specialDays.count {
             guard let calculatedDate = datePicker.calendar.date(byAdding: .day,
                                                                 value: 100 * (index + 1),
