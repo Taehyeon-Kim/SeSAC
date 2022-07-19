@@ -8,24 +8,24 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Shopping Table View Controller-->
+        <!--쇼핑-->
         <scene sceneID="fYJ-Td-LAO">
             <objects>
                 <tableViewController id="1fB-1l-798" customClass="ShoppingTableViewController" customModule="SeSACWeek3" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="EvV-YU-CTJ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="EvV-YU-CTJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="InputTableViewCell" rowHeight="95" id="T5Z-9o-gmd" customClass="InputTableViewCell" customModule="SeSACWeek3" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="95"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="InputTableViewCell" rowHeight="70" id="T5Z-9o-gmd" customClass="InputTableViewCell" customModule="SeSACWeek3" customModuleProvider="target">
+                                <rect key="frame" x="20" y="49.5" width="374" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="T5Z-9o-gmd" id="Ucb-aK-ekz">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="95"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="70"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="무엇을 구매하실 건가요?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cwe-1d-M2n">
-                                            <rect key="frame" x="16" y="22.5" width="316" height="50"/>
+                                            <rect key="frame" x="16" y="10" width="276" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="6lI-aW-JrE"/>
                                             </constraints>
@@ -33,7 +33,7 @@
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZ1-5M-jWE">
-                                            <rect key="frame" x="348" y="29.5" width="50" height="36"/>
+                                            <rect key="frame" x="308" y="17" width="50" height="36"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="50" id="G1D-Ou-Kqj"/>
                                                 <constraint firstAttribute="height" constant="36" id="eQ8-QV-Sj7"/>
@@ -53,16 +53,17 @@
                                         <constraint firstItem="Cwe-1d-M2n" firstAttribute="centerY" secondItem="Ucb-aK-ekz" secondAttribute="centerY" id="t9C-8h-OMJ"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <connections>
                                     <outlet property="inputButton" destination="GZ1-5M-jWE" id="9ps-Hk-Zin"/>
                                     <outlet property="inputTextField" destination="Cwe-1d-M2n" id="go0-f7-bus"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShoppingTableViewCell" rowHeight="75" id="UzG-bn-0sO" customClass="ShoppingTableViewCell" customModule="SeSACWeek3" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="139.5" width="414" height="75"/>
+                                <rect key="frame" x="20" y="119.5" width="374" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UzG-bn-0sO" id="qnj-zs-2wU">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="75"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMG-bJ-MbN">
@@ -81,7 +82,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CYn-dG-xNX">
-                                            <rect key="frame" x="376" y="26.5" width="22" height="22"/>
+                                            <rect key="frame" x="336" y="26.5" width="22" height="22"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" image="star" catalog="system"/>
                                         </button>
@@ -97,6 +98,7 @@
                                         <constraint firstAttribute="trailing" secondItem="CYn-dG-xNX" secondAttribute="trailing" constant="16" id="uhQ-JE-Q7u"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <connections>
                                     <outlet property="checkboxButton" destination="mMG-bJ-MbN" id="TxY-oh-HW8"/>
                                     <outlet property="shoppingListLabel" destination="x6q-te-O3H" id="833-le-nfD"/>
@@ -109,7 +111,7 @@
                             <outlet property="delegate" destination="1fB-1l-798" id="ree-z0-asm"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="2dv-2x-czR"/>
+                    <navigationItem key="navigationItem" title="쇼핑" id="2dv-2x-czR"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5qF-Gd-f1l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -139,6 +141,9 @@
         <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
