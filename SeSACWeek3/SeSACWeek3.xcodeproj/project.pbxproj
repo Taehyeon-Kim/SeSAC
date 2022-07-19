@@ -22,6 +22,8 @@
 		BDCA1E2B2886443F00968372 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA1E2A2886443F00968372 /* SearchViewController.swift */; };
 		BDCA1E302886451600968372 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA1E2F2886451600968372 /* UIViewController+Extension.swift */; };
 		BDCA1E332886478A00968372 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA1E322886478A00968372 /* UITextField+Extension.swift */; };
+		BDCA1E3528864BB000968372 /* BucketlistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA1E3428864BB000968372 /* BucketlistTableViewController.swift */; };
+		BDCA1E3728864D9D00968372 /* BucketlistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA1E3628864D9D00968372 /* BucketlistTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		BDCA1E2A2886443F00968372 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		BDCA1E2F2886451600968372 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		BDCA1E322886478A00968372 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		BDCA1E3428864BB000968372 /* BucketlistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketlistTableViewController.swift; sourceTree = "<group>"; };
+		BDCA1E3628864D9D00968372 /* BucketlistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketlistTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,8 @@
 			children = (
 				BDCA1E242886404700968372 /* Trend.storyboard */,
 				BDCA1E282886443300968372 /* TrendViewController.swift */,
+				BDCA1E3428864BB000968372 /* BucketlistTableViewController.swift */,
+				BDCA1E3628864D9D00968372 /* BucketlistTableViewCell.swift */,
 			);
 			path = Trend;
 			sourceTree = "<group>";
@@ -214,8 +220,10 @@
 				BDCA1DE828856E2500968372 /* AppDelegate.swift in Sources */,
 				BDCA1E292886443300968372 /* TrendViewController.swift in Sources */,
 				BDCA1E302886451600968372 /* UIViewController+Extension.swift in Sources */,
+				BDCA1E3728864D9D00968372 /* BucketlistTableViewCell.swift in Sources */,
 				BDCA1E332886478A00968372 /* UITextField+Extension.swift in Sources */,
 				BDCA1DEA28856E2500968372 /* SceneDelegate.swift in Sources */,
+				BDCA1E3528864BB000968372 /* BucketlistTableViewController.swift in Sources */,
 				BDCA1E01288572CF00968372 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

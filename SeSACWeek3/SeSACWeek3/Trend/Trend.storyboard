@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nvc-xh-68d">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -40,7 +40,78 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="117"/>
+            <point key="canvasLocation" x="-7" y="117"/>
+        </scene>
+        <!--Bucketlist Table View Controller-->
+        <scene sceneID="NWj-qp-sgM">
+            <objects>
+                <tableViewController id="nvc-xh-68d" customClass="BucketlistTableViewController" customModule="SeSACWeek3" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="UsX-fZ-i4k">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BucketlistTableViewCell" rowHeight="114" id="2LP-0n-dpV" customClass="BucketlistTableViewCell" customModule="SeSACWeek3" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="114"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2LP-0n-dpV" id="nlW-PB-xlq">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="114"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qnh-v8-HQZ">
+                                            <rect key="frame" x="20" y="35" width="44" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="44" id="Nxh-QB-prR"/>
+                                                <constraint firstAttribute="height" constant="44" id="tZG-jQ-M8b"/>
+                                            </constraints>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        </button>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="wCK-32-LFY">
+                                            <rect key="frame" x="80" y="35" width="314" height="44"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="할 일 목록" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmS-ry-8Ba">
+                                                    <rect key="frame" x="0.0" y="0.0" width="314" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="날짜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kr0-Go-xyn">
+                                                    <rect key="frame" x="0.0" y="23" width="314" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="x9w-BQ-mNP"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="wCK-32-LFY" firstAttribute="leading" secondItem="Qnh-v8-HQZ" secondAttribute="trailing" constant="16" id="NIJ-70-bnF"/>
+                                        <constraint firstItem="Qnh-v8-HQZ" firstAttribute="centerY" secondItem="nlW-PB-xlq" secondAttribute="centerY" id="RhL-cN-W0R"/>
+                                        <constraint firstAttribute="trailing" secondItem="wCK-32-LFY" secondAttribute="trailing" constant="20" id="ncR-2G-FBu"/>
+                                        <constraint firstItem="Qnh-v8-HQZ" firstAttribute="leading" secondItem="nlW-PB-xlq" secondAttribute="leading" constant="20" id="ot3-Qb-1Dx"/>
+                                        <constraint firstItem="wCK-32-LFY" firstAttribute="centerY" secondItem="Qnh-v8-HQZ" secondAttribute="centerY" id="rZ7-5N-KEM"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="bucketlistLabel" destination="hmS-ry-8Ba" id="UbX-ah-fzv"/>
+                                    <outlet property="checkboxButton" destination="Qnh-v8-HQZ" id="Cod-mg-So1"/>
+                                    <outlet property="dateLabel" destination="Kr0-Go-xyn" id="Wkd-Lb-3CN"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="nvc-xh-68d" id="ac2-Y2-JQL"/>
+                            <outlet property="delegate" destination="nvc-xh-68d" id="szK-lt-Lrk"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P9A-QC-eE6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886.95652173913049" y="116.51785714285714"/>
         </scene>
     </scenes>
     <resources>
