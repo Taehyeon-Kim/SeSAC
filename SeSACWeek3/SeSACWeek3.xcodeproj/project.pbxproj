@@ -15,6 +15,13 @@
 		BDCA1DF428856E2700968372 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDCA1DF228856E2700968372 /* LaunchScreen.storyboard */; };
 		BDCA1DFF28856E9F00968372 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDCA1DFE28856E9F00968372 /* Setting.storyboard */; };
 		BDCA1E01288572CF00968372 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA1E00288572CF00968372 /* SettingViewController.swift */; };
+		BDCA1E232886401800968372 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDCA1E222886401800968372 /* Search.storyboard */; };
+		BDCA1E252886404700968372 /* Trend.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDCA1E242886404700968372 /* Trend.storyboard */; };
+		BDCA1E272886419400968372 /* Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDCA1E262886419400968372 /* Intro.storyboard */; };
+		BDCA1E292886443300968372 /* TrendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA1E282886443300968372 /* TrendViewController.swift */; };
+		BDCA1E2B2886443F00968372 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA1E2A2886443F00968372 /* SearchViewController.swift */; };
+		BDCA1E302886451600968372 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA1E2F2886451600968372 /* UIViewController+Extension.swift */; };
+		BDCA1E332886478A00968372 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA1E322886478A00968372 /* UITextField+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +35,13 @@
 		BDCA1DF528856E2700968372 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDCA1DFE28856E9F00968372 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		BDCA1E00288572CF00968372 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		BDCA1E222886401800968372 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		BDCA1E242886404700968372 /* Trend.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Trend.storyboard; sourceTree = "<group>"; };
+		BDCA1E262886419400968372 /* Intro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Intro.storyboard; sourceTree = "<group>"; };
+		BDCA1E282886443300968372 /* TrendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendViewController.swift; sourceTree = "<group>"; };
+		BDCA1E2A2886443F00968372 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		BDCA1E2F2886451600968372 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		BDCA1E322886478A00968372 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +74,10 @@
 		BDCA1DE628856E2500968372 /* SeSACWeek3 */ = {
 			isa = PBXGroup;
 			children = (
+				BDCA1E312886477000968372 /* Extensions */,
+				BDCA1E2E2886446000968372 /* Intro */,
+				BDCA1E2D2886445700968372 /* Trend */,
+				BDCA1E2C2886444E00968372 /* Search */,
 				BDCA1DFB28856E7A00968372 /* Setting */,
 				BDCA1DE728856E2500968372 /* AppDelegate.swift */,
 				BDCA1DE928856E2500968372 /* SceneDelegate.swift */,
@@ -79,6 +97,41 @@
 				BDCA1E00288572CF00968372 /* SettingViewController.swift */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		BDCA1E2C2886444E00968372 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				BDCA1E222886401800968372 /* Search.storyboard */,
+				BDCA1E2A2886443F00968372 /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		BDCA1E2D2886445700968372 /* Trend */ = {
+			isa = PBXGroup;
+			children = (
+				BDCA1E242886404700968372 /* Trend.storyboard */,
+				BDCA1E282886443300968372 /* TrendViewController.swift */,
+			);
+			path = Trend;
+			sourceTree = "<group>";
+		};
+		BDCA1E2E2886446000968372 /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				BDCA1E262886419400968372 /* Intro.storyboard */,
+			);
+			path = Intro;
+			sourceTree = "<group>";
+		};
+		BDCA1E312886477000968372 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BDCA1E2F2886451600968372 /* UIViewController+Extension.swift */,
+				BDCA1E322886478A00968372 /* UITextField+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +196,9 @@
 				BDCA1DF128856E2700968372 /* Assets.xcassets in Resources */,
 				BDCA1DEF28856E2500968372 /* Main.storyboard in Resources */,
 				BDCA1DFF28856E9F00968372 /* Setting.storyboard in Resources */,
+				BDCA1E252886404700968372 /* Trend.storyboard in Resources */,
+				BDCA1E272886419400968372 /* Intro.storyboard in Resources */,
+				BDCA1E232886401800968372 /* Search.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,8 +209,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDCA1E2B2886443F00968372 /* SearchViewController.swift in Sources */,
 				BDCA1DEC28856E2500968372 /* ViewController.swift in Sources */,
 				BDCA1DE828856E2500968372 /* AppDelegate.swift in Sources */,
+				BDCA1E292886443300968372 /* TrendViewController.swift in Sources */,
+				BDCA1E302886451600968372 /* UIViewController+Extension.swift in Sources */,
+				BDCA1E332886478A00968372 /* UITextField+Extension.swift in Sources */,
 				BDCA1DEA28856E2500968372 /* SceneDelegate.swift in Sources */,
 				BDCA1E01288572CF00968372 /* SettingViewController.swift in Sources */,
 			);
