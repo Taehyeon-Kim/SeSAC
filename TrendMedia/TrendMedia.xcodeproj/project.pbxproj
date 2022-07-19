@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BDC5C00928869E64004F297E /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDC5C00828869E64004F297E /* Search.storyboard */; };
+		BDC5C00B28869EC1004F297E /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC5C00A28869EC1004F297E /* SearchTableViewController.swift */; };
 		BDCA1D962884DE0000968372 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA1D952884DE0000968372 /* AppDelegate.swift */; };
 		BDCA1D982884DE0000968372 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA1D972884DE0000968372 /* SceneDelegate.swift */; };
 		BDCA1D9A2884DE0000968372 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA1D992884DE0000968372 /* ViewController.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BDC5C00828869E64004F297E /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		BDC5C00A28869EC1004F297E /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		BDCA1D922884DE0000968372 /* TrendMedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrendMedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDCA1D952884DE0000968372 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDCA1D972884DE0000968372 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +45,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BDC5C00728869E5B004F297E /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				BDC5C00828869E64004F297E /* Search.storyboard */,
+				BDC5C00A28869EC1004F297E /* SearchTableViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		BDCA1D892884DE0000968372 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +73,7 @@
 		BDCA1D942884DE0000968372 /* TrendMedia */ = {
 			isa = PBXGroup;
 			children = (
+				BDC5C00728869E5B004F297E /* Search */,
 				BDCA1DD62884F12700968372 /* Home */,
 				BDCA1D952884DE0000968372 /* AppDelegate.swift */,
 				BDCA1D972884DE0000968372 /* SceneDelegate.swift */,
@@ -143,6 +157,7 @@
 				BDCA1D9F2884DE0200968372 /* Assets.xcassets in Resources */,
 				BDCA1D9D2884DE0000968372 /* Main.storyboard in Resources */,
 				BDCA1DD82884F13200968372 /* Home.storyboard in Resources */,
+				BDC5C00928869E64004F297E /* Search.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +170,7 @@
 			files = (
 				BDCA1DDA2884FE3400968372 /* SettingTableViewController.swift in Sources */,
 				BDCA1D9A2884DE0000968372 /* ViewController.swift in Sources */,
+				BDC5C00B28869EC1004F297E /* SearchTableViewController.swift in Sources */,
 				BDCA1D962884DE0000968372 /* AppDelegate.swift in Sources */,
 				BDCA1D982884DE0000968372 /* SceneDelegate.swift in Sources */,
 			);
