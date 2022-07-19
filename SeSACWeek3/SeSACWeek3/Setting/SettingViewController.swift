@@ -45,7 +45,7 @@ final class SettingViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return SettingType.allCases[section].description
+        return String(describing: SettingType.allCases[section])
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
