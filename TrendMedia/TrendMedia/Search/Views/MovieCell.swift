@@ -8,4 +8,8 @@
 import UIKit
 
 final class MovieCell: UITableViewCell {
+    @IBOutlet weak var posterImageView: UIImageView!
+    @IBOutlet weak var movieTitleLabel: UILabel!
+    @IBOutlet weak var movieReleaseLabel: UILabel!
+    @IBOutlet weak var movieDescriptionLabel: UILabel!
 }
