@@ -23,7 +23,7 @@ enum SettingType: CaseIterable, CustomStringConvertible {
         }
     }
     
-    var numberOfSections: Int {
+    var numberOfRowInSections: Int {
         return contents.count
     }
     
@@ -49,7 +49,7 @@ final class SettingViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return SettingType.allCases[section].numberOfSections
+        return SettingType.allCases[section].numberOfRowInSections
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
