@@ -13,7 +13,7 @@ class SettingTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.tableView.rowHeight = 80
     }
     
     // 섹션의 개수는 default가 1 (그렇기 때문에 선택적인 요소이다)
@@ -61,22 +61,38 @@ class SettingTableViewController: UITableViewController {
     // ex. 카톡 이름, 프로필 사진, 상태 메시지 등 - 데이터가 셀마다 각각 다름
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "settingCell")!
+        print("cell for row at", indexPath)
         
-        if indexPath.section == 0 {
-            cell.textLabel?.text = birthdatFriends[indexPath.row]
-            cell.textLabel?.textColor = .systemGreen
-            cell.textLabel?.font = .boldSystemFont(ofSize: 20)
-        } else if indexPath.section == 1 {
-            cell.textLabel?.text = "1번째 섹션의 텍스트"
-            cell.textLabel?.textColor = .systemPink
-            cell.textLabel?.font = .italicSystemFont(ofSize: 25)
-        } else if indexPath.section == 2 {
-            cell.textLabel?.text = "2번째 섹션의 텍스트"
+        if indexPath.section == 2 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "rightDetailCell")!
+            cell.textLabel?.text = "2번째 인덱스 섹션의 텍스트"
             cell.textLabel?.textColor = .brown
             cell.textLabel?.font = .boldSystemFont(ofSize: 15)
+            cell.detailTextLabel?.text = "디테일 레이블"
+            
+            // 간단한 조건 판단의 경우 삼항 연산자를 사용해도 괜찮을 것 같다.
+            // 너무 남용해서는 안될 것.
+            cell.imageView?.image = indexPath.row % 2 == 0 ? UIImage(systemName: "star") : UIImage(systemName: "star.fill")
+            cell.backgroundColor = indexPath.row % 2 == 0 ? .white : .systemGray6
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "settingCell")!
+            if indexPath.section == 0 {
+                cell.textLabel?.text = birthdatFriends[indexPath.row]
+                cell.textLabel?.textColor = .systemGreen
+                cell.textLabel?.font = .boldSystemFont(ofSize: 20)
+            } else if indexPath.section == 1 {
+                cell.textLabel?.text = "1번째 인덱스 섹션의 텍스트"
+                cell.textLabel?.textColor = .systemPink
+                cell.textLabel?.font = .italicSystemFont(ofSize: 25)
+            }
+            return cell
         }
-        
-        return cell
+    }
+    
+    // 셀의 높이(옵션, 빈도 높은) (feat. tableView.rowHeight)
+    // 함수의 우선 순위가 더 높다. 동적으로 높이 조정할 가능성이 더 높기 때문
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
 }
