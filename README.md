@@ -19,3 +19,11 @@
 `week2`
 - [Day6, 220711](https://github.com/Taehyeon-Kim/SeSAC/issues/28)
 - [Day7, 220712](https://github.com/Taehyeon-Kim/SeSAC/issues/36)
+- [Day8, 220713](https://github.com/Taehyeon-Kim/SeSAC/issues/43)
+- [Day9, 220714](https://github.com/Taehyeon-Kim/SeSAC/issues/47)
+- [Day10, 220715](https://github.com/Taehyeon-Kim/SeSAC/issues/50)
+
+`week3`
+- [Day11, 220718](https://github.com/Taehyeon-Kim/SeSAC/issues/54)
+- [Day12, 220719](https://github.com/Taehyeon-Kim/SeSAC/issues/59)
+
