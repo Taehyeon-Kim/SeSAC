@@ -10,6 +10,7 @@
 		BD48B6192887083D003A1122 /* Shopping.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD48B6182887083D003A1122 /* Shopping.storyboard */; };
 		BD48B61B28870873003A1122 /* ShoppingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD48B61A28870873003A1122 /* ShoppingTableViewController.swift */; };
 		BD48B61E28870947003A1122 /* InputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD48B61D28870947003A1122 /* InputTableViewCell.swift */; };
+		BD48B62028870E6A003A1122 /* ShoppingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD48B61F28870E6A003A1122 /* ShoppingTableViewCell.swift */; };
 		BDCA1DE828856E2500968372 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA1DE728856E2500968372 /* AppDelegate.swift */; };
 		BDCA1DEA28856E2500968372 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA1DE928856E2500968372 /* SceneDelegate.swift */; };
 		BDCA1DEC28856E2500968372 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA1DEB28856E2500968372 /* ViewController.swift */; };
@@ -33,6 +34,7 @@
 		BD48B6182887083D003A1122 /* Shopping.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Shopping.storyboard; sourceTree = "<group>"; };
 		BD48B61A28870873003A1122 /* ShoppingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingTableViewController.swift; sourceTree = "<group>"; };
 		BD48B61D28870947003A1122 /* InputTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTableViewCell.swift; sourceTree = "<group>"; };
+		BD48B61F28870E6A003A1122 /* ShoppingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingTableViewCell.swift; sourceTree = "<group>"; };
 		BDCA1DE428856E2500968372 /* SeSACWeek3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACWeek3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDCA1DE728856E2500968372 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDCA1DE928856E2500968372 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				BD48B61D28870947003A1122 /* InputTableViewCell.swift */,
+				BD48B61F28870E6A003A1122 /* ShoppingTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDCA1E2B2886443F00968372 /* SearchViewController.swift in Sources */,
+				BD48B62028870E6A003A1122 /* ShoppingTableViewCell.swift in Sources */,
 				BD48B61B28870873003A1122 /* ShoppingTableViewController.swift in Sources */,
 				BDCA1DEC28856E2500968372 /* ViewController.swift in Sources */,
 				BDCA1DE828856E2500968372 /* AppDelegate.swift in Sources */,

@@ -58,13 +58,50 @@
                                     <outlet property="inputTextField" destination="Cwe-1d-M2n" id="go0-f7-bus"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="116" id="UzG-bn-0sO">
-                                <rect key="frame" x="0.0" y="139.5" width="414" height="116"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShoppingTableViewCell" rowHeight="75" id="UzG-bn-0sO" customClass="ShoppingTableViewCell" customModule="SeSACWeek3" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="139.5" width="414" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UzG-bn-0sO" id="qnj-zs-2wU">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="116"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMG-bJ-MbN">
+                                            <rect key="frame" x="16" y="25.5" width="24" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="24" id="Bht-hx-DFu"/>
+                                                <constraint firstAttribute="height" constant="24" id="xsm-f4-0R5"/>
+                                            </constraints>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="" image="checkmark.square" catalog="system"/>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x6q-te-O3H">
+                                            <rect key="frame" x="56" y="16" width="42" height="43"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CYn-dG-xNX">
+                                            <rect key="frame" x="376" y="26.5" width="22" height="22"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="star" catalog="system"/>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="mMG-bJ-MbN" firstAttribute="leading" secondItem="qnj-zs-2wU" secondAttribute="leading" constant="16" id="7XE-gk-4oT"/>
+                                        <constraint firstItem="CYn-dG-xNX" firstAttribute="centerY" secondItem="x6q-te-O3H" secondAttribute="centerY" id="81x-QF-L4n"/>
+                                        <constraint firstAttribute="bottom" secondItem="x6q-te-O3H" secondAttribute="bottom" constant="16" id="ROp-ec-I4M"/>
+                                        <constraint firstItem="CYn-dG-xNX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="x6q-te-O3H" secondAttribute="trailing" constant="16" id="bHu-Mg-5cZ"/>
+                                        <constraint firstItem="mMG-bJ-MbN" firstAttribute="centerY" secondItem="x6q-te-O3H" secondAttribute="centerY" id="cTF-1s-ujh"/>
+                                        <constraint firstItem="x6q-te-O3H" firstAttribute="top" secondItem="qnj-zs-2wU" secondAttribute="top" constant="16" id="foH-hR-bna"/>
+                                        <constraint firstItem="x6q-te-O3H" firstAttribute="leading" secondItem="mMG-bJ-MbN" secondAttribute="trailing" constant="16" id="uIb-G0-QP1"/>
+                                        <constraint firstAttribute="trailing" secondItem="CYn-dG-xNX" secondAttribute="trailing" constant="16" id="uhQ-JE-Q7u"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="checkboxButton" destination="mMG-bJ-MbN" id="TxY-oh-HW8"/>
+                                    <outlet property="shoppingListLabel" destination="x6q-te-O3H" id="833-le-nfD"/>
+                                    <outlet property="starButton" destination="CYn-dG-xNX" id="NLK-CK-17E"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -98,6 +135,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="checkmark.square" catalog="system" width="128" height="114"/>
+        <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
