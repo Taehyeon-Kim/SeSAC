@@ -7,6 +7,6 @@
 
 import UIKit
 
-class SearchTableViewController: UITableViewController {
+final class SearchTableViewController: UITableViewController {
 
 }
