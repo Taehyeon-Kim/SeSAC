@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD48B6192887083D003A1122 /* Shopping.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD48B6182887083D003A1122 /* Shopping.storyboard */; };
+		BD48B61B28870873003A1122 /* ShoppingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD48B61A28870873003A1122 /* ShoppingTableViewController.swift */; };
 		BDCA1DE828856E2500968372 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA1DE728856E2500968372 /* AppDelegate.swift */; };
 		BDCA1DEA28856E2500968372 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA1DE928856E2500968372 /* SceneDelegate.swift */; };
 		BDCA1DEC28856E2500968372 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA1DEB28856E2500968372 /* ViewController.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD48B6182887083D003A1122 /* Shopping.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Shopping.storyboard; sourceTree = "<group>"; };
+		BD48B61A28870873003A1122 /* ShoppingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingTableViewController.swift; sourceTree = "<group>"; };
 		BDCA1DE428856E2500968372 /* SeSACWeek3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACWeek3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDCA1DE728856E2500968372 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDCA1DE928856E2500968372 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +63,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD48B6172887082D003A1122 /* Shopping */ = {
+			isa = PBXGroup;
+			children = (
+				BD48B6182887083D003A1122 /* Shopping.storyboard */,
+				BD48B61A28870873003A1122 /* ShoppingTableViewController.swift */,
+			);
+			path = Shopping;
+			sourceTree = "<group>";
+		};
 		BDCA1DDB28856E2500968372 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +96,7 @@
 				BDCA1E2D2886445700968372 /* Trend */,
 				BDCA1E2C2886444E00968372 /* Search */,
 				BDCA1DFB28856E7A00968372 /* Setting */,
+				BD48B6172887082D003A1122 /* Shopping */,
 				BDCA1DE728856E2500968372 /* AppDelegate.swift */,
 				BDCA1DE928856E2500968372 /* SceneDelegate.swift */,
 				BDCA1DEB28856E2500968372 /* ViewController.swift */,
@@ -200,6 +214,7 @@
 			files = (
 				BDCA1DF428856E2700968372 /* LaunchScreen.storyboard in Resources */,
 				BDCA1DF128856E2700968372 /* Assets.xcassets in Resources */,
+				BD48B6192887083D003A1122 /* Shopping.storyboard in Resources */,
 				BDCA1DEF28856E2500968372 /* Main.storyboard in Resources */,
 				BDCA1DFF28856E9F00968372 /* Setting.storyboard in Resources */,
 				BDCA1E252886404700968372 /* Trend.storyboard in Resources */,
@@ -216,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDCA1E2B2886443F00968372 /* SearchViewController.swift in Sources */,
+				BD48B61B28870873003A1122 /* ShoppingTableViewController.swift in Sources */,
 				BDCA1DEC28856E2500968372 /* ViewController.swift in Sources */,
 				BDCA1DE828856E2500968372 /* AppDelegate.swift in Sources */,
 				BDCA1E292886443300968372 /* TrendViewController.swift in Sources */,
