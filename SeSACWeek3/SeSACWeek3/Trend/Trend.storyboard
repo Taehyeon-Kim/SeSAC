@@ -46,13 +46,34 @@
         <scene sceneID="NWj-qp-sgM">
             <objects>
                 <tableViewController id="nvc-xh-68d" customClass="BucketlistTableViewController" customModule="SeSACWeek3" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="UsX-fZ-i4k">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="UsX-fZ-i4k">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="jbX-BH-Sqi">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="78"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nFq-II-Pha">
+                                    <rect key="frame" x="20" y="20" width="374" height="38"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <action selector="userTextFieldDidFinish:" destination="nvc-xh-68d" eventType="editingDidEndOnExit" id="NeZ-Uz-5Ab"/>
+                                    </connections>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="nFq-II-Pha" firstAttribute="leading" secondItem="jbX-BH-Sqi" secondAttribute="leading" constant="20" id="enE-gL-f20"/>
+                                <constraint firstAttribute="bottom" secondItem="nFq-II-Pha" secondAttribute="bottom" constant="20" id="lc2-NE-lYg"/>
+                                <constraint firstItem="nFq-II-Pha" firstAttribute="top" secondItem="jbX-BH-Sqi" secondAttribute="top" constant="20" id="lvB-Od-1aG"/>
+                                <constraint firstAttribute="trailing" secondItem="nFq-II-Pha" secondAttribute="trailing" constant="20" id="q7I-B0-aFc"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BucketlistTableViewCell" rowHeight="114" id="2LP-0n-dpV" customClass="BucketlistTableViewCell" customModule="SeSACWeek3" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="114"/>
+                                <rect key="frame" x="0.0" y="122.5" width="414" height="114"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2LP-0n-dpV" id="nlW-PB-xlq">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="114"/>
@@ -108,6 +129,9 @@
                             <outlet property="delegate" destination="nvc-xh-68d" id="szK-lt-Lrk"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="userTextField" destination="nFq-II-Pha" id="jqd-eX-7jq"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P9A-QC-eE6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
