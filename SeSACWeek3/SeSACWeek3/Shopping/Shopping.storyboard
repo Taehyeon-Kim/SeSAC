@@ -31,6 +31,9 @@
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <action selector="textFieldInputDidFinish:" destination="1fB-1l-798" eventType="editingDidEndOnExit" id="9i1-yM-2ZP"/>
+                                            </connections>
                                         </textField>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZ1-5M-jWE">
                                             <rect key="frame" x="308" y="17" width="50" height="36"/>

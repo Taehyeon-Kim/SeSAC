@@ -8,7 +8,19 @@
 import UIKit
 
 class ShoppingTableViewController: UITableViewController {
-
+    
+    var shoppingList: [String] = [
+        "그립톡 구매하기",
+        "사이다 구매",
+        "아이패드 케이스 최저가 알아보기",
+        "양말"
+    ]
+    
+    @IBAction func textFieldInputDidFinish(_ sender: UITextField) {
+        self.shoppingList.append(sender.text!)
+        self.tableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -21,7 +33,7 @@ class ShoppingTableViewController: UITableViewController {
         if section == 0 {
             return 1
         } else {
-            return 4
+            return self.shoppingList.count
         }
     }
     
@@ -31,6 +43,7 @@ class ShoppingTableViewController: UITableViewController {
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ShoppingTableViewCell") as! ShoppingTableViewCell
+            cell.shoppingListLabel.text = self.shoppingList[indexPath.row]
             return cell
         }
     }
@@ -39,7 +52,18 @@ class ShoppingTableViewController: UITableViewController {
         if indexPath.section == 0 {
             return 60
         } else {
-            return 45
+            return 50
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            self.shoppingList.remove(at: indexPath.row)
+            self.tableView.reloadData()
         }
     }
 }
