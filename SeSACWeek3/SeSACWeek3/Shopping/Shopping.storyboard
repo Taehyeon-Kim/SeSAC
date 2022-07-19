@@ -17,11 +17,52 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="T5Z-9o-gmd">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="InputTableViewCell" rowHeight="95" id="T5Z-9o-gmd" customClass="InputTableViewCell" customModule="SeSACWeek3" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="95"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="T5Z-9o-gmd" id="Ucb-aK-ekz">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="95"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="무엇을 구매하실 건가요?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cwe-1d-M2n">
+                                            <rect key="frame" x="16" y="22.5" width="316" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="6lI-aW-JrE"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZ1-5M-jWE">
+                                            <rect key="frame" x="348" y="29.5" width="50" height="36"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="G1D-Ou-Kqj"/>
+                                                <constraint firstAttribute="height" constant="36" id="eQ8-QV-Sj7"/>
+                                            </constraints>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="추가"/>
+                                            <connections>
+                                                <action selector="inputButtonTapped:" destination="T5Z-9o-gmd" eventType="touchUpInside" id="mmu-EL-w9V"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Cwe-1d-M2n" firstAttribute="leading" secondItem="Ucb-aK-ekz" secondAttribute="leading" constant="16" id="aIM-nH-JCd"/>
+                                        <constraint firstItem="GZ1-5M-jWE" firstAttribute="leading" secondItem="Cwe-1d-M2n" secondAttribute="trailing" constant="16" id="ipw-dd-6bz"/>
+                                        <constraint firstItem="GZ1-5M-jWE" firstAttribute="centerY" secondItem="Ucb-aK-ekz" secondAttribute="centerY" id="mSi-eS-PDM"/>
+                                        <constraint firstAttribute="trailing" secondItem="GZ1-5M-jWE" secondAttribute="trailing" constant="16" id="o2I-sF-dgF"/>
+                                        <constraint firstItem="Cwe-1d-M2n" firstAttribute="centerY" secondItem="Ucb-aK-ekz" secondAttribute="centerY" id="t9C-8h-OMJ"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="inputButton" destination="GZ1-5M-jWE" id="9ps-Hk-Zin"/>
+                                    <outlet property="inputTextField" destination="Cwe-1d-M2n" id="go0-f7-bus"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="116" id="UzG-bn-0sO">
+                                <rect key="frame" x="0.0" y="139.5" width="414" height="116"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UzG-bn-0sO" id="qnj-zs-2wU">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="116"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>

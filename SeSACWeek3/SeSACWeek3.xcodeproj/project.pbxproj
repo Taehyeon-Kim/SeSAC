@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BD48B6192887083D003A1122 /* Shopping.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD48B6182887083D003A1122 /* Shopping.storyboard */; };
 		BD48B61B28870873003A1122 /* ShoppingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD48B61A28870873003A1122 /* ShoppingTableViewController.swift */; };
+		BD48B61E28870947003A1122 /* InputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD48B61D28870947003A1122 /* InputTableViewCell.swift */; };
 		BDCA1DE828856E2500968372 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA1DE728856E2500968372 /* AppDelegate.swift */; };
 		BDCA1DEA28856E2500968372 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA1DE928856E2500968372 /* SceneDelegate.swift */; };
 		BDCA1DEC28856E2500968372 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA1DEB28856E2500968372 /* ViewController.swift */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		BD48B6182887083D003A1122 /* Shopping.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Shopping.storyboard; sourceTree = "<group>"; };
 		BD48B61A28870873003A1122 /* ShoppingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingTableViewController.swift; sourceTree = "<group>"; };
+		BD48B61D28870947003A1122 /* InputTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTableViewCell.swift; sourceTree = "<group>"; };
 		BDCA1DE428856E2500968372 /* SeSACWeek3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACWeek3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDCA1DE728856E2500968372 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDCA1DE928856E2500968372 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,10 +68,19 @@
 		BD48B6172887082D003A1122 /* Shopping */ = {
 			isa = PBXGroup;
 			children = (
+				BD48B61C2887093F003A1122 /* Cell */,
 				BD48B6182887083D003A1122 /* Shopping.storyboard */,
 				BD48B61A28870873003A1122 /* ShoppingTableViewController.swift */,
 			);
 			path = Shopping;
+			sourceTree = "<group>";
+		};
+		BD48B61C2887093F003A1122 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BD48B61D28870947003A1122 /* InputTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		BDCA1DDB28856E2500968372 = {
@@ -240,6 +251,7 @@
 				BDCA1E332886478A00968372 /* UITextField+Extension.swift in Sources */,
 				BDCA1DEA28856E2500968372 /* SceneDelegate.swift in Sources */,
 				BDCA1E3528864BB000968372 /* BucketlistTableViewController.swift in Sources */,
+				BD48B61E28870947003A1122 /* InputTableViewCell.swift in Sources */,
 				BDCA1E01288572CF00968372 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
