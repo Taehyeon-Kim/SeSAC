@@ -19,4 +19,8 @@ final class SearchTableViewController: UITableViewController {
         cell.configureCell(data: movieList[indexPath.row])
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UIScreen.main.bounds.height / 6
+    }
 }
