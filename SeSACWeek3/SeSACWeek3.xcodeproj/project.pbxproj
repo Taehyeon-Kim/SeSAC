@@ -12,6 +12,8 @@
 		BD48B61E28870947003A1122 /* InputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD48B61D28870947003A1122 /* InputTableViewCell.swift */; };
 		BD48B62028870E6A003A1122 /* ShoppingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD48B61F28870E6A003A1122 /* ShoppingTableViewCell.swift */; };
 		BD828D5928879DF800664C76 /* RecommendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD828D5828879DF800664C76 /* RecommendCollectionViewCell.swift */; };
+		BD828D5C2887AE3500664C76 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = BD828D5B2887AE3500664C76 /* Kingfisher */; };
+		BD828D5F2887AE6700664C76 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = BD828D5E2887AE6700664C76 /* Toast */; };
 		BDCA1DE828856E2500968372 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA1DE728856E2500968372 /* AppDelegate.swift */; };
 		BDCA1DEA28856E2500968372 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA1DE928856E2500968372 /* SceneDelegate.swift */; };
 		BDCA1DEC28856E2500968372 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA1DEB28856E2500968372 /* ViewController.swift */; };
@@ -65,6 +67,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD828D5F2887AE6700664C76 /* Toast in Frameworks */,
+				BD828D5C2887AE3500664C76 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +194,10 @@
 			dependencies = (
 			);
 			name = SeSACWeek3;
+			packageProductDependencies = (
+				BD828D5B2887AE3500664C76 /* Kingfisher */,
+				BD828D5E2887AE6700664C76 /* Toast */,
+			);
 			productName = SeSACWeek3;
 			productReference = BDCA1DE428856E2500968372 /* SeSACWeek3.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +226,10 @@
 				Base,
 			);
 			mainGroup = BDCA1DDB28856E2500968372;
+			packageReferences = (
+				BD828D5A2887AE3500664C76 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				BD828D5D2887AE6700664C76 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+			);
 			productRefGroup = BDCA1DE528856E2500968372 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -484,6 +496,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BD828D5A2887AE3500664C76 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		BD828D5D2887AE6700664C76 /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BD828D5B2887AE3500664C76 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD828D5A2887AE3500664C76 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		BD828D5E2887AE6700664C76 /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD828D5D2887AE6700664C76 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BDCA1DDC28856E2500968372 /* Project object */;
 }
