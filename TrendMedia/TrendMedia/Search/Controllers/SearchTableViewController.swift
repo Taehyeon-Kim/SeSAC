@@ -8,15 +8,15 @@
 import UIKit
 
 final class SearchTableViewController: UITableViewController {
-    private var movieList: [Movie] = MovieInfo().movie
+    private var movieInfo: MovieInfo = MovieInfo()
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return movieList.count
+        return movieInfo.movie.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell") as! MovieCell
-        cell.configureCell(data: movieList[indexPath.row])
+        cell.configureCell(data: movieInfo.movie[indexPath.row])
         return cell
     }
     
