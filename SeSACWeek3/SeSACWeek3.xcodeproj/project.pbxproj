@@ -11,6 +11,7 @@
 		BD48B61B28870873003A1122 /* ShoppingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD48B61A28870873003A1122 /* ShoppingTableViewController.swift */; };
 		BD48B61E28870947003A1122 /* InputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD48B61D28870947003A1122 /* InputTableViewCell.swift */; };
 		BD48B62028870E6A003A1122 /* ShoppingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD48B61F28870E6A003A1122 /* ShoppingTableViewCell.swift */; };
+		BD828D5928879DF800664C76 /* RecommendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD828D5828879DF800664C76 /* RecommendCollectionViewCell.swift */; };
 		BDCA1DE828856E2500968372 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA1DE728856E2500968372 /* AppDelegate.swift */; };
 		BDCA1DEA28856E2500968372 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA1DE928856E2500968372 /* SceneDelegate.swift */; };
 		BDCA1DEC28856E2500968372 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA1DEB28856E2500968372 /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 		BDCA1E332886478A00968372 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA1E322886478A00968372 /* UITextField+Extension.swift */; };
 		BDCA1E3528864BB000968372 /* BucketlistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA1E3428864BB000968372 /* BucketlistTableViewController.swift */; };
 		BDCA1E3728864D9D00968372 /* BucketlistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA1E3628864D9D00968372 /* BucketlistTableViewCell.swift */; };
+		BDCD020228879AA9007A562C /* RecommendCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCD020128879AA9007A562C /* RecommendCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,7 @@
 		BD48B61A28870873003A1122 /* ShoppingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingTableViewController.swift; sourceTree = "<group>"; };
 		BD48B61D28870947003A1122 /* InputTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTableViewCell.swift; sourceTree = "<group>"; };
 		BD48B61F28870E6A003A1122 /* ShoppingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingTableViewCell.swift; sourceTree = "<group>"; };
+		BD828D5828879DF800664C76 /* RecommendCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCollectionViewCell.swift; sourceTree = "<group>"; };
 		BDCA1DE428856E2500968372 /* SeSACWeek3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACWeek3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDCA1DE728856E2500968372 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDCA1DE928856E2500968372 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +57,7 @@
 		BDCA1E322886478A00968372 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		BDCA1E3428864BB000968372 /* BucketlistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketlistTableViewController.swift; sourceTree = "<group>"; };
 		BDCA1E3628864D9D00968372 /* BucketlistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketlistTableViewCell.swift; sourceTree = "<group>"; };
+		BDCD020128879AA9007A562C /* RecommendCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,9 +148,11 @@
 			isa = PBXGroup;
 			children = (
 				BDCA1E242886404700968372 /* Trend.storyboard */,
+				BDCD020128879AA9007A562C /* RecommendCollectionViewController.swift */,
 				BDCA1E282886443300968372 /* TrendViewController.swift */,
 				BDCA1E3428864BB000968372 /* BucketlistTableViewController.swift */,
 				BDCA1E3628864D9D00968372 /* BucketlistTableViewCell.swift */,
+				BD828D5828879DF800664C76 /* RecommendCollectionViewCell.swift */,
 			);
 			path = Trend;
 			sourceTree = "<group>";
@@ -245,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDCA1E2B2886443F00968372 /* SearchViewController.swift in Sources */,
+				BDCD020228879AA9007A562C /* RecommendCollectionViewController.swift in Sources */,
 				BD48B62028870E6A003A1122 /* ShoppingTableViewCell.swift in Sources */,
 				BD48B61B28870873003A1122 /* ShoppingTableViewController.swift in Sources */,
 				BDCA1DEC28856E2500968372 /* ViewController.swift in Sources */,
@@ -254,6 +261,7 @@
 				BDCA1E3728864D9D00968372 /* BucketlistTableViewCell.swift in Sources */,
 				BDCA1E332886478A00968372 /* UITextField+Extension.swift in Sources */,
 				BDCA1DEA28856E2500968372 /* SceneDelegate.swift in Sources */,
+				BD828D5928879DF800664C76 /* RecommendCollectionViewCell.swift in Sources */,
 				BDCA1E3528864BB000968372 /* BucketlistTableViewController.swift in Sources */,
 				BD48B61E28870947003A1122 /* InputTableViewCell.swift in Sources */,
 				BDCA1E01288572CF00968372 /* SettingViewController.swift in Sources */,
