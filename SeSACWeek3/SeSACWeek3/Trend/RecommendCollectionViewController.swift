@@ -7,6 +7,8 @@
 
 import UIKit
 
+import Toast
+
 /*
  TableView > CollectionView
  Row > Item
@@ -36,5 +38,10 @@ class RecommendCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecommendCollectionViewCell", for: indexPath) as! RecommendCollectionViewCell
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // collection view 이름을 view로 지어놓았다. 더 정확히는 collection view 아래에 view가 있다.
+        self.view.makeToast("\(indexPath.item)번째 셀을 선택했습니다.", duration: 1, position: .center)
     }
 }
