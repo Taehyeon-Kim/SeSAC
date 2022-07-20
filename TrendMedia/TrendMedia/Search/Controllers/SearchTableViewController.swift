@@ -8,7 +8,7 @@
 import UIKit
 
 final class SearchTableViewController: UITableViewController {
-    private var movieList: [Movie] = Movie.sampleData
+    private var movieList: [Movie] = MovieInfo().movie
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return movieList.count
