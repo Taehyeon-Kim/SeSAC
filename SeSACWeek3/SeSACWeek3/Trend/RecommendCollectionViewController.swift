@@ -8,6 +8,7 @@
 import UIKit
 
 import Toast
+import Kingfisher
 
 /*
  TableView > CollectionView
@@ -16,6 +17,8 @@ import Toast
  */
 
 class RecommendCollectionViewController: UICollectionViewController {
+    
+    let imageURL = "https://img1.daumcdn.net/thumb/R1280x0/?fname=http://t1.daumcdn.net/brunch/service/user/wXP/image/6j8FvDZzIaPickhD9G5IR-u7yGc.png"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +40,12 @@ class RecommendCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecommendCollectionViewCell", for: indexPath) as! RecommendCollectionViewCell
+        
+        let url = URL(string: self.imageURL)
+        
+        cell.posterImageView.contentMode = .scaleAspectFill
+        cell.posterImageView.kf.setImage(with: url)
+        
         return cell
     }
     

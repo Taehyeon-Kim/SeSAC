@@ -8,5 +8,5 @@
 import UIKit
 
 class RecommendCollectionViewCell: UICollectionViewCell {
-    
+    @IBOutlet weak var posterImageView: UIImageView!
 }

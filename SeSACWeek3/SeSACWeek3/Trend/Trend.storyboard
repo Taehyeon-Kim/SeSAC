@@ -172,6 +172,9 @@
                                         <constraint firstItem="9Lq-9G-gXX" firstAttribute="top" secondItem="woZ-bB-2gg" secondAttribute="top" id="w1h-e4-Xpb"/>
                                     </constraints>
                                 </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="posterImageView" destination="9Lq-9G-gXX" id="6Ox-1E-hyF"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
