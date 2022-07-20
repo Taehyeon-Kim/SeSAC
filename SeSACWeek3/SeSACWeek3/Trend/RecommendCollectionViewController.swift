@@ -19,11 +19,13 @@ class RecommendCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 150, height: 150)
-        layout.scrollDirection = .horizontal
-        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-        layout.minimumLineSpacing = 8
-        layout.minimumInteritemSpacing = 8
+        let spacing: CGFloat = 8
+        let width = UIScreen.main.bounds.width - (spacing * 4)
+        layout.itemSize = CGSize(width: width / 3, height: 150)
+        layout.scrollDirection = .vertical
+        layout.sectionInset = UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
+        layout.minimumLineSpacing = spacing
+        layout.minimumInteritemSpacing = spacing
         collectionView.collectionViewLayout = layout
     }
     
