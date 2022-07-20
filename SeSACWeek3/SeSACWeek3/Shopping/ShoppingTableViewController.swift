@@ -9,53 +9,47 @@ import UIKit
 
 class ShoppingTableViewController: UITableViewController {
     
-    var shoppingList: [String] = [
+    @IBOutlet weak var inputTextField: UITextField!
+    
+    private var shoppingList: [String] = [
         "그립톡 구매하기",
         "사이다 구매",
         "아이패드 케이스 최저가 알아보기",
         "양말"
     ]
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
     @IBAction func textFieldInputDidFinish(_ sender: UITextField) {
         self.shoppingList.append(sender.text!)
         self.tableView.reloadData()
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBAction func addButtonDidTap(_ sender: UIButton) {
+        self.shoppingList.append(inputTextField.text!)
+        self.tableView.reloadData()
     }
+}
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
-    }
+// MARK: - UITableView Methods
+extension ShoppingTableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return 1
-        } else {
-            return self.shoppingList.count
-        }
+        return self.shoppingList.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "InputTableViewCell") as! InputTableViewCell
-            return cell
-        } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ShoppingTableViewCell") as! ShoppingTableViewCell
-            cell.shoppingListLabel.text = self.shoppingList[indexPath.row]
-            return cell
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ShoppingTableViewCell") as! ShoppingTableViewCell
+        cell.shoppingListLabel.text = self.shoppingList[indexPath.row]
+        return cell
     }
-    
+
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 0 {
-            return 60
-        } else {
-            return 50
-        }
+        return 50
     }
-    
+
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }

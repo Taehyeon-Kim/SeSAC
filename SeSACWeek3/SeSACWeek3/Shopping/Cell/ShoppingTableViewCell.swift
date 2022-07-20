@@ -8,7 +8,7 @@
 import UIKit
 
 final class ShoppingTableViewCell: UITableViewCell {
-    @IBOutlet weak var checkboxButton: UIButton!
+    @IBOutlet weak var checkboxImage: UIImageView!
     @IBOutlet weak var shoppingListLabel: UILabel!
-    @IBOutlet weak var starButton: UIButton!
+    @IBOutlet weak var bookmarkButton: UIButton!
 }
