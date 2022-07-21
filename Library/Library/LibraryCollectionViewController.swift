@@ -15,6 +15,7 @@ class LibraryCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         
         self.configureCollectionView()
+        self.configureNavigationBar()
     }
     
     private func configureCollectionView() {
@@ -41,5 +42,17 @@ class LibraryCollectionViewController: UICollectionViewController {
         cell.configureCell(book: self.booklist[indexPath.row])
         
         return cell
+    }
+}
+
+extension LibraryCollectionViewController {
+    private func configureNavigationBar() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"), style: .plain, target: self, action: #selector(pushToSearchScreen))
+    }
+    
+    @objc func pushToSearchScreen() {
+        let searchViewController = ViewController()
+        
+        self.navigationController?.pushViewController(searchViewController, animated: true)
     }
 }
