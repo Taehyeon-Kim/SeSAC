@@ -10,6 +10,17 @@ import UIKit
 class LibraryCollectionViewController: UICollectionViewController {
     
     private let booklist: [Book] = Book.sampleData
+    private let colorlist = [
+        UIColor(hex: "#B22727FF"),
+        UIColor(hex: "#EE5007FF"),
+        UIColor(hex: "#F8CB2EFF"),
+        UIColor(hex: "#006E7FFF"),
+        UIColor(hex: "#764AF1FF"),
+        UIColor(hex: "#FFD9C0ff"),
+        UIColor(hex: "#68A7ADff"),
+        UIColor(hex: "#FF8AAEff"),
+        UIColor(hex: "#7C99ACff")
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +31,9 @@ class LibraryCollectionViewController: UICollectionViewController {
     
     private func configureCollectionView() {
         let layout = UICollectionViewFlowLayout()
-        let spacing: CGFloat = 8
+        let spacing: CGFloat = 20
         let width = UIScreen.main.bounds.width - (spacing * 3)
-        layout.itemSize = CGSize(width: width / 2, height: width / 2)
+        layout.itemSize = CGSize(width: width / 2, height: width / 2 * 1.1)
         layout.scrollDirection = .vertical
         layout.sectionInset = UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
         layout.minimumLineSpacing = spacing
@@ -37,8 +48,9 @@ class LibraryCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LibraryCollectionViewCell", for: indexPath) as! LibraryCollectionViewCell
         
-        cell.backgroundColor = .orange
-        cell.bookImageView.backgroundColor = .gray
+        cell.backgroundColor = self.colorlist[indexPath.row % self.booklist.count]
+        cell.layer.cornerRadius = 8
+        cell.bookImageView.image = UIImage(named: "bookCover3")
         cell.configureCell(book: self.booklist[indexPath.row])
         
         return cell
@@ -53,7 +65,8 @@ class LibraryCollectionViewController: UICollectionViewController {
 
 extension LibraryCollectionViewController {
     private func configureNavigationBar() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"), style: .plain, target: self, action: #selector(presentToSearchScreen))
+        self.title = "도서 목록"
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"), style: .plain, target: self, action: #selector(presentToSearchScreen))
     }
     
     @objc func presentToSearchScreen() {

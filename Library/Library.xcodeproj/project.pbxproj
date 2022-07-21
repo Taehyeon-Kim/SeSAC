@@ -22,6 +22,7 @@
 		BD7B662B28898E1C009D1A17 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B662A28898E1C009D1A17 /* DetailViewController.swift */; };
 		BD7B662E28898F29009D1A17 /* Web.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD7B662D28898F29009D1A17 /* Web.storyboard */; };
 		BD7B663028898F30009D1A17 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B662F28898F30009D1A17 /* WebViewController.swift */; };
+		BD7B663D2889B691009D1A17 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B663C2889B691009D1A17 /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		BD7B662A28898E1C009D1A17 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		BD7B662D28898F29009D1A17 /* Web.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Web.storyboard; sourceTree = "<group>"; };
 		BD7B662F28898F30009D1A17 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		BD7B663C2889B691009D1A17 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		BD20D6082887E8C4000A225B /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				BD7B663B2889B685009D1A17 /* Extensions */,
 				BD7B662C28898F21009D1A17 /* Web */,
 				BD7B662728898E09009D1A17 /* Detail */,
 				BD7B662228898C5C009D1A17 /* Search */,
@@ -116,6 +119,14 @@
 				BD7B662F28898F30009D1A17 /* WebViewController.swift */,
 			);
 			path = Web;
+			sourceTree = "<group>";
+		};
+		BD7B663B2889B685009D1A17 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BD7B663C2889B691009D1A17 /* UIColor+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +212,7 @@
 				BD20D60A2887E8C4000A225B /* AppDelegate.swift in Sources */,
 				BD20D60C2887E8C4000A225B /* SceneDelegate.swift in Sources */,
 				BD7B662B28898E1C009D1A17 /* DetailViewController.swift in Sources */,
+				BD7B663D2889B691009D1A17 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
