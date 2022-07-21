@@ -47,12 +47,15 @@ class LibraryCollectionViewController: UICollectionViewController {
 
 extension LibraryCollectionViewController {
     private func configureNavigationBar() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"), style: .plain, target: self, action: #selector(pushToSearchScreen))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"), style: .plain, target: self, action: #selector(presentToSearchScreen))
     }
     
-    @objc func pushToSearchScreen() {
-        let searchViewController = ViewController()
+    @objc func presentToSearchScreen() {
+        guard let searchViewController = UIStoryboard(name: "Search", bundle: nil).instantiateViewController(withIdentifier: "SearchViewController") as? SearchViewController else { return }
         
-        self.navigationController?.pushViewController(searchViewController, animated: true)
+        let searchNavigationController = UINavigationController(rootViewController: searchViewController)
+        searchNavigationController.modalPresentationStyle = .fullScreen
+        
+        self.present(searchNavigationController, animated: true)
     }
 }
