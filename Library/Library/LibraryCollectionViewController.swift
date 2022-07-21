@@ -8,6 +8,8 @@
 import UIKit
 
 class LibraryCollectionViewController: UICollectionViewController {
+    
+    private let booklist: [Book] = Book.sampleData
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +30,7 @@ class LibraryCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return self.booklist.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -36,6 +38,7 @@ class LibraryCollectionViewController: UICollectionViewController {
         
         cell.backgroundColor = .orange
         cell.bookImageView.backgroundColor = .gray
+        cell.configureCell(book: self.booklist[indexPath.row])
         
         return cell
     }
