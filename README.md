@@ -27,4 +27,4 @@
 - [Day11, 220718](https://github.com/Taehyeon-Kim/SeSAC/issues/54)
 - [Day12, 220719](https://github.com/Taehyeon-Kim/SeSAC/issues/59)
 - [Day13, 220720](https://github.com/Taehyeon-Kim/SeSAC/issues/64)
-
+- [Day14, 220721](https://github.com/Taehyeon-Kim/SeSAC/issues/66)
