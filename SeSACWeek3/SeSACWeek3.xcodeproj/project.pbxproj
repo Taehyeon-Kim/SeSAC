@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD1C39552888E767007609A7 /* TrendTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1C39542888E767007609A7 /* TrendTableViewController.swift */; };
 		BD48B6192887083D003A1122 /* Shopping.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD48B6182887083D003A1122 /* Shopping.storyboard */; };
 		BD48B61B28870873003A1122 /* ShoppingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD48B61A28870873003A1122 /* ShoppingTableViewController.swift */; };
 		BD48B61E28870947003A1122 /* InputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD48B61D28870947003A1122 /* InputTableViewCell.swift */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		BD1C39532888D654007609A7 /* Grammer.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Grammer.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		BD1C39542888E767007609A7 /* TrendTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendTableViewController.swift; sourceTree = "<group>"; };
 		BD48B6182887083D003A1122 /* Shopping.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Shopping.storyboard; sourceTree = "<group>"; };
 		BD48B61A28870873003A1122 /* ShoppingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingTableViewController.swift; sourceTree = "<group>"; };
 		BD48B61D28870947003A1122 /* InputTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTableViewCell.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				BDCA1E242886404700968372 /* Trend.storyboard */,
+				BD1C39542888E767007609A7 /* TrendTableViewController.swift */,
 				BDCD020128879AA9007A562C /* RecommendCollectionViewController.swift */,
 				BDCA1E282886443300968372 /* TrendViewController.swift */,
 				BDCA1E3428864BB000968372 /* BucketlistTableViewController.swift */,
@@ -285,6 +288,7 @@
 				BDCA1DEA28856E2500968372 /* SceneDelegate.swift in Sources */,
 				BD828D5928879DF800664C76 /* RecommendCollectionViewCell.swift in Sources */,
 				BDCA1E3528864BB000968372 /* BucketlistTableViewController.swift in Sources */,
+				BD1C39552888E767007609A7 /* TrendTableViewController.swift in Sources */,
 				BD48B61E28870947003A1122 /* InputTableViewCell.swift in Sources */,
 				BDCA1E01288572CF00968372 /* SettingViewController.swift in Sources */,
 			);

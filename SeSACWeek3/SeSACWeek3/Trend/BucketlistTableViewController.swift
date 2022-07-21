@@ -8,6 +8,8 @@
 import UIKit
 
 class BucketlistTableViewController: UITableViewController {
+    
+    static let identifier = "BucketlistTableViewController"
 
     var list = ["범죄도시", "탑건", "토르"]
     
@@ -15,7 +17,16 @@ class BucketlistTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.title = "버킷리스트"
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(xmarkButtonTapped))
+        
         self.tableView.rowHeight = 90
+    }
+    
+    @objc
+    func xmarkButtonTapped() {
+        self.dismiss(animated: true)
     }
     
     @IBAction func userTextFieldDidFinish(_ sender: UITextField) {
