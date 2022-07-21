@@ -23,4 +23,11 @@ final class SearchTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UIScreen.main.bounds.height / 6
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Trend", bundle: nil)
+        let viewController = storyboard.instantiateViewController(identifier: RecommendCollectionViewController.identifier) as! RecommendCollectionViewController
+        
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
 }

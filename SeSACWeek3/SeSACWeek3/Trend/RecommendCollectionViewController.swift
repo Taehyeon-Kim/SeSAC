@@ -18,6 +18,7 @@ import Kingfisher
 
 class RecommendCollectionViewController: UICollectionViewController {
     
+    static let identifier = "RecommendCollectionViewController"
     let imageURL = "https://img1.daumcdn.net/thumb/R1280x0/?fname=http://t1.daumcdn.net/brunch/service/user/wXP/image/6j8FvDZzIaPickhD9G5IR-u7yGc.png"
 
     override func viewDidLoad() {
@@ -54,5 +55,6 @@ class RecommendCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // collection view 이름을 view로 지어놓았다. 더 정확히는 collection view 아래에 view가 있다.
         self.view.makeToast("\(indexPath.item)번째 셀을 선택했습니다.", duration: 1, position: .center)
+        self.navigationController?.popViewController(animated: true)
     }
 }

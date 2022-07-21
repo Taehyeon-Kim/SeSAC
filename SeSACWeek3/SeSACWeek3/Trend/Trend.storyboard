@@ -141,7 +141,7 @@
         <!--Recommend Collection View Controller-->
         <scene sceneID="X7S-nc-2tx">
             <objects>
-                <collectionViewController id="87s-BR-KK6" customClass="RecommendCollectionViewController" customModule="SeSACWeek3" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="RecommendCollectionViewController" id="87s-BR-KK6" customClass="RecommendCollectionViewController" customModule="SeSACWeek3" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="NU0-Wc-6v5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
