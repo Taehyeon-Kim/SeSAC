@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BD1C394B2888CC96007609A7 /* LibraryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1C394A2888CC96007609A7 /* LibraryCollectionViewController.swift */; };
 		BD1C394D2888CCB4007609A7 /* LibraryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1C394C2888CCB4007609A7 /* LibraryCollectionViewCell.swift */; };
+		BD1C39512888CEF3007609A7 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1C39502888CEF3007609A7 /* Book.swift */; };
 		BD20D60A2887E8C4000A225B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD20D6092887E8C4000A225B /* AppDelegate.swift */; };
 		BD20D60C2887E8C4000A225B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD20D60B2887E8C4000A225B /* SceneDelegate.swift */; };
 		BD20D60E2887E8C4000A225B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD20D60D2887E8C4000A225B /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		BD1C394A2888CC96007609A7 /* LibraryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCollectionViewController.swift; sourceTree = "<group>"; };
 		BD1C394C2888CCB4007609A7 /* LibraryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCollectionViewCell.swift; sourceTree = "<group>"; };
+		BD1C39502888CEF3007609A7 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		BD20D6062887E8C4000A225B /* Library.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Library.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD20D6092887E8C4000A225B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD20D60B2887E8C4000A225B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				BD20D6092887E8C4000A225B /* AppDelegate.swift */,
 				BD20D60B2887E8C4000A225B /* SceneDelegate.swift */,
 				BD20D60D2887E8C4000A225B /* ViewController.swift */,
+				BD1C39502888CEF3007609A7 /* Book.swift */,
 				BD1C394A2888CC96007609A7 /* LibraryCollectionViewController.swift */,
 				BD1C394C2888CCB4007609A7 /* LibraryCollectionViewCell.swift */,
 				BD20D60F2887E8C4000A225B /* Main.storyboard */,
@@ -146,6 +149,7 @@
 			files = (
 				BD1C394D2888CCB4007609A7 /* LibraryCollectionViewCell.swift in Sources */,
 				BD1C394B2888CC96007609A7 /* LibraryCollectionViewController.swift in Sources */,
+				BD1C39512888CEF3007609A7 /* Book.swift in Sources */,
 				BD20D60E2887E8C4000A225B /* ViewController.swift in Sources */,
 				BD20D60A2887E8C4000A225B /* AppDelegate.swift in Sources */,
 				BD20D60C2887E8C4000A225B /* SceneDelegate.swift in Sources */,
