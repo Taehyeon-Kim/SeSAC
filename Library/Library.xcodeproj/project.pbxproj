@@ -16,6 +16,8 @@
 		BD20D6112887E8C4000A225B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD20D60F2887E8C4000A225B /* Main.storyboard */; };
 		BD20D6132887E8C5000A225B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD20D6122887E8C5000A225B /* Assets.xcassets */; };
 		BD20D6162887E8C5000A225B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD20D6142887E8C5000A225B /* LaunchScreen.storyboard */; };
+		BD7B662428898C71009D1A17 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD7B662328898C71009D1A17 /* Search.storyboard */; };
+		BD7B662628898C85009D1A17 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B662528898C85009D1A17 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		BD20D6122887E8C5000A225B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD20D6152887E8C5000A225B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD20D6172887E8C5000A225B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD7B662328898C71009D1A17 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		BD7B662528898C85009D1A17 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,7 @@
 		BD20D6082887E8C4000A225B /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				BD7B662228898C5C009D1A17 /* Search */,
 				BD20D6092887E8C4000A225B /* AppDelegate.swift */,
 				BD20D60B2887E8C4000A225B /* SceneDelegate.swift */,
 				BD20D60D2887E8C4000A225B /* ViewController.swift */,
@@ -74,6 +79,15 @@
 				BD20D6172887E8C5000A225B /* Info.plist */,
 			);
 			path = Library;
+			sourceTree = "<group>";
+		};
+		BD7B662228898C5C009D1A17 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				BD7B662328898C71009D1A17 /* Search.storyboard */,
+				BD7B662528898C85009D1A17 /* SearchViewController.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +150,7 @@
 			files = (
 				BD20D6162887E8C5000A225B /* LaunchScreen.storyboard in Resources */,
 				BD20D6132887E8C5000A225B /* Assets.xcassets in Resources */,
+				BD7B662428898C71009D1A17 /* Search.storyboard in Resources */,
 				BD20D6112887E8C4000A225B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD1C394D2888CCB4007609A7 /* LibraryCollectionViewCell.swift in Sources */,
+				BD7B662628898C85009D1A17 /* SearchViewController.swift in Sources */,
 				BD1C394B2888CC96007609A7 /* LibraryCollectionViewController.swift in Sources */,
 				BD1C39512888CEF3007609A7 /* Book.swift in Sources */,
 				BD20D60E2887E8C4000A225B /* ViewController.swift in Sources */,
