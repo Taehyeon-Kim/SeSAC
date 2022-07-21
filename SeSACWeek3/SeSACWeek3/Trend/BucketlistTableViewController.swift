@@ -19,8 +19,31 @@ class BucketlistTableViewController: UITableViewController {
     }
     
     @IBAction func userTextFieldDidFinish(_ sender: UITextField) {
-        self.list.append(sender.text!)
-        self.tableView.reloadData()
+        
+        // 중복 영화, white space(공백), 글자 수 제한 처리 등 많은 처리 코드가 붙음
+        // string -> trimming character
+        
+        // ✅ case 2. if let
+        if let value = sender.text?.trimmingCharacters(in: .whitespaces),
+           !value.isEmpty,
+           (2...6).contains(value.count)
+        {
+            self.list.append(value)
+            self.tableView.reloadData()
+        } else {
+            // 토스트 메시지 띄우기
+        }
+        
+        // ✅ case 3. guard else
+        // 해당 구문의 빈도가 high
+        guard let value = sender.text?.trimmingCharacters(in: .whitespaces), !value.isEmpty, (2...6).contains(value.count) else {
+            return
+            // Alert, Toast를 통해 빈칸을 입력했다. 글자수가 많다.
+        }
+        
+        // ✅ case 1.
+//        self.list.append(sender.text!)
+//        self.tableView.reloadData()
 //        self.tableView.reloadSections(IndexSet(), with: .fade)
 //        self.tableView.reloadRows(at: [IndexPath(row: 0, section: 0), IndexPath(row: 1, section: 0)], with: .fade)
     }
@@ -35,6 +58,7 @@ extension BucketlistTableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: BucketlistTableViewCell.self), for: indexPath) as! BucketlistTableViewCell
+        
         cell.bucketlistLabel.text = self.list[indexPath.row]
         cell.bucketlistLabel.font = .boldSystemFont(ofSize: 18)
         return cell
