@@ -57,7 +57,7 @@ extension BucketlistTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: BucketlistTableViewCell.self), for: indexPath) as! BucketlistTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: BucketlistTableViewCell.identifier, for: indexPath) as! BucketlistTableViewCell
         
         cell.bucketlistLabel.text = self.list[indexPath.row]
         cell.bucketlistLabel.font = .boldSystemFont(ofSize: 18)
