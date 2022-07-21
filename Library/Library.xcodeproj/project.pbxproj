@@ -20,6 +20,8 @@
 		BD7B662628898C85009D1A17 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B662528898C85009D1A17 /* SearchViewController.swift */; };
 		BD7B662928898E11009D1A17 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD7B662828898E11009D1A17 /* Detail.storyboard */; };
 		BD7B662B28898E1C009D1A17 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B662A28898E1C009D1A17 /* DetailViewController.swift */; };
+		BD7B662E28898F29009D1A17 /* Web.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD7B662D28898F29009D1A17 /* Web.storyboard */; };
+		BD7B663028898F30009D1A17 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B662F28898F30009D1A17 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		BD7B662528898C85009D1A17 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		BD7B662828898E11009D1A17 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		BD7B662A28898E1C009D1A17 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		BD7B662D28898F29009D1A17 /* Web.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Web.storyboard; sourceTree = "<group>"; };
+		BD7B662F28898F30009D1A17 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 		BD20D6082887E8C4000A225B /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				BD7B662C28898F21009D1A17 /* Web */,
 				BD7B662728898E09009D1A17 /* Detail */,
 				BD7B662228898C5C009D1A17 /* Search */,
 				BD20D6092887E8C4000A225B /* AppDelegate.swift */,
@@ -102,6 +107,15 @@
 				BD7B662A28898E1C009D1A17 /* DetailViewController.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		BD7B662C28898F21009D1A17 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				BD7B662D28898F29009D1A17 /* Web.storyboard */,
+				BD7B662F28898F30009D1A17 /* WebViewController.swift */,
+			);
+			path = Web;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +181,7 @@
 				BD7B662428898C71009D1A17 /* Search.storyboard in Resources */,
 				BD7B662928898E11009D1A17 /* Detail.storyboard in Resources */,
 				BD20D6112887E8C4000A225B /* Main.storyboard in Resources */,
+				BD7B662E28898F29009D1A17 /* Web.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD1C394D2888CCB4007609A7 /* LibraryCollectionViewCell.swift in Sources */,
+				BD7B663028898F30009D1A17 /* WebViewController.swift in Sources */,
 				BD7B662628898C85009D1A17 /* SearchViewController.swift in Sources */,
 				BD1C394B2888CC96007609A7 /* LibraryCollectionViewController.swift in Sources */,
 				BD1C39512888CEF3007609A7 /* Book.swift in Sources */,
