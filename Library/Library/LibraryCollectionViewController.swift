@@ -43,6 +43,12 @@ class LibraryCollectionViewController: UICollectionViewController {
         
         return cell
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let detailViewController = UIStoryboard(name: "Detail", bundle: nil).instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else { return }
+        
+        self.navigationController?.pushViewController(detailViewController, animated: true)
+    }
 }
 
 extension LibraryCollectionViewController {
