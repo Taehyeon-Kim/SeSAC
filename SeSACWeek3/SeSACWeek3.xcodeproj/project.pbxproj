@@ -69,6 +69,7 @@
 		BDCA1E3428864BB000968372 /* BucketlistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketlistTableViewController.swift; sourceTree = "<group>"; };
 		BDCA1E3628864D9D00968372 /* BucketlistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketlistTableViewCell.swift; sourceTree = "<group>"; };
 		BDCD020128879AA9007A562C /* RecommendCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCollectionViewController.swift; sourceTree = "<group>"; };
+		BDE114B0288A4D510029BCBF /* Property.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Property.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				BD1C39532888D654007609A7 /* Grammer.playground */,
+				BDE114B0288A4D510029BCBF /* Property.playground */,
 			);
 			path = Playground;
 			sourceTree = "<group>";
