@@ -29,7 +29,8 @@ final class SearchTableViewController: UITableViewController {
         let viewController = storyboard.instantiateViewController(identifier: RecommendCollectionViewController.identifier) as! RecommendCollectionViewController
         
         // 2. 값 전달 - vc가 가지고 있는 프로퍼티에 데이터 추가
-        viewController.movieTitle = self.movieInfo.movie[indexPath.row].title
+//        viewController.movieTitle = self.movieInfo.movie[indexPath.row].title
+        viewController.movieData = self.movieInfo.movie[indexPath.row]
         
         self.navigationController?.pushViewController(viewController, animated: true)
     }

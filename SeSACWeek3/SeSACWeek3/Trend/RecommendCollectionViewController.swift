@@ -22,13 +22,15 @@ class RecommendCollectionViewController: UICollectionViewController {
     let imageURL = "https://img1.daumcdn.net/thumb/R1280x0/?fname=http://t1.daumcdn.net/brunch/service/user/wXP/image/6j8FvDZzIaPickhD9G5IR-u7yGc.png"
     
     // 1. 값 전달 - 데이터를 받을 공간(프로퍼티) 생성
-    var movieTitle: String?
+//    var movieTitle: String?
+    var movieData: Movie?
+    // 따로 따로 프로퍼티 생성하지 않고, 하나의 구조체 전체를 전달 받는 이유 (귀찮아서, 깔끔해서)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // 3. 값 전달 - 프로퍼티 값을 뷰에 표현
-        self.title = self.movieTitle == nil ? "데이터 없음" : movieTitle!
+        self.title = movieData?.title
         
         let layout = UICollectionViewFlowLayout()
         let spacing: CGFloat = 8
