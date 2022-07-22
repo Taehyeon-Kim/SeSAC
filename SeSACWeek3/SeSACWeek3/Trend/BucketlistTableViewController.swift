@@ -12,11 +12,14 @@ class BucketlistTableViewController: UITableViewController {
     static let identifier = "BucketlistTableViewController"
 
     var list = ["범죄도시", "탑건", "토르"]
+    var placeholder: String?
     
     @IBOutlet weak var userTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.userTextField.placeholder = placeholder
         
         self.navigationItem.title = "버킷리스트"
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(xmarkButtonTapped))
