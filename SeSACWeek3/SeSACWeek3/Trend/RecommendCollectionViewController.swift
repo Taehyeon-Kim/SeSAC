@@ -20,9 +20,15 @@ class RecommendCollectionViewController: UICollectionViewController {
     
     static let identifier = "RecommendCollectionViewController"
     let imageURL = "https://img1.daumcdn.net/thumb/R1280x0/?fname=http://t1.daumcdn.net/brunch/service/user/wXP/image/6j8FvDZzIaPickhD9G5IR-u7yGc.png"
+    
+    // 1. 값 전달 - 데이터를 받을 공간(프로퍼티) 생성
+    var movieTitle: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // 3. 값 전달 - 프로퍼티 값을 뷰에 표현
+        self.title = self.movieTitle == nil ? "데이터 없음" : movieTitle!
         
         let layout = UICollectionViewFlowLayout()
         let spacing: CGFloat = 8
