@@ -30,7 +30,7 @@ class TrendTableViewController: UITableViewController {
         case 0:
             viewController.placeholder = "검색할 영화를 입력해주세요."
         case 1:
-            viewController.placeholder = "검색할 드라마를 입력해주세요."
+            viewController.placeholder = nil
         case 2:
             viewController.placeholder = "검색할 도서를 입력해주세요."
         default:

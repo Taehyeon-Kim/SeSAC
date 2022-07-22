@@ -14,12 +14,16 @@ class BucketlistTableViewController: UITableViewController {
     var list = ["범죄도시", "탑건", "토르"]
     var placeholder: String?
     
+    // 옵셔널 스트링 타입으로 선언하더라도 오류가 뜨지 않는 이유는?
+    // placeholder 자체가 옵셔널이라면? o (가능)
+    // 하지만 String Interplation이라면? x (컴파일 에러 발생)
+    
     @IBOutlet weak var userTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.userTextField.placeholder = placeholder
+        self.userTextField.placeholder = "\(placeholder ?? "nil value")"
         
         self.navigationItem.title = "버킷리스트"
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(xmarkButtonTapped))
