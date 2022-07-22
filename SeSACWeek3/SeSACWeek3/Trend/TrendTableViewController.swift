@@ -25,7 +25,17 @@ class TrendTableViewController: UITableViewController {
         
         // 2.
         let viewController = storyboard.instantiateViewController(withIdentifier: BucketlistTableViewController.identifier) as! BucketlistTableViewController
-        viewController.placeholder = "검색할 도서를 입력해주세요."
+        
+        switch sender.tag {
+        case 0:
+            viewController.placeholder = "검색할 영화를 입력해주세요."
+        case 1:
+            viewController.placeholder = "검색할 드라마를 입력해주세요."
+        case 2:
+            viewController.placeholder = "검색할 도서를 입력해주세요."
+        default:
+            fatalError()
+        }
         
         let navigationController = UINavigationController(rootViewController: viewController)
         
