@@ -109,6 +109,7 @@ extension BucketlistTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: BucketlistTableViewCell.identifier, for: indexPath) as! BucketlistTableViewCell
         
+        // 셀의 뷰(UI)와 관련된 요소 처리
         cell.bucketlistLabel.text = self.list[indexPath.row].title
         cell.bucketlistLabel.font = .boldSystemFont(ofSize: 18)
         
@@ -126,6 +127,7 @@ extension BucketlistTableViewController {
         
         // 배열 인덱스를 찾아서 done을 바꿔야 한다, 그리고 테이블뷰를 갱신 해야 한다.
         list[sender.tag].done.toggle()
+        tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .fade)
         
         
         // 재사용 셀 오류 확인용 코드
