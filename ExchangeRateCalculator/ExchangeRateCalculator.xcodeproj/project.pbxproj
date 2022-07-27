@@ -16,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BDB0925F289167C500B0A4E1 /* ExchangeRate.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ExchangeRate.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		BDE2ADEE2891418E00A42559 /* ExchangeRateCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExchangeRateCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDE2ADF12891418E00A42559 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDE2ADF32891418E00A42559 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +41,7 @@
 		BDE2ADE52891418E00A42559 = {
 			isa = PBXGroup;
 			children = (
+				BDB0925F289167C500B0A4E1 /* ExchangeRate.playground */,
 				BDE2ADF02891418E00A42559 /* ExchangeRateCalculator */,
 				BDE2ADEF2891418E00A42559 /* Products */,
 			);
