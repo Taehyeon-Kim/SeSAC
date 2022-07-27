@@ -28,7 +28,14 @@ print(user4.nickname, User.originalName)
  */
 
 struct BMI {
-    var nickname: String
+    var nickname: String {
+        willSet(newNickname) {
+            print("유저 닉네임이 \(nickname)에서 \(newNickname)로 변경될 예정이에요")
+        }
+        didSet {
+            print("유저 닉네임 변경 완료!!!! \(oldValue) -> \(nickname)으로 바뀜!")
+        }
+    }
     var weight: Double
     var height: Double
     
@@ -146,5 +153,35 @@ print(ViewType.title)
 
 // 타입 프로퍼티는 인스턴스랑 상관없이 접근 가능 따라서 열거형에서 타입 저장 프로퍼티, 타입 연산 프로퍼티는 모두 사용 가능
 // 인스턴스 저장 프로퍼티는 메모리에 올라감, 값이 달라질 수 있음, 열거형에서 사용 불가, 초기화 구문을 만들 수 없기 때문
+
+
+class TypeFoodRestaurant {
+    static let name = "잭치킨"         // 타입 상수 저장 프로퍼티
+    static var totalOrderCount = 10 {
+        willSet {
+            print("총 주문 건수가 \(totalOrderCount)에서 \(newValue)로 변경될 예정입니다.")
+        }
+        didSet {
+            print("총 주문 건수가 \(oldValue)에서 \(totalOrderCount)로 변경되었습니다.")
+        }
+    }
+    
+    
+    static var nowOrder: Int {
+        get {
+            return totalOrderCount * 5000
+        }
+        set {
+            totalOrderCount += newValue     // 기본 파라미터 newValue, 변경 가능
+        }
+    }
+}
+
+let myFood = TypeFoodRestaurant()
+TypeFoodRestaurant.nowOrder
+TypeFoodRestaurant.nowOrder = 15
+TypeFoodRestaurant.nowOrder
+
+// Property Observer : 저장 프로퍼티에서 주로 사용되고, 저장 프로퍼티 값을 관찰을 하다가 변경이 될 것 같을 때 또는 변경이 되었을 때 호출됨! (willSet / didSet)
 
 //: [Next](@next)
