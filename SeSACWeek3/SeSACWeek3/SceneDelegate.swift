@@ -19,12 +19,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         // 이 코드는 다른 화면에 배치해야 함.
         // 시작할때마다 저장.
-        UserDefaults.standard.set(false, forKey: "First")
+        UserDefaults.standard.set(true, forKey: "First")
         
         // true이면 ViewController, false이면 SearchTableViewController
         if UserDefaults.standard.bool(forKey: "First") {
             let sb = UIStoryboard(name: "Trend", bundle: nil)
-            guard let vc = sb.instantiateViewController(withIdentifier: "ViewController") as? ViewController else { return }
+            guard let vc = sb.instantiateViewController(withIdentifier: "BucketlistTableViewController") as? BucketlistTableViewController else { return }
             self.window?.rootViewController = vc // 어떤 뷰 컨트롤러를 보여주겠다.
         } else {
             let sb = UIStoryboard(name: "Search", bundle: nil)
