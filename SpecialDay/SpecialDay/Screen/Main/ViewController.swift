@@ -93,7 +93,7 @@ class ViewController: UIViewController {
         self.currentDate = date
         self.datePicker.date = date
         
-        for index in 0..<specialDays.count {
+        for index in specialDays.indices {
             guard let calculatedDate = datePicker.calendar.date(byAdding: .day,
                                                                 value: 100 * (index + 1),
                                                                 to: date)
