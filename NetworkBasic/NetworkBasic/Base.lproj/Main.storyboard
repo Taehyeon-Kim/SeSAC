@@ -243,7 +243,11 @@
                                     <constraint firstAttribute="height" constant="44" id="aE1-pN-1d8"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="Item" id="aiE-T5-9TL"/>
+                                    <barButtonItem title="넷플릭스 바로가기" id="aiE-T5-9TL">
+                                        <connections>
+                                            <action selector="openExternalLinkButtonTapped:" destination="G7n-co-BIA" id="tQF-SM-yl5"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="8c9-2j-2yu"/>
                                     <barButtonItem title="새로고침" id="MZP-VY-H7t"/>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="zva-Ty-s4u"/>

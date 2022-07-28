@@ -10,6 +10,7 @@
 		BD4566EC2892239F009B4514 /* LottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4566EB2892239F009B4514 /* LottoViewController.swift */; };
 		BD4566EE28923052009B4514 /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4566ED28923052009B4514 /* TranslateViewController.swift */; };
 		BD4566F028923AAD009B4514 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4566EF28923AAD009B4514 /* WebViewController.swift */; };
+		BD4566F228923DFA009B4514 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4566F128923DFA009B4514 /* Utils.swift */; };
 		BD79150B2890DDA8000A12EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD79150A2890DDA8000A12EE /* AppDelegate.swift */; };
 		BD79150D2890DDA8000A12EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD79150C2890DDA8000A12EE /* SceneDelegate.swift */; };
 		BD79150F2890DDA8000A12EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD79150E2890DDA8000A12EE /* ViewController.swift */; };
@@ -26,6 +27,7 @@
 		BD4566EB2892239F009B4514 /* LottoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoViewController.swift; sourceTree = "<group>"; };
 		BD4566ED28923052009B4514 /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
 		BD4566EF28923AAD009B4514 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		BD4566F128923DFA009B4514 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		BD7915072890DDA8000A12EE /* NetworkBasic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkBasic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD79150A2890DDA8000A12EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD79150C2890DDA8000A12EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				BD79150E2890DDA8000A12EE /* ViewController.swift */,
 				BD4566EB2892239F009B4514 /* LottoViewController.swift */,
 				BD4566ED28923052009B4514 /* TranslateViewController.swift */,
+				BD4566F128923DFA009B4514 /* Utils.swift */,
 				BD7915102890DDA8000A12EE /* Main.storyboard */,
 				BD4566EF28923AAD009B4514 /* WebViewController.swift */,
 				BD7915132890DDAA000A12EE /* Assets.xcassets */,
@@ -181,6 +184,7 @@
 				BD79150F2890DDA8000A12EE /* ViewController.swift in Sources */,
 				BD79150B2890DDA8000A12EE /* AppDelegate.swift in Sources */,
 				BD4566EC2892239F009B4514 /* LottoViewController.swift in Sources */,
+				BD4566F228923DFA009B4514 /* Utils.swift in Sources */,
 				BD79151F2890E249000A12EE /* SearchViewController.swift in Sources */,
 				BD4566EE28923052009B4514 /* TranslateViewController.swift in Sources */,
 				BD79150D2890DDA8000A12EE /* SceneDelegate.swift in Sources */,

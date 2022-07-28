@@ -13,7 +13,9 @@ class WebViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var webView: WKWebView!
     
-    var destinationURLString: String = "https://www.apple.com" // App Transport Security Settings
+    var destinationURLString: String = "https://www.apple.com"
+    // App Transport Security Settings (ATS 설정)
+    // http 보편적으로 보안상의 이유로 막아놓았다.
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +32,10 @@ class WebViewController: UIViewController {
         }
         let request = URLRequest(url: url)
         webView.load(request)
+    }
+    
+    @IBAction func openExternalLinkButtonTapped(_ sender: Any) {
+        Utils.openExternalLink(urlString: "https://www.netflix.com")
     }
 }
 
