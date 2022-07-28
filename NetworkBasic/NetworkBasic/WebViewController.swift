@@ -34,9 +34,26 @@ class WebViewController: UIViewController {
         webView.load(request)
     }
     
-    @IBAction func openExternalLinkButtonTapped(_ sender: Any) {
+    @IBAction func openExternalLinkButtonTapped(_ sender: UIBarButtonItem) {
         Utils.openExternalLink(urlString: "https://www.netflix.com")
     }
+    
+    @IBAction func goBackButtonClicked(_ sender: UIBarButtonItem) {
+        if webView.canGoBack {
+            webView.goBack()
+        }
+    }
+    
+    @IBAction func reloadButtonClicked(_ sender: UIBarButtonItem) {
+        webView.reload()
+    }
+    
+    @IBAction func gorForwardButtonClicked(_ sender: UIBarButtonItem) {
+        if webView.canGoForward {
+            webView.goForward()
+        }
+    }
+    
 }
 
 // SearchBar 역시 Action이 없음

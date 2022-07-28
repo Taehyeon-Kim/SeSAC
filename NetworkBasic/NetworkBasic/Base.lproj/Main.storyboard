@@ -249,9 +249,23 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="8c9-2j-2yu"/>
-                                    <barButtonItem title="새로고침" id="MZP-VY-H7t"/>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="zva-Ty-s4u"/>
-                                    <barButtonItem title="Item" id="5Kq-hC-wNT"/>
+                                    <barButtonItem image="arrow.left" catalog="system" id="IKY-tl-EKr">
+                                        <connections>
+                                            <action selector="goBackButtonClicked:" destination="G7n-co-BIA" id="7zx-qe-Ihn"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="od9-p4-dz0"/>
+                                    <barButtonItem title="새로고침" image="arrow.clockwise" catalog="system" id="MZP-VY-H7t">
+                                        <connections>
+                                            <action selector="reloadButtonClicked:" destination="G7n-co-BIA" id="aMM-XP-bjZ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="3vc-36-eus"/>
+                                    <barButtonItem image="arrow.right" catalog="system" id="5Kq-hC-wNT">
+                                        <connections>
+                                            <action selector="gorForwardButtonClicked:" destination="G7n-co-BIA" id="kig-Fx-wNE"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eeP-mE-3Tf">
@@ -289,6 +303,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="arrow.right" catalog="system" width="128" height="98"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
