@@ -7,13 +7,23 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, ViewPresentable {
+    
+    var navigationTitleString: String = "대장님의 다마고치"
+    var backgroundColor: UIColor = .blue
+    
+    func configureView() {
+        self.backgroundColor = .yellow
+        self.view.backgroundColor = backgroundColor
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.configureView()
     }
+}
 
+extension ViewController {
 
 }
 

@@ -16,6 +16,7 @@
 		BD79151F2890E249000A12EE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD79151E2890E249000A12EE /* SearchViewController.swift */; };
 		BD7915222890E4EB000A12EE /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7915202890E4EB000A12EE /* ListTableViewCell.swift */; };
 		BD7915232890E4EB000A12EE /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD7915212890E4EB000A12EE /* ListTableViewCell.xib */; };
+		BDB0926328920CCB00B0A4E1 /* ViewPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB0926228920CCB00B0A4E1 /* ViewPresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		BD79151E2890E249000A12EE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		BD7915202890E4EB000A12EE /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		BD7915212890E4EB000A12EE /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
+		BDB0926228920CCB00B0A4E1 /* ViewPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPresentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,8 @@
 		BD7915092890DDA8000A12EE /* NetworkBasic */ = {
 			isa = PBXGroup;
 			children = (
+				BDB0926128920CAF00B0A4E1 /* SearchScene */,
+				BDB0926028920CA200B0A4E1 /* Protocol */,
 				BD79150A2890DDA8000A12EE /* AppDelegate.swift */,
 				BD79150C2890DDA8000A12EE /* SceneDelegate.swift */,
 				BD79150E2890DDA8000A12EE /* ViewController.swift */,
@@ -69,11 +73,26 @@
 				BD7915132890DDAA000A12EE /* Assets.xcassets */,
 				BD7915152890DDAA000A12EE /* LaunchScreen.storyboard */,
 				BD7915182890DDAA000A12EE /* Info.plist */,
+			);
+			path = NetworkBasic;
+			sourceTree = "<group>";
+		};
+		BDB0926028920CA200B0A4E1 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				BDB0926228920CCB00B0A4E1 /* ViewPresentable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		BDB0926128920CAF00B0A4E1 /* SearchScene */ = {
+			isa = PBXGroup;
+			children = (
 				BD79151E2890E249000A12EE /* SearchViewController.swift */,
 				BD7915202890E4EB000A12EE /* ListTableViewCell.swift */,
 				BD7915212890E4EB000A12EE /* ListTableViewCell.xib */,
 			);
-			path = NetworkBasic;
+			path = SearchScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDB0926328920CCB00B0A4E1 /* ViewPresentable.swift in Sources */,
 				BD79150F2890DDA8000A12EE /* ViewController.swift in Sources */,
 				BD79150B2890DDA8000A12EE /* AppDelegate.swift in Sources */,
 				BD79151F2890E249000A12EE /* SearchViewController.swift in Sources */,

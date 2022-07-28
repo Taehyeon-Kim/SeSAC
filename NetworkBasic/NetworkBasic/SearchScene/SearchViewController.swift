@@ -17,7 +17,10 @@
 
 import UIKit
 
-class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ViewConfigurable {
+class SearchViewController: UIViewController, ViewPresentable, UITableViewDelegate, UITableViewDataSource {
+    
+    var navigationTitleString: String = ""
+    var backgroundColor: UIColor = .red
     
     @IBOutlet weak var searchTableView: UITableView!
     
@@ -32,6 +35,16 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // XIB: xml interface builder <= NIB
         // Literal한 문자열은 제거하자
         searchTableView.register(UINib(nibName: ListTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: ListTableViewCell.identifier)
+    }
+    
+    func configureView() {
+        searchTableView.backgroundColor = .clear
+        searchTableView.separatorColor = .clear
+        searchTableView.rowHeight = 80
+    }
+    
+    func configureLabel() {
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
