@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="peX-a1-Xcj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="G7n-co-BIA">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -221,6 +221,67 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="okt-S8-5Ve" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2617" y="70"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="798-0u-uUi">
+            <objects>
+                <viewController id="G7n-co-BIA" customClass="WebViewController" customModule="NetworkBasic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zyk-LM-eUI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="HGN-hg-6xg">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="mYY-M3-W4r"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="60A-pE-uDN">
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="aE1-pN-1d8"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Item" id="aiE-T5-9TL"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="8c9-2j-2yu"/>
+                                    <barButtonItem title="새로고침" id="MZP-VY-H7t"/>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="zva-Ty-s4u"/>
+                                    <barButtonItem title="Item" id="5Kq-hC-wNT"/>
+                                </items>
+                            </toolbar>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eeP-mE-3Tf">
+                                <rect key="frame" x="0.0" y="88" width="414" height="730"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CDS-qN-ysG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="60A-pE-uDN" firstAttribute="leading" secondItem="CDS-qN-ysG" secondAttribute="leading" id="1ax-lM-e11"/>
+                            <constraint firstItem="eeP-mE-3Tf" firstAttribute="top" secondItem="HGN-hg-6xg" secondAttribute="bottom" id="39f-w7-E09"/>
+                            <constraint firstItem="eeP-mE-3Tf" firstAttribute="leading" secondItem="CDS-qN-ysG" secondAttribute="leading" id="5Nc-hw-uV5"/>
+                            <constraint firstItem="HGN-hg-6xg" firstAttribute="top" secondItem="CDS-qN-ysG" secondAttribute="top" id="BjH-Uc-kkW"/>
+                            <constraint firstAttribute="trailing" secondItem="60A-pE-uDN" secondAttribute="trailing" id="kRQ-Fe-hsa"/>
+                            <constraint firstItem="CDS-qN-ysG" firstAttribute="bottom" secondItem="60A-pE-uDN" secondAttribute="bottom" id="pLT-TS-JvA"/>
+                            <constraint firstItem="60A-pE-uDN" firstAttribute="top" secondItem="eeP-mE-3Tf" secondAttribute="bottom" id="rS0-Dl-aBA"/>
+                            <constraint firstItem="HGN-hg-6xg" firstAttribute="leading" secondItem="CDS-qN-ysG" secondAttribute="leading" id="s8k-lU-YEN"/>
+                            <constraint firstAttribute="trailing" secondItem="HGN-hg-6xg" secondAttribute="trailing" id="zG0-ZN-gNJ"/>
+                            <constraint firstItem="CDS-qN-ysG" firstAttribute="trailing" secondItem="eeP-mE-3Tf" secondAttribute="trailing" id="zZK-9u-H18"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="HGN-hg-6xg" id="12N-KL-hQn"/>
+                        <outlet property="webView" destination="eeP-mE-3Tf" id="14D-Zo-HbH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n5e-S9-6LX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3432" y="70"/>
         </scene>
     </scenes>
     <resources>
