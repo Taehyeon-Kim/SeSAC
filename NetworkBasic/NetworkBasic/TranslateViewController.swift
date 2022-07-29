@@ -24,6 +24,7 @@ class TranslateViewController: UIViewController {
         userInputTextView.delegate = self
         userInputTextView.text = textViewPlaceholderText
         userInputTextView.textColor = .lightGray
+        userInputTextView.font = UIFont(name: "Galmuri11-Regular", size: 17)
         
 //        userInputTextView.resignFirstResponder()
 //        userInputTextView.becomeFirstResponder()

@@ -14,6 +14,16 @@ class LocationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Custom Font
+        
+        for family in UIFont.familyNames {
+            print("============= \(family)")
+            
+            for name in UIFont.fontNames(forFamilyName: family) {
+                print("✅ - \(name)")
+            }
+        }
     }
     
     
