@@ -60,6 +60,7 @@ class LocationViewController: UIViewController {
      - 노티는 앱 실행이 기본인데, 특정 노티르 클릭할 때 원하는 화면(특정 화면)으로 가고 싶다면?
      - 포그라운드 수신 > 카톡 시에도 다른 채팅방에서 온 알림만 옴.
      - ㄴ 특정 화면에서는 안받고 특정 조건에 대해서만 포그라운드 수신을 하고 싶다면?
+     - iOS 15 집중모드 등 5~6 우선순위 존재! (집중 모드를 쓰고 있더라도, 몇 개의 알림은 보내겠다.)
      */
     func sendNotification() {
         let notificationContent = UNMutableNotificationContent() // UNNotificationContent: uneditable한 contents도 있음
