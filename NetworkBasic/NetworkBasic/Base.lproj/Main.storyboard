@@ -308,8 +308,26 @@
                     <view key="view" contentMode="scaleToFill" id="sqK-lX-3t0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQY-7W-z9V">
+                                <rect key="frame" x="20" y="64" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="qGE-rS-6nD"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Local Notification"/>
+                                <connections>
+                                    <action selector="notificationButtonClicked:" destination="lwb-n7-r8f" eventType="touchUpInside" id="daf-bs-31T"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Sl6-Um-p8n"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xQY-7W-z9V" firstAttribute="top" secondItem="Sl6-Um-p8n" secondAttribute="top" constant="20" id="1n1-E6-rmh"/>
+                            <constraint firstItem="xQY-7W-z9V" firstAttribute="leading" secondItem="Sl6-Um-p8n" secondAttribute="leading" constant="20" id="XyA-mm-Xl3"/>
+                            <constraint firstItem="Sl6-Um-p8n" firstAttribute="trailing" secondItem="xQY-7W-z9V" secondAttribute="trailing" constant="20" id="kGE-xp-4IS"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cKx-Mt-CPk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
