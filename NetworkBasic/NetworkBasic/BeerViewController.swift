@@ -11,9 +11,13 @@ import Alamofire
 import SwiftyJSON
 
 final class BeerViewController: UIViewController {
+    
+    @IBOutlet weak var beerImageView: UIImageView!
+    @IBOutlet weak var beerNameLabel: UILabel!
+    @IBOutlet weak var beerDescriptionLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchBeers()
     }
     
     func fetchBeers() {
@@ -23,12 +27,21 @@ final class BeerViewController: UIViewController {
             case .success(let value):
                 let json = JSON(value)
                 let array = json.array?.first
-                print("name", "\(array?["name"])")
-                print("description", "\(array?["description"])")
-                print("image_url", "\(array?["image_url"])")
+                
+                guard let imageURLString = (array?["image_url"] ?? "").rawValue as? String else { return }
+                let imageURL = URL(string: imageURLString)
+                let imageData = try! Data(contentsOf: imageURL!)
+                self.beerImageView.image = UIImage(data: imageData)
+                
+                self.beerNameLabel.text = "\(array?["name"] ?? "")"
+                self.beerDescriptionLabel.text = "\(array?["description"] ?? "")"
             case .failure(let error):
                 print(error)
             }
         }
+    }
+    
+    @IBAction func fetchBeerButtonTapped(_ sender: UIButton) {
+        fetchBeers()
     }
 }

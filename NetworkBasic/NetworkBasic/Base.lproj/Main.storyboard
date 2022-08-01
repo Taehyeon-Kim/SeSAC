@@ -348,13 +348,63 @@
                     <view key="view" contentMode="scaleToFill" id="3b2-x8-LnP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NT9-rh-z7v">
+                                <rect key="frame" x="83" y="64" width="248" height="248.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NT9-rh-z7v" secondAttribute="height" multiplier="1:1" id="mz6-3b-8Wq"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3l0-TF-uxu">
+                                <rect key="frame" x="20" y="332.5" width="374" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ciT-rU-uN1">
+                                <rect key="frame" x="20" y="352.5" width="374" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwi-37-es7">
+                                <rect key="frame" x="20" y="372.5" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="h98-44-IKe"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="맥주 랜덤 생성하기"/>
+                                <connections>
+                                    <action selector="fetchBeerButtonTapped:" destination="KWp-2u-CDh" eventType="touchUpInside" id="efx-f0-6kG"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="rVa-HN-Edx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3l0-TF-uxu" firstAttribute="leading" secondItem="rVa-HN-Edx" secondAttribute="leading" constant="20" id="0II-nC-XuO"/>
+                            <constraint firstItem="NT9-rh-z7v" firstAttribute="top" secondItem="rVa-HN-Edx" secondAttribute="top" constant="20" id="Aqe-pW-MlB"/>
+                            <constraint firstItem="dwi-37-es7" firstAttribute="top" secondItem="ciT-rU-uN1" secondAttribute="bottom" constant="20" id="H5W-bD-koc"/>
+                            <constraint firstItem="ciT-rU-uN1" firstAttribute="top" secondItem="3l0-TF-uxu" secondAttribute="bottom" constant="20" id="PqU-nA-e9i"/>
+                            <constraint firstItem="3l0-TF-uxu" firstAttribute="top" secondItem="NT9-rh-z7v" secondAttribute="bottom" constant="20" id="XJb-0u-H9G"/>
+                            <constraint firstItem="NT9-rh-z7v" firstAttribute="width" secondItem="3b2-x8-LnP" secondAttribute="width" multiplier="0.6" id="iOy-Ob-hpq"/>
+                            <constraint firstItem="ciT-rU-uN1" firstAttribute="leading" secondItem="rVa-HN-Edx" secondAttribute="leading" constant="20" id="prP-rn-VdV"/>
+                            <constraint firstItem="rVa-HN-Edx" firstAttribute="trailing" secondItem="dwi-37-es7" secondAttribute="trailing" constant="20" id="r56-zm-M8Y"/>
+                            <constraint firstItem="NT9-rh-z7v" firstAttribute="centerX" secondItem="rVa-HN-Edx" secondAttribute="centerX" id="s7G-KC-Q2C"/>
+                            <constraint firstItem="rVa-HN-Edx" firstAttribute="trailing" secondItem="3l0-TF-uxu" secondAttribute="trailing" constant="20" id="vB6-Ok-R5l"/>
+                            <constraint firstItem="rVa-HN-Edx" firstAttribute="trailing" secondItem="ciT-rU-uN1" secondAttribute="trailing" constant="20" id="vIG-RZ-xQm"/>
+                            <constraint firstItem="dwi-37-es7" firstAttribute="leading" secondItem="rVa-HN-Edx" secondAttribute="leading" constant="20" id="xq0-OP-c9A"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="beerDescriptionLabel" destination="ciT-rU-uN1" id="HYU-f3-UMA"/>
+                        <outlet property="beerImageView" destination="NT9-rh-z7v" id="tdR-k0-4nU"/>
+                        <outlet property="beerNameLabel" destination="3l0-TF-uxu" id="MjK-Ns-SFf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sxw-uC-BjO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5230" y="70"/>
+            <point key="canvasLocation" x="5228.985507246377" y="69.642857142857139"/>
         </scene>
     </scenes>
     <resources>
