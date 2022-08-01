@@ -8,7 +8,6 @@
 import UIKit
 
 class LocationViewController: UIViewController {
-
     // Notification 1. 인스턴스 생성
     let notificationCenter = UNUserNotificationCenter.current()
     

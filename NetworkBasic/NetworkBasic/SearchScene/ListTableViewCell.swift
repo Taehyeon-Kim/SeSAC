@@ -7,9 +7,6 @@
 
 import UIKit
 
-class ListTableViewCell: UITableViewCell {
-
-    static let identifier = "ListTableViewCell"
-    
+class ListTableViewCell: UITableViewCell {    
     @IBOutlet weak var titleLabel: UILabel!
 }

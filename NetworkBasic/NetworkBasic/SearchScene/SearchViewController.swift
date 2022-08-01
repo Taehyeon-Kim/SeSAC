@@ -34,7 +34,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // 테이블 뷰가 사용할 테이블뷰 셀(XIB) 등록
         // XIB: xml interface builder <= NIB
         // Literal한 문자열은 제거하자
-        searchTableView.register(UINib(nibName: ListTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: ListTableViewCell.identifier)
+        searchTableView.register(UINib(nibName: ListTableViewCell.reuseidentifier, bundle: nil), forCellReuseIdentifier: ListTableViewCell.reuseidentifier)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,7 +42,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.identifier, for: indexPath) as? ListTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.reuseidentifier, for: indexPath) as? ListTableViewCell else {
             return UITableViewCell()
         }
         

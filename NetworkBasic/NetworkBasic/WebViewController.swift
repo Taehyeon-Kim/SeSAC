@@ -9,7 +9,8 @@ import UIKit
 import WebKit
 
 class WebViewController: UIViewController {
-
+    // WebViewController.self 메타 타입 => "WebViewController"
+    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var webView: WKWebView!
     

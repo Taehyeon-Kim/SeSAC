@@ -27,6 +27,8 @@
 		BD7E81462893888400E86383 /* Galmuri11.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD7E81432893888300E86383 /* Galmuri11.ttf */; };
 		BD7E81472893888400E86383 /* Galmuri7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD7E81442893888300E86383 /* Galmuri7.ttf */; };
 		BD7E81482893888400E86383 /* Galmuri9.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD7E81452893888400E86383 /* Galmuri9.ttf */; };
+		BD857383289752C0007F294F /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD857382289752C0007F294F /* ReusableViewProtocol.swift */; };
+		BD85738628975827007F294F /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD85738528975827007F294F /* Constant.swift */; };
 		BDB0926328920CCB00B0A4E1 /* ViewPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB0926228920CCB00B0A4E1 /* ViewPresentable.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +55,8 @@
 		BD7E81432893888300E86383 /* Galmuri11.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Galmuri11.ttf; sourceTree = "<group>"; };
 		BD7E81442893888300E86383 /* Galmuri7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Galmuri7.ttf; sourceTree = "<group>"; };
 		BD7E81452893888400E86383 /* Galmuri9.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Galmuri9.ttf; sourceTree = "<group>"; };
+		BD857382289752C0007F294F /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
+		BD85738528975827007F294F /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		BDB0926228920CCB00B0A4E1 /* ViewPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPresentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +90,7 @@
 		BD7915092890DDA8000A12EE /* NetworkBasic */ = {
 			isa = PBXGroup;
 			children = (
+				BD85738428975817007F294F /* Constant */,
 				BD7E813C289384A700E86383 /* Resource */,
 				BDB0926128920CAF00B0A4E1 /* SearchScene */,
 				BDB0926028920CA200B0A4E1 /* Protocol */,
@@ -118,10 +123,19 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		BD85738428975817007F294F /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				BD85738528975827007F294F /* Constant.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
 		BDB0926028920CA200B0A4E1 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
 				BDB0926228920CCB00B0A4E1 /* ViewPresentable.swift */,
+				BD857382289752C0007F294F /* ReusableViewProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -219,9 +233,11 @@
 				BD79150F2890DDA8000A12EE /* ViewController.swift in Sources */,
 				BD79150B2890DDA8000A12EE /* AppDelegate.swift in Sources */,
 				BD4566EC2892239F009B4514 /* LottoViewController.swift in Sources */,
+				BD857383289752C0007F294F /* ReusableViewProtocol.swift in Sources */,
 				BD7E813B28935E1600E86383 /* LocationViewController.swift in Sources */,
 				BD4566F228923DFA009B4514 /* Utils.swift in Sources */,
 				BD79151F2890E249000A12EE /* SearchViewController.swift in Sources */,
+				BD85738628975827007F294F /* Constant.swift in Sources */,
 				BD4566EE28923052009B4514 /* TranslateViewController.swift in Sources */,
 				BD79150D2890DDA8000A12EE /* SceneDelegate.swift in Sources */,
 				BD7915222890E4EB000A12EE /* ListTableViewCell.swift in Sources */,
