@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="peX-a1-Xcj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="znc-hz-tfL">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -166,7 +166,14 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bonusNumber" destination="EZr-UL-eS5" id="rbL-aU-V8e"/>
+                        <outlet property="fifthNumber" destination="ele-4N-dz9" id="aLd-nB-n30"/>
+                        <outlet property="firstNumber" destination="AJ5-Ek-ODB" id="34O-Vi-TFR"/>
+                        <outlet property="fourthNumber" destination="Klh-T4-UE3" id="V8L-41-oty"/>
                         <outlet property="numberTextField" destination="8ii-3s-Iek" id="9o7-Ul-xIB"/>
+                        <outlet property="secondNumber" destination="hsj-f3-WUZ" id="PL4-Tt-9Bl"/>
+                        <outlet property="sixthNumber" destination="Dc9-iL-vyN" id="6b0-wK-qLn"/>
+                        <outlet property="thirdNumber" destination="sVl-Jl-anl" id="85U-Kd-g8q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EAa-3H-BSZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
