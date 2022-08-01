@@ -29,6 +29,7 @@
 		BD7E81482893888400E86383 /* Galmuri9.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD7E81452893888400E86383 /* Galmuri9.ttf */; };
 		BD857383289752C0007F294F /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD857382289752C0007F294F /* ReusableViewProtocol.swift */; };
 		BD85738628975827007F294F /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD85738528975827007F294F /* Constant.swift */; };
+		BD85738828975FA3007F294F /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD85738728975FA3007F294F /* UserDefaultsHelper.swift */; };
 		BDB0926328920CCB00B0A4E1 /* ViewPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB0926228920CCB00B0A4E1 /* ViewPresentable.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		BD7E81452893888400E86383 /* Galmuri9.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Galmuri9.ttf; sourceTree = "<group>"; };
 		BD857382289752C0007F294F /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
 		BD85738528975827007F294F /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		BD85738728975FA3007F294F /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
 		BDB0926228920CCB00B0A4E1 /* ViewPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPresentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				BD85738528975827007F294F /* Constant.swift */,
+				BD85738728975FA3007F294F /* UserDefaultsHelper.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD85738828975FA3007F294F /* UserDefaultsHelper.swift in Sources */,
 				BDB0926328920CCB00B0A4E1 /* ViewPresentable.swift in Sources */,
 				BD4566F028923AAD009B4514 /* WebViewController.swift in Sources */,
 				BD79150F2890DDA8000A12EE /* ViewController.swift in Sources */,
