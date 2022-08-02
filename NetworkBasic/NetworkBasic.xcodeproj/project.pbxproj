@@ -33,6 +33,7 @@
 		BD85738B28977CF5007F294F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BD85738A28977CF5007F294F /* Alamofire */; };
 		BD85738E28977D22007F294F /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = BD85738D28977D22007F294F /* SwiftyJSON */; };
 		BDA841952898018D0062C174 /* BeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA841942898018D0062C174 /* BeerViewController.swift */; };
+		BDA841972898BD3A0062C174 /* BoxOfficeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA841962898BD3A0062C174 /* BoxOfficeModel.swift */; };
 		BDB0926328920CCB00B0A4E1 /* ViewPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB0926228920CCB00B0A4E1 /* ViewPresentable.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		BD85738528975827007F294F /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		BD85738728975FA3007F294F /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
 		BDA841942898018D0062C174 /* BeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewController.swift; sourceTree = "<group>"; };
+		BDA841962898BD3A0062C174 /* BoxOfficeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeModel.swift; sourceTree = "<group>"; };
 		BDB0926228920CCB00B0A4E1 /* ViewPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPresentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,6 +158,7 @@
 				BD79151E2890E249000A12EE /* SearchViewController.swift */,
 				BD7915202890E4EB000A12EE /* ListTableViewCell.swift */,
 				BD7915212890E4EB000A12EE /* ListTableViewCell.xib */,
+				BDA841962898BD3A0062C174 /* BoxOfficeModel.swift */,
 			);
 			path = SearchScene;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				BD4566F028923AAD009B4514 /* WebViewController.swift in Sources */,
 				BD79150F2890DDA8000A12EE /* ViewController.swift in Sources */,
 				BD79150B2890DDA8000A12EE /* AppDelegate.swift in Sources */,
+				BDA841972898BD3A0062C174 /* BoxOfficeModel.swift in Sources */,
 				BDA841952898018D0062C174 /* BeerViewController.swift in Sources */,
 				BD4566EC2892239F009B4514 /* LottoViewController.swift in Sources */,
 				BD857383289752C0007F294F /* ReusableViewProtocol.swift in Sources */,

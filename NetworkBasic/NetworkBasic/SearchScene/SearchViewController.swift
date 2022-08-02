@@ -24,7 +24,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     var navigationTitleString: String = ""
     var backgroundColor: UIColor = .red
-    var list: [String] = []
+    var list: [BoxOfficeModel] = []
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var searchTableView: UITableView!
@@ -55,7 +55,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
         
         cell.titleLabel.font = .boldSystemFont(ofSize: 22)
-        cell.titleLabel.text = list[indexPath.row]
+        cell.titleLabel.text = "\(list[indexPath.row].movieTitle): \(list[indexPath.row].releaseDate)"
         
         return cell
     }
@@ -74,13 +74,15 @@ extension SearchViewController {
                 let json = JSON(value)
                 print("JSON: \(json)")
                 
-                //                let movieNm1 = json["boxOfficeResult"]["dailyBoxOfficeList"][0]["movieNm"].stringValue
-                //                let movieNm2 = json["boxOfficeResult"]["dailyBoxOfficeList"][1]["movieNm"].stringValue
-                //                let movieNm3 = json["boxOfficeResult"]["dailyBoxOfficeList"][2]["movieNm"].stringValue
+                // let movieNm1 = json["boxOfficeResult"]["dailyBoxOfficeList"][0]["movieNm"].stringValue
+                // let movieNm2 = json["boxOfficeResult"]["dailyBoxOfficeList"][1]["movieNm"].stringValue
+                // let movieNm3 = json["boxOfficeResult"]["dailyBoxOfficeList"][2]["movieNm"].stringValue
                 
                 for movie in json["boxOfficeResult"]["dailyBoxOfficeList"].arrayValue {
                     let movieNm = movie["movieNm"].stringValue
-                    self.list.append(movieNm)
+                    let openDt = movie["openDt"].stringValue
+                    let audiCnt = movie["audiCnt"].stringValue
+                    self.list.append(BoxOfficeModel(movieTitle: movieNm, releaseDate: openDt, audienceCount: audiCnt))
                 }
                 
                 self.searchTableView.reloadData()
