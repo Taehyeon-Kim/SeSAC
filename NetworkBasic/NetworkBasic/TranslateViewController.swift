@@ -13,9 +13,14 @@ import UIKit
 // UIControl
 // UIResponderChain > resignFirstResponder() / becomeFirstResponder()
 
+import Alamofire
+import SwiftyJSON
+
 class TranslateViewController: UIViewController {
 
     @IBOutlet weak var userInputTextView: UITextView!
+    @IBOutlet weak var resultTextView: UITextView!
+    
     let textViewPlaceholderText = "번역하고 싶은 문장을 작성해보세요."
     
     override func viewDidLoad() {
@@ -25,13 +30,48 @@ class TranslateViewController: UIViewController {
         userInputTextView.text = textViewPlaceholderText
         userInputTextView.textColor = .lightGray
         userInputTextView.font = UIFont(name: "Galmuri11-Regular", size: 17)
+        resultTextView.font = UIFont(name: "Galmuri11-Regular", size: 17)
         
 //        userInputTextView.resignFirstResponder()
 //        userInputTextView.becomeFirstResponder()
     }
     
     @IBAction func completeButtonTapped(_ sender: Any) {
+        requestTranslatedData(text: userInputTextView.text)
         userInputTextView.resignFirstResponder()
+    }
+    
+    func requestTranslatedData(text: String) {
+        let url = EndPoint.translateURL
+        let headers: HTTPHeaders = [
+            "X-Naver-Client-Id": APIKey.NAVER_ID,
+            "X-Naver-Client-Secret": APIKey.NAVER_SECRET
+        ]
+        let parameters: [String: String] = [
+            "source": "ko",
+            "target": "en",
+            "text": text
+        ]
+        AF.request(url, method: .post, parameters: parameters, headers: headers)
+            .validate(statusCode: 200...500)
+            .responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                print("JSON: \(json)")
+
+                let statusCode = response.response?.statusCode ?? 500
+                
+                if statusCode == 200 {
+                    self.resultTextView.text = json["message"]["result"]["translatedText"].stringValue
+                } else {
+                    self.resultTextView.text = json["errorMessage"].stringValue
+                }
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }
 

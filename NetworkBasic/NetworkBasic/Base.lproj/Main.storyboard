@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="znc-hz-tfL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="peX-a1-Xcj">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -207,7 +207,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwA-eq-FOF">
-                                <rect key="frame" x="20" y="408" width="374" height="50"/>
+                                <rect key="frame" x="20" y="314" width="374" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="o43-7a-S9B"/>
                                 </constraints>
@@ -217,19 +217,33 @@
                                     <action selector="completeButtonTapped:" destination="peX-a1-Xcj" eventType="touchUpInside" id="TdU-O2-agD"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2h7-aX-aiW">
+                                <rect key="frame" x="20" y="393" width="374" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="2kB-Yc-xeU"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="J7Q-ak-AO9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="iAz-zS-mDF" firstAttribute="leading" secondItem="J7Q-ak-AO9" secondAttribute="leading" constant="20" id="15w-Hg-xvt"/>
+                            <constraint firstItem="2h7-aX-aiW" firstAttribute="leading" secondItem="J7Q-ak-AO9" secondAttribute="leading" constant="20" id="EcD-go-dtg"/>
+                            <constraint firstItem="2h7-aX-aiW" firstAttribute="top" secondItem="jwA-eq-FOF" secondAttribute="bottom" constant="29" id="Eoa-Gh-644"/>
+                            <constraint firstItem="J7Q-ak-AO9" firstAttribute="trailing" secondItem="2h7-aX-aiW" secondAttribute="trailing" constant="20" id="OdF-qV-GwN"/>
                             <constraint firstItem="jwA-eq-FOF" firstAttribute="leading" secondItem="J7Q-ak-AO9" secondAttribute="leading" constant="20" id="Q5g-EE-wSw"/>
                             <constraint firstItem="J7Q-ak-AO9" firstAttribute="trailing" secondItem="jwA-eq-FOF" secondAttribute="trailing" constant="20" id="Zy1-Q7-jnI"/>
                             <constraint firstItem="J7Q-ak-AO9" firstAttribute="trailing" secondItem="iAz-zS-mDF" secondAttribute="trailing" constant="20" id="b1A-el-K6J"/>
                             <constraint firstItem="iAz-zS-mDF" firstAttribute="top" secondItem="J7Q-ak-AO9" secondAttribute="top" constant="50" id="eng-8n-tYd"/>
-                            <constraint firstItem="jwA-eq-FOF" firstAttribute="top" secondItem="iAz-zS-mDF" secondAttribute="bottom" constant="114" id="oAd-t5-9De"/>
+                            <constraint firstItem="jwA-eq-FOF" firstAttribute="top" secondItem="iAz-zS-mDF" secondAttribute="bottom" constant="20" id="oAd-t5-9De"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="resultTextView" destination="2h7-aX-aiW" id="nVi-MH-fOG"/>
                         <outlet property="userInputTextView" destination="iAz-zS-mDF" id="WkT-vA-gou"/>
                     </connections>
                 </viewController>
