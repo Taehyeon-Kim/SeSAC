@@ -17,11 +17,15 @@
 
 import UIKit
 
+import Alamofire
+import SwiftyJSON
+
 class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var navigationTitleString: String = ""
     var backgroundColor: UIColor = .red
     
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var searchTableView: UITableView!
     
     override func viewDidLoad() {
@@ -35,6 +39,9 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // XIB: xml interface builder <= NIB
         // Literal한 문자열은 제거하자
         searchTableView.register(UINib(nibName: ListTableViewCell.reuseidentifier, bundle: nil), forCellReuseIdentifier: ListTableViewCell.reuseidentifier)
+        
+        searchBar.delegate = self
+        requestBoxOffice(text: "20220801")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -50,5 +57,29 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.titleLabel.text = "HELLO"
         
         return cell
+    }
+}
+
+extension SearchViewController {
+    private func requestBoxOffice(text: String) {
+        let url = "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=ba371c92e519dd60e2a78ed1df301638&targetDt=\(text)"
+        AF.request(url, method: .get).validate().responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                print("JSON: \(json)")
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+}
+
+extension SearchViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let text = searchBar.text,
+        (2...8).contains(text.count) else { return } // 옵셔널 바인딩, 8글자, 숫자, 날짜로 변경 시 유효한 형태의 값인 지 등 체크
+        requestBoxOffice(text: text)
     }
 }
