@@ -8,6 +8,7 @@
 - [Alpha vs Opacity](https://github.com/Taehyeon-Kim/SeSAC/issues/30)
 - [Image Rendering Mode, Original vs Template](https://github.com/Taehyeon-Kim/SeSAC/issues/31)
 - [Raw Strings](https://github.com/Taehyeon-Kim/SeSAC/issues/41)
+- [타입 추론과 타입 어노테이션의 속도 차이에 관하여](https://github.com/Taehyeon-Kim/SeSAC/issues/86)
 
 ## TIL
 
