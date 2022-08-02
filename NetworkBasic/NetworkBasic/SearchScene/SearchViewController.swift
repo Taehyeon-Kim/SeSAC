@@ -67,7 +67,7 @@ extension SearchViewController {
         list.removeAll()
         searchTableView.reloadData()
         
-        let url = "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=ba371c92e519dd60e2a78ed1df301638&targetDt=\(text)"
+        let url = "\(EndPoint.boxOfficeURL)key=\(APIKey.BOXOFFICE)&targetDt=\(text)"
         AF.request(url, method: .get).validate().responseJSON { response in
             switch response.result {
             case .success(let value):

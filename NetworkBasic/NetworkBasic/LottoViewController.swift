@@ -39,7 +39,7 @@ class LottoViewController: UIViewController {
     
     func requestLotto(number: Int) {
         // 알라모파이어에서는 AF: 200 ~ 299를 기본적으로 성공으로 간주한다.
-        let url = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=\(number)"
+        let url = "\(EndPoint.lottoURL)&drwNo=\(number)"
         AF.request(url, method: .get).validate(statusCode: 200..<400).responseJSON { response in
             switch response.result {
             case .success(let value):
