@@ -25,6 +25,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var navigationTitleString: String = ""
     var backgroundColor: UIColor = .red
     var list: [BoxOfficeModel] = []
+    lazy var dateFormatter = DateFormatter()
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var searchTableView: UITableView!
@@ -42,7 +43,9 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         searchTableView.register(UINib(nibName: ListTableViewCell.reuseidentifier, bundle: nil), forCellReuseIdentifier: ListTableViewCell.reuseidentifier)
         
         searchBar.delegate = self
-        requestBoxOffice(text: "20220801")
+        
+        let yesterdayDateString = getYesterdayDate()
+        requestBoxOffice(text: yesterdayDateString)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -63,7 +66,6 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
 extension SearchViewController {
     private func requestBoxOffice(text: String) {
-        
         list.removeAll()
         searchTableView.reloadData()
         
@@ -91,6 +93,15 @@ extension SearchViewController {
                 print(error)
             }
         }
+    }
+    
+    func getYesterdayDate() -> String {
+        let currentDate = Date()
+        let yesterdayDate = currentDate.addingTimeInterval(3600 * -24)
+        dateFormatter.locale = Locale(identifier: "ko_KR")
+        dateFormatter.dateFormat = "yyyyMMdd"
+        let yesterdayDateString = dateFormatter.string(from: yesterdayDate)
+        return yesterdayDateString
     }
 }
 
