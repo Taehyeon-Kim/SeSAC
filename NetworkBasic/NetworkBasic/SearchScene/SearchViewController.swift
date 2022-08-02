@@ -24,6 +24,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     var navigationTitleString: String = ""
     var backgroundColor: UIColor = .red
+    var list: [String] = []
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var searchTableView: UITableView!
@@ -45,7 +46,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 100
+        return list.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -54,7 +55,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
         
         cell.titleLabel.font = .boldSystemFont(ofSize: 22)
-        cell.titleLabel.text = "HELLO"
+        cell.titleLabel.text = list[indexPath.row]
         
         return cell
     }
@@ -62,12 +63,27 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
 extension SearchViewController {
     private func requestBoxOffice(text: String) {
+        
+        list.removeAll()
+        searchTableView.reloadData()
+        
         let url = "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=ba371c92e519dd60e2a78ed1df301638&targetDt=\(text)"
         AF.request(url, method: .get).validate().responseJSON { response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
                 print("JSON: \(json)")
+                
+                //                let movieNm1 = json["boxOfficeResult"]["dailyBoxOfficeList"][0]["movieNm"].stringValue
+                //                let movieNm2 = json["boxOfficeResult"]["dailyBoxOfficeList"][1]["movieNm"].stringValue
+                //                let movieNm3 = json["boxOfficeResult"]["dailyBoxOfficeList"][2]["movieNm"].stringValue
+                
+                for movie in json["boxOfficeResult"]["dailyBoxOfficeList"].arrayValue {
+                    let movieNm = movie["movieNm"].stringValue
+                    self.list.append(movieNm)
+                }
+                
+                self.searchTableView.reloadData()
                 
             case .failure(let error):
                 print(error)
