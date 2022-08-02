@@ -23,9 +23,8 @@ class LottoViewController: UIViewController {
     @IBOutlet weak var bonusNumber: UILabel!
     
     var lottoPickerView = UIPickerView()
-    // 코드로 뷰를 만드는 기능이 훨씬 더 많이 남아있음.
-    
     let numberList: [Int] = Array(1...1025).reversed()  // 데이터는 numberList만 관리한다. (역할의 분리)
+    var drwNumber = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,8 +33,18 @@ class LottoViewController: UIViewController {
         lottoPickerView.delegate = self
         lottoPickerView.dataSource = self
         
-        requestLotto(number: 1025)
+        requestLotto(number: 1026)
     }
+    
+    /*
+     // - 중요한 포인트는 1회차부터 돌릴 필요가 없지 않나 생각이 듬.
+     1. 개발하는 시점에서 가장 최신회차의 정보는 알고 있으니까 이 회차 정보를 UserDefaults로 가지고 있음.
+     2. 해당 회차 정보부터 1씩 증가시키는 반복문을 돌리면서 서버통신을 함.
+     3. Fail이 나는 순간 현재 가지고 있는 정보가 최신 회차라는 이야기이고,
+     4. 통신이 정상적으로 이루어지면 계속해서 갱신하면 될 것 같음.
+     
+     // - 이것말고 다른 방법이 있을지는 고민해봐야지
+     */
     
     func requestLotto(number: Int) {
         // 알라모파이어에서는 AF: 200 ~ 299를 기본적으로 성공으로 간주한다.
@@ -46,25 +55,17 @@ class LottoViewController: UIViewController {
                 let json = JSON(value)
                 print("JSON: \(json)")
                 
-                let bonus = json["bnusNo"].stringValue
-                let firstNumber = json["drwtNo1"].stringValue
-                let secondNumber = json["drwtNo2"].stringValue
-                let thirdNumber = json["drwtNo3"].stringValue
-                let fourthNumber = json["drwtNo4"].stringValue
-                let fifthNumber = json["drwtNo5"].stringValue
-                let sixthNumber = json["drwtNo6"].stringValue
-                
                 let date = json["drwNoDate"].stringValue
                 print(date)
                 
                 self.numberTextField.text = date
-                self.firstNumber.text = firstNumber
-                self.secondNumber.text = secondNumber
-                self.thirdNumber.text = thirdNumber
-                self.fourthNumber.text = fourthNumber
-                self.fifthNumber.text = fifthNumber
-                self.sixthNumber.text = sixthNumber
-                self.bonusNumber.text = bonus
+                self.firstNumber.text = json["drwtNo1"].stringValue
+                self.secondNumber.text = json["drwtNo2"].stringValue
+                self.thirdNumber.text = json["drwtNo3"].stringValue
+                self.fourthNumber.text = json["drwtNo4"].stringValue
+                self.fifthNumber.text = json["drwtNo5"].stringValue
+                self.sixthNumber.text = json["drwtNo6"].stringValue
+                self.bonusNumber.text = json["bnusNo"].stringValue
                 
             case .failure(let error):
                 print(error)
