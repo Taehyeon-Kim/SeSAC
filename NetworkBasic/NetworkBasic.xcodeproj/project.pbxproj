@@ -35,6 +35,11 @@
 		BDA841952898018D0062C174 /* BeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA841942898018D0062C174 /* BeerViewController.swift */; };
 		BDA841972898BD3A0062C174 /* BoxOfficeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA841962898BD3A0062C174 /* BoxOfficeModel.swift */; };
 		BDB0926328920CCB00B0A4E1 /* ViewPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB0926228920CCB00B0A4E1 /* ViewPresentable.swift */; };
+		BDDF7684289937370096196B /* BeerListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDDF7683289937370096196B /* BeerListViewController.storyboard */; };
+		BDDF7686289937450096196B /* BeerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDF7685289937450096196B /* BeerListViewController.swift */; };
+		BDDF768C28993DF70096196B /* BeerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDF768A28993DF70096196B /* BeerCollectionViewCell.swift */; };
+		BDDF768D28993DF70096196B /* BeerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDDF768B28993DF70096196B /* BeerCollectionViewCell.xib */; };
+		BDDF768F28993F820096196B /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDF768E28993F820096196B /* Beer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +71,11 @@
 		BDA841942898018D0062C174 /* BeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewController.swift; sourceTree = "<group>"; };
 		BDA841962898BD3A0062C174 /* BoxOfficeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeModel.swift; sourceTree = "<group>"; };
 		BDB0926228920CCB00B0A4E1 /* ViewPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPresentable.swift; sourceTree = "<group>"; };
+		BDDF7683289937370096196B /* BeerListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BeerListViewController.storyboard; sourceTree = "<group>"; };
+		BDDF7685289937450096196B /* BeerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListViewController.swift; sourceTree = "<group>"; };
+		BDDF768A28993DF70096196B /* BeerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCollectionViewCell.swift; sourceTree = "<group>"; };
+		BDDF768B28993DF70096196B /* BeerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerCollectionViewCell.xib; sourceTree = "<group>"; };
+		BDDF768E28993F820096196B /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +110,7 @@
 		BD7915092890DDA8000A12EE /* NetworkBasic */ = {
 			isa = PBXGroup;
 			children = (
+				BDDF767F2899370D0096196B /* Scenes */,
 				BD85738428975817007F294F /* Constant */,
 				BD7E813C289384A700E86383 /* Resource */,
 				BDB0926128920CAF00B0A4E1 /* SearchScene */,
@@ -110,8 +121,8 @@
 				BD4566EB2892239F009B4514 /* LottoViewController.swift */,
 				BD7E813A28935E1600E86383 /* LocationViewController.swift */,
 				BD4566ED28923052009B4514 /* TranslateViewController.swift */,
-				BD4566F128923DFA009B4514 /* Utils.swift */,
 				BDA841942898018D0062C174 /* BeerViewController.swift */,
+				BD4566F128923DFA009B4514 /* Utils.swift */,
 				BD7915102890DDA8000A12EE /* Main.storyboard */,
 				BD4566EF28923AAD009B4514 /* WebViewController.swift */,
 				BD7915132890DDAA000A12EE /* Assets.xcassets */,
@@ -161,6 +172,34 @@
 				BDA841962898BD3A0062C174 /* BoxOfficeModel.swift */,
 			);
 			path = SearchScene;
+			sourceTree = "<group>";
+		};
+		BDDF767F2899370D0096196B /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				BDDF7680289937120096196B /* Beer */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		BDDF7680289937120096196B /* Beer */ = {
+			isa = PBXGroup;
+			children = (
+				BDDF7687289937610096196B /* Cells */,
+				BDDF7683289937370096196B /* BeerListViewController.storyboard */,
+				BDDF7685289937450096196B /* BeerListViewController.swift */,
+				BDDF768E28993F820096196B /* Beer.swift */,
+			);
+			path = Beer;
+			sourceTree = "<group>";
+		};
+		BDDF7687289937610096196B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BDDF768A28993DF70096196B /* BeerCollectionViewCell.swift */,
+				BDDF768B28993DF70096196B /* BeerCollectionViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +272,8 @@
 				BD7E8142289384BE00E86383 /* LeferiPointBlack.otf in Resources */,
 				BD7E8140289384BE00E86383 /* LeferiBaseBold.otf in Resources */,
 				BD7915172890DDAA000A12EE /* LaunchScreen.storyboard in Resources */,
+				BDDF768D28993DF70096196B /* BeerCollectionViewCell.xib in Resources */,
+				BDDF7684289937370096196B /* BeerListViewController.storyboard in Resources */,
 				BD7E81472893888400E86383 /* Galmuri7.ttf in Resources */,
 				BD7915232890E4EB000A12EE /* ListTableViewCell.xib in Resources */,
 				BD7E81462893888400E86383 /* Galmuri11.ttf in Resources */,
@@ -251,13 +292,16 @@
 			files = (
 				BD85738828975FA3007F294F /* UserDefaultsHelper.swift in Sources */,
 				BDB0926328920CCB00B0A4E1 /* ViewPresentable.swift in Sources */,
+				BDDF768C28993DF70096196B /* BeerCollectionViewCell.swift in Sources */,
 				BD4566F028923AAD009B4514 /* WebViewController.swift in Sources */,
 				BD79150F2890DDA8000A12EE /* ViewController.swift in Sources */,
 				BD79150B2890DDA8000A12EE /* AppDelegate.swift in Sources */,
+				BDDF768F28993F820096196B /* Beer.swift in Sources */,
 				BDA841972898BD3A0062C174 /* BoxOfficeModel.swift in Sources */,
 				BDA841952898018D0062C174 /* BeerViewController.swift in Sources */,
 				BD4566EC2892239F009B4514 /* LottoViewController.swift in Sources */,
 				BD857383289752C0007F294F /* ReusableViewProtocol.swift in Sources */,
+				BDDF7686289937450096196B /* BeerListViewController.swift in Sources */,
 				BD7E813B28935E1600E86383 /* LocationViewController.swift in Sources */,
 				BD4566F228923DFA009B4514 /* Utils.swift in Sources */,
 				BD79151F2890E249000A12EE /* SearchViewController.swift in Sources */,
