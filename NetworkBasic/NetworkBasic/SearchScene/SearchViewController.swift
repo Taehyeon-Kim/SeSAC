@@ -96,11 +96,13 @@ extension SearchViewController {
     }
     
     func getYesterdayDate() -> String {
+        // Date DateFormatter Calendar
         let currentDate = Date()
-        let yesterdayDate = currentDate.addingTimeInterval(3600 * -24)
+//        let yesterdayDate = currentDate.addingTimeInterval(3600 * -24)
+        let yesterdayDate = Calendar.current.date(byAdding: .day, value: -1, to: currentDate)
         dateFormatter.locale = Locale(identifier: "ko_KR")
         dateFormatter.dateFormat = "yyyyMMdd"
-        let yesterdayDateString = dateFormatter.string(from: yesterdayDate)
+        let yesterdayDateString = dateFormatter.string(from: yesterdayDate ?? currentDate)
         return yesterdayDateString
     }
 }
