@@ -41,6 +41,7 @@
 		BDDF768D28993DF70096196B /* BeerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDDF768B28993DF70096196B /* BeerCollectionViewCell.xib */; };
 		BDDF768F28993F820096196B /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDF768E28993F820096196B /* Beer.swift */; };
 		BDDF76DD289A09490096196B /* ImageSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDF76DC289A09490096196B /* ImageSearchViewController.swift */; };
+		BDDF771F289A84E80096196B /* SearchResultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDF771E289A84E80096196B /* SearchResultCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		BDDF768B28993DF70096196B /* BeerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerCollectionViewCell.xib; sourceTree = "<group>"; };
 		BDDF768E28993F820096196B /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		BDDF76DC289A09490096196B /* ImageSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchViewController.swift; sourceTree = "<group>"; };
+		BDDF771E289A84E80096196B /* SearchResultCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				BD4566ED28923052009B4514 /* TranslateViewController.swift */,
 				BDA841942898018D0062C174 /* BeerViewController.swift */,
 				BDDF76DC289A09490096196B /* ImageSearchViewController.swift */,
+				BDDF771E289A84E80096196B /* SearchResultCollectionViewCell.swift */,
 				BD4566F128923DFA009B4514 /* Utils.swift */,
 				BD7915102890DDA8000A12EE /* Main.storyboard */,
 				BD4566EF28923AAD009B4514 /* WebViewController.swift */,
@@ -297,6 +300,7 @@
 				BDB0926328920CCB00B0A4E1 /* ViewPresentable.swift in Sources */,
 				BDDF768C28993DF70096196B /* BeerCollectionViewCell.swift in Sources */,
 				BD4566F028923AAD009B4514 /* WebViewController.swift in Sources */,
+				BDDF771F289A84E80096196B /* SearchResultCollectionViewCell.swift in Sources */,
 				BD79150F2890DDA8000A12EE /* ViewController.swift in Sources */,
 				BD79150B2890DDA8000A12EE /* AppDelegate.swift in Sources */,
 				BDDF76DD289A09490096196B /* ImageSearchViewController.swift in Sources */,
