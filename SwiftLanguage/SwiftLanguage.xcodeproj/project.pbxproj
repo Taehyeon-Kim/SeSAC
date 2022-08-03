@@ -27,6 +27,7 @@
 		BD78BAF3288F83B800198C85 /* Property (인스턴스, 지연 저장).playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Property (인스턴스, 지연 저장).playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		BD78BAF4288F875000198C85 /* Property (타입, 연산).playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Property (타입, 연산).playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		BD7914FD2890C0D4000A12EE /* Method.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Method.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		BDDF76DE289A1EF80096196B /* Closure+First Class Object.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Closure+First Class Object.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +44,7 @@
 		BD78BAD3288F830900198C85 = {
 			isa = PBXGroup;
 			children = (
+				BDDF76DE289A1EF80096196B /* Closure+First Class Object.playground */,
 				BD7914FD2890C0D4000A12EE /* Method.playground */,
 				BD78BAF3288F83B800198C85 /* Property (인스턴스, 지연 저장).playground */,
 				BD78BAF4288F875000198C85 /* Property (타입, 연산).playground */,
