@@ -438,7 +438,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tiY-hL-gUl">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="95" width="414" height="767"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5M3-Oq-fdv">
                                     <size key="itemSize" width="263" height="275"/>
@@ -472,18 +472,26 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Lav-GQ-1FD">
+                                <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oFB-x5-Kvi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="tiY-hL-gUl" firstAttribute="leading" secondItem="oFB-x5-Kvi" secondAttribute="leading" id="FgX-Nt-8Dj"/>
+                            <constraint firstItem="tiY-hL-gUl" firstAttribute="top" secondItem="Lav-GQ-1FD" secondAttribute="bottom" id="Vo6-ZG-YOm"/>
+                            <constraint firstItem="Lav-GQ-1FD" firstAttribute="leading" secondItem="oFB-x5-Kvi" secondAttribute="leading" id="Wtx-N4-GBb"/>
                             <constraint firstItem="oFB-x5-Kvi" firstAttribute="bottom" secondItem="tiY-hL-gUl" secondAttribute="bottom" id="YZD-cH-exS"/>
-                            <constraint firstItem="tiY-hL-gUl" firstAttribute="top" secondItem="oFB-x5-Kvi" secondAttribute="top" id="Zfd-9w-2Z4"/>
+                            <constraint firstItem="Lav-GQ-1FD" firstAttribute="trailing" secondItem="oFB-x5-Kvi" secondAttribute="trailing" id="gf8-2Z-ZA4"/>
                             <constraint firstItem="oFB-x5-Kvi" firstAttribute="trailing" secondItem="tiY-hL-gUl" secondAttribute="trailing" id="tLM-Ch-AcM"/>
+                            <constraint firstItem="Lav-GQ-1FD" firstAttribute="top" secondItem="oFB-x5-Kvi" secondAttribute="top" id="vIq-an-Pfj"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="tiY-hL-gUl" id="KN2-ZZ-Dn3"/>
+                        <outlet property="searchBar" destination="Lav-GQ-1FD" id="r6H-bj-hKy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PAw-DM-cSj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

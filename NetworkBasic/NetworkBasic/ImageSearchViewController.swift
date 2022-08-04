@@ -17,16 +17,17 @@ class ImageSearchViewController: UIViewController {
     var totalCount = 0
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchImage()
+        searchBar.delegate = self
         configureCollectionView()
     }
     
     // fetchImage, requestImage, callRequestImage, getImage -> response에 따라 네이밍을 설정해주기도 함.
-    func fetchImage() {
-        let text = "클클클".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+    func fetchImage(query: String) {
+        let text = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
         let url = EndPoint.imageSearchURL + "query=\(text)&display=100&start=\(startPage)"
         let headers: HTTPHeaders = [
             "X-Naver-Client-Id": APIKey.NAVER_ID,
@@ -35,7 +36,7 @@ class ImageSearchViewController: UIViewController {
         
         AF.request(url, method: .get, headers: headers)
             .validate(statusCode: 200...500)
-            .responseJSON { response in
+            .responseData { response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
@@ -51,6 +52,36 @@ class ImageSearchViewController: UIViewController {
                 print(error)
             }
         }
+    }
+}
+
+extension ImageSearchViewController: UISearchBarDelegate {
+    
+    // 검색 버튼 클릭 시 실행. (키보드 Return키에 디폴트 구현)
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        if let text = searchBar.text {
+            // 검색 결과가 계속 바뀌기 때문에, 그럴 때마다 초기화 해줄 필요가 있음
+            searchThumnailStrings.removeAll()
+            startPage = 1
+            collectionView.scrollsToTop = true
+            fetchImage(query: text)
+        }
+        
+        view.endEditing(true)
+    }
+    
+    // 취소 버튼 눌렀을 때 실행
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchThumnailStrings.removeAll()
+        collectionView.reloadData()
+        searchBar.text = ""
+        searchBar.setShowsCancelButton(false, animated: true)
+    }
+    
+    // 서치바에 커서가 깜빡이기 시작할 때 실행
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBar.setShowsCancelButton(true, animated: true)
     }
 }
 
@@ -105,7 +136,7 @@ extension ImageSearchViewController: UICollectionViewDataSourcePrefetching {
         for indexPath in indexPaths {
             if searchThumnailStrings.indices.last == indexPath.item && searchThumnailStrings.count < totalCount {
                 startPage += 30
-                fetchImage()
+                fetchImage(query: searchBar.text!)
             }
         }
 //        print("===\(indexPaths)")
