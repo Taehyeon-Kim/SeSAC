@@ -19,12 +19,14 @@ import UIKit
 
 import Alamofire
 import SwiftyJSON
+import JGProgressHUD
 
 class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var navigationTitleString: String = ""
     var backgroundColor: UIColor = .red
     var list: [BoxOfficeModel] = []
+    let hud = JGProgressHUD()
     lazy var dateFormatter = DateFormatter()
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -66,6 +68,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
 extension SearchViewController {
     private func requestBoxOffice(text: String) {
+        hud.show(in: self.view)
         list.removeAll()
         searchTableView.reloadData()
         
@@ -88,6 +91,7 @@ extension SearchViewController {
                 }
                 
                 self.searchTableView.reloadData()
+                self.hud.dismiss(animated: true)
                 
             case .failure(let error):
                 print(error)
