@@ -38,7 +38,7 @@ final class ImageSearchAPIManager {
                 print("JSON: \(json)")
 
                 let totalCount = json["total"].intValue
-                let list = json["item"].arrayValue.map { $0["thumbnail"].stringValue }
+                let list = json["items"].arrayValue.map { $0["thumbnail"].stringValue }
                 
                 completionHandler(totalCount, list)
                 

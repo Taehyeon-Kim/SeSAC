@@ -7,6 +7,8 @@
 
 import UIKit
 
+import Kingfisher
+
 final class SearchResultCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var ImageView: UIImageView! {
         didSet {
@@ -15,12 +17,8 @@ final class SearchResultCollectionViewCell: UICollectionViewCell {
     }
     
     func configureCell(withImageString imageString: String?) {
-        guard let imageURLString = imageString else { return }
-        let imageURL = URL(string: imageURLString)
-        if let imageData = try? Data(contentsOf: imageURL!) {
-            self.ImageView.image = UIImage(data: imageData)
-        } else {
-            self.ImageView.backgroundColor = .black
+        if let url = URL(string: imageString!) {
+            ImageView.kf.setImage(with: url)
         }
     }
 }

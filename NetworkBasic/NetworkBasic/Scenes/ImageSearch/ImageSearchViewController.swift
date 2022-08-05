@@ -31,6 +31,8 @@ class ImageSearchViewController: UIViewController {
             self.totalCount = totalCount
             self.list.append(contentsOf: list)
             
+            print(list)
+            
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
             }
@@ -42,10 +44,9 @@ extension ImageSearchViewController: UISearchBarDelegate {
     
     // 검색 버튼 클릭 시 실행. (키보드 Return키에 디폴트 구현)
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        
+        list.removeAll()
         if let text = searchBar.text {
             // 검색 결과가 계속 바뀌기 때문에, 그럴 때마다 초기화 해줄 필요가 있음
-            list.removeAll()
             startPage = 1
             collectionView.scrollsToTop = true
             fetchImage(query: text)
@@ -88,6 +89,7 @@ extension ImageSearchViewController: UICollectionViewDelegate, UICollectionViewD
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SearchResultCollectionViewCell.reuseidentifier, for: indexPath) as? SearchResultCollectionViewCell else {
             return UICollectionViewCell()
         }
+        print("cell")
         cell.configureCell(withImageString: list[indexPath.row])
         return cell
     }
