@@ -31,7 +31,7 @@ final class ImageSearchAPIManager {
         
         AF.request(url, method: .get, headers: headers)
             .validate(statusCode: 200...500)
-            .responseData { response in
+            .responseData(queue: .global()) { response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)

@@ -350,6 +350,31 @@
                                     <action selector="notificationButtonClicked:" destination="lwb-n7-r8f" eventType="touchUpInside" id="daf-bs-31T"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KyJ-qo-jAN">
+                                <rect key="frame" x="59" y="241" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ybw-jF-pDI">
+                                <rect key="frame" x="234" y="241" width="131" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZJn-k3-V9B">
+                                <rect key="frame" x="59" y="320" width="306" height="249"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJw-7Q-AwE">
+                                <rect key="frame" x="59" y="606" width="306" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="downloadImage:" destination="lwb-n7-r8f" eventType="touchUpInside" id="BO2-W7-JZr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Sl6-Um-p8n"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -359,10 +384,13 @@
                             <constraint firstItem="Sl6-Um-p8n" firstAttribute="trailing" secondItem="xQY-7W-z9V" secondAttribute="trailing" constant="20" id="kGE-xp-4IS"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="ZJn-k3-V9B" id="XNc-9h-NM6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cKx-Mt-CPk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4343" y="70"/>
+            <point key="canvasLocation" x="4342.0289855072469" y="69.642857142857139"/>
         </scene>
         <!--Beer View Controller-->
         <scene sceneID="pjB-F4-BBo">

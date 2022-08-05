@@ -11,20 +11,41 @@ class LocationViewController: UIViewController {
     // Notification 1. 인스턴스 생성
     let notificationCenter = UNUserNotificationCenter.current()
     
+    @IBOutlet weak var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Custom Font
         
-        for family in UIFont.familyNames {
-            print("============= \(family)")
+//        for family in UIFont.familyNames {
+//            print("============= \(family)")
+//            
+//            for name in UIFont.fontNames(forFamilyName: family) {
+//                print("✅ - \(name)")
+//            }
+//        }
+    }
+    
+    @IBAction func downloadImage(_ sender: UIButton) {
+        let url = "https://apod.nasa.gov/apod/image/2208/M13_final2_sinfirma.jpg"
+        print(11111, Thread.isMainThread)
+        
+        DispatchQueue.global(qos: .background).async { // 동시에 여러 작업이 가능하게 해줘
             
-            for name in UIFont.fontNames(forFamilyName: family) {
-                print("✅ - \(name)")
+            print(22222, Thread.isMainThread)
+            
+            let data = try! Data(contentsOf: URL(string: url)!)
+            let image = UIImage(data: data)
+            
+            DispatchQueue.main.async {
+                
+                print(33333, Thread.isMainThread)
+                
+                self.imageView.image = image
             }
         }
     }
-    
     
     @IBAction func notificationButtonClicked(_ sender: UIButton) {
         self.requestAuthorization()

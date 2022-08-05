@@ -30,7 +30,10 @@ class ImageSearchViewController: UIViewController {
         ImageSearchAPIManager.shared.fetchImageData(query: query, startPage: startPage) { totalCount, list in
             self.totalCount = totalCount
             self.list.append(contentsOf: list)
-            self.collectionView.reloadData()
+            
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
         }
     }
 }
