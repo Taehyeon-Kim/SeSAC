@@ -12,7 +12,7 @@ import SwiftyJSON
 
 class ImageSearchViewController: UIViewController {
     
-    var searchThumnailStrings: [String] = []
+    var list: [String] = []
     var startPage = 1
     var totalCount = 0
     
@@ -27,30 +27,10 @@ class ImageSearchViewController: UIViewController {
     
     // fetchImage, requestImage, callRequestImage, getImage -> response에 따라 네이밍을 설정해주기도 함.
     func fetchImage(query: String) {
-        let text = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-        let url = EndPoint.imageSearchURL + "query=\(text)&display=100&start=\(startPage)"
-        let headers: HTTPHeaders = [
-            "X-Naver-Client-Id": APIKey.NAVER_ID,
-            "X-Naver-Client-Secret": APIKey.NAVER_SECRET
-        ]
-        
-        AF.request(url, method: .get, headers: headers)
-            .validate(statusCode: 200...500)
-            .responseData { response in
-            switch response.result {
-            case .success(let value):
-                let json = JSON(value)
-                print("JSON: \(json)")
-                self.totalCount = json["total"].intValue
-                let thumbnailStrings = json["items"].arrayValue
-                for thumbnailString in thumbnailStrings {
-                    self.searchThumnailStrings.append(thumbnailString["thumbnail"].stringValue)
-                }
-                self.collectionView.reloadData()
-                
-            case .failure(let error):
-                print(error)
-            }
+        ImageSearchAPIManager.shared.fetchImageData(query: query, startPage: startPage) { totalCount, list in
+            self.totalCount = totalCount
+            self.list.append(contentsOf: list)
+            self.collectionView.reloadData()
         }
     }
 }
@@ -62,7 +42,7 @@ extension ImageSearchViewController: UISearchBarDelegate {
         
         if let text = searchBar.text {
             // 검색 결과가 계속 바뀌기 때문에, 그럴 때마다 초기화 해줄 필요가 있음
-            searchThumnailStrings.removeAll()
+            list.removeAll()
             startPage = 1
             collectionView.scrollsToTop = true
             fetchImage(query: text)
@@ -73,7 +53,7 @@ extension ImageSearchViewController: UISearchBarDelegate {
     
     // 취소 버튼 눌렀을 때 실행
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchThumnailStrings.removeAll()
+        list.removeAll()
         collectionView.reloadData()
         searchBar.text = ""
         searchBar.setShowsCancelButton(false, animated: true)
@@ -98,14 +78,14 @@ extension ImageSearchViewController: UICollectionViewDelegate, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        searchThumnailStrings.count
+        list.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SearchResultCollectionViewCell.reuseidentifier, for: indexPath) as? SearchResultCollectionViewCell else {
             return UICollectionViewCell()
         }
-        cell.configureCell(withImageString: searchThumnailStrings[indexPath.row])
+        cell.configureCell(withImageString: list[indexPath.row])
         return cell
     }
  
@@ -134,7 +114,7 @@ extension ImageSearchViewController: UICollectionViewDataSourcePrefetching {
     // 셀이 화면에 보이기 직전에 필요한 리소스를 미리 다운 받는 기능
     func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
         for indexPath in indexPaths {
-            if searchThumnailStrings.indices.last == indexPath.item && searchThumnailStrings.count < totalCount {
+            if list.indices.last == indexPath.item && list.count < totalCount {
                 startPage += 30
                 fetchImage(query: searchBar.text!)
             }
