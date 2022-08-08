@@ -14,6 +14,15 @@ import SwiftyJSON
 // 2. replacing 문자열 대체 메서드
 // - 활용도 측면에서 response에서 처리하는 것과 보여지는 cell에서 처리하는 것 중 어느 것이 더 나을까?
 
+/*
+ 테이블 뷰 셀의 높이 조정
+ UITableView.AutomaticDimension
+ - 컨텐츠의 양에 따라서 셀 높이가 자유롭게
+ - 조건: 레이블 numberOfLines 0
+ - 조건: tableview automatic dimension
+ - 조건: 레이아웃은 잘 잡아놓아야 한다. 특히 위아래/높이에 대한 관계가 잘 설정되어야 한다.
+ */
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
@@ -65,11 +74,17 @@ extension ViewController {
     private func configureTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+        // 모든 섹션의 셀에 대해서 유동적으로 높이를 설정하고 싶다.
+        tableView.rowHeight = UITableView.automaticDimension
     }
 }
 
 extension ViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        // 분기 처리를 해서도 조정할 수 있다.
+        // 더 우선적으로 호출된다. (메서드가 우선한다. - viewDidLoad에서 호출되는 것과 비교했을 때!!)
+        return UITableView.automaticDimension
+    }
 }
 
 extension ViewController: UITableViewDataSource {

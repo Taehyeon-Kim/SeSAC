@@ -27,18 +27,30 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="153"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACf-Ze-VXm">
-                                                    <rect key="frame" x="16" y="8" width="382" height="137"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACf-Ze-VXm">
+                                                    <rect key="frame" x="76" y="8" width="322" height="137"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Woz-SJ-67S">
+                                                    <rect key="frame" x="20" y="56.5" width="40" height="40"/>
+                                                    <color key="backgroundColor" red="0.96078431369999995" green="0.98823529409999999" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="fPe-1U-3sd"/>
+                                                        <constraint firstAttribute="width" secondItem="Woz-SJ-67S" secondAttribute="height" id="uL1-OO-shs"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain"/>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="ACf-Ze-VXm" secondAttribute="bottom" constant="8" id="8HD-DG-pv6"/>
                                                 <constraint firstItem="ACf-Ze-VXm" firstAttribute="top" secondItem="fkn-yD-xLh" secondAttribute="top" constant="8" id="BPM-fV-ccm"/>
-                                                <constraint firstItem="ACf-Ze-VXm" firstAttribute="leading" secondItem="fkn-yD-xLh" secondAttribute="leading" constant="16" id="K0O-HV-QQs"/>
                                                 <constraint firstAttribute="trailing" secondItem="ACf-Ze-VXm" secondAttribute="trailing" constant="16" id="Xnj-9z-4GR"/>
+                                                <constraint firstItem="Woz-SJ-67S" firstAttribute="leading" secondItem="fkn-yD-xLh" secondAttribute="leading" constant="20" id="eQE-ji-0v8"/>
+                                                <constraint firstItem="Woz-SJ-67S" firstAttribute="centerY" secondItem="fkn-yD-xLh" secondAttribute="centerY" id="hgg-2Z-w44"/>
+                                                <constraint firstItem="ACf-Ze-VXm" firstAttribute="leading" secondItem="Woz-SJ-67S" secondAttribute="trailing" constant="16" id="znl-zU-5yt"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
