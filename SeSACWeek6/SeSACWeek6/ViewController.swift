@@ -29,6 +29,8 @@ class ViewController: UIViewController {
     
     var blogList: [String] = []
     var cafeList: [String] = []
+    
+    var isExpanded = false // false면 2줄, true면 0으로
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +69,11 @@ class ViewController: UIViewController {
             self.tableView.reloadData()
         })
     }
+    
+    @IBAction func showTotalButtonTapped(_ sender: UIBarButtonItem) {
+        isExpanded.toggle()
+        tableView.reloadData()
+    }
 }
 
 extension ViewController {
@@ -101,6 +108,8 @@ extension ViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "KakaoCell", for: indexPath) as? KakaoCell else {
             return UITableViewCell()
         }
+        
+        cell.testLabel.numberOfLines = isExpanded ? 0 : 2
         cell.testLabel.text = indexPath.section == 0 ? blogList[indexPath.row] : cafeList[indexPath.row]
         return cell
     }
