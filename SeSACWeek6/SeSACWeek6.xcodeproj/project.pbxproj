@@ -19,6 +19,8 @@
 		BD897D3128A09158003F7B47 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD897D3028A09158003F7B47 /* APIKey.swift */; };
 		BD897D3428A0949A003F7B47 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD897D3328A0949A003F7B47 /* EndPoint.swift */; };
 		BD897D3628A0954C003F7B47 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD897D3528A0954C003F7B47 /* URL+Extension.swift */; };
+		BD897D3828A0A7C2003F7B47 /* KakaoAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD897D3728A0A7C2003F7B47 /* KakaoAPIManager.swift */; };
+		BD897D3A28A0ACD0003F7B47 /* ClosureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD897D3928A0ACD0003F7B47 /* ClosureViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		BD897D3028A09158003F7B47 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		BD897D3328A0949A003F7B47 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		BD897D3528A0954C003F7B47 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
+		BD897D3728A0A7C2003F7B47 /* KakaoAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAPIManager.swift; sourceTree = "<group>"; };
+		BD897D3928A0ACD0003F7B47 /* ClosureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 				BD897D1328A09013003F7B47 /* AppDelegate.swift */,
 				BD897D1528A09013003F7B47 /* SceneDelegate.swift */,
 				BD897D1728A09013003F7B47 /* ViewController.swift */,
+				BD897D3928A0ACD0003F7B47 /* ClosureViewController.swift */,
 				BD897D1928A09013003F7B47 /* Main.storyboard */,
 				BD897D1C28A09015003F7B47 /* Assets.xcassets */,
 				BD897D1E28A09015003F7B47 /* LaunchScreen.storyboard */,
@@ -86,6 +91,7 @@
 			children = (
 				BD897D3328A0949A003F7B47 /* EndPoint.swift */,
 				BD897D3528A0954C003F7B47 /* URL+Extension.swift */,
+				BD897D3728A0A7C2003F7B47 /* KakaoAPIManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -173,8 +179,10 @@
 			files = (
 				BD897D1828A09013003F7B47 /* ViewController.swift in Sources */,
 				BD897D1428A09013003F7B47 /* AppDelegate.swift in Sources */,
+				BD897D3A28A0ACD0003F7B47 /* ClosureViewController.swift in Sources */,
 				BD897D3428A0949A003F7B47 /* EndPoint.swift in Sources */,
 				BD897D3128A09158003F7B47 /* APIKey.swift in Sources */,
+				BD897D3828A0A7C2003F7B47 /* KakaoAPIManager.swift in Sources */,
 				BD897D1628A09013003F7B47 /* SceneDelegate.swift in Sources */,
 				BD897D3628A0954C003F7B47 /* URL+Extension.swift in Sources */,
 			);

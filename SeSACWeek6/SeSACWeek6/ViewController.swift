@@ -10,66 +10,91 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
+// 1. html tag <> </> 기능 활용
+// 2. replacing 문자열 대체 메서드
+// - 활용도 측면에서 response에서 처리하는 것과 보여지는 cell에서 처리하는 것 중 어느 것이 더 나을까?
+
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    var blogList: [String] = []
+    var cafeList: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(#function, "START")
-        requestBlog(query: "Swift")
-        print(#function, "END")
+        searchBlog(for: "노을")
+        configureTableView()
     }
 
+    func searchBlog(for keyword: String) {
+        KakaoAPIManager.shared.callRequest(type: .blog, query: keyword, completion: { json in
+            for item in json["documents"].arrayValue {
+                let value = item["contents"].stringValue
+                    .replacingOccurrences(of: "<b>", with: "")
+                    .replacingOccurrences(of: "</b>", with: "")
+                
+                self.blogList.append(value)
+            }
+            
+            self.searchCafe(for: keyword)
+        })
+    }
     
-    // - Alamofire + SwiftyJSON
-    // - 검색 키워드
-    // - 인증키
-    func requestBlog(query: String) {
-        print(#function)
-        guard let query = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return }
-        let url = EndPoint.blog.requestURL + query
-        
-        let headers: HTTPHeaders = [
-            "Authorization": "KakaoAK \(APIKey.kakao)"
-        ]
-        
-        // Alamofire -> URLSession Framework -> 비동기 Request
-        // completion handler에서 Alamofire가 알아서 메인 스레드로 바꿔줌
-        AF.request(url, method: .get, headers: headers).validate().responseData { response in
-            switch response.result {
-            case .success(let value):
-                let json = JSON(value)
-                print("JSON: \(json)")
+    func searchCafe(for keyword: String) {
+        KakaoAPIManager.shared.callRequest(type: .blog, query: keyword, completion: { json in
+            for item in json["documents"].arrayValue {
+                let value = item["contents"].stringValue
+                    .replacingOccurrences(of: "<b>", with: "")
+                    .replacingOccurrences(of: "</b>", with: "")
                 
-                self.requestCafe(query: "고래밥")
-                
-            case .failure(let error):
-                print(error)
+                self.cafeList.append(value)
             }
-        }
-    }
-
-    func requestCafe(query: String) {
-        print(#function)
-        guard let query = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return }
-        let url = EndPoint.cafe.requestURL + query
-        
-        let headers: HTTPHeaders = [
-            "Authorization": "KakaoAK \(APIKey.kakao)"
-        ]
-        
-        // Alamofire -> URLSession Framework -> 비동기 Request
-        // completion handler에서 Alamofire가 알아서 메인 스레드로 바꿔줌
-        AF.request(url, method: .get, headers: headers).validate().responseData { response in
-            switch response.result {
-            case .success(let value):
-                let json = JSON(value)
-                print("JSON: \(json)")
-                
-            case .failure(let error):
-                print(error)
-            }
-        }
+            
+            print(self.blogList)
+            print(self.cafeList)
+            
+            self.tableView.reloadData()
+        })
     }
 }
 
+extension ViewController {
+    
+    private func configureTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
+}
+
+extension ViewController: UITableViewDelegate {
+    
+}
+
+extension ViewController: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return section == 0 ? blogList.count : cafeList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "KakaoCell", for: indexPath) as? KakaoCell else {
+            return UITableViewCell()
+        }
+        cell.testLabel.text = indexPath.section == 0 ? blogList[indexPath.row] : cafeList[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return section == 0 ? "블로그 검색 결과" : "카페 검색 결과"
+    }
+}
+
+final class KakaoCell: UITableViewCell {
+    @IBOutlet weak var testLabel: UILabel!
+}
