@@ -17,6 +17,8 @@
 		BD897D2C28A0903E003F7B47 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = BD897D2B28A0903E003F7B47 /* SwiftyJSON */; };
 		BD897D2F28A0904A003F7B47 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = BD897D2E28A0904A003F7B47 /* Kingfisher */; };
 		BD897D3128A09158003F7B47 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD897D3028A09158003F7B47 /* APIKey.swift */; };
+		BD897D3428A0949A003F7B47 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD897D3328A0949A003F7B47 /* EndPoint.swift */; };
+		BD897D3628A0954C003F7B47 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD897D3528A0954C003F7B47 /* URL+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		BD897D1F28A09015003F7B47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD897D2128A09015003F7B47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD897D3028A09158003F7B47 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		BD897D3328A0949A003F7B47 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		BD897D3528A0954C003F7B47 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 		BD897D1228A09013003F7B47 /* SeSACWeek6 */ = {
 			isa = PBXGroup;
 			children = (
+				BD897D3228A0948C003F7B47 /* Network */,
 				BD897D1328A09013003F7B47 /* AppDelegate.swift */,
 				BD897D1528A09013003F7B47 /* SceneDelegate.swift */,
 				BD897D1728A09013003F7B47 /* ViewController.swift */,
@@ -74,6 +79,15 @@
 				BD897D3028A09158003F7B47 /* APIKey.swift */,
 			);
 			path = SeSACWeek6;
+			sourceTree = "<group>";
+		};
+		BD897D3228A0948C003F7B47 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BD897D3328A0949A003F7B47 /* EndPoint.swift */,
+				BD897D3528A0954C003F7B47 /* URL+Extension.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,8 +173,10 @@
 			files = (
 				BD897D1828A09013003F7B47 /* ViewController.swift in Sources */,
 				BD897D1428A09013003F7B47 /* AppDelegate.swift in Sources */,
+				BD897D3428A0949A003F7B47 /* EndPoint.swift in Sources */,
 				BD897D3128A09158003F7B47 /* APIKey.swift in Sources */,
 				BD897D1628A09013003F7B47 /* SceneDelegate.swift in Sources */,
+				BD897D3628A0954C003F7B47 /* URL+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
