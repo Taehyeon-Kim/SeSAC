@@ -24,6 +24,10 @@
 		BD897D4928A1E0AE003F7B47 /* SeSACButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD897D4828A1E0AE003F7B47 /* SeSACButton.swift */; };
 		BD897D4B28A1E64F003F7B47 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD897D4A28A1E64F003F7B47 /* CardView.swift */; };
 		BD897D4D28A1E665003F7B47 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD897D4C28A1E665003F7B47 /* CardView.xib */; };
+		BD897D5028A1F390003F7B47 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD897D4E28A1F390003F7B47 /* CardCollectionViewCell.swift */; };
+		BD897D5128A1F390003F7B47 /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD897D4F28A1F390003F7B47 /* CardCollectionViewCell.xib */; };
+		BD897D5328A1F65A003F7B47 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD897D5228A1F65A003F7B47 /* MainViewController.swift */; };
+		BD897D5528A1FC25003F7B47 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD897D5428A1FC25003F7B47 /* MainTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +47,10 @@
 		BD897D4828A1E0AE003F7B47 /* SeSACButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeSACButton.swift; sourceTree = "<group>"; };
 		BD897D4A28A1E64F003F7B47 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		BD897D4C28A1E665003F7B47 /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
+		BD897D4E28A1F390003F7B47 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		BD897D4F28A1F390003F7B47 /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
+		BD897D5228A1F65A003F7B47 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		BD897D5428A1FC25003F7B47 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +93,7 @@
 				BD897D1728A09013003F7B47 /* ViewController.swift */,
 				BD897D3928A0ACD0003F7B47 /* ClosureViewController.swift */,
 				BD897D1928A09013003F7B47 /* Main.storyboard */,
+				BD897D5228A1F65A003F7B47 /* MainViewController.swift */,
 				BD897D1C28A09015003F7B47 /* Assets.xcassets */,
 				BD897D1E28A09015003F7B47 /* LaunchScreen.storyboard */,
 				BD897D2128A09015003F7B47 /* Info.plist */,
@@ -109,6 +118,9 @@
 				BD897D4828A1E0AE003F7B47 /* SeSACButton.swift */,
 				BD897D4A28A1E64F003F7B47 /* CardView.swift */,
 				BD897D4C28A1E665003F7B47 /* CardView.xib */,
+				BD897D4E28A1F390003F7B47 /* CardCollectionViewCell.swift */,
+				BD897D4F28A1F390003F7B47 /* CardCollectionViewCell.xib */,
+				BD897D5428A1FC25003F7B47 /* MainTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -182,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD897D2028A09015003F7B47 /* LaunchScreen.storyboard in Resources */,
+				BD897D5128A1F390003F7B47 /* CardCollectionViewCell.xib in Resources */,
 				BD897D1D28A09015003F7B47 /* Assets.xcassets in Resources */,
 				BD897D4D28A1E665003F7B47 /* CardView.xib in Resources */,
 				BD897D1B28A09013003F7B47 /* Main.storyboard in Resources */,
@@ -195,9 +208,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD897D5528A1FC25003F7B47 /* MainTableViewCell.swift in Sources */,
 				BD897D1828A09013003F7B47 /* ViewController.swift in Sources */,
 				BD897D1428A09013003F7B47 /* AppDelegate.swift in Sources */,
 				BD897D3A28A0ACD0003F7B47 /* ClosureViewController.swift in Sources */,
+				BD897D5328A1F65A003F7B47 /* MainViewController.swift in Sources */,
+				BD897D5028A1F390003F7B47 /* CardCollectionViewCell.swift in Sources */,
 				BD897D3428A0949A003F7B47 /* EndPoint.swift in Sources */,
 				BD897D4B28A1E64F003F7B47 /* CardView.swift in Sources */,
 				BD897D3128A09158003F7B47 /* APIKey.swift in Sources */,
