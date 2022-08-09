@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardView" customModule="SeSACWeek6" customModuleProvider="target">
             <connections>
+                <outlet property="contentLabel" destination="IIK-nq-cja" id="R2v-Xf-pWb"/>
                 <outlet property="likeButton" destination="6on-zE-WmK" id="amc-MN-pS3"/>
                 <outlet property="posterImageView" destination="mUf-EI-mXS" id="ZcY-H8-Nw0"/>
             </connections>
@@ -20,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mUf-EI-mXS">
-                    <rect key="frame" x="8" y="20" width="261" height="114"/>
+                    <rect key="frame" x="8" y="8" width="261" height="138"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6on-zE-WmK">
                     <rect key="frame" x="221" y="20" width="48" height="48"/>
@@ -34,14 +35,22 @@
                         <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="17"/>
                     </buttonConfiguration>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIK-nq-cja">
+                    <rect key="frame" x="117.5" y="66.5" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="6on-zE-WmK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="1jp-xi-we3"/>
-                <constraint firstAttribute="bottom" secondItem="mUf-EI-mXS" secondAttribute="bottom" constant="20" id="Aal-59-l5b"/>
+                <constraint firstItem="IIK-nq-cja" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="4Hh-tx-FPw"/>
+                <constraint firstAttribute="bottom" secondItem="mUf-EI-mXS" secondAttribute="bottom" constant="8" id="Aal-59-l5b"/>
                 <constraint firstAttribute="trailing" secondItem="mUf-EI-mXS" secondAttribute="trailing" constant="8" id="R6B-wC-ycz"/>
                 <constraint firstAttribute="trailing" secondItem="6on-zE-WmK" secondAttribute="trailing" constant="8" id="ReS-9d-9ay"/>
-                <constraint firstItem="mUf-EI-mXS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="VNn-s8-HaL"/>
+                <constraint firstItem="mUf-EI-mXS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="VNn-s8-HaL"/>
+                <constraint firstItem="IIK-nq-cja" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="myO-Ho-gQf"/>
                 <constraint firstItem="mUf-EI-mXS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="qtt-P3-R4P"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

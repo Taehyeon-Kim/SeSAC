@@ -13,6 +13,14 @@ class MainViewController: UIViewController {
     @IBOutlet weak var mainTableView: UITableView!
     
     let color: [UIColor] = [.systemPurple, .systemRed, .systemGreen, .systemYellow, .systemMint]
+    let numberList: [[Int]] = [
+        [Int](100...110),
+        [Int](55...75),
+        [Int](5000...5006),
+        [Int](100...110),
+        [Int](55...75),
+        [Int](5000...5006)
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,20 +65,23 @@ extension MainViewController: UICollectionViewDelegate {
 
 // MARK: - Collection View Data Source
 extension MainViewController: UICollectionViewDataSource {
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 10
-    }
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return collectionView == bannerCollectionView ? color.count : numberList[collectionView.tag].count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCollectionViewCell", for: indexPath) as? CardCollectionViewCell else {
             return UICollectionViewCell()
         }
-        cell.cardView.posterImageView.backgroundColor = color[indexPath.row]
+        
+        if collectionView == bannerCollectionView {
+            cell.cardView.posterImageView.backgroundColor = color[indexPath.row]
+        } else {
+            cell.cardView.contentLabel.text = "\(numberList[collectionView.tag][indexPath.row])"
+            cell.cardView.posterImageView.backgroundColor = collectionView.tag.isMultiple(of: 2) ? .blue : .red
+        }
+    
         return cell
     }
 }
@@ -83,8 +94,8 @@ extension MainViewController: UITableViewDelegate {
 // MARK: - MainViewController DataSource
 extension MainViewController: UITableViewDataSource {
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 10
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return numberList.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -95,7 +106,10 @@ extension MainViewController: UITableViewDataSource {
         guard let cell = mainTableView.dequeueReusableCell(withIdentifier: "MainTableViewCell", for: indexPath) as? MainTableViewCell else {
             return UITableViewCell()
         }
-        
+        cell.collectionView.delegate = self
+        cell.collectionView.dataSource = self
+        cell.collectionView.tag = indexPath.section
+        cell.collectionView.register(UINib(nibName: "CardCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CardCollectionViewCell")
         return cell
     }
     

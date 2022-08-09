@@ -34,6 +34,7 @@ class CardView: UIView {
     
     @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var likeButton: UIButton!
+    @IBOutlet weak var contentLabel: UILabel!
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)

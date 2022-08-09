@@ -23,7 +23,7 @@ class MainTableViewCell: UITableViewCell {
         titleLabel.text = "넷플릭스 인기 컨텐츠"
         titleLabel.backgroundColor = .clear
         
-        collectionView.backgroundColor = .gray
+        collectionView.backgroundColor = .clear
         collectionView.collectionViewLayout = collectionViewLayout()
     }
     
