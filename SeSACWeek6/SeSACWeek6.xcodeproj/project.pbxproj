@@ -28,6 +28,7 @@
 		BD897D5128A1F390003F7B47 /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD897D4F28A1F390003F7B47 /* CardCollectionViewCell.xib */; };
 		BD897D5328A1F65A003F7B47 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD897D5228A1F65A003F7B47 /* MainViewController.swift */; };
 		BD897D5528A1FC25003F7B47 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD897D5428A1FC25003F7B47 /* MainTableViewCell.swift */; };
+		BDAA91D428A330A500CB3848 /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAA91D328A330A500CB3848 /* ReusableViewProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		BD897D4F28A1F390003F7B47 /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
 		BD897D5228A1F65A003F7B47 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BD897D5428A1FC25003F7B47 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		BDAA91D328A330A500CB3848 /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		BD897D1228A09013003F7B47 /* SeSACWeek6 */ = {
 			isa = PBXGroup;
 			children = (
+				BDAA91D028A3307C00CB3848 /* Protocol */,
 				BD897D4728A1E0A0003F7B47 /* View */,
 				BD897D3228A0948C003F7B47 /* Network */,
 				BD897D1328A09013003F7B47 /* AppDelegate.swift */,
@@ -123,6 +126,14 @@
 				BD897D5428A1FC25003F7B47 /* MainTableViewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		BDAA91D028A3307C00CB3848 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				BDAA91D328A330A500CB3848 /* ReusableViewProtocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +230,7 @@
 				BD897D3128A09158003F7B47 /* APIKey.swift in Sources */,
 				BD897D4928A1E0AE003F7B47 /* SeSACButton.swift in Sources */,
 				BD897D3828A0A7C2003F7B47 /* KakaoAPIManager.swift in Sources */,
+				BDAA91D428A330A500CB3848 /* ReusableViewProtocol.swift in Sources */,
 				BD897D1628A09013003F7B47 /* SceneDelegate.swift in Sources */,
 				BD897D3628A0954C003F7B47 /* URL+Extension.swift in Sources */,
 			);
