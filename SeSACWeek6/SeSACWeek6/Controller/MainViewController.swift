@@ -7,6 +7,8 @@
 
 import UIKit
 
+import Kingfisher
+
 /*
  tableView - CollectionView > 프로토콜
  tag
@@ -48,11 +50,25 @@ class MainViewController: UIViewController {
         [Int](61...70)
     ]
     
+    var episodeList: [[String]] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupCollectionView()
         setupTableView()
+        
+        TMDBAPIManager.shared.requestEpisodeImage { [weak self] value in
+//            dump(value)
+            
+            // 1. 네트워크 통신 2. 배열 생성 3. 배열 담기
+            // 4. 뷰 등에 표현
+            // - 테이블뷰 섹션, 컬렉션 뷰 셀
+            // 5. 뷰 갱신
+            guard let self = self else { return }
+            self.episodeList = value
+            self.mainTableView.reloadData()
+        }
     }
 }
 
@@ -93,13 +109,13 @@ extension MainViewController: UICollectionViewDelegate {
 extension MainViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return collectionView == bannerCollectionView ? color.count : numberList[collectionView.tag].count
+        return collectionView == bannerCollectionView ? color.count : episodeList[collectionView.tag].count
     }
     
     // bannerCollectionView or 테이블뷰 안에 들어있는 컬렉션 뷰
     // 내부 매개변수가 아닌 명확한 아웃렛을 사용할 경우, 셀이 재사용 되면 특정 collectionView 셀을 재사용하게 될 수 있음
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        print("MainViewController", #function, indexPath)
+//        print("MainViewController", #function, indexPath)
         // bannerCollectionView - 다른 컬렉션뷰에서 사용하는 셀을 재사용하려고 했을 때 레이아웃 이슈가 발생한다.
         
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCollectionViewCell", for: indexPath) as? CardCollectionViewCell else {
@@ -109,11 +125,14 @@ extension MainViewController: UICollectionViewDataSource {
         if collectionView == bannerCollectionView {
             cell.cardView.posterImageView.backgroundColor = color[indexPath.item]
         } else {
-            cell.cardView.contentLabel.text = "\(numberList[collectionView.tag][indexPath.item])"
+//            cell.cardView.contentLabel.text = "\(episodeList[collectionView.tag][indexPath.item])"
 //            cell.cardView.posterImageView.backgroundColor = collectionView.tag.isMultiple(of: 2) ? .blue : .red
-            cell.cardView.contentLabel.textColor = .white
-            cell.cardView.posterImageView.backgroundColor = .black
             
+            let url = URL(string: "\(TMDBAPIManager.shared.imageURL)\(episodeList[collectionView.tag][indexPath.item])")
+            cell.cardView.contentLabel.text = ""
+            cell.cardView.posterImageView.kf.setImage(with: url)
+            cell.cardView.contentLabel.textColor = .white
+                    
             // - 화면과 데이터는 별개, 모든 indexPath.item에 대한 조건이 없다면 재사용 시 오류가 발생할 수 있음.
 //            if indexPath.item < 2 {
 //                cell.cardView.contentLabel.text = "\(numberList[collectionView.tag][indexPath.item])"
@@ -136,7 +155,7 @@ extension MainViewController: UITableViewDelegate {
 extension MainViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return numberList.count
+        return episodeList.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -151,17 +170,18 @@ extension MainViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
-        print("MainViewController", #function, indexPath)
+//        print("MainViewController", #function, indexPath)
         
+        cell.titleLabel.text = TMDBAPIManager.shared.tvList[indexPath.section].0
         cell.collectionView.delegate = self
         cell.collectionView.dataSource = self
         cell.collectionView.tag = indexPath.section
         cell.collectionView.register(UINib(nibName: "CardCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CardCollectionViewCell")
-        // cell.collectionView.reloadData() // Index Out of Range 해결
+        cell.collectionView.reloadData() // Index Out of Range 해결
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 190
+        return 240
     }
 }

@@ -24,7 +24,7 @@
                     <rect key="frame" x="8" y="8" width="200" height="117"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6on-zE-WmK">
-                    <rect key="frame" x="160" y="20" width="48" height="48"/>
+                    <rect key="frame" x="160" y="8" width="48" height="48"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="48" id="Yrj-f6-Ib1"/>
                         <constraint firstAttribute="width" constant="48" id="wVt-pL-oAd"/>
@@ -44,7 +44,7 @@
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="6on-zE-WmK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="1jp-xi-we3"/>
+                <constraint firstItem="6on-zE-WmK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="1jp-xi-we3"/>
                 <constraint firstItem="IIK-nq-cja" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="4Hh-tx-FPw"/>
                 <constraint firstAttribute="bottom" secondItem="mUf-EI-mXS" secondAttribute="bottom" constant="8" id="Aal-59-l5b"/>
                 <constraint firstAttribute="trailing" secondItem="mUf-EI-mXS" secondAttribute="trailing" constant="8" id="R6B-wC-ycz"/>

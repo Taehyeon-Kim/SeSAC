@@ -44,7 +44,6 @@ class CardView: UIView {
         let view = UINib(nibName: "CardView", bundle: nil)
             .instantiate(withOwner: self).first as! UIView
         view.frame = bounds
-        view.backgroundColor = .lightGray
         self.addSubview(view)
     }
 }

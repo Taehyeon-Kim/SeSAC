@@ -14,7 +14,7 @@ class CardCollectionViewCell: UICollectionViewCell {
     // 변경되지 않는 UI
     override func awakeFromNib() {
         super.awakeFromNib()
-        print("CardCollectionViewCell", #function)
+//        print("CardCollectionViewCell", #function)
         configureUI()
     }
     
@@ -26,8 +26,8 @@ class CardCollectionViewCell: UICollectionViewCell {
     
     private func configureUI() {
         cardView.backgroundColor = .clear
-        cardView.posterImageView.backgroundColor = .lightGray
         cardView.posterImageView.layer.cornerRadius = 10
         cardView.likeButton.tintColor = .systemBlue
+        cardView.posterImageView.contentMode = .scaleAspectFill
     }
 }
