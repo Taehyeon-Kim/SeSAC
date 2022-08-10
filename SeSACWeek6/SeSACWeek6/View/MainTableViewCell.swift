@@ -14,7 +14,7 @@ class MainTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        print("MainTableViewCell", #function)
         configureUI()
     }
 

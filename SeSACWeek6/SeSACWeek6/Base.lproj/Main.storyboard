@@ -198,7 +198,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uG4-ss-jh1">
-                                <rect key="frame" x="0.0" y="44" width="414" height="179"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="224"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pXg-Ps-y8g">
                                     <size key="itemSize" width="128" height="128"/>
@@ -209,7 +209,7 @@
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="HKe-LD-iJ0">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <autoresizingMask key="autoresizingMask"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="5GP-to-rEw">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
@@ -218,7 +218,7 @@
                                 </cells>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KLs-FD-HWy">
-                                <rect key="frame" x="0.0" y="223" width="414" height="639"/>
+                                <rect key="frame" x="0.0" y="268" width="414" height="594"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MainTableViewCell" rowHeight="256" id="OfW-Y8-lx5" customClass="MainTableViewCell" customModule="SeSACWeek6" customModuleProvider="target">
@@ -249,7 +249,7 @@
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="cZL-tu-Qc8">
                                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
                                                             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ZNG-jM-jzb">
                                                                 <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
@@ -279,7 +279,7 @@
                         <viewLayoutGuide key="safeArea" id="5RZ-Ln-YKv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="uG4-ss-jh1" firstAttribute="height" secondItem="52r-kA-pht" secondAttribute="height" multiplier="0.2" id="Ez8-Sp-12s"/>
+                            <constraint firstItem="uG4-ss-jh1" firstAttribute="height" secondItem="52r-kA-pht" secondAttribute="height" multiplier="0.25" id="Ez8-Sp-12s"/>
                             <constraint firstItem="5RZ-Ln-YKv" firstAttribute="trailing" secondItem="KLs-FD-HWy" secondAttribute="trailing" id="Ig0-si-jLa"/>
                             <constraint firstItem="uG4-ss-jh1" firstAttribute="leading" secondItem="5RZ-Ln-YKv" secondAttribute="leading" id="bny-QE-C3X"/>
                             <constraint firstItem="uG4-ss-jh1" firstAttribute="top" secondItem="5RZ-Ln-YKv" secondAttribute="top" id="e6x-7I-oT9"/>
