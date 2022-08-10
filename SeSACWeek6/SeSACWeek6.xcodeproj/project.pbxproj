@@ -29,6 +29,7 @@
 		BD897D5328A1F65A003F7B47 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD897D5228A1F65A003F7B47 /* MainViewController.swift */; };
 		BD897D5528A1FC25003F7B47 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD897D5428A1FC25003F7B47 /* MainTableViewCell.swift */; };
 		BDAA91D428A330A500CB3848 /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAA91D328A330A500CB3848 /* ReusableViewProtocol.swift */; };
+		BDAA91D628A343D900CB3848 /* TMDBAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAA91D528A343D900CB3848 /* TMDBAPIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		BD897D5228A1F65A003F7B47 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BD897D5428A1FC25003F7B47 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		BDAA91D328A330A500CB3848 /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
+		BDAA91D528A343D900CB3848 /* TMDBAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBAPIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,19 +90,13 @@
 		BD897D1228A09013003F7B47 /* SeSACWeek6 */ = {
 			isa = PBXGroup;
 			children = (
-				BDAA91D028A3307C00CB3848 /* Protocol */,
-				BD897D4728A1E0A0003F7B47 /* View */,
-				BD897D3228A0948C003F7B47 /* Network */,
-				BD897D1328A09013003F7B47 /* AppDelegate.swift */,
-				BD897D1528A09013003F7B47 /* SceneDelegate.swift */,
-				BD897D1728A09013003F7B47 /* ViewController.swift */,
-				BD897D3928A0ACD0003F7B47 /* ClosureViewController.swift */,
-				BD897D1928A09013003F7B47 /* Main.storyboard */,
-				BD897D5228A1F65A003F7B47 /* MainViewController.swift */,
-				BD897D1C28A09015003F7B47 /* Assets.xcassets */,
-				BD897D1E28A09015003F7B47 /* LaunchScreen.storyboard */,
 				BD897D2128A09015003F7B47 /* Info.plist */,
-				BD897D3028A09158003F7B47 /* APIKey.swift */,
+				BDAA91DB28A3443500CB3848 /* Application */,
+				BDAA91DD28A3444A00CB3848 /* Controller */,
+				BD897D3228A0948C003F7B47 /* Network */,
+				BDAA91D028A3307C00CB3848 /* Protocol */,
+				BDAA91DC28A3443E00CB3848 /* Resources */,
+				BD897D4728A1E0A0003F7B47 /* View */,
 			);
 			path = SeSACWeek6;
 			sourceTree = "<group>";
@@ -108,9 +104,9 @@
 		BD897D3228A0948C003F7B47 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				BD897D3328A0949A003F7B47 /* EndPoint.swift */,
-				BD897D3528A0954C003F7B47 /* URL+Extension.swift */,
+				BDAA91D728A343E500CB3848 /* Foundation */,
 				BD897D3728A0A7C2003F7B47 /* KakaoAPIManager.swift */,
+				BDAA91D528A343D900CB3848 /* TMDBAPIManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -118,12 +114,9 @@
 		BD897D4728A1E0A0003F7B47 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BD897D4828A1E0AE003F7B47 /* SeSACButton.swift */,
-				BD897D4A28A1E64F003F7B47 /* CardView.swift */,
-				BD897D4C28A1E665003F7B47 /* CardView.xib */,
-				BD897D4E28A1F390003F7B47 /* CardCollectionViewCell.swift */,
-				BD897D4F28A1F390003F7B47 /* CardCollectionViewCell.xib */,
-				BD897D5428A1FC25003F7B47 /* MainTableViewCell.swift */,
+				BDAA91DA28A3440300CB3848 /* Cell */,
+				BDAA91D928A343FF00CB3848 /* CardView */,
+				BDAA91D828A343FC00CB3848 /* SeSACButton */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -134,6 +127,72 @@
 				BDAA91D328A330A500CB3848 /* ReusableViewProtocol.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		BDAA91D728A343E500CB3848 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				BD897D3028A09158003F7B47 /* APIKey.swift */,
+				BD897D3328A0949A003F7B47 /* EndPoint.swift */,
+				BD897D3528A0954C003F7B47 /* URL+Extension.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		BDAA91D828A343FC00CB3848 /* SeSACButton */ = {
+			isa = PBXGroup;
+			children = (
+				BD897D4828A1E0AE003F7B47 /* SeSACButton.swift */,
+			);
+			path = SeSACButton;
+			sourceTree = "<group>";
+		};
+		BDAA91D928A343FF00CB3848 /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				BD897D4A28A1E64F003F7B47 /* CardView.swift */,
+				BD897D4C28A1E665003F7B47 /* CardView.xib */,
+			);
+			path = CardView;
+			sourceTree = "<group>";
+		};
+		BDAA91DA28A3440300CB3848 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BD897D4E28A1F390003F7B47 /* CardCollectionViewCell.swift */,
+				BD897D4F28A1F390003F7B47 /* CardCollectionViewCell.xib */,
+				BD897D5428A1FC25003F7B47 /* MainTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		BDAA91DB28A3443500CB3848 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				BD897D1328A09013003F7B47 /* AppDelegate.swift */,
+				BD897D1528A09013003F7B47 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		BDAA91DC28A3443E00CB3848 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BD897D1928A09013003F7B47 /* Main.storyboard */,
+				BD897D1C28A09015003F7B47 /* Assets.xcassets */,
+				BD897D1E28A09015003F7B47 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BDAA91DD28A3444A00CB3848 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BD897D1728A09013003F7B47 /* ViewController.swift */,
+				BD897D3928A0ACD0003F7B47 /* ClosureViewController.swift */,
+				BD897D5228A1F65A003F7B47 /* MainViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +291,7 @@
 				BD897D3828A0A7C2003F7B47 /* KakaoAPIManager.swift in Sources */,
 				BDAA91D428A330A500CB3848 /* ReusableViewProtocol.swift in Sources */,
 				BD897D1628A09013003F7B47 /* SceneDelegate.swift in Sources */,
+				BDAA91D628A343D900CB3848 /* TMDBAPIManager.swift in Sources */,
 				BD897D3628A0954C003F7B47 /* URL+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
