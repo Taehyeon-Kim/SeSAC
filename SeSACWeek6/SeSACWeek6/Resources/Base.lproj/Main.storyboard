@@ -164,6 +164,11 @@
                                     <constraint firstAttribute="width" constant="100" id="q9p-xH-6SV"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uog-MR-95j">
+                                <rect key="frame" x="157" y="808" width="240" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="urv-BG-ulJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -183,6 +188,7 @@
                     </view>
                     <connections>
                         <outlet property="cardView" destination="ZYe-6y-qsQ" id="xJT-1f-T0K"/>
+                        <outlet property="purpleView" destination="uog-MR-95j" id="Klj-jD-Jag"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="web-u0-ScR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -331,6 +337,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

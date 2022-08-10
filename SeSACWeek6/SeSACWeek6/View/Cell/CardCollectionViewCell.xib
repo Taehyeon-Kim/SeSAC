@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="106" height="108"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FTM-Cm-rcM" customClass="CardView" customModule="SeSACWeek6" customModuleProvider="target">
+                    <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTM-Cm-rcM" customClass="CardView" customModule="SeSACWeek6" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="106" height="108"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>

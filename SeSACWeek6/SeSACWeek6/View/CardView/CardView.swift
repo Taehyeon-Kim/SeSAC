@@ -36,14 +36,22 @@ class CardView: UIView {
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var contentLabel: UILabel!
     
+    // xib 이용..
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         
         // XIB 파일 내에 여러 개의 뷰를 만들 수 있다. (권장은 하지 않음)
         // 그래서 first로 접근해서 몇 번째 뷰인지 체크한다.
+        
+        // 이 자체가 코드를 통해서 뷰를 추가해주는 작업
         let view = UINib(nibName: "CardView", bundle: nil)
             .instantiate(withOwner: self).first as! UIView
+        view.backgroundColor = .blue
         view.frame = bounds
         self.addSubview(view)
+        
+        // 카드뷰를 인터페이스 빌더 기반으로 만들고, 레이아웃도 설정했는데 false가 아닌 true로 나온다.
+        // true라고 한다면 오토레이아웃이 적용이 되는 관점보다 오토리사이징이 내부적으로 constraint 처리가 됨.
+        print(view.translatesAutoresizingMaskIntoConstraints)
     }
 }
