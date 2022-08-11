@@ -30,6 +30,7 @@
 		BD897D5528A1FC25003F7B47 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD897D5428A1FC25003F7B47 /* MainTableViewCell.swift */; };
 		BDAA91D428A330A500CB3848 /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAA91D328A330A500CB3848 /* ReusableViewProtocol.swift */; };
 		BDAA91D628A343D900CB3848 /* TMDBAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAA91D528A343D900CB3848 /* TMDBAPIManager.swift */; };
+		BDAD2D3F28A493A0004ED9A2 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAD2D3E28A493A0004ED9A2 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		BD897D5428A1FC25003F7B47 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		BDAA91D328A330A500CB3848 /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
 		BDAA91D528A343D900CB3848 /* TMDBAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBAPIManager.swift; sourceTree = "<group>"; };
+		BDAD2D3E28A493A0004ED9A2 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 				BD897D1728A09013003F7B47 /* ViewController.swift */,
 				BD897D3928A0ACD0003F7B47 /* ClosureViewController.swift */,
 				BD897D5228A1F65A003F7B47 /* MainViewController.swift */,
+				BDAD2D3E28A493A0004ED9A2 /* MapViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				BD897D1628A09013003F7B47 /* SceneDelegate.swift in Sources */,
 				BDAA91D628A343D900CB3848 /* TMDBAPIManager.swift in Sources */,
 				BD897D3628A0954C003F7B47 /* URL+Extension.swift in Sources */,
+				BDAD2D3F28A493A0004ED9A2 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
