@@ -19,7 +19,7 @@ import CoreLocation  // Location1. import
 
 /*
  권한: 반영이 조금씩 느릴 수 있음. 지웠다가 실행한다고 하더라도, 한 번 허용
- 설정: 앱이 바로 안 뜰 수
+ 설정: 앱이 바로 안 뜰 수 있음. 설정에서 다음번에 묻기로 변경하기
  */
 
 final class MapViewController: UIViewController {
@@ -35,15 +35,21 @@ final class MapViewController: UIViewController {
         // Location3. 프로토콜 연결
         locationManager.delegate = self
         
-        checkUserDeviceLocationServiceAuthorization()
-        setRegionAndAnnotation()
-    }
-    
-    func setRegionAndAnnotation() {
+//        checkUserDeviceLocationServiceAuthorization() 제거 가능한 이유 알기
+        
         // 지도 중심 설정 : 애플맵 활용해 좌표 복사
         // 위도, 경도에 대한 정보
         // - 사용자의 위치 정보를 모르더라도 사용 가능한 정보
         let center = CLLocationCoordinate2D(latitude: 37.517829, longitude: 126.886270)
+        setRegionAndAnnotation(center: center)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        showRequestLocationServiceAlert()
+    }
+    
+    func setRegionAndAnnotation(center: CLLocationCoordinate2D) {
         
         // 지도 중심 기반으로 보여질 범위 설정
         let region = MKCoordinateRegion(center: center, latitudinalMeters: 1000, longitudinalMeters: 1000)
@@ -90,6 +96,9 @@ extension MapViewController {
     // Location8. 사용자의 위치 권한 상태 확인
     // 사용자가 위치를 허용했는지, 거부했는지, 아직 선택하지 않았는지 등을 확인(단, 사전에 iOS 위치 서비스 활성화 상태 꼭 확인 필요)
     func checkUserCurrentLocationAuthorization(_ authorizationStatus: CLAuthorizationStatus) {
+        
+        print(authorizationStatus)
+        
         switch authorizationStatus {
         case .notDetermined:
             print("NOT DETERMINED")
@@ -97,7 +106,7 @@ extension MapViewController {
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.requestWhenInUseAuthorization()         // 앱을 사용하는 동안에 대한 위치 권한 요청
             //plist에 WhenInUse가 등록되어 있어야 request 메서드를 사용할 수 있다. 권한이 없으면 앱이 꺼지게 된다.
-            locationManager.startUpdatingLocation()                 // 이 부분도 요청 필요
+//            locationManager.startUpdatingLocation()                 // 이 부분도 요청 필요
             
         case .restricted, .denied:
             print("DENIED, 아이폰 설정으로 유도")
@@ -109,6 +118,27 @@ extension MapViewController {
             print("DEFAULT")
         }
     }
+    
+    /*
+     Location Authorization Custom Alert
+     */
+
+    func showRequestLocationServiceAlert() {
+      let requestLocationServiceAlert = UIAlertController(title: "위치정보 이용", message: "위치 서비스를 사용할 수 없습니다. 기기의 '설정>개인정보 보호'에서 위치 서비스를 켜주세요.", preferredStyle: .alert)
+      let goSetting = UIAlertAction(title: "설정으로 이동", style: .destructive) { _ in
+        
+          // 설정까지 이동하거나 설정 세부화면까지 이동하거나 하는 것은 통제가 불가능하다.
+          // 한 번도 설정 앱에 들어가지 않았거나, 막 다운받은 앱이거나 보통 설정화면까지 이동?
+          if let appSetting = URL(string: UIApplication.openSettingsURLString) {
+              UIApplication.shared.open(appSetting)
+          }
+      }
+      let cancel = UIAlertAction(title: "취소", style: .default)
+      requestLocationServiceAlert.addAction(cancel)
+      requestLocationServiceAlert.addAction(goSetting)
+      
+      present(requestLocationServiceAlert, animated: true, completion: nil)
+    }
 }
 
 // Location4. 프로토콜 선언
@@ -117,11 +147,36 @@ extension MapViewController: CLLocationManagerDelegate {
     // Location5. 사용자의 위치를 성공적으로 가지고 온 경우
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         print(#function, locations)
+        
+        // ex. 위도 경도 기반으로 날씨 정보를 조회
+        // ex. 지도를 다시 세팅
+        if let coordinate = locations.last?.coordinate {
+            setRegionAndAnnotation(center: coordinate)
+        }
+        
+        // 위치 업데이트 멈춰! - 실시간성이 중요하지 않을때는 만들어주자. (start 했으면 적절한 시점에 stop해라)
+        locationManager.stopUpdatingLocation()
     }
     
     // Location6. 사용자의 위치를 못 가지고 온 경우
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(#function, error)
+    }
+    
+    // Location9. 사용자의 권한 상태가 바뀔 때를 알려줌
+    // 허용 거부 했다가 설정에서 변경했거나, notDetermined에서 허용을 눌렀거나 등
+    // 허용 했었는데 위치를 가지고 오는 중에, 설정에서 거부하고 돌아온다면
+    
+    // iOS 14 이상: 사용자의 권한 상태가 변경이 될 때, 위치 관리자 생성할 때도 호출됨
+    // - 인스턴스 생성시에 한번 호출됨. (앱을 실행하면 가장 처음으로 호출)
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        print(#function)
+        checkUserDeviceLocationServiceAuthorization()
+    }
+    
+    // iOS 14 미만
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+
     }
 }
 
@@ -133,7 +188,8 @@ extension MapViewController: MKMapViewDelegate {
 //    }
     
     // ex. Kakao T - 탑승 위치 수정 시 택시 위치 변경되는 것
+    // 지도를 움직이는게 끝났다면 다시 locationManager에게 요청
 //    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
-//        <#code#>
+//        locationManager.startUpdatingLocation()
 //    }
 }
