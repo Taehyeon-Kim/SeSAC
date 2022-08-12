@@ -31,6 +31,7 @@
 		BDAA91D428A330A500CB3848 /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAA91D328A330A500CB3848 /* ReusableViewProtocol.swift */; };
 		BDAA91D628A343D900CB3848 /* TMDBAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAA91D528A343D900CB3848 /* TMDBAPIManager.swift */; };
 		BDAD2D3F28A493A0004ED9A2 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAD2D3E28A493A0004ED9A2 /* MapViewController.swift */; };
+		BDAD2D4228A5D70F004ED9A2 /* YPImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = BDAD2D4128A5D70F004ED9A2 /* YPImagePicker */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 				BD897D2F28A0904A003F7B47 /* Kingfisher in Frameworks */,
 				BD897D2C28A0903E003F7B47 /* SwiftyJSON in Frameworks */,
 				BD897D2928A0902E003F7B47 /* Alamofire in Frameworks */,
+				BDAD2D4228A5D70F004ED9A2 /* YPImagePicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +220,7 @@
 				BD897D2828A0902E003F7B47 /* Alamofire */,
 				BD897D2B28A0903E003F7B47 /* SwiftyJSON */,
 				BD897D2E28A0904A003F7B47 /* Kingfisher */,
+				BDAD2D4128A5D70F004ED9A2 /* YPImagePicker */,
 			);
 			productName = SeSACWeek6;
 			productReference = BD897D1028A09013003F7B47 /* SeSACWeek6.app */;
@@ -251,6 +254,7 @@
 				BD897D2728A0902E003F7B47 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				BD897D2A28A0903E003F7B47 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				BD897D2D28A0904A003F7B47 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				BDAD2D4028A5D70F004ED9A2 /* XCRemoteSwiftPackageReference "YPImagePicker" */,
 			);
 			productRefGroup = BD897D1128A09013003F7B47 /* Products */;
 			projectDirPath = "";
@@ -542,6 +546,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		BDAD2D4028A5D70F004ED9A2 /* XCRemoteSwiftPackageReference "YPImagePicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Yummypets/YPImagePicker.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -559,6 +571,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BD897D2D28A0904A003F7B47 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		BDAD2D4128A5D70F004ED9A2 /* YPImagePicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDAD2D4028A5D70F004ED9A2 /* XCRemoteSwiftPackageReference "YPImagePicker" */;
+			productName = YPImagePicker;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
