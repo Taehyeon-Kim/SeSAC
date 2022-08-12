@@ -30,3 +30,24 @@
 - [Day13, 220720](https://github.com/Taehyeon-Kim/SeSAC/issues/64)
 - [Day14, 220721](https://github.com/Taehyeon-Kim/SeSAC/issues/66)
 - [Day15, 220722](https://github.com/Taehyeon-Kim/SeSAC/issues/68)
+
+`week4`
+- [Day16, 220725](https://github.com/Taehyeon-Kim/SeSAC/issues/69)
+- [Day17, 220726](https://github.com/Taehyeon-Kim/SeSAC/issues/70)
+- [Day18, 220727](https://github.com/Taehyeon-Kim/SeSAC/issues/71)
+- [Day19, 220728](https://github.com/Taehyeon-Kim/SeSAC/issues/73)
+- [Day20, 220729](https://github.com/Taehyeon-Kim/SeSAC/issues/78)
+
+`week5`
+- [Day21, 220801](https://github.com/Taehyeon-Kim/SeSAC/issues/79)
+- [Day22, 220802](https://github.com/Taehyeon-Kim/SeSAC/issues/82)
+- [Day23, 220803](https://github.com/Taehyeon-Kim/SeSAC/issues/89)
+- [Day24, 220804](https://github.com/Taehyeon-Kim/SeSAC/issues/91)
+- [Day25, 220805](https://github.com/Taehyeon-Kim/SeSAC/issues/92)
+
+`week6`
+- [Day26, 220808](https://github.com/Taehyeon-Kim/SeSAC/issues/93)
+- [Day27, 220809](https://github.com/Taehyeon-Kim/SeSAC/issues/94)
+- [Day28, 220810](https://github.com/Taehyeon-Kim/SeSAC/issues/95)
+- [Day29, 220811](https://github.com/Taehyeon-Kim/SeSAC/issues/97)
+- [Day30, 220812](https://github.com/Taehyeon-Kim/SeSAC/issues/98)
