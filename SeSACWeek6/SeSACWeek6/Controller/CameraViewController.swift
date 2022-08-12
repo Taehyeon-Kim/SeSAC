@@ -55,8 +55,23 @@ final class CameraViewController: UIViewController {
     }
     
     @IBAction func photoLibraryButtonTapped(_ sender: UIButton) {
+        guard UIImagePickerController.isSourceTypeAvailable(.photoLibrary) else {
+            print("사용 불가 + 사용자에게 토스트/얼럿")
+            return
+        }
         
+        picker.sourceType = .photoLibrary
+        picker.allowsEditing = false // 편집화면 등장
+        
+        present(picker, animated: true)
     }
+    
+    @IBAction func saveToPhotoLibrary(_ sender: Any) {
+        if let image = imageView.image {
+            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+        }
+    }
+    
 }
 
 // UIImagePickerController 3.
@@ -68,7 +83,7 @@ extension CameraViewController: UIImagePickerControllerDelegate, UINavigationCon
         print(#function)
         
         // 원본, 편집, 메타 데이터 등 - infoKey
-        
+        // - 갤러리 상에 있는 이미지는 originalImage
         if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
             self.imageView.image = image
             dismiss(animated: true)
