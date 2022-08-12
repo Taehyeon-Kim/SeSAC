@@ -347,7 +347,7 @@
                                     <constraint firstAttribute="height" constant="50" id="Lhk-GM-9k9"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="YPImagePicker"/>
                                 <connections>
                                     <action selector="YPImageButtonTapped:" destination="Hda-Ic-lcR" eventType="touchUpInside" id="7UV-br-Co4"/>
                                 </connections>
@@ -358,7 +358,7 @@
                                     <constraint firstAttribute="height" constant="50" id="8YN-HX-wwb"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="갤러리"/>
                                 <connections>
                                     <action selector="photoLibraryButtonTapped:" destination="Hda-Ic-lcR" eventType="touchUpInside" id="EFi-Ti-i1Z"/>
                                 </connections>
@@ -369,7 +369,7 @@
                                     <constraint firstAttribute="height" constant="50" id="IFz-Jp-g2p"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="카메라"/>
                                 <connections>
                                     <action selector="cameraButtonTapped:" destination="Hda-Ic-lcR" eventType="touchUpInside" id="uM2-mz-rvF"/>
                                 </connections>
@@ -386,9 +386,20 @@
                                     <constraint firstAttribute="height" constant="50" id="FwF-Gh-QFv"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="사진 저장"/>
                                 <connections>
                                     <action selector="saveToPhotoLibrary:" destination="Hda-Ic-lcR" eventType="touchUpInside" id="mtb-QL-oLY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rzl-2D-WxF">
+                                <rect key="frame" x="20" y="599" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="dst-8u-FUT"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="얼굴 인식"/>
+                                <connections>
+                                    <action selector="clovaFaceButtonTapped:" destination="Hda-Ic-lcR" eventType="touchUpInside" id="PbM-b8-hNg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -399,11 +410,14 @@
                             <constraint firstItem="uES-k9-WzU" firstAttribute="trailing" secondItem="Gmm-Iq-O2B" secondAttribute="trailing" constant="20" id="4fl-MU-3Ah"/>
                             <constraint firstItem="Jpg-x0-5TI" firstAttribute="top" secondItem="uES-k9-WzU" secondAttribute="top" constant="20" id="6ZI-XA-5aA"/>
                             <constraint firstItem="uES-k9-WzU" firstAttribute="trailing" secondItem="qPJ-Aa-vAg" secondAttribute="trailing" constant="20" id="CiB-SZ-oCB"/>
+                            <constraint firstItem="Rzl-2D-WxF" firstAttribute="leading" secondItem="uES-k9-WzU" secondAttribute="leading" constant="20" id="IpK-U7-Ea6"/>
                             <constraint firstItem="Jpg-x0-5TI" firstAttribute="leading" secondItem="uES-k9-WzU" secondAttribute="leading" constant="20" id="QCh-Ph-njI"/>
                             <constraint firstItem="8PI-ZW-0fF" firstAttribute="leading" secondItem="uES-k9-WzU" secondAttribute="leading" constant="20" id="YJD-t2-hSs"/>
                             <constraint firstItem="uES-k9-WzU" firstAttribute="trailing" secondItem="Pcm-I9-kIV" secondAttribute="trailing" constant="20" id="hZ2-sC-Yr3"/>
                             <constraint firstItem="uES-k9-WzU" firstAttribute="trailing" secondItem="Jpg-x0-5TI" secondAttribute="trailing" constant="20" id="kSw-EJ-frh"/>
                             <constraint firstItem="uES-k9-WzU" firstAttribute="trailing" secondItem="8PI-ZW-0fF" secondAttribute="trailing" constant="20" id="lkz-Ts-Ig0"/>
+                            <constraint firstItem="uES-k9-WzU" firstAttribute="trailing" secondItem="Rzl-2D-WxF" secondAttribute="trailing" constant="20" id="r36-Yc-y5G"/>
+                            <constraint firstItem="Rzl-2D-WxF" firstAttribute="top" secondItem="Pcm-I9-kIV" secondAttribute="bottom" constant="20" id="tbN-wo-Z0C"/>
                             <constraint firstItem="Pcm-I9-kIV" firstAttribute="leading" secondItem="uES-k9-WzU" secondAttribute="leading" constant="20" id="uaC-H0-oAw"/>
                             <constraint firstItem="Gmm-Iq-O2B" firstAttribute="top" secondItem="8PI-ZW-0fF" secondAttribute="bottom" constant="55" id="ux7-mW-WZ2"/>
                             <constraint firstItem="qPJ-Aa-vAg" firstAttribute="leading" secondItem="uES-k9-WzU" secondAttribute="leading" constant="20" id="v3s-rc-fS8"/>
