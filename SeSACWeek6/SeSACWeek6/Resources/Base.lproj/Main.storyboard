@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zOh-Og-KfX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hda-Ic-lcR">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -332,6 +332,67 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Lb-1G-Gmt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3584" y="120"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="bcy-Jj-ZRJ">
+            <objects>
+                <viewController storyboardIdentifier="CameraViewController" id="Hda-Ic-lcR" customClass="CameraViewController" customModule="SeSACWeek6" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g0G-Fe-vmP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jpg-x0-5TI">
+                                <rect key="frame" x="20" y="64" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Lhk-GM-9k9"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="YPImageButtonTapped:" destination="Hda-Ic-lcR" eventType="touchUpInside" id="7UV-br-Co4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8PI-ZW-0fF">
+                                <rect key="frame" x="20" y="204" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8YN-HX-wwb"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="photoLibraryButtonTapped:" destination="Hda-Ic-lcR" eventType="touchUpInside" id="EFi-Ti-i1Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPJ-Aa-vAg">
+                                <rect key="frame" x="20" y="134" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="IFz-Jp-g2p"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="cameraButtonTapped:" destination="Hda-Ic-lcR" eventType="touchUpInside" id="uM2-mz-rvF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uES-k9-WzU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jpg-x0-5TI" firstAttribute="top" secondItem="uES-k9-WzU" secondAttribute="top" constant="20" id="6ZI-XA-5aA"/>
+                            <constraint firstItem="uES-k9-WzU" firstAttribute="trailing" secondItem="qPJ-Aa-vAg" secondAttribute="trailing" constant="20" id="CiB-SZ-oCB"/>
+                            <constraint firstItem="Jpg-x0-5TI" firstAttribute="leading" secondItem="uES-k9-WzU" secondAttribute="leading" constant="20" id="QCh-Ph-njI"/>
+                            <constraint firstItem="8PI-ZW-0fF" firstAttribute="leading" secondItem="uES-k9-WzU" secondAttribute="leading" constant="20" id="YJD-t2-hSs"/>
+                            <constraint firstItem="uES-k9-WzU" firstAttribute="trailing" secondItem="Jpg-x0-5TI" secondAttribute="trailing" constant="20" id="kSw-EJ-frh"/>
+                            <constraint firstItem="uES-k9-WzU" firstAttribute="trailing" secondItem="8PI-ZW-0fF" secondAttribute="trailing" constant="20" id="lkz-Ts-Ig0"/>
+                            <constraint firstItem="qPJ-Aa-vAg" firstAttribute="leading" secondItem="uES-k9-WzU" secondAttribute="leading" constant="20" id="v3s-rc-fS8"/>
+                            <constraint firstItem="qPJ-Aa-vAg" firstAttribute="top" secondItem="Jpg-x0-5TI" secondAttribute="bottom" constant="20" id="xe7-kK-mvT"/>
+                            <constraint firstItem="8PI-ZW-0fF" firstAttribute="top" secondItem="qPJ-Aa-vAg" secondAttribute="bottom" constant="20" id="zr0-PW-O4X"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nSH-Pv-73b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4315.9420289855079" y="119.86607142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="itf-L2-6mB">

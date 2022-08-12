@@ -32,6 +32,7 @@
 		BDAA91D628A343D900CB3848 /* TMDBAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAA91D528A343D900CB3848 /* TMDBAPIManager.swift */; };
 		BDAD2D3F28A493A0004ED9A2 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAD2D3E28A493A0004ED9A2 /* MapViewController.swift */; };
 		BDAD2D4228A5D70F004ED9A2 /* YPImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = BDAD2D4128A5D70F004ED9A2 /* YPImagePicker */; };
+		BDAD2D4428A5DDDC004ED9A2 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAD2D4328A5DDDC004ED9A2 /* CameraViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		BDAA91D328A330A500CB3848 /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
 		BDAA91D528A343D900CB3848 /* TMDBAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBAPIManager.swift; sourceTree = "<group>"; };
 		BDAD2D3E28A493A0004ED9A2 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		BDAD2D4328A5DDDC004ED9A2 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 				BD897D3928A0ACD0003F7B47 /* ClosureViewController.swift */,
 				BD897D5228A1F65A003F7B47 /* MainViewController.swift */,
 				BDAD2D3E28A493A0004ED9A2 /* MapViewController.swift */,
+				BDAD2D4328A5DDDC004ED9A2 /* CameraViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				BD897D5528A1FC25003F7B47 /* MainTableViewCell.swift in Sources */,
 				BD897D1828A09013003F7B47 /* ViewController.swift in Sources */,
 				BD897D1428A09013003F7B47 /* AppDelegate.swift in Sources */,
+				BDAD2D4428A5DDDC004ED9A2 /* CameraViewController.swift in Sources */,
 				BD897D3A28A0ACD0003F7B47 /* ClosureViewController.swift in Sources */,
 				BD897D5328A1F65A003F7B47 /* MainViewController.swift in Sources */,
 				BD897D5028A1F390003F7B47 /* CardCollectionViewCell.swift in Sources */,
