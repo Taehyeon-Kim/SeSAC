@@ -17,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD6571ED28AA102100A0623A /* UIButton.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = UIButton.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		BD71B35C287DCF770058E8C6 /* RawStrings.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RawStrings.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		BD71B35D287E478D0058E8C6 /* Day8.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Day8.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		BD71B35E287E67000058E8C6 /* Class+Struct.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Class+Struct.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -54,6 +55,7 @@
 				BD9B9351287EB31F00D6777D /* Formatted.playground */,
 				BD9B9352287F96D500D6777D /* Day9.playground */,
 				BDD82020287FC86B00B712BE /* DateFormat.playground */,
+				BD6571ED28AA102100A0623A /* UIButton.playground */,
 			);
 			path = Playground;
 			sourceTree = "<group>";
