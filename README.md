@@ -1,14 +1,18 @@
 # SeSAC
 ☀️ SeSAC Daily Reporting
 
-## iOS
+## Swift & iOS
 
-- [번들 아이디, Bundle Identifier](https://github.com/Taehyeon-Kim/SeSAC/issues/22)
-- [IBOutlet Collection 연결 시 weak 수식어를 사용하지 않는 이유](https://github.com/Taehyeon-Kim/SeSAC/issues/27)
-- [Alpha vs Opacity](https://github.com/Taehyeon-Kim/SeSAC/issues/30)
-- [Image Rendering Mode, Original vs Template](https://github.com/Taehyeon-Kim/SeSAC/issues/31)
-- [Raw Strings](https://github.com/Taehyeon-Kim/SeSAC/issues/41)
-- [타입 추론과 타입 어노테이션의 속도 차이에 관하여](https://github.com/Taehyeon-Kim/SeSAC/issues/86)
+|title|tag|progress|
+|:--|:--|:--|
+|[번들 아이디, Bundle Identifier](https://github.com/Taehyeon-Kim/SeSAC/issues/22)||`🔚 done`|
+|[IBOutlet Collection 연결 시 weak 수식어를 사용하지 않는 이유](https://github.com/Taehyeon-Kim/SeSAC/issues/27)||`🔚 done`|
+|[Alpha vs Opacity](https://github.com/Taehyeon-Kim/SeSAC/issues/30)||`🔚 done`|
+|[Image Rendering Mode, Original vs Template](https://github.com/Taehyeon-Kim/SeSAC/issues/31)||`🔚 done`|
+|[Raw Strings](https://github.com/Taehyeon-Kim/SeSAC/issues/41)||`🔚 done`|
+|[타입 추론과 타입 어노테이션의 속도 차이에 관하여](https://github.com/Taehyeon-Kim/SeSAC/issues/86)||`🔚 done`|
+
+<br />
 
 ## TIL
 
