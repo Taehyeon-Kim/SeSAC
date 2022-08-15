@@ -11,6 +11,7 @@
 |[Image Rendering Mode, Original vs Template](https://github.com/Taehyeon-Kim/SeSAC/issues/31)||`🔚 done`|
 |[Raw Strings](https://github.com/Taehyeon-Kim/SeSAC/issues/41)||`🔚 done`|
 |[타입 추론과 타입 어노테이션의 속도 차이에 관하여](https://github.com/Taehyeon-Kim/SeSAC/issues/86)||`🔚 done`|
+|[UIButton.Configuration을 확장해서 사용해보자](https://github.com/Taehyeon-Kim/SeSAC/issues/99)||`🔚 done`|
 
 <br />
 
