@@ -6,14 +6,25 @@
 //
 
 import UIKit
+import SeSACUIFramework
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
-
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // open(o) / internal, fileprivate, private(x)
+        testOpen()
+        
+        // public(o)
+        showSeSACAlert(title: "테스트 얼럿", message: "테스트 메시지", buttonTitle: "저장") { _ in
+            self.view.backgroundColor = .blue
+        }
+    }
 }
 
