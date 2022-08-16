@@ -15,7 +15,7 @@ open class OpenWebView {
         case push
     }
     
-    public func presentWebViewController(_ viewController: UIViewController, url: String, transitionStyle: TransitionStyle) {
+    public static func presentWebViewController(_ viewController: UIViewController, url: String, transitionStyle: TransitionStyle) {
         
         let vc = WebViewController()
         vc.url = url

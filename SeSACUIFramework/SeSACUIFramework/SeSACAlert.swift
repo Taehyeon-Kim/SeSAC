@@ -9,7 +9,7 @@ import UIKit
 
 extension UIViewController {
     
-    open func testOpen() {}
+    @objc open func testOpen() {}
     
     public func showSeSACAlert(title: String, message: String, buttonTitle: String, buttonAction: @escaping ((UIAlertAction) -> ())) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
