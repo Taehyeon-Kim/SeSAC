@@ -13,26 +13,7 @@
 		BD38CB1328AB2005006CB0FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD38CB1128AB2005006CB0FB /* Main.storyboard */; };
 		BD38CB1528AB2007006CB0FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD38CB1428AB2007006CB0FB /* Assets.xcassets */; };
 		BD38CB1828AB2007006CB0FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD38CB1628AB2007006CB0FB /* LaunchScreen.storyboard */; };
-		BD38CB3B28AB212E006CB0FB /* SeSACUIFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD38CB3728AB20EB006CB0FB /* SeSACUIFramework.framework */; };
-		BD38CB3C28AB212E006CB0FB /* SeSACUIFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BD38CB3728AB20EB006CB0FB /* SeSACUIFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		BD38CB3628AB20EB006CB0FB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BD38CB3128AB20EB006CB0FB /* SeSACUIFramework.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BD38CAE328AB1C5D006CB0FB;
-			remoteInfo = SeSACUIFramework;
-		};
-		BD38CB3828AB20EB006CB0FB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BD38CB3128AB20EB006CB0FB /* SeSACUIFramework.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BD38CAED28AB1C5D006CB0FB;
-			remoteInfo = SeSACUIFrameworkTests;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		BD38CB3D28AB212F006CB0FB /* Embed Frameworks */ = {
@@ -41,7 +22,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BD38CB3C28AB212E006CB0FB /* SeSACUIFramework.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -57,7 +37,6 @@
 		BD38CB1428AB2007006CB0FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD38CB1728AB2007006CB0FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD38CB1928AB2007006CB0FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BD38CB3128AB20EB006CB0FB /* SeSACUIFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SeSACUIFramework.xcodeproj; path = ../SeSACUIFramework/SeSACUIFramework.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +44,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD38CB3B28AB212E006CB0FB /* SeSACUIFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,7 +53,6 @@
 		BD38CAFF28AB2005006CB0FB = {
 			isa = PBXGroup;
 			children = (
-				BD38CB3128AB20EB006CB0FB /* SeSACUIFramework.xcodeproj */,
 				BD38CB0A28AB2005006CB0FB /* SeSACWeek7+Diary */,
 				BD38CB0928AB2005006CB0FB /* Products */,
 				BD38CB3A28AB212E006CB0FB /* Frameworks */,
@@ -102,15 +79,6 @@
 				BD38CB1928AB2007006CB0FB /* Info.plist */,
 			);
 			path = "SeSACWeek7+Diary";
-			sourceTree = "<group>";
-		};
-		BD38CB3228AB20EB006CB0FB /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				BD38CB3728AB20EB006CB0FB /* SeSACUIFramework.framework */,
-				BD38CB3928AB20EB006CB0FB /* SeSACUIFrameworkTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		BD38CB3A28AB212E006CB0FB /* Frameworks */ = {
@@ -167,35 +135,12 @@
 			mainGroup = BD38CAFF28AB2005006CB0FB;
 			productRefGroup = BD38CB0928AB2005006CB0FB /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = BD38CB3228AB20EB006CB0FB /* Products */;
-					ProjectRef = BD38CB3128AB20EB006CB0FB /* SeSACUIFramework.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				BD38CB0728AB2005006CB0FB /* SeSACWeek7+Diary */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		BD38CB3728AB20EB006CB0FB /* SeSACUIFramework.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SeSACUIFramework.framework;
-			remoteRef = BD38CB3628AB20EB006CB0FB /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		BD38CB3928AB20EB006CB0FB /* SeSACUIFrameworkTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = SeSACUIFrameworkTests.xctest;
-			remoteRef = BD38CB3828AB20EB006CB0FB /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		BD38CB0628AB2005006CB0FB /* Resources */ = {

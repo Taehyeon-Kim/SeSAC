@@ -12,6 +12,9 @@
 		BD38CAF328AB1C5D006CB0FB /* SeSACUIFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38CAF228AB1C5D006CB0FB /* SeSACUIFrameworkTests.swift */; };
 		BD38CAF428AB1C5D006CB0FB /* SeSACUIFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = BD38CAE628AB1C5D006CB0FB /* SeSACUIFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD38CAFE28AB1C6A006CB0FB /* SeSACAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38CAFD28AB1C6A006CB0FB /* SeSACAlert.swift */; };
+		BD38CB4228AB2862006CB0FB /* SeSACReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38CB4128AB2862006CB0FB /* SeSACReusableViewProtocol.swift */; };
+		BD38CB4428AB2933006CB0FB /* SeSACActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38CB4328AB2933006CB0FB /* SeSACActivityViewController.swift */; };
+		BD38CB4628AB2A25006CB0FB /* SeSACWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38CB4528AB2A25006CB0FB /* SeSACWebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +34,9 @@
 		BD38CAED28AB1C5D006CB0FB /* SeSACUIFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeSACUIFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD38CAF228AB1C5D006CB0FB /* SeSACUIFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeSACUIFrameworkTests.swift; sourceTree = "<group>"; };
 		BD38CAFD28AB1C6A006CB0FB /* SeSACAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeSACAlert.swift; sourceTree = "<group>"; };
+		BD38CB4128AB2862006CB0FB /* SeSACReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeSACReusableViewProtocol.swift; sourceTree = "<group>"; };
+		BD38CB4328AB2933006CB0FB /* SeSACActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeSACActivityViewController.swift; sourceTree = "<group>"; };
+		BD38CB4528AB2A25006CB0FB /* SeSACWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeSACWebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +82,9 @@
 				BD38CAE628AB1C5D006CB0FB /* SeSACUIFramework.h */,
 				BD38CAE728AB1C5D006CB0FB /* SeSACUIFramework.docc */,
 				BD38CAFD28AB1C6A006CB0FB /* SeSACAlert.swift */,
+				BD38CB4128AB2862006CB0FB /* SeSACReusableViewProtocol.swift */,
+				BD38CB4328AB2933006CB0FB /* SeSACActivityViewController.swift */,
+				BD38CB4528AB2A25006CB0FB /* SeSACWebView.swift */,
 			);
 			path = SeSACUIFramework;
 			sourceTree = "<group>";
@@ -197,7 +206,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD38CB4228AB2862006CB0FB /* SeSACReusableViewProtocol.swift in Sources */,
+				BD38CB4428AB2933006CB0FB /* SeSACActivityViewController.swift in Sources */,
 				BD38CAFE28AB1C6A006CB0FB /* SeSACAlert.swift in Sources */,
+				BD38CB4628AB2A25006CB0FB /* SeSACWebView.swift in Sources */,
 				BD38CAE828AB1C5D006CB0FB /* SeSACUIFramework.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
