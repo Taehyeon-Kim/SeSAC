@@ -15,6 +15,8 @@
 		BD38CB1828AB2007006CB0FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD38CB1628AB2007006CB0FB /* LaunchScreen.storyboard */; };
 		BD38CB5028AB2C5E006CB0FB /* SeSACUIFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD38CB4D28AB2C55006CB0FB /* SeSACUIFramework.framework */; };
 		BD38CB5128AB2C5E006CB0FB /* SeSACUIFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BD38CB4D28AB2C55006CB0FB /* SeSACUIFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BD38CB5728AB3B0E006CB0FB /* WalkThrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD38CB5628AB3B0E006CB0FB /* WalkThrough.storyboard */; };
+		BD38CB5928AB3B24006CB0FB /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38CB5828AB3B24006CB0FB /* FirstViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		BD38CB1728AB2007006CB0FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD38CB1928AB2007006CB0FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD38CB4728AB2C55006CB0FB /* SeSACUIFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SeSACUIFramework.xcodeproj; path = ../SeSACUIFramework/SeSACUIFramework.xcodeproj; sourceTree = "<group>"; };
+		BD38CB5628AB3B0E006CB0FB /* WalkThrough.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WalkThrough.storyboard; sourceTree = "<group>"; };
+		BD38CB5828AB3B24006CB0FB /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 		BD38CB0A28AB2005006CB0FB /* SeSACWeek7+Diary */ = {
 			isa = PBXGroup;
 			children = (
+				BD38CB5328AB3A92006CB0FB /* WalkThrough */,
 				BD38CB0B28AB2005006CB0FB /* AppDelegate.swift */,
 				BD38CB0D28AB2005006CB0FB /* SceneDelegate.swift */,
 				BD38CB0F28AB2005006CB0FB /* ViewController.swift */,
@@ -118,6 +123,15 @@
 				BD38CB4F28AB2C55006CB0FB /* SeSACUIFrameworkTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		BD38CB5328AB3A92006CB0FB /* WalkThrough */ = {
+			isa = PBXGroup;
+			children = (
+				BD38CB5628AB3B0E006CB0FB /* WalkThrough.storyboard */,
+				BD38CB5828AB3B24006CB0FB /* FirstViewController.swift */,
+			);
+			path = WalkThrough;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD38CB1828AB2007006CB0FB /* LaunchScreen.storyboard in Resources */,
+				BD38CB5728AB3B0E006CB0FB /* WalkThrough.storyboard in Resources */,
 				BD38CB1528AB2007006CB0FB /* Assets.xcassets in Resources */,
 				BD38CB1328AB2005006CB0FB /* Main.storyboard in Resources */,
 			);
@@ -218,6 +233,7 @@
 				BD38CB1028AB2005006CB0FB /* ViewController.swift in Sources */,
 				BD38CB0C28AB2005006CB0FB /* AppDelegate.swift in Sources */,
 				BD38CB0E28AB2005006CB0FB /* SceneDelegate.swift in Sources */,
+				BD38CB5928AB3B24006CB0FB /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
