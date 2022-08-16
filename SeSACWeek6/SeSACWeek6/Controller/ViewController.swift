@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         configureTableView()
     }
 
-    func searchBlog(for keyword: String) {
+    private func searchBlog(for keyword: String) {
         KakaoAPIManager.shared.callRequest(type: .blog, query: keyword, completion: { json in
             for item in json["documents"].arrayValue {
                 let value = item["contents"].stringValue
@@ -53,7 +53,7 @@ class ViewController: UIViewController {
         })
     }
     
-    func searchCafe(for keyword: String) {
+    private func searchCafe(for keyword: String) {
         KakaoAPIManager.shared.callRequest(type: .blog, query: keyword, completion: { json in
             for item in json["documents"].arrayValue {
                 let value = item["contents"].stringValue
