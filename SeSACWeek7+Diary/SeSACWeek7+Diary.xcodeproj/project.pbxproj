@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD1358C328AC71AB00D7EE0E /* CodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1358C228AC71AB00D7EE0E /* CodeViewController.swift */; };
 		BD38CB0C28AB2005006CB0FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38CB0B28AB2005006CB0FB /* AppDelegate.swift */; };
 		BD38CB0E28AB2005006CB0FB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38CB0D28AB2005006CB0FB /* SceneDelegate.swift */; };
 		BD38CB1028AB2005006CB0FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38CB0F28AB2005006CB0FB /* ViewController.swift */; };
@@ -54,6 +55,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BD1358C228AC71AB00D7EE0E /* CodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewController.swift; sourceTree = "<group>"; };
 		BD38CB0828AB2005006CB0FB /* SeSACWeek7+Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SeSACWeek7+Diary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD38CB0B28AB2005006CB0FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD38CB0D28AB2005006CB0FB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD1358BF28AC719000D7EE0E /* CodeBase */ = {
+			isa = PBXGroup;
+			children = (
+				BD1358C228AC71AB00D7EE0E /* CodeViewController.swift */,
+			);
+			path = CodeBase;
+			sourceTree = "<group>";
+		};
 		BD38CAFF28AB2005006CB0FB = {
 			isa = PBXGroup;
 			children = (
@@ -104,9 +114,10 @@
 			isa = PBXGroup;
 			children = (
 				BD38CB6328AB4514006CB0FB /* Application */,
-				BD38CB5328AB3A92006CB0FB /* WalkThrough */,
-				BD38CB6428AB453F006CB0FB /* Resource */,
+				BD1358BF28AC719000D7EE0E /* CodeBase */,
 				BD38CB6528AB4559006CB0FB /* Configuration */,
+				BD38CB6428AB453F006CB0FB /* Resource */,
+				BD38CB5328AB3A92006CB0FB /* WalkThrough */,
 			);
 			path = "SeSACWeek7+Diary";
 			sourceTree = "<group>";
@@ -268,6 +279,7 @@
 				BD38CB0E28AB2005006CB0FB /* SceneDelegate.swift in Sources */,
 				BD38CB5C28AB40C8006CB0FB /* SecondViewController.swift in Sources */,
 				BD38CB6028AB40F1006CB0FB /* ThirdViewController.swift in Sources */,
+				BD1358C328AC71AB00D7EE0E /* CodeViewController.swift in Sources */,
 				BD38CB6228AB417D006CB0FB /* WalkThroughViewController.swift in Sources */,
 				BD38CB5928AB3B24006CB0FB /* FirstViewController.swift in Sources */,
 			);

@@ -22,6 +22,11 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        // 스토리보드와 클래스를 엮어주는 작업 자체가 없어짐
+        let vc = CodeViewController()
+        vc.modalPresentationStyle = .overFullScreen
+        present(vc, animated: true)
+        
         // open(o) / internal, fileprivate, private(x)
 //        testOpen()
         
