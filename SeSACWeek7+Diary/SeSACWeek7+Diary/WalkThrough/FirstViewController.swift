@@ -10,11 +10,14 @@ import UIKit
 final class FirstViewController: UIViewController {
     
     @IBOutlet weak var tutorialLabel: UILabel!
+    @IBOutlet weak var starImageView: UIImageView!
     @IBOutlet weak var blackView: UIView!
     @IBOutlet weak var blackViewConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        starImageView.image = UIImage(systemName: "star.fill")
         
         tutorialLabel.numberOfLines = 0
         tutorialLabel.alpha = 0
@@ -34,6 +37,7 @@ final class FirstViewController: UIViewController {
             
         } completion: { _ in
             self.animateBlackView()
+            self.animateImageView()
         }
     }
     
@@ -44,6 +48,12 @@ final class FirstViewController: UIViewController {
             
         } completion: { _ in
 
+        }
+    }
+    
+    func animateImageView() {
+        UIView.animate(withDuration: 1, delay: 1, options: [.repeat, .autoreverse]) {
+            self.starImageView.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
         }
     }
 }
