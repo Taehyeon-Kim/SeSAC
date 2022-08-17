@@ -24,19 +24,21 @@ final class CodeViewController: UIViewController {
     // 1. 뷰 객체 프로퍼티 선언, 클래스의 인스턴스를 생성
     let emailTextField = UITextField()
     let passwordTextField = UITextField()
+    let signButton = UIButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.addSubview(emailTextField)
         view.addSubview(passwordTextField)
-        
+        view.addSubview(signButton)
 
         // 1. frame 기반
         emailTextField.frame = CGRect(x: 50, y: 50, width: UIScreen.main.bounds.width - 100, height: 50)
         emailTextField.borderStyle = .line
         emailTextField.backgroundColor = .lightGray
         passwordTextField.backgroundColor = .lightGray
+        signButton.backgroundColor = .red
         
         // 2. NSConstraints
         // isActive - Layout 활성화
@@ -53,5 +55,15 @@ final class CodeViewController: UIViewController {
         let height = NSLayoutConstraint(item: passwordTextField, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 60)
         
         view.addConstraints([top, leading, trailing, height])
+        
+        // 4. NSLayoutAnchor
+        signButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            signButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            signButton.widthAnchor.constraint(equalToConstant: 300),
+            signButton.heightAnchor.constraint(equalToConstant: 50),
+            signButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+        ])
     }
 }
