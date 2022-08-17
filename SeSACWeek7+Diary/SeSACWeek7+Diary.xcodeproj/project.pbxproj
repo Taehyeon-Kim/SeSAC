@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BD1358C328AC71AB00D7EE0E /* CodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1358C228AC71AB00D7EE0E /* CodeViewController.swift */; };
+		BD1358C628AC81CA00D7EE0E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BD1358C528AC81CA00D7EE0E /* SnapKit */; };
+		BD1358C828AC823500D7EE0E /* SnapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1358C728AC823500D7EE0E /* SnapKitViewController.swift */; };
 		BD38CB0C28AB2005006CB0FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38CB0B28AB2005006CB0FB /* AppDelegate.swift */; };
 		BD38CB0E28AB2005006CB0FB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38CB0D28AB2005006CB0FB /* SceneDelegate.swift */; };
 		BD38CB1028AB2005006CB0FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38CB0F28AB2005006CB0FB /* ViewController.swift */; };
@@ -56,6 +58,7 @@
 
 /* Begin PBXFileReference section */
 		BD1358C228AC71AB00D7EE0E /* CodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewController.swift; sourceTree = "<group>"; };
+		BD1358C728AC823500D7EE0E /* SnapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapKitViewController.swift; sourceTree = "<group>"; };
 		BD38CB0828AB2005006CB0FB /* SeSACWeek7+Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SeSACWeek7+Diary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD38CB0B28AB2005006CB0FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD38CB0D28AB2005006CB0FB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +81,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD38CB5028AB2C5E006CB0FB /* SeSACUIFramework.framework in Frameworks */,
+				BD1358C628AC81CA00D7EE0E /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				BD1358C228AC71AB00D7EE0E /* CodeViewController.swift */,
+				BD1358C728AC823500D7EE0E /* SnapKitViewController.swift */,
 			);
 			path = CodeBase;
 			sourceTree = "<group>";
@@ -195,6 +200,9 @@
 			dependencies = (
 			);
 			name = "SeSACWeek7+Diary";
+			packageProductDependencies = (
+				BD1358C528AC81CA00D7EE0E /* SnapKit */,
+			);
 			productName = "SeSACWeek7+Diary";
 			productReference = BD38CB0828AB2005006CB0FB /* SeSACWeek7+Diary.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +231,9 @@
 				Base,
 			);
 			mainGroup = BD38CAFF28AB2005006CB0FB;
+			packageReferences = (
+				BD1358C428AC81CA00D7EE0E /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = BD38CB0928AB2005006CB0FB /* Products */;
 			projectDirPath = "";
 			projectReferences = (
@@ -277,6 +288,7 @@
 				BD38CB1028AB2005006CB0FB /* ViewController.swift in Sources */,
 				BD38CB0C28AB2005006CB0FB /* AppDelegate.swift in Sources */,
 				BD38CB0E28AB2005006CB0FB /* SceneDelegate.swift in Sources */,
+				BD1358C828AC823500D7EE0E /* SnapKitViewController.swift in Sources */,
 				BD38CB5C28AB40C8006CB0FB /* SecondViewController.swift in Sources */,
 				BD38CB6028AB40F1006CB0FB /* ThirdViewController.swift in Sources */,
 				BD1358C328AC71AB00D7EE0E /* CodeViewController.swift in Sources */,
@@ -499,6 +511,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BD1358C428AC81CA00D7EE0E /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BD1358C528AC81CA00D7EE0E /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD1358C428AC81CA00D7EE0E /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BD38CB0028AB2005006CB0FB /* Project object */;
 }
