@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
         
         // 스토리보드와 클래스를 엮어주는 작업 자체가 없어짐
-        let vc = SnapKitViewController()
+        let vc = SnapKit2ViewController()
         vc.modalPresentationStyle = .overFullScreen
         present(vc, animated: true)
         
