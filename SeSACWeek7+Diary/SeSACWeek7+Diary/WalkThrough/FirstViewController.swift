@@ -19,6 +19,7 @@ final class FirstViewController: UIViewController {
         tutorialLabel.numberOfLines = 0
         tutorialLabel.alpha = 0
         tutorialLabel.font = .boldSystemFont(ofSize: 24)
+        tutorialLabel.backgroundColor = .red
         tutorialLabel.text = """
         일기를 씁시다.
         잘 써봅시다.
@@ -29,17 +30,17 @@ final class FirstViewController: UIViewController {
 
         UIView.animate(withDuration: 3) {
             self.tutorialLabel.alpha = 1
+            self.tutorialLabel.backgroundColor = .yellow
             
         } completion: { _ in
-            self.blackView.alpha = 1
             self.animateBlackView()
         }
     }
     
     func animateBlackView() {
         UIView.animate(withDuration: 2) {
-            self.blackViewConstraint.constant += 200
-            self.view.layoutIfNeeded()
+            self.blackView.transform = CGAffineTransform(scaleX: 3, y: 0.8)
+            self.blackView.alpha = 1
             
         } completion: { _ in
 
