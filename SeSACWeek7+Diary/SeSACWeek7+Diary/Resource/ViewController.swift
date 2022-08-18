@@ -9,37 +9,37 @@ import UIKit
 import SeSACUIFramework
 
 class ViewController: UIViewController {
+    
+    lazy var nameButton: UIButton = {
+        let view = UIButton()
+        view.setTitle("닉네임", for: .normal)
+        view.setTitleColor(UIColor.black, for: .normal)
+        view.backgroundColor = .blue
+        view.addTarget(self, action: #selector(nameButtonClicked), for: .touchUpInside)
+        return view
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configure()
     }
     
-    override func testOpen() {
-        //
+    func configure() {
+        view.addSubview(nameButton)
+        
+        nameButton.snp.makeConstraints {
+            $0.width.height.equalTo(200)
+            $0.center.equalTo(view)
+        }
     }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        // 스토리보드와 클래스를 엮어주는 작업 자체가 없어짐
-        let vc = SnapKit2ViewController()
-        vc.modalPresentationStyle = .overFullScreen
-        present(vc, animated: true)
-        
-        // open(o) / internal, fileprivate, private(x)
-//        testOpen()
-        
-        // public(o)
-//        showSeSACAlert(title: "테스트 얼럿", message: "테스트 메시지", buttonTitle: "저장") { _ in
-//            self.view.backgroundColor = .blue
-//        }
-        
-//        let image = UIImage(systemName: "star.fill")!
-//        let shareURL = "https://www.apple.com"
-//        let shareText = "Hello, world"
-//        sesacShowActivityViewController(shareImage: image, shareURL: shareURL, shareText: shareText)
-        
-        OpenWebView.presentWebViewController(self, url: "https://www.apple.com", transitionStyle: .present)
+    
+    @objc func nameButtonClicked() {
+        let controller = ProfileViewController()
+        controller.saveButtonActionHandler = { name in
+            print("2")
+            self.nameButton.setTitle(name, for: .normal)
+        }
+        present(controller, animated: true)
     }
 }

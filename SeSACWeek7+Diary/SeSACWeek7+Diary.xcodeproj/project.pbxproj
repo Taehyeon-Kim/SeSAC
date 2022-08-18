@@ -12,6 +12,7 @@
 		BD1358C828AC823500D7EE0E /* SnapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1358C728AC823500D7EE0E /* SnapKitViewController.swift */; };
 		BD1358CA28AC8C7000D7EE0E /* SnapKit2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1358C928AC8C7000D7EE0E /* SnapKit2ViewController.swift */; };
 		BD19AB9E28ADDF71007C9DF3 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD19AB9D28ADDF71007C9DF3 /* UIViewController+.swift */; };
+		BD19ABA028ADE60A007C9DF3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD19AB9F28ADE60A007C9DF3 /* ProfileViewController.swift */; };
 		BD38CB0C28AB2005006CB0FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38CB0B28AB2005006CB0FB /* AppDelegate.swift */; };
 		BD38CB0E28AB2005006CB0FB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38CB0D28AB2005006CB0FB /* SceneDelegate.swift */; };
 		BD38CB1028AB2005006CB0FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38CB0F28AB2005006CB0FB /* ViewController.swift */; };
@@ -63,6 +64,7 @@
 		BD1358C728AC823500D7EE0E /* SnapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapKitViewController.swift; sourceTree = "<group>"; };
 		BD1358C928AC8C7000D7EE0E /* SnapKit2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapKit2ViewController.swift; sourceTree = "<group>"; };
 		BD19AB9D28ADDF71007C9DF3 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		BD19AB9F28ADE60A007C9DF3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BD38CB0828AB2005006CB0FB /* SeSACWeek7+Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SeSACWeek7+Diary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD38CB0B28AB2005006CB0FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD38CB0D28AB2005006CB0FB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				BD38CB0F28AB2005006CB0FB /* ViewController.swift */,
+				BD19AB9F28ADE60A007C9DF3 /* ProfileViewController.swift */,
 				BD38CB1128AB2005006CB0FB /* Main.storyboard */,
 				BD38CB1428AB2007006CB0FB /* Assets.xcassets */,
 				BD38CB1628AB2007006CB0FB /* LaunchScreen.storyboard */,
@@ -305,6 +308,7 @@
 				BD1358C828AC823500D7EE0E /* SnapKitViewController.swift in Sources */,
 				BD38CB5C28AB40C8006CB0FB /* SecondViewController.swift in Sources */,
 				BD38CB6028AB40F1006CB0FB /* ThirdViewController.swift in Sources */,
+				BD19ABA028ADE60A007C9DF3 /* ProfileViewController.swift in Sources */,
 				BD1358C328AC71AB00D7EE0E /* CodeViewController.swift in Sources */,
 				BD38CB6228AB417D006CB0FB /* WalkThroughViewController.swift in Sources */,
 				BD19AB9E28ADDF71007C9DF3 /* UIViewController+.swift in Sources */,
