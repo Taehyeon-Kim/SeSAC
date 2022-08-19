@@ -7,13 +7,19 @@
 
 import UIKit
 
+extension NSNotification.Name {
+    
+    // - 보통 이렇게 관리함.
+    
+    static let saveButton = NSNotification.Name("saveButtonNotification")
+}
+
 class ProfileViewController: UIViewController {
     
     let saveButton: UIButton = {
         let view = UIButton()
         view.setTitle("저장", for: .normal)
         view.backgroundColor = .black
-        view.addTarget(self, action: #selector(saveButtonClicked), for: .touchUpInside)
         return view
     }()
     
@@ -32,6 +38,16 @@ class ProfileViewController: UIViewController {
         
         view.backgroundColor = .yellow
         configure()
+        saveButton.addTarget(self, action: #selector(saveButtonClicked), for: .touchUpInside)
+    }
+    
+    func addObservers() {
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(saveButtonNotificationObserver),
+            name: Notification.Name("Test"),
+            object: nil
+        )
     }
     
     func configure() {
@@ -49,13 +65,28 @@ class ProfileViewController: UIViewController {
     }
     
     @objc func saveButtonClicked() {
+  
+        NotificationCenter.default.post(
+            name: Notification.Name("saveButtonNotification"),
+            object: nil,
+            userInfo: ["name": nameTextField.text!, "value": 123456]
+        )
+        
         
         // 값 전달 기능 실행 => 클로저 구문 활용
-        guard let text = nameTextField.text else { return }
-        print("1")
-        saveButtonActionHandler?(text)
+//        guard let text = nameTextField.text else { return }
+//        print("1")
+//        saveButtonActionHandler?(text)
         
         // 화면 dismiss
         dismiss(animated: true)
+    }
+    
+    @objc func saveButtonNotificationObserver(_ notification: NSNotification) {
+        print(#function)
+        if let name = notification.userInfo?["name"] as? String {
+            print(name)
+            self.nameTextField.text = name
+        }
     }
 }
