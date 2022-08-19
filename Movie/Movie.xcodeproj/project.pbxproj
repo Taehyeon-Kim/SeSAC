@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD16D21D28AF9C1D00BEF83F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD16D21C28AF9C1D00BEF83F /* MainView.swift */; };
+		BD16D21F28AF9C2800BEF83F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD16D21E28AF9C2800BEF83F /* MainViewController.swift */; };
+		BD16D22128AF9C3A00BEF83F /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD16D22028AF9C3A00BEF83F /* SignUpView.swift */; };
+		BD16D22328AF9C4200BEF83F /* NewSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD16D22228AF9C4200BEF83F /* NewSignUpViewController.swift */; };
+		BD16D22528AF9C9000BEF83F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD16D22428AF9C9000BEF83F /* BaseView.swift */; };
+		BD16D22728AF9C9500BEF83F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD16D22628AF9C9500BEF83F /* BaseViewController.swift */; };
 		BD4240242874B4B700D1CF66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4240232874B4B700D1CF66 /* AppDelegate.swift */; };
 		BD4240262874B4B700D1CF66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4240252874B4B700D1CF66 /* SceneDelegate.swift */; };
 		BD4240282874B4B700D1CF66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4240272874B4B700D1CF66 /* ViewController.swift */; };
@@ -17,6 +23,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD16D21C28AF9C1D00BEF83F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		BD16D21E28AF9C2800BEF83F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		BD16D22028AF9C3A00BEF83F /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		BD16D22228AF9C4200BEF83F /* NewSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSignUpViewController.swift; sourceTree = "<group>"; };
+		BD16D22428AF9C9000BEF83F /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		BD16D22628AF9C9500BEF83F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BD4240202874B4B700D1CF66 /* Movie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD4240232874B4B700D1CF66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD4240252874B4B700D1CF66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +51,86 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD16D21328AF9B2A00BEF83F /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				BD4240232874B4B700D1CF66 /* AppDelegate.swift */,
+				BD4240252874B4B700D1CF66 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		BD16D21428AF9B4000BEF83F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				BD4240292874B4B700D1CF66 /* Main.storyboard */,
+				BD42402C2874B4BB00D1CF66 /* Assets.xcassets */,
+				BD42402E2874B4BB00D1CF66 /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		BD16D21528AF9B6400BEF83F /* Old */ = {
+			isa = PBXGroup;
+			children = (
+				BD7D3A612876F73800DEF52A /* SignUpViewController.swift */,
+				BD4240272874B4B700D1CF66 /* ViewController.swift */,
+			);
+			path = Old;
+			sourceTree = "<group>";
+		};
+		BD16D21628AF9B6B00BEF83F /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				BD16D21728AF9BA300BEF83F /* Main */,
+				BD16D21828AF9BA700BEF83F /* SignUp */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		BD16D21728AF9BA300BEF83F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BD16D21C28AF9C1D00BEF83F /* MainView.swift */,
+				BD16D21E28AF9C2800BEF83F /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		BD16D21828AF9BA700BEF83F /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				BD16D22028AF9C3A00BEF83F /* SignUpView.swift */,
+				BD16D22228AF9C4200BEF83F /* NewSignUpViewController.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		BD16D21928AF9BE600BEF83F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BD16D21B28AF9BF200BEF83F /* Base */,
+				BD16D21A28AF9BEE00BEF83F /* Component */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		BD16D21A28AF9BEE00BEF83F /* Component */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		BD16D21B28AF9BF200BEF83F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				BD16D22428AF9C9000BEF83F /* BaseView.swift */,
+				BD16D22628AF9C9500BEF83F /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		BD4240172874B4B700D1CF66 = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +150,12 @@
 		BD4240222874B4B700D1CF66 /* Movie */ = {
 			isa = PBXGroup;
 			children = (
-				BD4240232874B4B700D1CF66 /* AppDelegate.swift */,
-				BD4240252874B4B700D1CF66 /* SceneDelegate.swift */,
-				BD4240272874B4B700D1CF66 /* ViewController.swift */,
-				BD7D3A612876F73800DEF52A /* SignUpViewController.swift */,
-				BD4240292874B4B700D1CF66 /* Main.storyboard */,
-				BD42402C2874B4BB00D1CF66 /* Assets.xcassets */,
-				BD42402E2874B4BB00D1CF66 /* LaunchScreen.storyboard */,
 				BD4240312874B4BB00D1CF66 /* Info.plist */,
+				BD16D21328AF9B2A00BEF83F /* Application */,
+				BD16D21928AF9BE600BEF83F /* Common */,
+				BD16D21528AF9B6400BEF83F /* Old */,
+				BD16D21628AF9B6B00BEF83F /* Presentation */,
+				BD16D21428AF9B4000BEF83F /* Resource */,
 			);
 			path = Movie;
 			sourceTree = "<group>";
@@ -144,7 +234,13 @@
 				BD4240282874B4B700D1CF66 /* ViewController.swift in Sources */,
 				BD4240242874B4B700D1CF66 /* AppDelegate.swift in Sources */,
 				BD7D3A622876F73800DEF52A /* SignUpViewController.swift in Sources */,
+				BD16D22128AF9C3A00BEF83F /* SignUpView.swift in Sources */,
+				BD16D21F28AF9C2800BEF83F /* MainViewController.swift in Sources */,
+				BD16D22728AF9C9500BEF83F /* BaseViewController.swift in Sources */,
+				BD16D21D28AF9C1D00BEF83F /* MainView.swift in Sources */,
+				BD16D22528AF9C9000BEF83F /* BaseView.swift in Sources */,
 				BD4240262874B4B700D1CF66 /* SceneDelegate.swift in Sources */,
+				BD16D22328AF9C4200BEF83F /* NewSignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
