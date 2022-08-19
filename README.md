@@ -52,3 +52,8 @@
 |`week6`|[Day28, 220810](https://github.com/Taehyeon-Kim/SeSAC/issues/95)|
 |`week6`|[Day29, 220811](https://github.com/Taehyeon-Kim/SeSAC/issues/97)|
 |`week6`|[Day30, 220812](https://github.com/Taehyeon-Kim/SeSAC/issues/98)|
+|||
+|`week7`|[Day31, 220808](https://github.com/Taehyeon-Kim/SeSAC/issues/100)|
+|`week7`|[Day32, 220809](https://github.com/Taehyeon-Kim/SeSAC/issues/101)|
+|`week7`|[Day33, 220810](https://github.com/Taehyeon-Kim/SeSAC/issues/102)|
+|`week7`|[Day34, 220811](https://github.com/Taehyeon-Kim/SeSAC/issues/104)|
