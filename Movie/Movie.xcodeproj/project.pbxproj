@@ -13,6 +13,10 @@
 		BD16D22328AF9C4200BEF83F /* NewSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD16D22228AF9C4200BEF83F /* NewSignUpViewController.swift */; };
 		BD16D22528AF9C9000BEF83F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD16D22428AF9C9000BEF83F /* BaseView.swift */; };
 		BD16D22728AF9C9500BEF83F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD16D22628AF9C9500BEF83F /* BaseViewController.swift */; };
+		BD16D22928AFCB1800BEF83F /* UserInputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD16D22828AFCB1800BEF83F /* UserInputTextField.swift */; };
+		BD16D22C28AFCBF900BEF83F /* UIButton+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD16D22B28AFCBF900BEF83F /* UIButton+Configuration.swift */; };
+		BD16D22F28AFCDA000BEF83F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BD16D22E28AFCDA000BEF83F /* SnapKit */; };
+		BD16D23228AFCDAC00BEF83F /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = BD16D23128AFCDAC00BEF83F /* Then */; };
 		BD4240242874B4B700D1CF66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4240232874B4B700D1CF66 /* AppDelegate.swift */; };
 		BD4240262874B4B700D1CF66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4240252874B4B700D1CF66 /* SceneDelegate.swift */; };
 		BD4240282874B4B700D1CF66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4240272874B4B700D1CF66 /* ViewController.swift */; };
@@ -29,6 +33,8 @@
 		BD16D22228AF9C4200BEF83F /* NewSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSignUpViewController.swift; sourceTree = "<group>"; };
 		BD16D22428AF9C9000BEF83F /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		BD16D22628AF9C9500BEF83F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		BD16D22828AFCB1800BEF83F /* UserInputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInputTextField.swift; sourceTree = "<group>"; };
+		BD16D22B28AFCBF900BEF83F /* UIButton+Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Configuration.swift"; sourceTree = "<group>"; };
 		BD4240202874B4B700D1CF66 /* Movie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD4240232874B4B700D1CF66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD4240252874B4B700D1CF66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD16D22F28AFCDA000BEF83F /* SnapKit in Frameworks */,
+				BD16D23228AFCDAC00BEF83F /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +119,7 @@
 			children = (
 				BD16D21B28AF9BF200BEF83F /* Base */,
 				BD16D21A28AF9BEE00BEF83F /* Component */,
+				BD16D22A28AFCBDD00BEF83F /* Extension */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -118,6 +127,7 @@
 		BD16D21A28AF9BEE00BEF83F /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				BD16D22828AFCB1800BEF83F /* UserInputTextField.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -129,6 +139,14 @@
 				BD16D22628AF9C9500BEF83F /* BaseViewController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		BD16D22A28AFCBDD00BEF83F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BD16D22B28AFCBF900BEF83F /* UIButton+Configuration.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		BD4240172874B4B700D1CF66 = {
@@ -176,6 +194,10 @@
 			dependencies = (
 			);
 			name = Movie;
+			packageProductDependencies = (
+				BD16D22E28AFCDA000BEF83F /* SnapKit */,
+				BD16D23128AFCDAC00BEF83F /* Then */,
+			);
 			productName = Movie;
 			productReference = BD4240202874B4B700D1CF66 /* Movie.app */;
 			productType = "com.apple.product-type.application";
@@ -204,6 +226,10 @@
 				Base,
 			);
 			mainGroup = BD4240172874B4B700D1CF66;
+			packageReferences = (
+				BD16D22D28AFCDA000BEF83F /* XCRemoteSwiftPackageReference "SnapKit" */,
+				BD16D23028AFCDAC00BEF83F /* XCRemoteSwiftPackageReference "Then" */,
+			);
 			productRefGroup = BD4240212874B4B700D1CF66 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -231,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD16D22C28AFCBF900BEF83F /* UIButton+Configuration.swift in Sources */,
 				BD4240282874B4B700D1CF66 /* ViewController.swift in Sources */,
 				BD4240242874B4B700D1CF66 /* AppDelegate.swift in Sources */,
 				BD7D3A622876F73800DEF52A /* SignUpViewController.swift in Sources */,
@@ -239,6 +266,7 @@
 				BD16D22728AF9C9500BEF83F /* BaseViewController.swift in Sources */,
 				BD16D21D28AF9C1D00BEF83F /* MainView.swift in Sources */,
 				BD16D22528AF9C9000BEF83F /* BaseView.swift in Sources */,
+				BD16D22928AFCB1800BEF83F /* UserInputTextField.swift in Sources */,
 				BD4240262874B4B700D1CF66 /* SceneDelegate.swift in Sources */,
 				BD16D22328AF9C4200BEF83F /* NewSignUpViewController.swift in Sources */,
 			);
@@ -395,7 +423,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -424,7 +452,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -460,6 +488,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BD16D22D28AFCDA000BEF83F /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		BD16D23028AFCDAC00BEF83F /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BD16D22E28AFCDA000BEF83F /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD16D22D28AFCDA000BEF83F /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		BD16D23128AFCDAC00BEF83F /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD16D23028AFCDAC00BEF83F /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BD4240182874B4B700D1CF66 /* Project object */;
 }

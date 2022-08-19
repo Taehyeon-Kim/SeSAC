@@ -9,9 +9,17 @@ import UIKit
 
 final class NewSignUpViewController: BaseViewController {
     
+    let signUpView = SignUpView()
+    
+    override func loadView() {
+        self.view = signUpView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .red
+    }
+    
+    override func initialUI() {
+        view.backgroundColor = .black
     }
 }
