@@ -30,6 +30,7 @@
 		BD6F3A7D28AF1443004E34F5 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6F3A7C28AF1443004E34F5 /* WriteViewController.swift */; };
 		BD6F3A7F28AF1696004E34F5 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6F3A7E28AF1696004E34F5 /* BaseView.swift */; };
 		BD6F3A8128AF17B7004E34F5 /* WriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6F3A8028AF17B7004E34F5 /* WriteView.swift */; };
+		BD6F3A8628AF2CF9004E34F5 /* BlackRadiusTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6F3A8528AF2CF9004E34F5 /* BlackRadiusTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		BD6F3A7C28AF1443004E34F5 /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
 		BD6F3A7E28AF1696004E34F5 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		BD6F3A8028AF17B7004E34F5 /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
+		BD6F3A8528AF2CF9004E34F5 /* BlackRadiusTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackRadiusTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +215,7 @@
 		BD6F3A7628AF125D004E34F5 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				BD6F3A8228AF2CD6004E34F5 /* CustomView */,
 				BD6F3A7928AF1271004E34F5 /* BaseViewController.swift */,
 				BD6F3A7E28AF1696004E34F5 /* BaseView.swift */,
 			);
@@ -226,6 +229,14 @@
 				BD6F3A8028AF17B7004E34F5 /* WriteView.swift */,
 			);
 			path = Diary;
+			sourceTree = "<group>";
+		};
+		BD6F3A8228AF2CD6004E34F5 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				BD6F3A8528AF2CF9004E34F5 /* BlackRadiusTextField.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,6 +343,7 @@
 			files = (
 				BD6F3A8128AF17B7004E34F5 /* WriteView.swift in Sources */,
 				BD6F3A7A28AF1271004E34F5 /* BaseViewController.swift in Sources */,
+				BD6F3A8628AF2CF9004E34F5 /* BlackRadiusTextField.swift in Sources */,
 				BD38CB1028AB2005006CB0FB /* ViewController.swift in Sources */,
 				BD38CB0C28AB2005006CB0FB /* AppDelegate.swift in Sources */,
 				BD38CB0E28AB2005006CB0FB /* SceneDelegate.swift in Sources */,

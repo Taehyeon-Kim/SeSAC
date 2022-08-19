@@ -21,24 +21,14 @@ final class WriteView: BaseView {
     }()
     
     let titleTextField: UITextField = {
-        let view = UITextField()
-        view.borderStyle = .none
-        view.layer.borderColor = UIColor.black.cgColor
-        view.layer.borderWidth = 1
+        let view = BlackRadiusTextField()
         view.placeholder = "제목을 입력해주세요"
-        view.textAlignment = .center
-        view.font = .boldSystemFont(ofSize: 15)
         return view
     }()
     
     let dateTextField: UITextField = {
-        let view = UITextField()
-        view.borderStyle = .none
-        view.layer.borderColor = UIColor.black.cgColor
-        view.layer.borderWidth = 1
+        let view = BlackRadiusTextField()
         view.placeholder = "날짜를 입력해주세요"
-        view.textAlignment = .center
-        view.font = .boldSystemFont(ofSize: 15)
         return view
     }()
     
@@ -48,6 +38,8 @@ final class WriteView: BaseView {
         view.layer.borderWidth = 1
         return view
     }()
+    
+    let tableView = UITableView()
 
     override func configureUI() {
         [photoImageView, titleTextField, dateTextField, contentTextView].forEach {
