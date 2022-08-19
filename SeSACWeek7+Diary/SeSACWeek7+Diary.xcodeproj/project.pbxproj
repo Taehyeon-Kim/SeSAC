@@ -26,6 +26,10 @@
 		BD38CB5C28AB40C8006CB0FB /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38CB5B28AB40C8006CB0FB /* SecondViewController.swift */; };
 		BD38CB6028AB40F1006CB0FB /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38CB5F28AB40F1006CB0FB /* ThirdViewController.swift */; };
 		BD38CB6228AB417D006CB0FB /* WalkThroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38CB6128AB417D006CB0FB /* WalkThroughViewController.swift */; };
+		BD6F3A7A28AF1271004E34F5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6F3A7928AF1271004E34F5 /* BaseViewController.swift */; };
+		BD6F3A7D28AF1443004E34F5 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6F3A7C28AF1443004E34F5 /* WriteViewController.swift */; };
+		BD6F3A7F28AF1696004E34F5 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6F3A7E28AF1696004E34F5 /* BaseView.swift */; };
+		BD6F3A8128AF17B7004E34F5 /* WriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6F3A8028AF17B7004E34F5 /* WriteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +83,10 @@
 		BD38CB5B28AB40C8006CB0FB /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		BD38CB5F28AB40F1006CB0FB /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		BD38CB6128AB417D006CB0FB /* WalkThroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughViewController.swift; sourceTree = "<group>"; };
+		BD6F3A7928AF1271004E34F5 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		BD6F3A7C28AF1443004E34F5 /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
+		BD6F3A7E28AF1696004E34F5 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		BD6F3A8028AF17B7004E34F5 /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,11 +141,13 @@
 		BD38CB0A28AB2005006CB0FB /* SeSACWeek7+Diary */ = {
 			isa = PBXGroup;
 			children = (
-				BD19AB9C28ADDF65007C9DF3 /* Extension */,
 				BD38CB6328AB4514006CB0FB /* Application */,
 				BD1358BF28AC719000D7EE0E /* CodeBase */,
 				BD38CB6528AB4559006CB0FB /* Configuration */,
+				BD6F3A7B28AF1422004E34F5 /* Diary */,
+				BD19AB9C28ADDF65007C9DF3 /* Extension */,
 				BD38CB6428AB453F006CB0FB /* Resource */,
+				BD6F3A7628AF125D004E34F5 /* Utility */,
 				BD38CB5328AB3A92006CB0FB /* WalkThrough */,
 			);
 			path = "SeSACWeek7+Diary";
@@ -198,6 +208,24 @@
 				BD38CB1928AB2007006CB0FB /* Info.plist */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		BD6F3A7628AF125D004E34F5 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				BD6F3A7928AF1271004E34F5 /* BaseViewController.swift */,
+				BD6F3A7E28AF1696004E34F5 /* BaseView.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		BD6F3A7B28AF1422004E34F5 /* Diary */ = {
+			isa = PBXGroup;
+			children = (
+				BD6F3A7C28AF1443004E34F5 /* WriteViewController.swift */,
+				BD6F3A8028AF17B7004E34F5 /* WriteView.swift */,
+			);
+			path = Diary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,16 +330,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD6F3A8128AF17B7004E34F5 /* WriteView.swift in Sources */,
+				BD6F3A7A28AF1271004E34F5 /* BaseViewController.swift in Sources */,
 				BD38CB1028AB2005006CB0FB /* ViewController.swift in Sources */,
 				BD38CB0C28AB2005006CB0FB /* AppDelegate.swift in Sources */,
 				BD38CB0E28AB2005006CB0FB /* SceneDelegate.swift in Sources */,
 				BD1358C828AC823500D7EE0E /* SnapKitViewController.swift in Sources */,
 				BD38CB5C28AB40C8006CB0FB /* SecondViewController.swift in Sources */,
+				BD6F3A7D28AF1443004E34F5 /* WriteViewController.swift in Sources */,
 				BD38CB6028AB40F1006CB0FB /* ThirdViewController.swift in Sources */,
 				BD19ABA028ADE60A007C9DF3 /* ProfileViewController.swift in Sources */,
 				BD1358C328AC71AB00D7EE0E /* CodeViewController.swift in Sources */,
 				BD38CB6228AB417D006CB0FB /* WalkThroughViewController.swift in Sources */,
 				BD19AB9E28ADDF71007C9DF3 /* UIViewController+.swift in Sources */,
+				BD6F3A7F28AF1696004E34F5 /* BaseView.swift in Sources */,
 				BD1358CA28AC8C7000D7EE0E /* SnapKit2ViewController.swift in Sources */,
 				BD38CB5928AB3B24006CB0FB /* FirstViewController.swift in Sources */,
 			);

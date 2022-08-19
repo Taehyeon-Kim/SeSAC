@@ -35,11 +35,11 @@ class ViewController: UIViewController {
     }
     
     @objc func nameButtonClicked() {
-        let controller = ProfileViewController()
-        controller.saveButtonActionHandler = { name in
-            print("2")
-            self.nameButton.setTitle(name, for: .normal)
-        }
+        let controller = WriteViewController()
+//        controller.saveButtonActionHandler = { name in
+//            print("2")
+//            self.nameButton.setTitle(name, for: .normal)
+//        }
         present(controller, animated: true)
     }
 }
