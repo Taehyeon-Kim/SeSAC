@@ -12,6 +12,7 @@
 |[Raw Strings](https://github.com/Taehyeon-Kim/SeSAC/issues/41)||`🔚 done`|
 |[타입 추론과 타입 어노테이션의 속도 차이에 관하여](https://github.com/Taehyeon-Kim/SeSAC/issues/86)||`🔚 done`|
 |[UIButton.Configuration을 확장해서 사용해보자](https://github.com/Taehyeon-Kim/SeSAC/issues/99)||`🔚 done`|
+|[Notification 조금 더 쉽게 사용하기](https://github.com/Taehyeon-Kim/SeSAC/issues/107)||`🔚 done`|
 
 <br />
 
