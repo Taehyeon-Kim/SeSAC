@@ -24,12 +24,12 @@ class ViewController: UIViewController {
         
         configure()
         
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(sendButtonNotificationObserver),
-            name: Notification.Name("saveButtonNotification"),
-            object: nil
-        )
+        Notification.Name.name.addObserver { notification in
+            if let name = notification.userInfo?["name"] as? String {
+                print(name)
+                self.nameButton.setTitle(name, for: .normal)
+            }
+        }
     }
     
     func configure() {
@@ -56,16 +56,5 @@ class ViewController: UIViewController {
             self.nameButton.setTitle(name, for: .normal)
         }
         present(controller, animated: true)
-    }
-    
-    /*
-     userInfo: [AnyHashable: Any]
-     - value 자리는 Any 타입이기 때문에 원하는 상황에 적절한 타입으로 사용하고 싶다면 다운 캐스팅을 해주어야 한다.
-     */
-    @objc func sendButtonNotificationObserver(_ notification: NSNotification) {
-        if let name = notification.userInfo?["name"] as? String {
-            print(name)
-            self.nameButton.setTitle(name, for: .normal)
-        }
     }
 }

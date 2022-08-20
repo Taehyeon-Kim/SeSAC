@@ -65,14 +65,12 @@ class ProfileViewController: UIViewController {
     }
     
     @objc func saveButtonClicked() {
-  
-        NotificationCenter.default.post(
-            name: Notification.Name("saveButtonNotification"),
+        
+        Notification.Name.name.post(
             object: nil,
             userInfo: ["name": nameTextField.text!, "value": 123456]
         )
-        
-        
+
         // 값 전달 기능 실행 => 클로저 구문 활용
 //        guard let text = nameTextField.text else { return }
 //        print("1")

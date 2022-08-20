@@ -31,6 +31,7 @@
 		BD6F3A7F28AF1696004E34F5 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6F3A7E28AF1696004E34F5 /* BaseView.swift */; };
 		BD6F3A8128AF17B7004E34F5 /* WriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6F3A8028AF17B7004E34F5 /* WriteView.swift */; };
 		BD6F3A8628AF2CF9004E34F5 /* BlackRadiusTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6F3A8528AF2CF9004E34F5 /* BlackRadiusTextField.swift */; };
+		BDCEFBF628B159E600EE0439 /* Notification+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCEFBF528B159E600EE0439 /* Notification+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		BD6F3A7E28AF1696004E34F5 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		BD6F3A8028AF17B7004E34F5 /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
 		BD6F3A8528AF2CF9004E34F5 /* BlackRadiusTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackRadiusTextField.swift; sourceTree = "<group>"; };
+		BDCEFBF528B159E600EE0439 /* Notification+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				BD19AB9D28ADDF71007C9DF3 /* UIViewController+.swift */,
+				BDCEFBF528B159E600EE0439 /* Notification+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 			files = (
 				BD6F3A8128AF17B7004E34F5 /* WriteView.swift in Sources */,
 				BD6F3A7A28AF1271004E34F5 /* BaseViewController.swift in Sources */,
+				BDCEFBF628B159E600EE0439 /* Notification+.swift in Sources */,
 				BD6F3A8628AF2CF9004E34F5 /* BlackRadiusTextField.swift in Sources */,
 				BD38CB1028AB2005006CB0FB /* ViewController.swift in Sources */,
 				BD38CB0C28AB2005006CB0FB /* AppDelegate.swift in Sources */,
