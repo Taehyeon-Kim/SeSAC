@@ -12,25 +12,32 @@ class ShoppingTableViewController: UITableViewController {
     
     @IBOutlet weak var inputTextField: UITextField!
     
-    private var shoppingList: [String] = [
-        "그립톡 구매하기",
-        "사이다 구매",
-        "아이패드 케이스 최저가 알아보기",
-        "양말"
-    ]
+    let realm = try! Realm()
+    var shoppingList: Results<Shopping>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        shoppingList = realm.objects(Shopping.self)
     }
     
     @IBAction func textFieldInputDidFinish(_ sender: UITextField) {
-        self.shoppingList.append(sender.text!)
+        addShoppingList()
         self.tableView.reloadData()
     }
     
     @IBAction func addButtonDidTap(_ sender: UIButton) {
-        self.shoppingList.append(inputTextField.text!)
+        addShoppingList()
         self.tableView.reloadData()
+    }
+    
+    func addShoppingList() {
+        let task = Shopping(title: inputTextField.text!, createdAt: Date())
+        
+        try! realm.write {
+            realm.add(task)
+            print("Realm Succeed")
+        }
     }
 }
 
@@ -38,12 +45,12 @@ class ShoppingTableViewController: UITableViewController {
 extension ShoppingTableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.shoppingList.count
+        return shoppingList != nil ? shoppingList.count : 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ShoppingTableViewCell") as! ShoppingTableViewCell
-        cell.shoppingListLabel.text = self.shoppingList[indexPath.row]
+        cell.shoppingListLabel.text = self.shoppingList[indexPath.row].title
         return cell
     }
 
@@ -57,7 +64,7 @@ extension ShoppingTableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            self.shoppingList.remove(at: indexPath.row)
+//            self.shoppingList.remove(at: indexPath.row)
             self.tableView.reloadData()
         }
     }

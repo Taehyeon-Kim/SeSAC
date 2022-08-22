@@ -14,11 +14,13 @@ class Shopping: Object {
     @Persisted var isCheck: Bool
     @Persisted var title: String
     @Persisted var isBookmark: Bool
+    @Persisted var createdAt = Date()
     
-    convenience init(title: String) {
+    convenience init(title: String, createdAt: Date) {
         self.init()
         self.isCheck = false
         self.title = title
         self.isBookmark = false
+        self.createdAt = createdAt
     }
 }
