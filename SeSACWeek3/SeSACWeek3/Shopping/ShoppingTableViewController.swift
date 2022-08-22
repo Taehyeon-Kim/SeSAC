@@ -55,6 +55,15 @@ extension ShoppingTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ShoppingTableViewCell") as! ShoppingTableViewCell
         cell.shoppingListLabel.text = self.shoppingList[indexPath.row].title
+        
+        cell.completionHandler = {
+            try! self.realm.write {
+                self.shoppingList[indexPath.row].isCheck = cell.isCheck
+                self.shoppingList[indexPath.row].isBookmark = cell.isBookmark
+                print("Realm Updated")
+            }
+        }
+        
         return cell
     }
 
