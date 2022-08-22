@@ -18,6 +18,10 @@ class ShoppingTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Get on-disk location of the default Realm
+        let realm = try! Realm()
+        print("Realm is located at:", realm.configuration.fileURL!)
+        
         shoppingList = realm.objects(Shopping.self)
     }
     
@@ -64,7 +68,9 @@ extension ShoppingTableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-//            self.shoppingList.remove(at: indexPath.row)
+            try! realm.write {
+                realm.delete(shoppingList[indexPath.row])
+            }
             self.tableView.reloadData()
         }
     }
