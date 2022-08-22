@@ -6,9 +6,18 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct BoxOfficeModel {
-    let movieTitle: String
-    let releaseDate: String
-    let audienceCount: String
+class BoxOfficeModel: Object {
+    @Persisted(primaryKey: true) var _id: ObjectId
+    @Persisted var movieTitle: String
+    @Persisted var releaseDate: String
+    @Persisted var audienceCount: String
+    
+    convenience init(movieTitle: String, releaseDate: String, audienceCount: String) {
+        self.init()
+        self.movieTitle = movieTitle
+        self.releaseDate = releaseDate
+        self.audienceCount = audienceCount
+    }
 }

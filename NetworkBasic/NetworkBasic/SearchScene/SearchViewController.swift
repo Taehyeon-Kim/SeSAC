@@ -18,6 +18,7 @@
 import UIKit
 
 import Alamofire
+import RealmSwift
 import SwiftyJSON
 import JGProgressHUD
 
@@ -29,11 +30,16 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     let hud = JGProgressHUD()
     lazy var dateFormatter = DateFormatter()
     
+    let realm = try! Realm()
+    var tasks: Results<BoxOfficeModel>!
+    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var searchTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("Realm is located at:", realm.configuration.fileURL!)
         
         // 연결고리 작업: 테이블 뷰가 해야 할 역할 > 뷰 컨트롤러에게 요청
         searchTableView.delegate = self     // 클래스(SearchViewController)의 인스턴스 자체를 의미
@@ -45,13 +51,21 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         searchTableView.register(UINib(nibName: ListTableViewCell.reuseidentifier, bundle: nil), forCellReuseIdentifier: ListTableViewCell.reuseidentifier)
         
         searchBar.delegate = self
+
+        // 데이터 로드(Read)
+        tasks = realm.objects(BoxOfficeModel.self)
         
-        let yesterdayDateString = getYesterdayDate()
-        requestBoxOffice(text: yesterdayDateString)
+        // 처음 실행일때만 네트워크 콜해서 정보 가져오고 저장하기
+        // 처음 실행일때 == tasks 비어있을때
+        if let tasks = tasks,
+           tasks.isEmpty {
+            let yesterdayDateString = getYesterdayDate()
+            requestBoxOffice(text: yesterdayDateString)
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return list.count
+        return tasks != nil ? tasks.count : list.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -59,8 +73,9 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
             return UITableViewCell()
         }
         
+        let data = tasks != nil ? tasks[indexPath.row] : list[indexPath.row]
         cell.titleLabel.font = .boldSystemFont(ofSize: 22)
-        cell.titleLabel.text = "\(list[indexPath.row].movieTitle): \(list[indexPath.row].releaseDate)"
+        cell.titleLabel.text = "\(data.movieTitle): \(data.releaseDate)"
         
         return cell
     }
@@ -77,17 +92,16 @@ extension SearchViewController {
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                print("JSON: \(json)")
-                
-                // let movieNm1 = json["boxOfficeResult"]["dailyBoxOfficeList"][0]["movieNm"].stringValue
-                // let movieNm2 = json["boxOfficeResult"]["dailyBoxOfficeList"][1]["movieNm"].stringValue
-                // let movieNm3 = json["boxOfficeResult"]["dailyBoxOfficeList"][2]["movieNm"].stringValue
                 
                 for movie in json["boxOfficeResult"]["dailyBoxOfficeList"].arrayValue {
                     let movieNm = movie["movieNm"].stringValue
                     let openDt = movie["openDt"].stringValue
                     let audiCnt = movie["audiCnt"].stringValue
-                    self.list.append(BoxOfficeModel(movieTitle: movieNm, releaseDate: openDt, audienceCount: audiCnt))
+                    let data = BoxOfficeModel(movieTitle: movieNm, releaseDate: openDt, audienceCount: audiCnt)
+                    try! self.realm.write {
+                        self.realm.add(data)
+                    }
+                    self.list.append(data)
                 }
                 
                 self.searchTableView.reloadData()
@@ -97,6 +111,8 @@ extension SearchViewController {
                 print(error)
             }
         }
+        
+        print("call")
     }
     
     func getYesterdayDate() -> String {

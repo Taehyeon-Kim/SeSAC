@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD117CFE28B37DF500A103FA /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = BD117CFD28B37DF500A103FA /* Realm */; };
+		BD117D0028B37DF500A103FA /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BD117CFF28B37DF500A103FA /* RealmSwift */; };
 		BD4566EC2892239F009B4514 /* LottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4566EB2892239F009B4514 /* LottoViewController.swift */; };
 		BD4566EE28923052009B4514 /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4566ED28923052009B4514 /* TranslateViewController.swift */; };
 		BD4566F028923AAD009B4514 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4566EF28923AAD009B4514 /* WebViewController.swift */; };
@@ -91,10 +93,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD117D0028B37DF500A103FA /* RealmSwift in Frameworks */,
 				BDDF775D289CC2F20096196B /* Kingfisher in Frameworks */,
 				BD85738E28977D22007F294F /* SwiftyJSON in Frameworks */,
 				BDDF773D289B508C0096196B /* JGProgressHUD in Frameworks */,
 				BD85738B28977CF5007F294F /* Alamofire in Frameworks */,
+				BD117CFE28B37DF500A103FA /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +312,8 @@
 				BD85738D28977D22007F294F /* SwiftyJSON */,
 				BDDF773C289B508C0096196B /* JGProgressHUD */,
 				BDDF775C289CC2F20096196B /* Kingfisher */,
+				BD117CFD28B37DF500A103FA /* Realm */,
+				BD117CFF28B37DF500A103FA /* RealmSwift */,
 			);
 			productName = NetworkBasic;
 			productReference = BD7915072890DDA8000A12EE /* NetworkBasic.app */;
@@ -342,6 +348,7 @@
 				BD85738C28977D22007F294F /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				BDDF773B289B508C0096196B /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
 				BDDF775B289CC2F20096196B /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				BD117CFC28B37DF500A103FA /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = BD7915082890DDA8000A12EE /* Products */;
 			projectDirPath = "";
@@ -620,6 +627,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		BD117CFC28B37DF500A103FA /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
 		BD85738928977CF5007F294F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -655,6 +670,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		BD117CFD28B37DF500A103FA /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD117CFC28B37DF500A103FA /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		BD117CFF28B37DF500A103FA /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD117CFC28B37DF500A103FA /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
 		BD85738A28977CF5007F294F /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BD85738928977CF5007F294F /* XCRemoteSwiftPackageReference "Alamofire" */;
