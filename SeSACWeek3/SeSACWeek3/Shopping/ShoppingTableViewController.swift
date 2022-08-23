@@ -13,10 +13,12 @@ class ShoppingTableViewController: UITableViewController {
     @IBOutlet weak var inputTextField: UITextField!
     
     let realm = try! Realm()
-    var shoppingList: Results<Shopping>!
+    var shoppingList: Results<Shopping>! { didSet { tableView.reloadData() } }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configureNavigationBar()
         
         // Get on-disk location of the default Realm
         let realm = try! Realm()
@@ -45,6 +47,45 @@ class ShoppingTableViewController: UITableViewController {
     }
 }
 
+extension ShoppingTableViewController {
+
+    func configureNavigationBar() {
+        let sortItem = UIBarButtonItem(
+            image: UIImage(systemName: "slider.horizontal.3"),
+            style: .plain,
+            target: self,
+            action: nil
+        )
+        
+        let todo = UIAction(title: "한 일 기준 정렬", image: nil, handler: { _ in
+            self.shoppingList = self.realm.objects(Shopping.self).sorted(byKeyPath: "isCheck", ascending: false)
+        })
+        
+        let title = UIAction(title: "제목순 정렬", image: nil, handler: { _ in
+            self.shoppingList = self.realm.objects(Shopping.self).sorted(byKeyPath: "title", ascending: true)
+        })
+        
+        let favorite = UIAction(title: "즐겨찾기 목록만 보기", image: nil, handler: { _ in
+            self.shoppingList = self.realm.objects(Shopping.self).filter("isBookmark == true")
+//            self.shoppingList = self.realm.objects(Shopping.self).sorted(byKeyPath: "isBookmark", ascending: false)
+        })
+        
+        let date = UIAction(title: "작성일 기준 정렬", image: nil, handler: { _ in
+            self.shoppingList = self.realm.objects(Shopping.self).sorted(byKeyPath: "createdAt", ascending: true)
+        })
+        
+        sortItem.menu = UIMenu(
+            title: "",
+            image: UIImage(systemName: "heart.fill"),
+            identifier: nil,
+            options: .displayInline,
+            children: [todo, title, favorite, date]
+        )
+        
+        navigationItem.rightBarButtonItems = [sortItem]
+    }
+}
+
 // MARK: - UITableView Methods
 extension ShoppingTableViewController {
     
@@ -54,7 +95,9 @@ extension ShoppingTableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ShoppingTableViewCell") as! ShoppingTableViewCell
-        cell.shoppingListLabel.text = self.shoppingList[indexPath.row].title
+        cell.shoppingListLabel.text = shoppingList[indexPath.row].title
+        cell.isCheck = shoppingList[indexPath.row].isCheck
+        cell.isBookmark = shoppingList[indexPath.row].isBookmark
         
         cell.completionHandler = {
             try! self.realm.write {
