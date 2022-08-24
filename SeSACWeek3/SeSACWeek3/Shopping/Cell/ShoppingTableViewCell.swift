@@ -26,6 +26,7 @@ final class ShoppingTableViewCell: UITableViewCell {
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var checkButton: UIButton!
+    @IBOutlet weak var shoppingimageView: UIImageView!
     @IBOutlet weak var shoppingListLabel: UILabel!
     @IBOutlet weak var bookmarkButton: UIButton!
     

@@ -147,11 +147,11 @@ extension ShoppingTableViewController {
         cell.shoppingListLabel.text = shoppingList[indexPath.row].title
         cell.isCheck = shoppingList[indexPath.row].isCheck
         cell.isBookmark = shoppingList[indexPath.row].isBookmark
+        cell.shoppingimageView.image = database.loadImageFromDocument(fileName: "\(shoppingList[indexPath.row]._id).jpg")
         
         let task = shoppingList[indexPath.row]
         
         cell.completionHandler = {
-            
             self.database.update(task) { task in
                 task.isCheck = cell.isCheck
                 task.isBookmark = cell.isBookmark
@@ -171,7 +171,8 @@ extension ShoppingTableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            database.delete(shoppingList[indexPath.row])
+            self.database.removeImageFromDocument(fileName: "\(self.shoppingList[indexPath.row]._id).jpg")
+            self.database.delete(self.shoppingList[indexPath.row])
             self.tableView.reloadData()
         }
     }
