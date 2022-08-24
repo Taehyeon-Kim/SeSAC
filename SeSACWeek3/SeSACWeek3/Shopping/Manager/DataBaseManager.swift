@@ -11,8 +11,13 @@ import RealmSwift
 protocol DataBase {
     func read<T: Object>(_ object: T.Type) -> Results<T>
     func write<T: Object>(_ object: T)
+    func update<T: Object>(_ object: T, completion: @escaping ((T) -> ()))
     func delete<T: Object>(_ object: T)
     func sort<T: Object>(_ object: T.Type, by keyPath: String, ascending: Bool) -> Results<T>
+    
+    func saveImageFromDocument(fileName: String, image: UIImage)
+    func loadImageFromDocument(fileName: String) -> UIImage?
+    func removeImageFromDocument(fileName: String)
 }
 
 final class DataBaseManager: DataBase {
@@ -71,4 +76,39 @@ final class DataBaseManager: DataBase {
     func sort<T: Object>(_ object: T.Type, by keyPath: String, ascending: Bool = true) -> Results<T> {
         return database.objects(object).sorted(byKeyPath: keyPath, ascending: ascending)
     }
+    
+    func saveImageFromDocument(fileName: String, image: UIImage) {
+        guard let document = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return }
+        let fileURL = document.appendingPathComponent(fileName)
+        guard let data = image.jpegData(compressionQuality: 0.5) else { return }
+
+        do {
+            try data.write(to: fileURL)
+        } catch let error {
+            print(error)
+        }
+    }
+    
+    func loadImageFromDocument(fileName: String) -> UIImage? {
+        guard let document = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return nil }
+        let fileURL = document.appendingPathComponent(fileName)
+
+        if FileManager.default.fileExists(atPath: fileURL.path) {
+            return UIImage(contentsOfFile: fileURL.path)
+        } else {
+            return UIImage(systemName: "favorite")
+        }
+    }
+    
+    func removeImageFromDocument(fileName: String) {
+        guard let document = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return }
+        let fileURL = document.appendingPathComponent(fileName)
+
+        do {
+            try FileManager.default.removeItem(at: fileURL)
+        } catch let error {
+            print(error)
+        }
+    }
+    
 }

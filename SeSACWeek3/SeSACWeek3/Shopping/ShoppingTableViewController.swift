@@ -6,10 +6,16 @@
 //
 
 import UIKit
+
+import PhotosUI
 import RealmSwift
 
 class ShoppingTableViewController: UITableViewController {
     
+    @IBOutlet weak var imageView: UIImageView! {
+        didSet { imageView.contentMode = .scaleAspectFill }
+    }
+    @IBOutlet weak var selectButton: UIButton!
     @IBOutlet weak var inputTextField: UITextField!
     
     private let database = DataBaseManager.shared
@@ -28,17 +34,66 @@ class ShoppingTableViewController: UITableViewController {
     
     @IBAction func textFieldInputDidFinish(_ sender: UITextField) {
         addShoppingList()
+        resetInputState()
         self.tableView.reloadData()
     }
     
     @IBAction func addButtonDidTap(_ sender: UIButton) {
+        guard imageView.image != nil else {
+            print("이미지를 추가해주세요.")
+            return
+        }
+        
+        guard inputTextField.text != "" else {
+            print("항목을 적어주세요.")
+            return
+        }
+    
         addShoppingList()
+        resetInputState()
         self.tableView.reloadData()
+    }
+    
+    func resetInputState() {
+        imageView.image = nil
+        selectButton.setImage(UIImage(systemName: "camera"), for: .normal)
+        inputTextField.text = nil
+    }
+    
+    @IBAction func selectImageButtonTapped(_ sender: UIButton) {
+        print("click")
+        
+        var configuration = PHPickerConfiguration()
+        configuration.selectionLimit = 1
+        configuration.filter = .images
+        
+        let picker = PHPickerViewController(configuration: configuration)
+        picker.delegate = self
+        self.present(picker, animated: true)
     }
     
     func addShoppingList() {
         let task = Shopping(title: inputTextField.text!, createdAt: Date())
         database.write(task)
+        database.saveImageFromDocument(fileName: "\(task._id).jpg", image: imageView.image!)
+    }
+}
+
+extension ShoppingTableViewController: PHPickerViewControllerDelegate, UINavigationControllerDelegate {
+
+    func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+        picker.dismiss(animated: true)
+        
+        let itemProvider = results.first?.itemProvider
+        if let itemProvider = itemProvider,
+           itemProvider.canLoadObject(ofClass: UIImage.self) {
+            itemProvider.loadObject(ofClass: UIImage.self) { image, error in
+                DispatchQueue.main.sync { [weak self] in
+                    self?.imageView.image = image as? UIImage
+                    self?.selectButton.setImage(nil, for: .normal)
+                }
+            }
+        }
     }
 }
 

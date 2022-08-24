@@ -24,6 +24,7 @@ final class ShoppingTableViewCell: UITableViewCell {
     
     var completionHandler: (() -> ())?
     
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var checkButton: UIButton!
     @IBOutlet weak var shoppingListLabel: UILabel!
     @IBOutlet weak var bookmarkButton: UIButton!
@@ -31,6 +32,10 @@ final class ShoppingTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
 
+        selectionStyle = .none
+        containerView.layer.borderColor = UIColor.darkGray.cgColor
+        containerView.layer.borderWidth = 1
+        containerView.layer.cornerRadius = 4
         checkButton.addTarget(self, action: #selector(checkButtonClicked(_:)), for: .touchUpInside)
         bookmarkButton.addTarget(self, action: #selector(bookmarkButtonClicked(_:)), for: .touchUpInside)
     }
