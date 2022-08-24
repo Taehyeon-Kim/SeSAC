@@ -12,6 +12,8 @@ class ShoppingTableViewController: UITableViewController {
     
     @IBOutlet weak var inputTextField: UITextField!
     
+    private let database = DataBaseManager.shared
+    
     let realm = try! Realm()
     var shoppingList: Results<Shopping>! { didSet { tableView.reloadData() } }
     
@@ -20,11 +22,8 @@ class ShoppingTableViewController: UITableViewController {
         
         configureNavigationBar()
         
-        // Get on-disk location of the default Realm
-        let realm = try! Realm()
-        print("Realm is located at:", realm.configuration.fileURL!)
-        
-        shoppingList = realm.objects(Shopping.self)
+        database.getLocationOfDefaultRealm()
+        shoppingList = database.read(Shopping.self)
     }
     
     @IBAction func textFieldInputDidFinish(_ sender: UITextField) {
@@ -39,11 +38,7 @@ class ShoppingTableViewController: UITableViewController {
     
     func addShoppingList() {
         let task = Shopping(title: inputTextField.text!, createdAt: Date())
-        
-        try! realm.write {
-            realm.add(task)
-            print("Realm Succeed")
-        }
+        database.write(task)
     }
 }
 
@@ -58,20 +53,19 @@ extension ShoppingTableViewController {
         )
         
         let todo = UIAction(title: "한 일 기준 정렬", image: nil, handler: { _ in
-            self.shoppingList = self.realm.objects(Shopping.self).sorted(byKeyPath: "isCheck", ascending: false)
+            self.shoppingList = self.database.sort(Shopping.self, by: "isCheck", ascending: false)
         })
         
         let title = UIAction(title: "제목순 정렬", image: nil, handler: { _ in
-            self.shoppingList = self.realm.objects(Shopping.self).sorted(byKeyPath: "title", ascending: true)
+            self.shoppingList = self.database.sort(Shopping.self, by: "title")
         })
         
         let favorite = UIAction(title: "즐겨찾기 목록만 보기", image: nil, handler: { _ in
             self.shoppingList = self.realm.objects(Shopping.self).filter("isBookmark == true")
-//            self.shoppingList = self.realm.objects(Shopping.self).sorted(byKeyPath: "isBookmark", ascending: false)
         })
         
         let date = UIAction(title: "작성일 기준 정렬", image: nil, handler: { _ in
-            self.shoppingList = self.realm.objects(Shopping.self).sorted(byKeyPath: "createdAt", ascending: true)
+            self.shoppingList = self.database.sort(Shopping.self, by: "createdAt")
         })
         
         sortItem.menu = UIMenu(
@@ -99,11 +93,13 @@ extension ShoppingTableViewController {
         cell.isCheck = shoppingList[indexPath.row].isCheck
         cell.isBookmark = shoppingList[indexPath.row].isBookmark
         
+        let task = shoppingList[indexPath.row]
+        
         cell.completionHandler = {
-            try! self.realm.write {
-                self.shoppingList[indexPath.row].isCheck = cell.isCheck
-                self.shoppingList[indexPath.row].isBookmark = cell.isBookmark
-                print("Realm Updated")
+            
+            self.database.update(task) { task in
+                task.isCheck = cell.isCheck
+                task.isBookmark = cell.isBookmark
             }
         }
         
@@ -120,9 +116,7 @@ extension ShoppingTableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            try! realm.write {
-                realm.delete(shoppingList[indexPath.row])
-            }
+            database.delete(shoppingList[indexPath.row])
             self.tableView.reloadData()
         }
     }
