@@ -23,6 +23,7 @@ final class BackUpViewController: UIViewController {
         super.viewDidLoad()
         
         mainView.backUpButton.addTarget(self, action: #selector(backup), for: .touchUpInside)
+        mainView.restoreButton.addTarget(self, action: #selector(restore), for: .touchUpInside)
     }
 }
 
@@ -83,5 +84,71 @@ extension BackUpViewController {
         let backUpFileURL = documentDirectoryPath.appendingPathComponent("Shopping_List.zip")
         let viewController = UIActivityViewController(activityItems: [backUpFileURL], applicationActivities: [])
         self.present(viewController, animated: true)
+    }
+    
+    
+    // 복구 버튼을 눌렀을 때에는 Document Picker를 가져와서 백업 파일을 확인할 수 있어야 한다.
+    @objc func restore() {
+        let documentPicker = UIDocumentPickerViewController(forOpeningContentTypes: [.archive], asCopy: true)
+        documentPicker.delegate = self
+        documentPicker.allowsMultipleSelection = false
+        self.present(documentPicker, animated: true)
+    }
+}
+
+extension BackUpViewController: UIDocumentPickerDelegate {
+    
+    func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
+        print("취소!!")
+    }
+    
+    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
+        guard let selectedFileURL = urls.first else {
+            print("파일을 찾을 수 없어요.")
+            return
+        }
+        
+        guard let path = getDocumentDirectoryPath() else {
+            print("도큐먼트 위치를 찾을 수 없어요.")
+            return
+        }
+        
+        // 샌드박스로 파일을 가져와야하는데
+        let sandboxFileURL = path.appendingPathComponent(selectedFileURL.lastPathComponent)
+        
+        // 파일 이미 존재하면 그냥 겹쳐 쓰는거지
+        if FileManager.default.fileExists(atPath: sandboxFileURL.path) {
+            
+            let fileURL = path.appendingPathComponent("Shopping_List.zip")
+            
+            do {
+                try Zip.unzipFile(fileURL, destination: path, overwrite: true, password: nil, progress: { progress in
+                    print(progress)
+                }, fileOutputHandler: { unzippedFile in
+                    print("복구완료! : ", unzippedFile)
+                })
+                
+            } catch {
+                print("압축 해제 실패! 복구 실패!!!")
+            }
+        } else {
+            
+            do {
+                // 없으면 파일을 옮겨와야함
+                try FileManager.default.copyItem(at: selectedFileURL, to: sandboxFileURL)
+                
+                let fileURL = path.appendingPathComponent("Shopping_List.zip")
+                
+                try Zip.unzipFile(fileURL, destination: path, overwrite: true, password: nil, progress: { progress in
+                    print(progress)
+                }, fileOutputHandler: { unzippedFile in
+                    print("복구완료! : ", unzippedFile)
+                })
+                
+            } catch {
+                print("압축 해제 실패! 복구 실패!!!")
+            }
+            
+        }
     }
 }
