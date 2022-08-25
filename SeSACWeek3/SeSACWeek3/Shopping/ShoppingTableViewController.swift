@@ -131,7 +131,20 @@ extension ShoppingTableViewController {
             children: [todo, title, favorite, date]
         )
         
-        navigationItem.rightBarButtonItems = [sortItem]
+        let settingItem = UIBarButtonItem(
+            image: UIImage(systemName: "gearshape"),
+            style: .plain,
+            target: self,
+            action: #selector(presentBackUpViewController)
+        )
+        
+        navigationItem.rightBarButtonItems = [settingItem, sortItem]
+    }
+    
+    @objc func presentBackUpViewController() {
+        let backUpViewController = BackUpViewController()
+//        backUpViewController.modalPresentationStyle = .fullScreen
+        present(backUpViewController, animated: true)
     }
 }
 

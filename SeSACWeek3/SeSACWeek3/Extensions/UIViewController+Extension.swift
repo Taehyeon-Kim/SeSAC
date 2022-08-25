@@ -19,3 +19,29 @@ extension UIViewController {
         self.present(alert, animated: true)
     }
 }
+
+extension UIViewController {
+    
+    func getDocumentDirectoryPath() -> URL? {
+        guard let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return nil }
+        return documentDirectory
+    }
+    
+    func fetchDocumentZipFile() {
+        do {
+            guard let path = getDocumentDirectoryPath() else { return }
+            
+            let docs = try FileManager.default.contentsOfDirectory(at: path, includingPropertiesForKeys: nil)
+            print("docs: \(docs)")
+            
+            let zip = docs.filter { $0.pathExtension == "zip" }
+            print("zip: \(zip)")
+            
+            let result = zip.map { $0.lastPathComponent }
+            print("result: \(result)")
+            
+        } catch {
+            print("Error")
+        }
+    }
+}

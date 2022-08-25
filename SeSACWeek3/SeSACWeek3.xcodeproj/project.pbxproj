@@ -21,6 +21,11 @@
 		BD48B61B28870873003A1122 /* ShoppingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD48B61A28870873003A1122 /* ShoppingTableViewController.swift */; };
 		BD48B61E28870947003A1122 /* InputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD48B61D28870947003A1122 /* InputTableViewCell.swift */; };
 		BD48B62028870E6A003A1122 /* ShoppingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD48B61F28870E6A003A1122 /* ShoppingTableViewCell.swift */; };
+		BD772D5E28B7BFFB006CBD6B /* BackUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD772D5D28B7BFFB006CBD6B /* BackUpViewController.swift */; };
+		BD772D6128B7C064006CBD6B /* BackUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD772D6028B7C064006CBD6B /* BackUpView.swift */; };
+		BD772D6428B7C110006CBD6B /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = BD772D6328B7C110006CBD6B /* Zip */; };
+		BD772D6728B7C123006CBD6B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BD772D6628B7C123006CBD6B /* SnapKit */; };
+		BD772D6A28B7C135006CBD6B /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = BD772D6928B7C135006CBD6B /* Then */; };
 		BD828D5928879DF800664C76 /* RecommendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD828D5828879DF800664C76 /* RecommendCollectionViewCell.swift */; };
 		BD828D5C2887AE3500664C76 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = BD828D5B2887AE3500664C76 /* Kingfisher */; };
 		BD828D5F2887AE6700664C76 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = BD828D5E2887AE6700664C76 /* Toast */; };
@@ -56,6 +61,8 @@
 		BD48B61A28870873003A1122 /* ShoppingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingTableViewController.swift; sourceTree = "<group>"; };
 		BD48B61D28870947003A1122 /* InputTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTableViewCell.swift; sourceTree = "<group>"; };
 		BD48B61F28870E6A003A1122 /* ShoppingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingTableViewCell.swift; sourceTree = "<group>"; };
+		BD772D5D28B7BFFB006CBD6B /* BackUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackUpViewController.swift; sourceTree = "<group>"; };
+		BD772D6028B7C064006CBD6B /* BackUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackUpView.swift; sourceTree = "<group>"; };
 		BD828D5828879DF800664C76 /* RecommendCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCollectionViewCell.swift; sourceTree = "<group>"; };
 		BDCA1DE428856E2500968372 /* SeSACWeek3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACWeek3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDCA1DE728856E2500968372 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,7 +93,10 @@
 				BD117CF728B368F300A103FA /* RealmSwift in Frameworks */,
 				BD117CF528B368F300A103FA /* Realm in Frameworks */,
 				BD828D5F2887AE6700664C76 /* Toast in Frameworks */,
+				BD772D6A28B7C135006CBD6B /* Then in Frameworks */,
+				BD772D6728B7C123006CBD6B /* SnapKit in Frameworks */,
 				BD828D5C2887AE3500664C76 /* Kingfisher in Frameworks */,
+				BD772D6428B7C110006CBD6B /* Zip in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,11 +176,13 @@
 		BD48B6172887082D003A1122 /* Shopping */ = {
 			isa = PBXGroup;
 			children = (
+				BD772D5F28B7C05B006CBD6B /* View */,
 				BD3D166F28B6057100C24BA2 /* Manager */,
 				BD117CF828B3693B00A103FA /* Model */,
 				BD48B61C2887093F003A1122 /* Cell */,
 				BD48B6182887083D003A1122 /* Shopping.storyboard */,
 				BD48B61A28870873003A1122 /* ShoppingTableViewController.swift */,
+				BD772D5D28B7BFFB006CBD6B /* BackUpViewController.swift */,
 			);
 			path = Shopping;
 			sourceTree = "<group>";
@@ -182,6 +194,14 @@
 				BD48B61F28870E6A003A1122 /* ShoppingTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		BD772D5F28B7C05B006CBD6B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BD772D6028B7C064006CBD6B /* BackUpView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		BDCA1DDB28856E2500968372 = {
@@ -282,6 +302,9 @@
 				BD828D5E2887AE6700664C76 /* Toast */,
 				BD117CF428B368F300A103FA /* Realm */,
 				BD117CF628B368F300A103FA /* RealmSwift */,
+				BD772D6328B7C110006CBD6B /* Zip */,
+				BD772D6628B7C123006CBD6B /* SnapKit */,
+				BD772D6928B7C135006CBD6B /* Then */,
 			);
 			productName = SeSACWeek3;
 			productReference = BDCA1DE428856E2500968372 /* SeSACWeek3.app */;
@@ -315,6 +338,9 @@
 				BD828D5A2887AE3500664C76 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				BD828D5D2887AE6700664C76 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 				BD117CF328B368F300A103FA /* XCRemoteSwiftPackageReference "realm-swift" */,
+				BD772D6228B7C10F006CBD6B /* XCRemoteSwiftPackageReference "Zip" */,
+				BD772D6528B7C123006CBD6B /* XCRemoteSwiftPackageReference "SnapKit" */,
+				BD772D6828B7C135006CBD6B /* XCRemoteSwiftPackageReference "Then" */,
 			);
 			productRefGroup = BDCA1DE528856E2500968372 /* Products */;
 			projectDirPath = "";
@@ -348,6 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD772D6128B7C064006CBD6B /* BackUpView.swift in Sources */,
 				BD1C39622888F26E007609A7 /* MovieInfo.swift in Sources */,
 				BD1C39632888F26E007609A7 /* SearchTableViewController.swift in Sources */,
 				BDCD020228879AA9007A562C /* RecommendCollectionViewController.swift in Sources */,
@@ -356,6 +383,7 @@
 				BD48B61B28870873003A1122 /* ShoppingTableViewController.swift in Sources */,
 				BDCA1DEC28856E2500968372 /* ViewController.swift in Sources */,
 				BDCA1DE828856E2500968372 /* AppDelegate.swift in Sources */,
+				BD772D5E28B7BFFB006CBD6B /* BackUpViewController.swift in Sources */,
 				BDCA1E292886443300968372 /* TrendViewController.swift in Sources */,
 				BD1C39612888F26E007609A7 /* Movie.swift in Sources */,
 				BD117CFA28B3696E00A103FA /* Shopping.swift in Sources */,
@@ -598,6 +626,30 @@
 				minimumVersion = 10.0.0;
 			};
 		};
+		BD772D6228B7C10F006CBD6B /* XCRemoteSwiftPackageReference "Zip" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marmelroy/Zip.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		BD772D6528B7C123006CBD6B /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		BD772D6828B7C135006CBD6B /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 		BD828D5A2887AE3500664C76 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -626,6 +678,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BD117CF328B368F300A103FA /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		BD772D6328B7C110006CBD6B /* Zip */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD772D6228B7C10F006CBD6B /* XCRemoteSwiftPackageReference "Zip" */;
+			productName = Zip;
+		};
+		BD772D6628B7C123006CBD6B /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD772D6528B7C123006CBD6B /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		BD772D6928B7C135006CBD6B /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD772D6828B7C135006CBD6B /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
 		};
 		BD828D5B2887AE3500664C76 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
