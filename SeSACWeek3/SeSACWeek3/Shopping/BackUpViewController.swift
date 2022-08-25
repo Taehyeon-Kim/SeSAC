@@ -9,6 +9,7 @@ import UIKit
 
 import SnapKit
 import Then
+import ProgressHUD
 import Zip
 
 final class BackUpViewController: UIViewController {
@@ -24,6 +25,10 @@ final class BackUpViewController: UIViewController {
         
         mainView.backUpButton.addTarget(self, action: #selector(backup), for: .touchUpInside)
         mainView.restoreButton.addTarget(self, action: #selector(restore), for: .touchUpInside)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
 }
 
@@ -123,9 +128,10 @@ extension BackUpViewController: UIDocumentPickerDelegate {
             
             do {
                 try Zip.unzipFile(fileURL, destination: path, overwrite: true, password: nil, progress: { progress in
-                    print(progress)
+                    ProgressHUD.showProgress(progress)
                 }, fileOutputHandler: { unzippedFile in
                     print("복구완료! : ", unzippedFile)
+                    ProgressHUD.dismiss()
                 })
                 
             } catch {
