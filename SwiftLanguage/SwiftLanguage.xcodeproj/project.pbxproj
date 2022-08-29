@@ -16,6 +16,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD54CC6B28BC5281006C737F /* Codable Example1.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Codable Example1.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		BD54CC6C28BC5714006C737F /* Codable Example2.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Codable Example2.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		BD54CC6D28BC5817006C737F /* Codable Example3.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Codable Example3.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		BD54CC6E28BC598D006C737F /* Codable Example4.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Codable Example4.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		BD54CC6F28BC5B35006C737F /* Codable Example5.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Codable Example5.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		BD54CC7028BC5FB0006C737F /* Codable Example6.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Codable Example6.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		BD54CC7128BC674D006C737F /* Codable Example7.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Codable Example7.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		BD54CC7228BC6AC5006C737F /* Codable Example8.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Codable Example8.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		BD78BADC288F830900198C85 /* SwiftLanguage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftLanguage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD78BADF288F830900198C85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD78BAE1288F830900198C85 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +57,14 @@
 		BD78BAD3288F830900198C85 = {
 			isa = PBXGroup;
 			children = (
+				BD54CC7228BC6AC5006C737F /* Codable Example8.playground */,
+				BD54CC7128BC674D006C737F /* Codable Example7.playground */,
+				BD54CC7028BC5FB0006C737F /* Codable Example6.playground */,
+				BD54CC6F28BC5B35006C737F /* Codable Example5.playground */,
+				BD54CC6E28BC598D006C737F /* Codable Example4.playground */,
+				BD54CC6D28BC5817006C737F /* Codable Example3.playground */,
+				BD54CC6C28BC5714006C737F /* Codable Example2.playground */,
+				BD54CC6B28BC5281006C737F /* Codable Example1.playground */,
 				BDF5576C28B47D9300017349 /* Swift Error Handling.playground */,
 				BDF5576B28B47A1400017349 /* MetaType.playground */,
 				BDBEB25828AE9D9B001CE0C6 /* TypeCasting+Example.playground */,
