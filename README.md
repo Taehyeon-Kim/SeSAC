@@ -58,3 +58,12 @@
 |`week7`|[Day32, 220809](https://github.com/Taehyeon-Kim/SeSAC/issues/101)|
 |`week7`|[Day33, 220810](https://github.com/Taehyeon-Kim/SeSAC/issues/102)|
 |`week7`|[Day34, 220811](https://github.com/Taehyeon-Kim/SeSAC/issues/104)|
+|||
+|`week8`|[Day35, 220822](https://github.com/Taehyeon-Kim/SeSAC/issues/108)|
+|`week8`|[Day36, 220823](https://github.com/Taehyeon-Kim/SeSAC/issues/111)|
+|`week8`|[Day37, 220824](https://github.com/Taehyeon-Kim/SeSAC/issues/112)|
+|`week8`|[Day38, 220825](https://github.com/Taehyeon-Kim/SeSAC/issues/113)|
+|`week8`|[Day39, 220826](https://github.com/Taehyeon-Kim/SeSAC/issues/115)|
+|||
+|`week9`|[Day40, 220829](https://github.com/Taehyeon-Kim/SeSAC/issues/117)|Codable, Decoding, Encoding|
+|`week9`|[Day41, 220830](https://github.com/Taehyeon-Kim/SeSAC/issues/118)|URLSession, URLSessionDataTask|
