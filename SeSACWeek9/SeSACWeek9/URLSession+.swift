@@ -21,38 +21,38 @@ extension URLSession {
     static func request<T: Decodable>(
         _ session: URLSession = .shared,
         endpoint: URLRequest,
-        completion: @escaping (T?, APIError?) -> Void
+        completion: @escaping (Result<T, APIError>) -> Void
     )
     {
         session.customDataTask(endpoint) { data, response, error in
             
             DispatchQueue.main.async {
                 guard error == nil else {
-                    completion(nil, .failedRequest)
+                    completion(.failure(.failedRequest))
                     return
                 }
                 
                 guard let data = data else {
-                    completion(nil, .noData)
+                    completion(.failure(.noData))
                     return
                 }
 
                 guard let response = response as? HTTPURLResponse else {
-                    completion(nil, .invaildResponse)
+                    completion(.failure(.invaildResponse))
                     return
                 }
                 
                 guard response.statusCode == 200 else {
-                    completion(nil, .failedRequest)
+                    completion(.failure(.failedRequest))
                     return
                 }
                 
                 do {
                     let result = try JSONDecoder().decode(T.self, from: data)
-                    completion(result, nil)
+                    completion(.success(result))
                     
                 } catch {
-                    completion(nil, .invaildData)
+                    completion(.failure(.invaildData))
                 }
             }
         }

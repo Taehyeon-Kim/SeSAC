@@ -9,7 +9,7 @@ import Foundation
 
 struct Person: Codable {
     let page, totalPages, totalResults: Int
-    let results: [Result]
+    let results: [Results]
     
     enum CodingKeys: String, CodingKey {
         case page, results
@@ -18,7 +18,7 @@ struct Person: Codable {
     }
 }
 
-struct Result: Codable {
+struct Results: Codable {
     let knownForDepartment, name: String
     
     enum CodingKeys: String, CodingKey {
