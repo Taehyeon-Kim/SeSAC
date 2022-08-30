@@ -17,11 +17,7 @@ class ViewController: UIViewController {
     }
     @IBOutlet weak var lottoLabel: UILabel!
     
-    var list: [Result] = []  {
-        didSet {
-            tableView.reloadData()
-        }
-    }
+    var list: Person = Person(page: 0, totalPages: 0, totalResults: 0, results: [])
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +29,8 @@ class ViewController: UIViewController {
         
         PersonAPIManager.requestPerson(query: "Squid") { person, error in
             guard let person = person else { return }
-            self.list = person.results
+            self.list = person
+            self.tableView.reloadData()
         }
     }
 }
@@ -41,13 +38,13 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return list.count
+        return list.results.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
-        cell.textLabel?.text = list[indexPath.row].knownForDepartment
-        cell.detailTextLabel?.text = list[indexPath.row].name
+        cell.textLabel?.text = list.results[indexPath.row].knownForDepartment
+        cell.detailTextLabel?.text = list.results[indexPath.row].name
         return cell
     }
     
