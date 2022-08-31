@@ -17,19 +17,15 @@ class ViewController: UIViewController {
     }
     @IBOutlet weak var lottoLabel: UILabel!
     
-    var list: Person = Person(page: 0, totalPages: 0, totalResults: 0, results: [])
+    private var viewModel = PersonViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        viewModel.fetchPerson(query: "kim")
         
-        LottoAPIManager.requestLotto(drwNo: 1011) { lotto, error in
-            guard let lotto = lotto else { return }
-            self.lottoLabel.text = lotto.drwNoDate
-        }
-        
-        PersonAPIManager.requestPerson(query: "Squid") { person, error in
-            guard let person = person else { return }
-            self.list = person
+        viewModel.list.bind { person in
+            print("viewController bind")
             self.tableView.reloadData()
         }
     }
@@ -38,13 +34,15 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return list.results.count
+        return viewModel.numberOfRowsInSection
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
-        cell.textLabel?.text = list.results[indexPath.row].knownForDepartment
-        cell.detailTextLabel?.text = list.results[indexPath.row].name
+        
+        let data = viewModel.cellForRowAt(at: indexPath)
+        cell.textLabel?.text = data.knownForDepartment
+        cell.detailTextLabel?.text = data.name
         return cell
     }
     

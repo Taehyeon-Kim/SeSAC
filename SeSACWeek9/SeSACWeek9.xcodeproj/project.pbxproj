@@ -18,6 +18,8 @@
 		BD69ECCC28BDA73000D62240 /* PersonAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD69ECCB28BDA73000D62240 /* PersonAPIManager.swift */; };
 		BD69ECCE28BDA96D00D62240 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD69ECCD28BDA96D00D62240 /* Person.swift */; };
 		BD69ECD028BDB75A00D62240 /* URLSession+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD69ECCF28BDB75A00D62240 /* URLSession+.swift */; };
+		BD69ECD228BEF8CC00D62240 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD69ECD128BEF8CC00D62240 /* Observable.swift */; };
+		BD69ECD428BEFC0B00D62240 /* PersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD69ECD328BEFC0B00D62240 /* PersonViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		BD69ECCB28BDA73000D62240 /* PersonAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonAPIManager.swift; sourceTree = "<group>"; };
 		BD69ECCD28BDA96D00D62240 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		BD69ECCF28BDB75A00D62240 /* URLSession+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+.swift"; sourceTree = "<group>"; };
+		BD69ECD128BEF8CC00D62240 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		BD69ECD328BEFC0B00D62240 /* PersonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 				BD69ECC128BD954D00D62240 /* Application */,
 				BD69ECBB28BD951500D62240 /* Info.plist */,
 				BD69ECCF28BDB75A00D62240 /* URLSession+.swift */,
+				BD69ECD128BEF8CC00D62240 /* Observable.swift */,
 			);
 			path = SeSACWeek9;
 			sourceTree = "<group>";
@@ -110,6 +115,7 @@
 			children = (
 				BD69ECCB28BDA73000D62240 /* PersonAPIManager.swift */,
 				BD69ECCD28BDA96D00D62240 /* Person.swift */,
+				BD69ECD328BEFC0B00D62240 /* PersonViewModel.swift */,
 			);
 			path = Person;
 			sourceTree = "<group>";
@@ -186,9 +192,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD69ECB228BD951300D62240 /* ViewController.swift in Sources */,
+				BD69ECD428BEFC0B00D62240 /* PersonViewModel.swift in Sources */,
 				BD69ECC728BD9BB000D62240 /* Lotto.swift in Sources */,
 				BD69ECAE28BD951300D62240 /* AppDelegate.swift in Sources */,
 				BD69ECCC28BDA73000D62240 /* PersonAPIManager.swift in Sources */,
+				BD69ECD228BEF8CC00D62240 /* Observable.swift in Sources */,
 				BD69ECCE28BDA96D00D62240 /* Person.swift in Sources */,
 				BD69ECB028BD951300D62240 /* SceneDelegate.swift in Sources */,
 				BD69ECD028BDB75A00D62240 /* URLSession+.swift in Sources */,
