@@ -21,6 +21,37 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let example = User("태현")
+        example.bind { value in
+            print("이름이 \(value)으로 수정되었습니다.")
+        }
+        example.value = "칙촉"
+        
+        let sample = User([1, 2, 3, 4, 5])
+        sample.bind { numbers in
+            print(numbers)
+        }
+        sample.value = [1, 2]
+        
+        
+        var number1 = 10
+        var number2 = 3
+        print(number1 - number2)
+        
+        number1 = 3
+        number2 = 1
+        
+        var number3 = Observable(10)
+        var number4 = Observable(3)
+        
+        number3.bind { a in
+            print("Observable", number3.value - number4.value)
+        }
+        
+        number3.value = 100
+        number3.value = 200
+        number3.value = 50
 
         viewModel.fetchPerson(query: "kim")
         

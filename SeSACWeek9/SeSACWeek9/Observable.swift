@@ -34,17 +34,3 @@ class Observable<T> {  // 양방향 바인딩
         listener = closure
     }
 }
-
-class User {
-    private var listener: ((String) -> Void)?
-    
-    var value: String {
-        didSet {
-            listener?(value)
-        }
-    }
-    
-    init(value: String) {
-        self.value = value
-    }
-}
