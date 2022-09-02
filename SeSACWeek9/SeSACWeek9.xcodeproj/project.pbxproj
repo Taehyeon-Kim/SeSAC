@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD45B03228C186BD00C271AA /* GCDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45B03128C186BD00C271AA /* GCDViewController.swift */; };
 		BD69ECAE28BD951300D62240 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD69ECAD28BD951300D62240 /* AppDelegate.swift */; };
 		BD69ECB028BD951300D62240 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD69ECAF28BD951300D62240 /* SceneDelegate.swift */; };
 		BD69ECB228BD951300D62240 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD69ECB128BD951300D62240 /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD45B03128C186BD00C271AA /* GCDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDViewController.swift; sourceTree = "<group>"; };
 		BD69ECAA28BD951300D62240 /* SeSACWeek9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACWeek9.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD69ECAD28BD951300D62240 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD69ECAF28BD951300D62240 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD45B03028C186B200C271AA /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				BD45B03128C186BD00C271AA /* GCDViewController.swift */,
+			);
+			path = GCD;
+			sourceTree = "<group>";
+		};
 		BD69ECA128BD951300D62240 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +90,7 @@
 		BD69ECAC28BD951300D62240 /* SeSACWeek9 */ = {
 			isa = PBXGroup;
 			children = (
+				BD45B03028C186B200C271AA /* GCD */,
 				BD69ECD728C0485A00D62240 /* Login */,
 				BD69ECC828BDA71F00D62240 /* Person */,
 				BD69ECC328BD956000D62240 /* Lotto */,
@@ -229,6 +240,7 @@
 				BD69ECD028BDB75A00D62240 /* URLSession+.swift in Sources */,
 				BD69ECD628C037F800D62240 /* Sample.swift in Sources */,
 				BD69ECC528BD956800D62240 /* LottoAPIManager.swift in Sources */,
+				BD45B03228C186BD00C271AA /* GCDViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

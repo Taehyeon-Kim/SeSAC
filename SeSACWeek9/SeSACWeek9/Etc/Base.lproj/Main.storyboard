@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2dL-tl-sSA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4zQ-4y-UGp">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -156,7 +156,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OGy-ZO-BZ3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="552" y="111"/>
+            <point key="canvasLocation" x="687" y="91"/>
         </scene>
         <!--Lotto View Controller-->
         <scene sceneID="j0a-S8-gGN">
@@ -253,6 +253,138 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hPm-cv-QZx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1331.8840579710145" y="99.776785714285708"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="iMK-aV-oHe">
+            <objects>
+                <viewController id="4zQ-4y-UGp" customClass="GCDViewController" customModule="SeSACWeek9" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zCu-0o-YMZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6yP-u8-GA1">
+                                <rect key="frame" x="20" y="124" width="374" height="358"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyQ-03-yGI">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="36"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Serial(Main) / Sync"/>
+                                        <connections>
+                                            <action selector="serialSync:" destination="4zQ-4y-UGp" eventType="touchUpInside" id="wRm-pA-GTy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="liq-OR-EUo">
+                                        <rect key="frame" x="0.0" y="46" width="374" height="36"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Serial(Main) / Async"/>
+                                        <connections>
+                                            <action selector="serialAsync:" destination="4zQ-4y-UGp" eventType="touchUpInside" id="egU-gj-loo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vto-JM-Kn2">
+                                        <rect key="frame" x="0.0" y="92" width="374" height="36"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Concurrent(Global) / Sync"/>
+                                        <connections>
+                                            <action selector="globalSync:" destination="4zQ-4y-UGp" eventType="touchUpInside" id="E7z-hS-Cf4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDa-8J-x62">
+                                        <rect key="frame" x="0.0" y="138" width="374" height="36"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Concurrent(Global) / Async"/>
+                                        <connections>
+                                            <action selector="globalAsync:" destination="4zQ-4y-UGp" eventType="touchUpInside" id="3R8-Q1-vg2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2n-0q-iwe">
+                                        <rect key="frame" x="0.0" y="184" width="374" height="36"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="GCD QoS (Quality Of Service)"/>
+                                        <connections>
+                                            <action selector="qos:" destination="4zQ-4y-UGp" eventType="touchUpInside" id="dyE-4p-O1a"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gvr-rt-ael">
+                                        <rect key="frame" x="0.0" y="230" width="374" height="36"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="DispatchGroup"/>
+                                        <connections>
+                                            <action selector="dispatchGroup:" destination="4zQ-4y-UGp" eventType="touchUpInside" id="3QM-VY-dke"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqf-KF-sjk">
+                                        <rect key="frame" x="0.0" y="276" width="374" height="36"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="DispatchGroup - NASA"/>
+                                        <connections>
+                                            <action selector="dispatchGroupNASA:" destination="4zQ-4y-UGp" eventType="touchUpInside" id="gM6-dK-i98"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y1Q-9G-NvC">
+                                        <rect key="frame" x="0.0" y="322" width="374" height="36"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="DispatchGroup enter/leave - NASA"/>
+                                        <connections>
+                                            <action selector="enterLeave:" destination="4zQ-4y-UGp" eventType="touchUpInside" id="I3q-Ch-oPl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="3it-HS-wOm">
+                                <rect key="frame" x="20" y="502" width="374" height="100"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ziP-bQ-Stp">
+                                        <rect key="frame" x="0.0" y="0.0" width="109.5" height="100"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3og-YT-wnI">
+                                        <rect key="frame" x="132.5" y="0.0" width="109" height="100"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WDF-Xg-bE3">
+                                        <rect key="frame" x="264.5" y="0.0" width="109.5" height="100"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="96E-Wx-cB4"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YLv-xa-Cfo">
+                                <rect key="frame" x="20" y="622" width="374" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="7AI-no-YZg"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Race Condition"/>
+                                <connections>
+                                    <action selector="raceCondition:" destination="4zQ-4y-UGp" eventType="touchUpInside" id="bI0-Q2-1fe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1Xv-HQ-qkV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YLv-xa-Cfo" firstAttribute="top" secondItem="3it-HS-wOm" secondAttribute="bottom" constant="20" id="DfT-OZ-om4"/>
+                            <constraint firstItem="YLv-xa-Cfo" firstAttribute="leading" secondItem="1Xv-HQ-qkV" secondAttribute="leading" constant="20" id="Le9-7J-kS5"/>
+                            <constraint firstItem="3it-HS-wOm" firstAttribute="top" secondItem="6yP-u8-GA1" secondAttribute="bottom" constant="20" id="Tuq-kk-y8M"/>
+                            <constraint firstItem="6yP-u8-GA1" firstAttribute="height" secondItem="zCu-0o-YMZ" secondAttribute="height" multiplier="0.4" id="a5F-RM-DU7"/>
+                            <constraint firstItem="3it-HS-wOm" firstAttribute="leading" secondItem="1Xv-HQ-qkV" secondAttribute="leading" constant="20" id="ab7-Dd-kyg"/>
+                            <constraint firstItem="6yP-u8-GA1" firstAttribute="leading" secondItem="1Xv-HQ-qkV" secondAttribute="leading" constant="20" id="bA0-4s-dBs"/>
+                            <constraint firstItem="6yP-u8-GA1" firstAttribute="centerY" secondItem="1Xv-HQ-qkV" secondAttribute="centerY" constant="-150" id="fVg-JU-UdL"/>
+                            <constraint firstItem="1Xv-HQ-qkV" firstAttribute="trailing" secondItem="YLv-xa-Cfo" secondAttribute="trailing" constant="20" id="lfN-jQ-5VC"/>
+                            <constraint firstItem="1Xv-HQ-qkV" firstAttribute="trailing" secondItem="3it-HS-wOm" secondAttribute="trailing" constant="20" id="vjP-a7-sL3"/>
+                            <constraint firstItem="6yP-u8-GA1" firstAttribute="centerX" secondItem="1Xv-HQ-qkV" secondAttribute="centerX" id="xid-To-kdS"/>
+                            <constraint firstItem="1Xv-HQ-qkV" firstAttribute="trailing" secondItem="6yP-u8-GA1" secondAttribute="trailing" constant="20" id="zcV-dV-dM3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView1" destination="ziP-bQ-Stp" id="un6-UV-zmg"/>
+                        <outlet property="imageView2" destination="3og-YT-wnI" id="3zV-41-TXM"/>
+                        <outlet property="imageView3" destination="WDF-Xg-bE3" id="xyF-r4-Qy9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uX5-AE-Y88" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2131.8840579710145" y="99.776785714285708"/>
         </scene>
     </scenes>
     <resources>
