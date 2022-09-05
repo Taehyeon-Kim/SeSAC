@@ -40,6 +40,7 @@
 		BDC5CC9F28ADCD1300CBDE12 /* Generic.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Generic.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		BDC99AFB28C579C600E7039A /* ARC 220905.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "ARC 220905.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		BDC99AFC28C58B7100E7039A /* ARC + delegate.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "ARC + delegate.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		BDC99AFD28C5947200E7039A /* ARC + capture list.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "ARC + capture list.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		BDDF76DE289A1EF80096196B /* Closure+First Class Object.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Closure+First Class Object.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		BDF5576B28B47A1400017349 /* MetaType.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MetaType.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		BDF5576C28B47D9300017349 /* Swift Error Handling.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Swift Error Handling.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -59,6 +60,7 @@
 		BD78BAD3288F830900198C85 = {
 			isa = PBXGroup;
 			children = (
+				BDC99AFD28C5947200E7039A /* ARC + capture list.playground */,
 				BDC99AFC28C58B7100E7039A /* ARC + delegate.playground */,
 				BDC99AFB28C579C600E7039A /* ARC 220905.playground */,
 				BD54CC7228BC6AC5006C737F /* Codable Example8.playground */,
