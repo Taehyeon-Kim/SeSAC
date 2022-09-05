@@ -67,3 +67,8 @@
 |||
 |`week9`|[Day40, 220829](https://github.com/Taehyeon-Kim/SeSAC/issues/117)|Codable, Decoding, Encoding|
 |`week9`|[Day41, 220830](https://github.com/Taehyeon-Kim/SeSAC/issues/118)|URLSession, URLSessionDataTask|
+|`week9`|[Day42, 220831](https://github.com/Taehyeon-Kim/SeSAC/issues/119)|Observable Helper, MVVM|
+|`week9`|[Day43, 220901](https://github.com/Taehyeon-Kim/SeSAC/issues/120)|MVVM|
+|`week9`|[Day44, 220902](https://github.com/Taehyeon-Kim/SeSAC/issues/121)|GCD|
+|||
+|`week10`|[Day45, 220905](https://github.com/Taehyeon-Kim/SeSAC/issues/122)|ARC|
