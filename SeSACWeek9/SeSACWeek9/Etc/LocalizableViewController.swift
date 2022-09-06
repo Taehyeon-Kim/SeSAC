@@ -7,8 +7,10 @@
 
 import UIKit
 import CoreLocation
+import StoreKit
+import MessageUI
 
-final class LocalizableViewController: UIViewController {
+final class LocalizableViewController: UIViewController, MFMailComposeViewControllerDelegate {
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var myLabel: UILabel!
@@ -29,8 +31,40 @@ final class LocalizableViewController: UIViewController {
         
         let buttonTitle = NSLocalizedString("common_cancel", comment: "")
         sampleButton.setTitle(buttonTitle, for: .normal)
+        sampleButton.addTarget(self, action: #selector(sendMail), for: .touchUpInside)
         
         CLLocationManager().requestWhenInUseAuthorization()
+    }
+    
+    @objc func sendMail() {
+        
+        // - 메일을 보낼 수 있는 상황인지
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.setToRecipients(["taekki@taekki.com"])
+            mail.setSubject("다이어리 문의사항")
+            mail.mailComposeDelegate = self
+            present(mail, animated: true)
+
+        } else {
+            // 메일 등록을 해주시거나, "~~@~~.com"으로 문의 주세요
+            print("alert")
+        }
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        
+//        switch result {
+//        case .cancelled:
+//            //
+//        case .saved:
+//            //
+//        case .sent:
+//            //
+//        case .failed:
+//            //
+//        }
+        controller.dismiss(animated: true)
     }
 }
 
