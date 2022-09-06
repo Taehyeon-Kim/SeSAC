@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  SeSACWeek9
+
+  Created by taekki on 2022/09/06.
+  
+*/
+
+"CFBundleDisplayName" = "다이어리";
+"NSLocationWhenInUseUsageDescription" = "권한 실행";
