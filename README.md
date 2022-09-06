@@ -72,4 +72,4 @@
 |`week9`|[Day44, 220902](https://github.com/Taehyeon-Kim/SeSAC/issues/121)|GCD|
 |||
 |`week10`|[Day45, 220905](https://github.com/Taehyeon-Kim/SeSAC/issues/122)|ARC|
-|`week10`|[Day46, 220905](https://github.com/Taehyeon-Kim/SeSAC/issues/123)|Localization, 리뷰/문의|
+|`week10`|[Day46, 220906](https://github.com/Taehyeon-Kim/SeSAC/issues/123)|Localization, 리뷰/문의|
