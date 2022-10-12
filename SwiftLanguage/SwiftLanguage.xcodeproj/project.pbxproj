@@ -42,6 +42,7 @@
 		BDC99AFB28C579C600E7039A /* ARC 220905.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "ARC 220905.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		BDC99AFC28C58B7100E7039A /* ARC + delegate.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "ARC + delegate.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		BDC99AFD28C5947200E7039A /* ARC + capture list.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "ARC + capture list.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		BDD99F3728F6B91700D27262 /* Date.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Date.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		BDDF76DE289A1EF80096196B /* Closure+First Class Object.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Closure+First Class Object.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		BDF5576B28B47A1400017349 /* MetaType.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MetaType.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		BDF5576C28B47D9300017349 /* Swift Error Handling.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Swift Error Handling.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -61,6 +62,7 @@
 		BD78BAD3288F830900198C85 = {
 			isa = PBXGroup;
 			children = (
+				BDD99F3728F6B91700D27262 /* Date.playground */,
 				BD81385728C99E1600BE3901 /* reduce.playground */,
 				BDC99AFD28C5947200E7039A /* ARC + capture list.playground */,
 				BDC99AFC28C58B7100E7039A /* ARC + delegate.playground */,
