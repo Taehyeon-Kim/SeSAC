@@ -23,9 +23,47 @@ class ViewController: UIViewController {
           "level_difficulty": 4
         ])
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        print("ViewController - viewWillAppear")
+    }
 
+    @IBAction func profileButtonTapped(_ sender: UIButton) {
+        let viewController = ProfileViewController()
+        present(viewController, animated: true)
+    }
+    
+    @IBAction func settingButtonTapped(_ sender: UIButton) {
+        let viewController = SettingViewController()
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+}
 
-    @IBAction func crashClicked(_ sender: UIButton) {
+final class ProfileViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .blue
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        print("ProfileViewController - viewWillAppear")
+    }
+}
+
+final class SettingViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .darkGray
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        print("SettingViewController - viewWillAppear")
     }
 }
 
@@ -55,5 +93,28 @@ extension UIViewController {
         } else {
             return currentViewController
         }
+    }
+}
+
+extension UIViewController {
+    
+    class func swizzleMethod() {
+        
+        let origin = #selector(viewWillAppear)
+        let change = #selector(changeViewWillAppear)
+        
+        guard
+            let originMethod = class_getInstanceMethod(UIViewController.self, origin),
+            let changeMethod = class_getInstanceMethod(UIViewController.self, change)
+        else {
+            print("함수를 찾을 수 없거나 오류 발생")
+            return
+        }
+        
+        method_exchangeImplementations(originMethod, changeMethod)
+    }
+    
+    @objc func changeViewWillAppear() {
+        print("swizzle ~~ 👀")
     }
 }

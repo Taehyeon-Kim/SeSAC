@@ -29,9 +29,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneDidBecomeActive(_ scene: UIScene) {
         
         // 배지 처리
-        UIApplication.shared.applicationIconBadgeNumber = 0
+//        UIApplication.shared.applicationIconBadgeNumber = 0
         // 등록되어 있는 알림 스택 제거(ex. 카톡 앱 실행 시, 스택 전부 제거/ 잔디 앱은 살려둠)
-        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+//        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
         
     }
 

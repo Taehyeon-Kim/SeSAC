@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        UIViewController.swizzleMethod()
         FirebaseApp.configure()
         
         if #available(iOS 10.0, *) {
@@ -68,7 +69,17 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     // .banner, .list: iOS14+ (= .alert 옵션)
     // 카카오톡: 특정 푸시마다 설정, 화면마다 설정
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        completionHandler([.badge, .banner, .list])
+        
+        // 세팅 화면에 있다면 포그라운드 푸시 띄우지 마라
+        guard let
+                viewController = (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window?.rootViewController?.topViewController
+        else { return }
+        
+        if viewController is SettingViewController {
+            completionHandler([])
+        } else {
+            completionHandler([.badge, .sound, .banner, .list])
+        }
     }
     
     // 푸시 클릭: 호두과자 장바구니 담는 화면
@@ -86,6 +97,42 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
             print("프로젝트 화면으로 이동")
         } else {
             print("Nothing")
+        }
+        
+        // 화면 전환
+        guard let
+                viewController = (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window?.rootViewController?.topViewController
+        else { return }
+        
+        if viewController is ViewController {
+            viewController.navigationController?.pushViewController(SettingViewController(), animated: true)
+        }
+        
+        else if viewController is ProfileViewController {
+            viewController.dismiss(animated: true)
+        }
+        
+        else if viewController is SettingViewController {
+            viewController.navigationController?.popViewController(animated: true)
+        }
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        
+        print("APN Receive")
+        
+        let state = application.applicationState
+        
+        switch state {
+        case .active:
+            print("active")
+        case .inactive:
+            print("inactive")
+        case .background:
+            print("background")
+            application.applicationIconBadgeNumber = application.applicationIconBadgeNumber + 1
+        @unknown default:
+            fatalError()
         }
     }
 }
