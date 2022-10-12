@@ -38,15 +38,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // 메시지 대리자 설정
         Messaging.messaging().delegate = self
-
-        // 현재 등록된 토큰 가져오기
-        Messaging.messaging().token { token, error in
-          if let error = error {
-            print("Error fetching FCM registration token: \(error)")
-          } else if let token = token {
-            print("FCM registration token: \(token)")
-          }
-        }
         
         return true
     }
