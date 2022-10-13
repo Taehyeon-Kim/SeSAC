@@ -12,16 +12,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        Analytics.logEvent("share_image", parameters: [
-          "name": "name",
-          "full_text": "text",
-        ])
-        
-        Analytics.setDefaultEventParameters([
-          "level_name": "Caverns01",
-          "level_difficulty": 4
-        ])
     }
     
     override func viewWillAppear(_ animated: Bool) {
