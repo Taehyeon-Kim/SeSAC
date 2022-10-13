@@ -9,6 +9,7 @@ import UIKit
 
 import FirebaseCore
 import FirebaseMessaging
+import RealmSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        aboutRealmMigration()
         UIViewController.swizzleMethod()
         FirebaseApp.configure()
         
@@ -152,5 +154,79 @@ extension AppDelegate: MessagingDelegate {
       )
       // TODO: If necessary send token to application server.
       // Note: This callback is fired at each app startup and whenever a new token is generated.
+    }
+}
+
+extension AppDelegate {
+    
+    private func aboutRealmMigration() {
+        // deleteRealmIfMigrationNeeded: 마이그레이션이 필요한 경우 기존 Realm 삭제
+        // Realm Browser 닫고 다시 열기
+        // let config = Realm.Configuration(schemaVersion: 0, deleteRealmIfMigrationNeeded: true)
+        
+        let config = Realm.Configuration(schemaVersion: 6) { migration, oldSchemaVersion in
+            
+            // if ~ else 블록이 아니라 if 블록을 사용해야 함
+            // 순차적으로 버전을 체크하면서 반영해야 함
+            if oldSchemaVersion < 1 {
+                
+            }
+            
+            // 컬럼, 테이블 단순 추가, 삭제의 경우에는 별도 코드 필요 없음
+            if oldSchemaVersion < 2 {
+                
+            }
+            
+            if oldSchemaVersion < 3 {
+                migration.renameProperty(onType: Todo.className(), from: "importance", to: "favorite")
+            }
+            
+            if oldSchemaVersion < 4 {
+                migration.enumerateObjects(ofType: Todo.className()) { oldObject, newObject in
+                    guard let oldObject else { return }
+                    guard let newObject else { return }
+                    
+                    // 초기값을 넣는거라면 단순히 값을 부여해주면 됨
+                    newObject["userDescription"] = "\(oldObject["title"]!)의 중요도는 \(oldObject["favorite"]!)입니다."
+                }
+            }
+            
+            if oldSchemaVersion < 5 {
+                migration.enumerateObjects(ofType: Todo.className()) { _, newObject in
+                    guard let newObject else { return }
+                    // 초기값 부여
+                    newObject["count"] = 100
+                }
+            }
+            
+            // Int -> Double
+            if oldSchemaVersion < 6 {
+                migration.enumerateObjects(ofType: Todo.className()) { oldObject, newObject in
+                    guard let oldObject else { return }
+                    guard let newObject else { return }
+                    
+                    // 단순 타입 변경
+                    // new required, old optional
+                    newObject["favorite"] = oldObject["favorite"]
+                    
+                    // new optional, old optional
+                    // newObject["favorite"] = oldObject["favorite"]
+                }
+            }
+            
+            // Int -> Double
+            if oldSchemaVersion < 7 {
+                migration.enumerateObjects(ofType: Todo.className()) { oldObject, newObject in
+                    guard let oldObject else { return }
+                    guard let newObject else { return }
+                    
+                    // 단순 타입 변경
+                    // new required, old optional
+                    newObject["count"] = oldObject["count"]
+                }
+            }
+        }
+        
+        Realm.Configuration.defaultConfiguration = config
     }
 }

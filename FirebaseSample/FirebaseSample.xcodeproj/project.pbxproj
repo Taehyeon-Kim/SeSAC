@@ -10,6 +10,7 @@
 		BD924FE628F7945000BBFC4C /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = BD924FE528F7945000BBFC4C /* Realm */; };
 		BD924FE828F7945000BBFC4C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BD924FE728F7945000BBFC4C /* RealmSwift */; };
 		BD924FEA28F79A8C00BBFC4C /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD924FE928F79A8C00BBFC4C /* Todo.swift */; };
+		BD924FEC28F79BC000BBFC4C /* MigrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD924FEB28F79BC000BBFC4C /* MigrationViewController.swift */; };
 		BDA1ACF928ED16BD005D1ED3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA1ACF828ED16BD005D1ED3 /* AppDelegate.swift */; };
 		BDA1ACFB28ED16BD005D1ED3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA1ACFA28ED16BD005D1ED3 /* SceneDelegate.swift */; };
 		BDA1ACFD28ED16BD005D1ED3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA1ACFC28ED16BD005D1ED3 /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		BD924FE928F79A8C00BBFC4C /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		BD924FEB28F79BC000BBFC4C /* MigrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationViewController.swift; sourceTree = "<group>"; };
 		BDA1ACF528ED16BD005D1ED3 /* FirebaseSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDA1ACF828ED16BD005D1ED3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDA1ACFA28ED16BD005D1ED3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				BDA1ACF828ED16BD005D1ED3 /* AppDelegate.swift */,
 				BDA1ACFA28ED16BD005D1ED3 /* SceneDelegate.swift */,
 				BDA1ACFC28ED16BD005D1ED3 /* ViewController.swift */,
+				BD924FEB28F79BC000BBFC4C /* MigrationViewController.swift */,
 				BDA1ACFE28ED16BD005D1ED3 /* Main.storyboard */,
 				BDA1AD0128ED16C3005D1ED3 /* Assets.xcassets */,
 				BDA1AD0328ED16C3005D1ED3 /* LaunchScreen.storyboard */,
@@ -193,6 +196,7 @@
 			files = (
 				BDA1ACFD28ED16BD005D1ED3 /* ViewController.swift in Sources */,
 				BDA1ACF928ED16BD005D1ED3 /* AppDelegate.swift in Sources */,
+				BD924FEC28F79BC000BBFC4C /* MigrationViewController.swift in Sources */,
 				BDA1ACFB28ED16BD005D1ED3 /* SceneDelegate.swift in Sources */,
 				BD924FEA28F79A8C00BBFC4C /* Todo.swift in Sources */,
 			);

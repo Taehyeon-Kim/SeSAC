@@ -11,7 +11,9 @@ import RealmSwift
 final class Todo: Object {
     
     @Persisted var title: String
-    @Persisted var importance: Int
+    @Persisted var favorite: Double
+    @Persisted var userDescription: String
+    @Persisted var count: Double
     
     @Persisted(primaryKey: true) var objectId: ObjectId
     
@@ -21,6 +23,6 @@ final class Todo: Object {
     ) {
         self.init()
         self.title = title
-        self.importance = importance
+        self.favorite = Double(importance)
     }
 }
