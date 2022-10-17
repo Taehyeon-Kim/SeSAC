@@ -51,16 +51,7 @@ final class DetailTodo: Object {
 
 // 특정 테이블에 포함
 // 별도의 테이블은 생성되지 않음
-final class Memo: EmbeddedObject {
+class Memo: EmbeddedObject {
     @Persisted var content: String
     @Persisted var date: Date
-    
-    init(
-        content: String,
-        date: Date
-        
-    ) {
-        self.content = content
-        self.date = date
-    }
 }

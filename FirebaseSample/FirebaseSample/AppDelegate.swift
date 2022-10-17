@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             
             if oldSchemaVersion < 2 {   // EmbeddedObject 추가
-                
+            
             }
         }
         
