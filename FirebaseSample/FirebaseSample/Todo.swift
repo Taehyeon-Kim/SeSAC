@@ -15,6 +15,9 @@ final class Todo: Object {
     
     @Persisted(primaryKey: true) var objectId: ObjectId
     
+    // 배열 형태로 다루고 싶을 때
+    @Persisted var detail: List<DetailTodo>
+    
     convenience init(
         title: String,
         importance: Int
