@@ -35,6 +35,7 @@ final class Todo: Object {
 final class DetailTodo: Object {
     @Persisted var detailTitle: String
     @Persisted var favorite: Bool
+    @Persisted var deadline: Date   // 옵셔널이 아니기 때문에 기본값이 들어감(self.init에서)
     
     @Persisted(primaryKey: true) var objectId: ObjectId
     
