@@ -15,8 +15,11 @@ final class Todo: Object {
     
     @Persisted(primaryKey: true) var objectId: ObjectId
     
-    // 배열 형태로 다루고 싶을 때
+    /// 배열 형태로 다루고 싶을 때
     @Persisted var detail: List<DetailTodo>
+    
+    /// EmbededObject는 항상 Optional
+    @Persisted var memo: Memo?
     
     convenience init(
         title: String,
@@ -43,5 +46,21 @@ final class DetailTodo: Object {
         self.init()
         self.detailTitle = detailTitle
         self.favorite = favorite
+    }
+}
+
+// 특정 테이블에 포함
+// 별도의 테이블은 생성되지 않음
+final class Memo: EmbeddedObject {
+    @Persisted var content: String
+    @Persisted var date: Date
+    
+    init(
+        content: String,
+        date: Date
+        
+    ) {
+        self.content = content
+        self.date = date
     }
 }
