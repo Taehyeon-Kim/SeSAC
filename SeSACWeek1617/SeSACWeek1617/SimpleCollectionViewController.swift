@@ -46,10 +46,16 @@ final class SimpleCollectionViewController: UICollectionViewController {
         
         // itemIdentifier: 데이터
         cellRegistration = UICollectionView.CellRegistration { cell, indexPath, itemIdentifier in
-            var content = cell.defaultContentConfiguration()
+            var content = UIListContentConfiguration.valueCell()
             content.text = itemIdentifier.title
+            
+            // valueCell에서는 secondaryText가 우측으로 감
+            // default configuration에서는 secondaryText가 하단으로 감
             content.secondaryText = itemIdentifier.emoji
-            content.image = UIImage(systemName: "arrowshape.right.fill")
+            content.prefersSideBySideTextAndSecondaryText = false
+            content.textToSecondaryTextVerticalPadding = 10
+            
+            content.image = indexPath.item < 3 ? UIImage(systemName: "arrowshape.right.fill") : UIImage(systemName: "arrowshape.right")
             content.imageProperties.tintColor = .darkGray
             cell.contentConfiguration = content
         }
