@@ -37,7 +37,10 @@ final class SimpleCollectionViewController: UICollectionViewController {
         //
         // - 더욱 테이블뷰가 필요할지에 대한 생각이 든다.
         // - Layout 설정
-        let configuration = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
+        var configuration = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
+        configuration.showsSeparators = false
+        configuration.backgroundColor = .systemGray6
+        
         let layout = UICollectionViewCompositionalLayout.list(using: configuration)
         collectionView.collectionViewLayout = layout
         
@@ -46,6 +49,8 @@ final class SimpleCollectionViewController: UICollectionViewController {
             var content = cell.defaultContentConfiguration()
             content.text = itemIdentifier.title
             content.secondaryText = itemIdentifier.emoji
+            content.image = UIImage(systemName: "arrowshape.right.fill")
+            content.imageProperties.tintColor = .darkGray
             cell.contentConfiguration = content
         }
     }
