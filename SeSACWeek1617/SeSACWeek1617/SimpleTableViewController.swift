@@ -13,6 +13,8 @@ final class SimpleTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.separatorInset = .zero
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -20,8 +22,14 @@ final class SimpleTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
-        cell.textLabel?.text = burgers[indexPath.row]
+        let cell = UITableViewCell()
+        
+        var content = cell.defaultContentConfiguration()
+        content.image = UIImage(systemName: "heart.fill")
+        content.text = burgers[indexPath.row]
+        content.secondaryText = "Detail"
+        cell.contentConfiguration = content
+        
         return cell
     }
 }
