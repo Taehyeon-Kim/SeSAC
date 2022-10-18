@@ -22,6 +22,11 @@ struct Food {
     }
 }
 
+struct User {
+    let name: String
+    let age: Int
+}
+
 final class SimpleCollectionViewController: UICollectionViewController {
     
     private var foods: [Food] = Food.dummy()
