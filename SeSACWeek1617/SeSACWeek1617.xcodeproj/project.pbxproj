@@ -13,6 +13,7 @@
 		BDD289E628FE2E2B00EB6A8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD289E428FE2E2B00EB6A8E /* Main.storyboard */; };
 		BDD289E828FE2E2D00EB6A8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD289E728FE2E2D00EB6A8E /* Assets.xcassets */; };
 		BDD289EB28FE2E2D00EB6A8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD289E928FE2E2D00EB6A8E /* LaunchScreen.storyboard */; };
+		BDD289F328FE398900EB6A8E /* SimpleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD289F228FE398900EB6A8E /* SimpleCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BDD289E728FE2E2D00EB6A8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDD289EA28FE2E2D00EB6A8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDD289EC28FE2E2D00EB6A8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDD289F228FE398900EB6A8E /* SimpleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				BDD289DE28FE2E2B00EB6A8E /* AppDelegate.swift */,
 				BDD289E028FE2E2B00EB6A8E /* SceneDelegate.swift */,
 				BDD289E228FE2E2B00EB6A8E /* SimpleTableViewController.swift */,
+				BDD289F228FE398900EB6A8E /* SimpleCollectionViewController.swift */,
 				BDD289E428FE2E2B00EB6A8E /* Main.storyboard */,
 				BDD289E728FE2E2D00EB6A8E /* Assets.xcassets */,
 				BDD289E928FE2E2D00EB6A8E /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDD289F328FE398900EB6A8E /* SimpleCollectionViewController.swift in Sources */,
 				BDD289E328FE2E2B00EB6A8E /* SimpleTableViewController.swift in Sources */,
 				BDD289DF28FE2E2B00EB6A8E /* AppDelegate.swift in Sources */,
 				BDD289E128FE2E2B00EB6A8E /* SceneDelegate.swift in Sources */,
