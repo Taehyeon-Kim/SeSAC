@@ -43,6 +43,40 @@ final class SampleCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let item = tasks[indexPath.item]
         let cell = collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: item)
+
+        var fruit: Fruit = Banana()
+        fruit = Apple()
+        // fruit = Melon()
+        print(fruit.price)
+        print((fruit as! Apple).printSelf())
         return cell
     }
+}
+
+protocol Fruit {
+    var price: Int { get }
+}
+
+extension Fruit {
+    var price: Int {
+        return 100
+    }
+}
+
+class Apple: Fruit {
+    func printSelf() {
+        print("Apple")
+    }
+}
+
+class Banana: Fruit {
+    
+}
+
+enum Melon: Fruit {
+    
+}
+
+struct Watermelon: Fruit {
+    
 }
