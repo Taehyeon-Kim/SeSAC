@@ -22,37 +22,43 @@ struct Food {
     }
 }
 
-struct User {
-    let name: String
-    let age: Int
+struct User: Hashable {
+    let id = UUID().uuidString  // Hashable
+    let name: String            // Hashable
+    let age: Int                // Hashable
 }
 
 final class SimpleCollectionViewController: UICollectionViewController {
     
-    private var foods: [Food] = Food.dummy()
+    // private var foods: [Food] = Food.dummy()
+    private var list: [User] = [
+        User(name: "뽀로로", age: 3),
+        User(name: "ㅁㅁㅁ", age: 4),
+        User(name: "ㅠㅠㅠ", age: 5),
+        User(name: "ㅃㅃㅃ", age: 6)
+    ]
     
     // cellForItemAt 전에 생성되어야 한다. register 코드와 유사한 역할
     // cellForItemAt에서 사용될 프로퍼티
-    var cellRegistration: UICollectionView.CellRegistration<UICollectionViewListCell, Food>!
-    var hello: (() -> Void)!
+    var cellRegistration: UICollectionView.CellRegistration<UICollectionViewListCell, User>!
+    var dataSource: UICollectionViewDiffableDataSource<Int, User>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         collectionView.collectionViewLayout = configureLayout()
+        
         // itemIdentifier: 데이터
         cellRegistration = UICollectionView.CellRegistration { cell, indexPath, itemIdentifier in
             var content = UIListContentConfiguration.valueCell()
-            content.text = itemIdentifier.title
+            content.text = itemIdentifier.name
             // valueCell에서는 secondaryText가 우측으로 감
             // default configuration에서는 secondaryText가 하단으로 감
-            content.secondaryText = itemIdentifier.emoji
+            content.secondaryText = "\(itemIdentifier.age)"
             content.prefersSideBySideTextAndSecondaryText = false
             content.textToSecondaryTextVerticalPadding = 10
             content.image = indexPath.item < 3 ? UIImage(systemName: "arrowshape.right.fill") : UIImage(systemName: "arrowshape.right")
             content.imageProperties.tintColor = .darkGray
-            
-            print("setup")
             cell.contentConfiguration = content
             
             var backgroundConfig = UIBackgroundConfiguration.listPlainCell()
@@ -62,14 +68,26 @@ final class SimpleCollectionViewController: UICollectionViewController {
             backgroundConfig.strokeColor = .systemPink
             cell.backgroundConfiguration = backgroundConfig
         }
+        
+        dataSource = UICollectionViewDiffableDataSource(collectionView: collectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
+            let cell = collectionView.dequeueConfiguredReusableCell(
+                using: self.cellRegistration, for: indexPath, item: itemIdentifier
+            )
+            return cell
+        })
+        
+        var snapshot = NSDiffableDataSourceSnapshot<Int, User>()
+        snapshot.appendSections([0])
+        snapshot.appendItems(list)
+        dataSource.apply(snapshot)
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return foods.count
+        return list.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let item = foods[indexPath.row]
+        let item = list[indexPath.row]
         let cell = collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: item)
         return cell
     }
