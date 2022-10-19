@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BDA5FD9428FF906500B4E3DD /* DiffableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA5FD9328FF906500B4E3DD /* DiffableViewController.swift */; };
 		BDD289DF28FE2E2B00EB6A8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD289DE28FE2E2B00EB6A8E /* AppDelegate.swift */; };
 		BDD289E128FE2E2B00EB6A8E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD289E028FE2E2B00EB6A8E /* SceneDelegate.swift */; };
 		BDD289E328FE2E2B00EB6A8E /* SimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD289E228FE2E2B00EB6A8E /* SimpleTableViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BDA5FD9328FF906500B4E3DD /* DiffableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableViewController.swift; sourceTree = "<group>"; };
 		BDD289DB28FE2E2B00EB6A8E /* SeSACWeek1617.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACWeek1617.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD289DE28FE2E2B00EB6A8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDD289E028FE2E2B00EB6A8E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				BDD289E728FE2E2D00EB6A8E /* Assets.xcassets */,
 				BDD289E928FE2E2D00EB6A8E /* LaunchScreen.storyboard */,
 				BDD289EC28FE2E2D00EB6A8E /* Info.plist */,
+				BDA5FD9328FF906500B4E3DD /* DiffableViewController.swift */,
 			);
 			path = SeSACWeek1617;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 				BDD289F328FE398900EB6A8E /* SimpleCollectionViewController.swift in Sources */,
 				BDD289E328FE2E2B00EB6A8E /* SimpleTableViewController.swift in Sources */,
 				BDD289DF28FE2E2B00EB6A8E /* AppDelegate.swift in Sources */,
+				BDA5FD9428FF906500B4E3DD /* DiffableViewController.swift in Sources */,
 				BDD289E128FE2E2B00EB6A8E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
