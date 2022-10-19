@@ -34,21 +34,12 @@ final class SimpleCollectionViewController: UICollectionViewController {
     // cellForItemAt 전에 생성되어야 한다. register 코드와 유사한 역할
     // cellForItemAt에서 사용될 프로퍼티
     var cellRegistration: UICollectionView.CellRegistration<UICollectionViewListCell, Food>!
-    
+    var hello: (() -> Void)!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // 14+ 컬렉션뷰를 테이블뷰 스타일처럼 사용 가능(List Configuration)
-        //
-        // - 더욱 테이블뷰가 필요할지에 대한 생각이 든다.
-        // - Layout 설정
-        var configuration = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
-        configuration.showsSeparators = false
-        configuration.backgroundColor = .systemGray6
-        
-        let layout = UICollectionViewCompositionalLayout.list(using: configuration)
-        collectionView.collectionViewLayout = layout
-        
+
+        collectionView.collectionViewLayout = configureLayout()
         // itemIdentifier: 데이터
         cellRegistration = UICollectionView.CellRegistration { cell, indexPath, itemIdentifier in
             var content = UIListContentConfiguration.valueCell()
@@ -62,6 +53,8 @@ final class SimpleCollectionViewController: UICollectionViewController {
             
             content.image = indexPath.item < 3 ? UIImage(systemName: "arrowshape.right.fill") : UIImage(systemName: "arrowshape.right")
             content.imageProperties.tintColor = .darkGray
+            
+            print("setup")
             cell.contentConfiguration = content
         }
     }
@@ -74,5 +67,21 @@ final class SimpleCollectionViewController: UICollectionViewController {
         let item = foods[indexPath.row]
         let cell = collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: item)
         return cell
+    }
+}
+
+extension SimpleCollectionViewController {
+    
+    private func configureLayout() -> UICollectionViewLayout {
+        // 14+ 컬렉션뷰를 테이블뷰 스타일처럼 사용 가능(List Configuration)
+        //
+        // - 더욱 테이블뷰가 필요할지에 대한 생각이 든다.
+        // - Layout 설정
+        var configuration = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
+        configuration.showsSeparators = false
+        configuration.backgroundColor = .systemGray6
+        
+        let layout = UICollectionViewCompositionalLayout.list(using: configuration)
+        return layout
     }
 }
