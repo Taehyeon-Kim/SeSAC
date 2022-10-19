@@ -51,6 +51,8 @@ final class SimpleCollectionViewController: UICollectionViewController {
             content.textToSecondaryTextVerticalPadding = 10
             content.image = indexPath.item < 3 ? UIImage(systemName: "arrowshape.right.fill") : UIImage(systemName: "arrowshape.right")
             content.imageProperties.tintColor = .darkGray
+            
+            print("setup")
             cell.contentConfiguration = content
             
             var backgroundConfig = UIBackgroundConfiguration.listPlainCell()
@@ -80,7 +82,7 @@ extension SimpleCollectionViewController {
         //
         // - 더욱 테이블뷰가 필요할지에 대한 생각이 든다.
         // - Layout 설정
-        var configuration = UICollectionLayoutListConfiguration(appearance: .plain)
+        var configuration = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
         configuration.showsSeparators = false
         configuration.backgroundColor = .systemGray6
         
