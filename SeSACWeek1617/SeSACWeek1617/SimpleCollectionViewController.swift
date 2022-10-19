@@ -34,35 +34,31 @@ final class SimpleCollectionViewController: UICollectionViewController {
     // cellForItemAt 전에 생성되어야 한다. register 코드와 유사한 역할
     // cellForItemAt에서 사용될 프로퍼티
     var cellRegistration: UICollectionView.CellRegistration<UICollectionViewListCell, Food>!
-    
+    var hello: (() -> Void)!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // 14+ 컬렉션뷰를 테이블뷰 스타일처럼 사용 가능(List Configuration)
-        //
-        // - 더욱 테이블뷰가 필요할지에 대한 생각이 든다.
-        // - Layout 설정
-        var configuration = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
-        configuration.showsSeparators = false
-        configuration.backgroundColor = .systemGray6
-        
-        let layout = UICollectionViewCompositionalLayout.list(using: configuration)
-        collectionView.collectionViewLayout = layout
-        
+
+        collectionView.collectionViewLayout = configureLayout()
         // itemIdentifier: 데이터
         cellRegistration = UICollectionView.CellRegistration { cell, indexPath, itemIdentifier in
             var content = UIListContentConfiguration.valueCell()
             content.text = itemIdentifier.title
-            
             // valueCell에서는 secondaryText가 우측으로 감
             // default configuration에서는 secondaryText가 하단으로 감
             content.secondaryText = itemIdentifier.emoji
             content.prefersSideBySideTextAndSecondaryText = false
             content.textToSecondaryTextVerticalPadding = 10
-            
             content.image = indexPath.item < 3 ? UIImage(systemName: "arrowshape.right.fill") : UIImage(systemName: "arrowshape.right")
             content.imageProperties.tintColor = .darkGray
             cell.contentConfiguration = content
+            
+            var backgroundConfig = UIBackgroundConfiguration.listPlainCell()
+            backgroundConfig.backgroundColor = .lightGray
+            backgroundConfig.cornerRadius = 10
+            backgroundConfig.strokeWidth = 2
+            backgroundConfig.strokeColor = .systemPink
+            cell.backgroundConfiguration = backgroundConfig
         }
     }
     
@@ -74,5 +70,21 @@ final class SimpleCollectionViewController: UICollectionViewController {
         let item = foods[indexPath.row]
         let cell = collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: item)
         return cell
+    }
+}
+
+extension SimpleCollectionViewController {
+    
+    private func configureLayout() -> UICollectionViewLayout {
+        // 14+ 컬렉션뷰를 테이블뷰 스타일처럼 사용 가능(List Configuration)
+        //
+        // - 더욱 테이블뷰가 필요할지에 대한 생각이 든다.
+        // - Layout 설정
+        var configuration = UICollectionLayoutListConfiguration(appearance: .plain)
+        configuration.showsSeparators = false
+        configuration.backgroundColor = .systemGray6
+        
+        let layout = UICollectionViewCompositionalLayout.list(using: configuration)
+        return layout
     }
 }
