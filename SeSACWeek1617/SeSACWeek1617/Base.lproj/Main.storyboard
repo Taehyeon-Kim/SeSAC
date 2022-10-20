@@ -148,16 +148,41 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rwj-AC-pv0">
+                                <rect key="frame" x="0.0" y="227" width="390" height="583"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Tq3-pl-ME7">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="r7q-IJ-Mau">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Ujg-Ue-jUr">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EOM-yf-Mqi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="EOM-yf-Mqi" firstAttribute="bottom" secondItem="rwj-AC-pv0" secondAttribute="bottom" id="Axo-ls-ZYP"/>
                             <constraint firstItem="qc5-nR-ACC" firstAttribute="leading" secondItem="EOM-yf-Mqi" secondAttribute="leading" constant="30" id="DTK-9V-oSM"/>
+                            <constraint firstItem="rwj-AC-pv0" firstAttribute="top" secondItem="qc5-nR-ACC" secondAttribute="bottom" constant="100" id="FJ4-dh-Qpy"/>
                             <constraint firstItem="qc5-nR-ACC" firstAttribute="top" secondItem="EOM-yf-Mqi" secondAttribute="top" constant="30" id="H5L-qW-zMn"/>
+                            <constraint firstItem="rwj-AC-pv0" firstAttribute="leading" secondItem="EOM-yf-Mqi" secondAttribute="leading" id="LAu-eJ-w9R"/>
                             <constraint firstItem="EOM-yf-Mqi" firstAttribute="trailing" secondItem="qc5-nR-ACC" secondAttribute="trailing" constant="30" id="NVU-1q-TVt"/>
+                            <constraint firstItem="EOM-yf-Mqi" firstAttribute="trailing" secondItem="rwj-AC-pv0" secondAttribute="trailing" id="mZH-2C-KpU"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="collectionView" destination="rwj-AC-pv0" id="jTj-nP-2qe"/>
                         <outlet property="numberTextField" destination="qc5-nR-ACC" id="kty-Vs-chO"/>
                     </connections>
                 </viewController>

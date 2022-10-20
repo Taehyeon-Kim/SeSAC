@@ -11,6 +11,7 @@ import Foundation
 class NewsViewModel {
     
     var pageNumber: CObservable<String> = CObservable("3000")
+    var news: CObservable<[News.NewsItem]> = CObservable(News.items)
     
     /// PageNumber의 Format을 변경해주는 메서드
     func changePageNumberFormat(of text: String) {
