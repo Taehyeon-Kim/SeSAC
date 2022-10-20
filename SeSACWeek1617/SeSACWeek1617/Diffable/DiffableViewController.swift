@@ -7,17 +7,19 @@
 
 import UIKit
 
+import Kingfisher
+
 final class DiffableViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    private var list = ["아이폰", "아이패드", "에어팟", "맥북", "애플 워치"]
+    var viewModel = DiffableViewModel()
     
     /// <SectionIdentifierType, ItemIdentifierType>
     /// <Section, Row에 들어갈 아이템>
     /// Model 기반
-    private var dataSource: UICollectionViewDiffableDataSource<Int, String>!
+    private var dataSource: UICollectionViewDiffableDataSource<Int, SearchResult>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +27,18 @@ final class DiffableViewController: UIViewController {
         collectionView.collectionViewLayout = createLayout()
         configureDataSource()
         collectionView.delegate = self
-        
         searchBar.delegate = self
+        
+        bind()
+    }
+    
+    func bind() {
+        viewModel.photoList.bind { photo in
+            var snapshot = NSDiffableDataSourceSnapshot<Int, SearchResult>()
+            snapshot.appendSections([0])
+            snapshot.appendItems(photo.results)
+            self.dataSource.apply(snapshot)
+        }
     }
 }
 
@@ -36,7 +48,7 @@ extension DiffableViewController: UICollectionViewDelegate {
         // DataSource에서 itemIdentifier를 이용해서 데이터를 가져오게 된다.
         // 데이터 리스트에 직접 접근을 하지 않더라도 원하는 데이터를 가져올 수 있음.
         guard let item = dataSource.itemIdentifier(for: indexPath) else { return }
-        let alert = UIAlertController(title: item, message: item, preferredStyle: .alert)
+        let alert = UIAlertController(title: "좋아요 수", message: "\(item.likes)개", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "확인", style: .cancel))
         present(alert, animated: true)
     }
@@ -45,11 +57,7 @@ extension DiffableViewController: UICollectionViewDelegate {
 extension DiffableViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        var snapshot = dataSource.snapshot()
-        snapshot.appendItems([searchBar.text!])
-        dataSource.apply(snapshot, animatingDifferences: true)
-        
-        searchBar.text = nil
+        viewModel.requestSearchPhoto(query: searchBar.text!)
     }
 }
 
@@ -62,12 +70,24 @@ extension DiffableViewController {
     }
     
     private func configureDataSource() {
-        let cellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, String> { cell, indexPath, item in
+        let cellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, SearchResult> { cell, indexPath, item in
             
             var contentConfig = UIListContentConfiguration.valueCell()
-            contentConfig.text = item
-            contentConfig.secondaryText = "\(item.count)" // 글자 수 출력
-            cell.contentConfiguration = contentConfig
+            contentConfig.text = "\(item.likes)"
+            
+            // String > URL > Data(Binary) > Image
+            // 왜 글로벌 큐에 보내놓을까? - 다운로드, 이미지 변환하는 동안에 동작이 멈추지 않도록 하기 위함
+            DispatchQueue.global().async {
+                let url = URL(string: item.urls.thumb)!
+                let data = try? Data(contentsOf: url)
+
+                DispatchQueue.main.async {
+                    contentConfig.image = UIImage(data: data!)
+                    
+                    // 해당 라인을 바깥에 꺼내놓으면 정상 동작 안 함, 왜냐하면 비동기적으로 동작이 진행되기 때문
+                    cell.contentConfiguration = contentConfig
+                }
+            }
             
             var backgroundConfig = UIBackgroundConfiguration.listPlainCell()
             backgroundConfig.strokeWidth = 3
@@ -85,13 +105,5 @@ extension DiffableViewController {
                 let cell = collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: itemIdentifier)
                 return cell
             })
-        
-        /// Initial
-        /// 최초의 스냅샷 생성 그 이후부터는 차이를 비교하는 연산 수행 후 업데이트
-        /// 그래서 어떤 데이터가 나오는데?
-        var snapshot = NSDiffableDataSourceSnapshot<Int, String>()
-        snapshot.appendSections([0])
-        snapshot.appendItems(list)
-        dataSource.apply(snapshot)
     }
 }

@@ -12,6 +12,12 @@
 		BDA5FD992900D14100B4E3DD /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA5FD982900D14100B4E3DD /* NewsViewController.swift */; };
 		BDA5FD9B2900D26800B4E3DD /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA5FD9A2900D26800B4E3DD /* NewsViewModel.swift */; };
 		BDA5FD9D2900D7F800B4E3DD /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA5FD9C2900D7F800B4E3DD /* News.swift */; };
+		BDA5FDA02900ED6800B4E3DD /* DiffableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA5FD9F2900ED6800B4E3DD /* DiffableViewModel.swift */; };
+		BDA5FDA22900EDEB00B4E3DD /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA5FDA12900EDEB00B4E3DD /* APIService.swift */; };
+		BDA5FDA42900EE3B00B4E3DD /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA5FDA32900EE3B00B4E3DD /* APIKey.swift */; };
+		BDA5FDA62900EF7400B4E3DD /* SearchPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA5FDA52900EF7400B4E3DD /* SearchPhoto.swift */; };
+		BDA5FDAA2900F10400B4E3DD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BDA5FDA92900F10400B4E3DD /* Alamofire */; };
+		BDA5FDAD2900F11500B4E3DD /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = BDA5FDAC2900F11500B4E3DD /* Kingfisher */; };
 		BDD289DF28FE2E2B00EB6A8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD289DE28FE2E2B00EB6A8E /* AppDelegate.swift */; };
 		BDD289E128FE2E2B00EB6A8E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD289E028FE2E2B00EB6A8E /* SceneDelegate.swift */; };
 		BDD289E328FE2E2B00EB6A8E /* SimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD289E228FE2E2B00EB6A8E /* SimpleTableViewController.swift */; };
@@ -27,6 +33,11 @@
 		BDA5FD982900D14100B4E3DD /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		BDA5FD9A2900D26800B4E3DD /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 		BDA5FD9C2900D7F800B4E3DD /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		BDA5FD9E2900EB4600B4E3DD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		BDA5FD9F2900ED6800B4E3DD /* DiffableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableViewModel.swift; sourceTree = "<group>"; };
+		BDA5FDA12900EDEB00B4E3DD /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		BDA5FDA32900EE3B00B4E3DD /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		BDA5FDA52900EF7400B4E3DD /* SearchPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhoto.swift; sourceTree = "<group>"; };
 		BDD289DB28FE2E2B00EB6A8E /* SeSACWeek1617.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACWeek1617.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD289DE28FE2E2B00EB6A8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDD289E028FE2E2B00EB6A8E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDA5FDAD2900F11500B4E3DD /* Kingfisher in Frameworks */,
+				BDA5FDAA2900F10400B4E3DD /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,8 +69,20 @@
 				BDA5FD982900D14100B4E3DD /* NewsViewController.swift */,
 				BDA5FD9A2900D26800B4E3DD /* NewsViewModel.swift */,
 				BDA5FD9C2900D7F800B4E3DD /* News.swift */,
+				BDA5FD9E2900EB4600B4E3DD /* README.md */,
 			);
 			path = MVVMSample;
+			sourceTree = "<group>";
+		};
+		BDA5FDA72900EF9400B4E3DD /* Diffable */ = {
+			isa = PBXGroup;
+			children = (
+				BDA5FD9328FF906500B4E3DD /* DiffableViewController.swift */,
+				BDA5FD9F2900ED6800B4E3DD /* DiffableViewModel.swift */,
+				BDA5FDA12900EDEB00B4E3DD /* APIService.swift */,
+				BDA5FDA52900EF7400B4E3DD /* SearchPhoto.swift */,
+			);
+			path = Diffable;
 			sourceTree = "<group>";
 		};
 		BDD289D228FE2E2B00EB6A8E = {
@@ -88,7 +113,8 @@
 				BDD289E728FE2E2D00EB6A8E /* Assets.xcassets */,
 				BDD289E928FE2E2D00EB6A8E /* LaunchScreen.storyboard */,
 				BDD289EC28FE2E2D00EB6A8E /* Info.plist */,
-				BDA5FD9328FF906500B4E3DD /* DiffableViewController.swift */,
+				BDA5FDA72900EF9400B4E3DD /* Diffable */,
+				BDA5FDA32900EE3B00B4E3DD /* APIKey.swift */,
 			);
 			path = SeSACWeek1617;
 			sourceTree = "<group>";
@@ -109,6 +135,10 @@
 			dependencies = (
 			);
 			name = SeSACWeek1617;
+			packageProductDependencies = (
+				BDA5FDA92900F10400B4E3DD /* Alamofire */,
+				BDA5FDAC2900F11500B4E3DD /* Kingfisher */,
+			);
 			productName = SeSACWeek1617;
 			productReference = BDD289DB28FE2E2B00EB6A8E /* SeSACWeek1617.app */;
 			productType = "com.apple.product-type.application";
@@ -137,6 +167,10 @@
 				Base,
 			);
 			mainGroup = BDD289D228FE2E2B00EB6A8E;
+			packageReferences = (
+				BDA5FDA82900F10400B4E3DD /* XCRemoteSwiftPackageReference "Alamofire" */,
+				BDA5FDAB2900F11500B4E3DD /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = BDD289DC28FE2E2B00EB6A8E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -168,11 +202,15 @@
 				BDD289F328FE398900EB6A8E /* SimpleCollectionViewController.swift in Sources */,
 				BDD289E328FE2E2B00EB6A8E /* SimpleTableViewController.swift in Sources */,
 				BDA5FD9D2900D7F800B4E3DD /* News.swift in Sources */,
+				BDA5FDA22900EDEB00B4E3DD /* APIService.swift in Sources */,
 				BDD289DF28FE2E2B00EB6A8E /* AppDelegate.swift in Sources */,
 				BDA5FD992900D14100B4E3DD /* NewsViewController.swift in Sources */,
 				BDA5FD9428FF906500B4E3DD /* DiffableViewController.swift in Sources */,
+				BDA5FDA62900EF7400B4E3DD /* SearchPhoto.swift in Sources */,
 				BDD289E128FE2E2B00EB6A8E /* SceneDelegate.swift in Sources */,
 				BDA5FD9B2900D26800B4E3DD /* NewsViewModel.swift in Sources */,
+				BDA5FDA42900EE3B00B4E3DD /* APIKey.swift in Sources */,
+				BDA5FDA02900ED6800B4E3DD /* DiffableViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +430,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BDA5FDA82900F10400B4E3DD /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		BDA5FDAB2900F11500B4E3DD /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BDA5FDA92900F10400B4E3DD /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDA5FDA82900F10400B4E3DD /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		BDA5FDAC2900F11500B4E3DD /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDA5FDAB2900F11500B4E3DD /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BDD289D328FE2E2B00EB6A8E /* Project object */;
 }
