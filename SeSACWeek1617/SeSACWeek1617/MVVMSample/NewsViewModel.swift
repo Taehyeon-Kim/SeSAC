@@ -24,4 +24,16 @@ class NewsViewModel {
         let result = numberFormatter.string(for: number)!
         pageNumber.value = result
     }
+    
+    /*
+     Data handling
+     */
+    
+    func resetNews() {
+        news.value = []
+    }
+    
+    func loadNews() {
+        news.value = News.items
+    }
 }

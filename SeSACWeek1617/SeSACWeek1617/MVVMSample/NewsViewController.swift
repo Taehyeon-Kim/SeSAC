@@ -14,6 +14,8 @@ final class NewsViewController: UIViewController {
     
     @IBOutlet weak var numberTextField: UITextField!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var resetButton: UIButton!
+    @IBOutlet weak var loadButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,10 +26,10 @@ final class NewsViewController: UIViewController {
         bind() // datasource 초기화 전에 bind하려고 하면 문제 발생
     }
     
-    // numberTextField.text = "3000"
+    /// 액션이 트리거될 때마다 ViewModel에 신호 전달
+    /// 변화가 있으면 bind 함수 실행
     private func bind() {
         viewModel.pageNumber.bind { value in
-            print("bind == \(value)")
             self.numberTextField.text = value
         }
         
@@ -40,11 +42,9 @@ final class NewsViewController: UIViewController {
     }
     
     private func addTarget() {
-        numberTextField.addTarget(
-            self,
-            action: #selector(numberTextFieldChanged),
-            for: .editingChanged
-        )
+        numberTextField.addTarget(self, action: #selector(numberTextFieldChanged), for: .editingChanged)
+        resetButton.addTarget(self, action: #selector(resetButtonDidTap), for: .touchUpInside)
+        loadButton.addTarget(self, action: #selector(loadButtonDidTap), for: .touchUpInside)
     }
 }
 
@@ -53,6 +53,14 @@ extension NewsViewController {
     @objc func numberTextFieldChanged() {
         guard let text = numberTextField.text else { return }
         viewModel.changePageNumberFormat(of: text)
+    }
+    
+    @objc func resetButtonDidTap() {
+        viewModel.resetNews()
+    }
+    
+    @objc func loadButtonDidTap() {
+        viewModel.loadNews()
     }
 }
 

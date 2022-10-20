@@ -168,22 +168,46 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezI-Tz-Wwl">
+                                <rect key="frame" x="20" y="147" width="165" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="caa-hO-yci"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="reset"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBA-X3-Zez">
+                                <rect key="frame" x="205" y="147" width="165" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="vbg-7W-pad"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="load"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EOM-yf-Mqi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="EOM-yf-Mqi" firstAttribute="bottom" secondItem="rwj-AC-pv0" secondAttribute="bottom" id="Axo-ls-ZYP"/>
                             <constraint firstItem="qc5-nR-ACC" firstAttribute="leading" secondItem="EOM-yf-Mqi" secondAttribute="leading" constant="30" id="DTK-9V-oSM"/>
+                            <constraint firstItem="ezI-Tz-Wwl" firstAttribute="top" secondItem="qc5-nR-ACC" secondAttribute="bottom" constant="20" id="DhZ-9V-Wgh"/>
+                            <constraint firstItem="QBA-X3-Zez" firstAttribute="top" secondItem="qc5-nR-ACC" secondAttribute="bottom" constant="20" id="Dp7-wy-W0b"/>
                             <constraint firstItem="rwj-AC-pv0" firstAttribute="top" secondItem="qc5-nR-ACC" secondAttribute="bottom" constant="100" id="FJ4-dh-Qpy"/>
                             <constraint firstItem="qc5-nR-ACC" firstAttribute="top" secondItem="EOM-yf-Mqi" secondAttribute="top" constant="30" id="H5L-qW-zMn"/>
                             <constraint firstItem="rwj-AC-pv0" firstAttribute="leading" secondItem="EOM-yf-Mqi" secondAttribute="leading" id="LAu-eJ-w9R"/>
                             <constraint firstItem="EOM-yf-Mqi" firstAttribute="trailing" secondItem="qc5-nR-ACC" secondAttribute="trailing" constant="30" id="NVU-1q-TVt"/>
+                            <constraint firstItem="QBA-X3-Zez" firstAttribute="leading" secondItem="ezI-Tz-Wwl" secondAttribute="trailing" constant="20" id="jU0-Et-pbc"/>
+                            <constraint firstItem="EOM-yf-Mqi" firstAttribute="trailing" secondItem="QBA-X3-Zez" secondAttribute="trailing" constant="20" id="ja9-Jl-cdm"/>
                             <constraint firstItem="EOM-yf-Mqi" firstAttribute="trailing" secondItem="rwj-AC-pv0" secondAttribute="trailing" id="mZH-2C-KpU"/>
+                            <constraint firstItem="QBA-X3-Zez" firstAttribute="width" secondItem="ezI-Tz-Wwl" secondAttribute="width" id="qpj-no-dbz"/>
+                            <constraint firstItem="ezI-Tz-Wwl" firstAttribute="leading" secondItem="EOM-yf-Mqi" secondAttribute="leading" constant="20" id="xbA-Sf-h3K"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="rwj-AC-pv0" id="jTj-nP-2qe"/>
+                        <outlet property="loadButton" destination="QBA-X3-Zez" id="SIY-DS-oHK"/>
                         <outlet property="numberTextField" destination="qc5-nR-ACC" id="kty-Vs-chO"/>
+                        <outlet property="resetButton" destination="ezI-Tz-Wwl" id="3eU-wH-Pow"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pud-ZX-yql" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
