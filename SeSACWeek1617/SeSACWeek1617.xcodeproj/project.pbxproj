@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		BDA5FD9428FF906500B4E3DD /* DiffableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA5FD9328FF906500B4E3DD /* DiffableViewController.swift */; };
+		BDA5FD972900CF8100B4E3DD /* CObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA5FD962900CF8100B4E3DD /* CObservable.swift */; };
+		BDA5FD992900D14100B4E3DD /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA5FD982900D14100B4E3DD /* NewsViewController.swift */; };
+		BDA5FD9B2900D26800B4E3DD /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA5FD9A2900D26800B4E3DD /* NewsViewModel.swift */; };
 		BDD289DF28FE2E2B00EB6A8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD289DE28FE2E2B00EB6A8E /* AppDelegate.swift */; };
 		BDD289E128FE2E2B00EB6A8E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD289E028FE2E2B00EB6A8E /* SceneDelegate.swift */; };
 		BDD289E328FE2E2B00EB6A8E /* SimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD289E228FE2E2B00EB6A8E /* SimpleTableViewController.swift */; };
@@ -19,6 +22,9 @@
 
 /* Begin PBXFileReference section */
 		BDA5FD9328FF906500B4E3DD /* DiffableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableViewController.swift; sourceTree = "<group>"; };
+		BDA5FD962900CF8100B4E3DD /* CObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CObservable.swift; sourceTree = "<group>"; };
+		BDA5FD982900D14100B4E3DD /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		BDA5FD9A2900D26800B4E3DD /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 		BDD289DB28FE2E2B00EB6A8E /* SeSACWeek1617.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACWeek1617.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD289DE28FE2E2B00EB6A8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDD289E028FE2E2B00EB6A8E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +47,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BDA5FD952900CDAF00B4E3DD /* MVVMSample */ = {
+			isa = PBXGroup;
+			children = (
+				BDA5FD962900CF8100B4E3DD /* CObservable.swift */,
+				BDA5FD982900D14100B4E3DD /* NewsViewController.swift */,
+				BDA5FD9A2900D26800B4E3DD /* NewsViewModel.swift */,
+			);
+			path = MVVMSample;
+			sourceTree = "<group>";
+		};
 		BDD289D228FE2E2B00EB6A8E = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +76,7 @@
 		BDD289DD28FE2E2B00EB6A8E /* SeSACWeek1617 */ = {
 			isa = PBXGroup;
 			children = (
+				BDA5FD952900CDAF00B4E3DD /* MVVMSample */,
 				BDD289DE28FE2E2B00EB6A8E /* AppDelegate.swift */,
 				BDD289E028FE2E2B00EB6A8E /* SceneDelegate.swift */,
 				BDD289E228FE2E2B00EB6A8E /* SimpleTableViewController.swift */,
@@ -144,11 +161,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDA5FD972900CF8100B4E3DD /* CObservable.swift in Sources */,
 				BDD289F328FE398900EB6A8E /* SimpleCollectionViewController.swift in Sources */,
 				BDD289E328FE2E2B00EB6A8E /* SimpleTableViewController.swift in Sources */,
 				BDD289DF28FE2E2B00EB6A8E /* AppDelegate.swift in Sources */,
+				BDA5FD992900D14100B4E3DD /* NewsViewController.swift in Sources */,
 				BDA5FD9428FF906500B4E3DD /* DiffableViewController.swift in Sources */,
 				BDD289E128FE2E2B00EB6A8E /* SceneDelegate.swift in Sources */,
+				BDA5FD9B2900D26800B4E3DD /* NewsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
