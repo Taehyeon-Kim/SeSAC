@@ -33,6 +33,7 @@ final class RxCocoaDemoViewController: UIViewController {
         setPickerView()
         setSwitch()
         setSign()
+        setOperator()
     }
     
     // MARK: - Private Functions
@@ -152,5 +153,84 @@ final class RxCocoaDemoViewController: UIViewController {
 
 // MARK: - Extension
 extension RxCocoaDemoViewController {
-    
+
+    func setOperator() {
+        let itemA = [5.3, 1.2, 4.0, 3.0, 2.2, 3.3]
+        let itemB = [2.3, 2.0, 1.1]
+        
+        // 한 개의 요소만 받을 수 있음
+        Observable.just(itemA)
+            .subscribe { value in
+                print("just - \(value)")
+            } onError: { error in
+                print("just - \(error)")
+            } onCompleted: {
+                print("just - completed")
+            } onDisposed: {
+                print("just - disposed")
+            }
+            .disposed(by: disposeBag)
+        
+        // 두 개 이상의 요소를 받을 수 있음
+        // 가변 매개변수로 이루어 짐
+        Observable.of([itemA, itemB], itemA)
+            .subscribe { value in
+                print("of - \(value)")
+            } onError: { error in
+                print("of - \(error)")
+            } onCompleted: {
+                print("of - completed")
+            } onDisposed: {
+                print("of - disposed")
+            }
+            .disposed(by: disposeBag)
+        
+        Observable.from(itemA)
+            .subscribe { value in
+                print("from - \(value)")
+            } onError: { error in
+                print("from - \(error)")
+            } onCompleted: {
+                print("from - completed")
+            } onDisposed: {
+                print("from - disposed")
+            }
+            .disposed(by: disposeBag)
+        
+        // 반복
+        // 5번만 반복하겠다.
+        // 네트워크 요청 횟수 제한.
+        Observable.repeatElement("Taekki")
+            .take(5)
+            .subscribe { value in
+                print("repeatElement - \(value)")
+            } onError: { error in
+                print("repeatElement - \(error)")
+            } onCompleted: {
+                print("repeatElement - completed")
+            } onDisposed: {
+                print("repeatElement - disposed")
+            }
+            .disposed(by: disposeBag)
+        
+        // 무한한 시퀀스
+        // 화면 전환되더라도 시퀀스는 살아있음.
+        // error or completed되면 시퀀스 종료
+        // 수동으로 dispose 시킬 필요가 있음.
+        let intervalObservable = Observable<Int>.interval(.seconds(1), scheduler: MainScheduler.instance)
+            .subscribe { value in
+                print("interval - \(value)")
+            } onError: { error in
+                print("interval - \(error)")
+            } onCompleted: {
+                print("interval - completed")
+            } onDisposed: {
+                print("interval - disposed")
+            }
+            // .disposed(by: disposeBag)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            intervalObservable.dispose()
+        }
+    }
 }
