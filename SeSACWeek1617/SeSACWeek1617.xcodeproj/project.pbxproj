@@ -10,6 +10,7 @@
 		BD02225F290622B200B07322 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = BD02225E290622B200B07322 /* RxCocoa */; };
 		BD022261290622B200B07322 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BD022260290622B200B07322 /* RxSwift */; };
 		BD022268290625B300B07322 /* RxCocoaDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD022267290625B300B07322 /* RxCocoaDemoViewController.swift */; };
+		BD5CE67B29077AB100EF593F /* SubjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5CE67A29077AB100EF593F /* SubjectViewController.swift */; };
 		BDA5FD9428FF906500B4E3DD /* DiffableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA5FD9328FF906500B4E3DD /* DiffableViewController.swift */; };
 		BDA5FD972900CF8100B4E3DD /* CObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA5FD962900CF8100B4E3DD /* CObservable.swift */; };
 		BDA5FD992900D14100B4E3DD /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA5FD982900D14100B4E3DD /* NewsViewController.swift */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		BD022267290625B300B07322 /* RxCocoaDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCocoaDemoViewController.swift; sourceTree = "<group>"; };
+		BD5CE67A29077AB100EF593F /* SubjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectViewController.swift; sourceTree = "<group>"; };
 		BDA5FD9328FF906500B4E3DD /* DiffableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableViewController.swift; sourceTree = "<group>"; };
 		BDA5FD962900CF8100B4E3DD /* CObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CObservable.swift; sourceTree = "<group>"; };
 		BDA5FD982900D14100B4E3DD /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +114,14 @@
 			path = RxDemo;
 			sourceTree = "<group>";
 		};
+		BD5CE67929077AA100EF593F /* Subject */ = {
+			isa = PBXGroup;
+			children = (
+				BD5CE67A29077AB100EF593F /* SubjectViewController.swift */,
+			);
+			path = Subject;
+			sourceTree = "<group>";
+		};
 		BDA5FD952900CDAF00B4E3DD /* MVVMSample */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +171,7 @@
 				BD022263290622E100B07322 /* Resources */,
 				BD0222662906258B00B07322 /* RxDemo */,
 				BD0222652906230A00B07322 /* Secrets */,
+				BD5CE67929077AA100EF593F /* Subject */,
 				BD022264290622F200B07322 /* ViewControllers */,
 			);
 			path = SeSACWeek1617;
@@ -255,6 +266,7 @@
 				BDA5FD9D2900D7F800B4E3DD /* News.swift in Sources */,
 				BDA5FDA22900EDEB00B4E3DD /* APIService.swift in Sources */,
 				BDD289DF28FE2E2B00EB6A8E /* AppDelegate.swift in Sources */,
+				BD5CE67B29077AB100EF593F /* SubjectViewController.swift in Sources */,
 				BDA5FD992900D14100B4E3DD /* NewsViewController.swift in Sources */,
 				BDA5FD9428FF906500B4E3DD /* DiffableViewController.swift in Sources */,
 				BDA5FDA62900EF7400B4E3DD /* SearchPhoto.swift in Sources */,
