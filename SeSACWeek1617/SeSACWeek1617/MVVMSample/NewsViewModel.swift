@@ -7,11 +7,16 @@
 
 import Foundation
 
+import RxSwift
+
 /// 글자(데이터)를 ViewModel에서 가지도록 구현한다.
 class NewsViewModel {
     
-    var pageNumber: CObservable<String> = CObservable("3000")
-    var news: CObservable<[News.NewsItem]> = CObservable(News.items)
+    // var pageNumber: CObservable<String> = CObservable("3000")
+    // var news: CObservable<[News.NewsItem]> = CObservable(News.items)
+    
+    var pageNumber = BehaviorSubject(value: "3000")
+    var news = BehaviorSubject(value: News.items)
     
     /// PageNumber의 Format을 변경해주는 메서드
     func changePageNumberFormat(of text: String) {
@@ -22,7 +27,7 @@ class NewsViewModel {
         let text = text.replacingOccurrences(of: ",", with: "")
         guard let number = Int(text) else { return }
         let result = numberFormatter.string(for: number)!
-        pageNumber.value = result
+        pageNumber.onNext(result)
     }
     
     /*
@@ -30,10 +35,10 @@ class NewsViewModel {
      */
     
     func resetNews() {
-        news.value = []
+        news.onNext([])
     }
     
     func loadNews() {
-        news.value = News.items
+        news.onNext(News.items)
     }
 }
