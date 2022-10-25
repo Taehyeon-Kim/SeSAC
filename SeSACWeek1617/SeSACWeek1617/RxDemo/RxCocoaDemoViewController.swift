@@ -22,18 +22,37 @@ final class RxCocoaDemoViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var signUpButton: UIButton!
     
+    @IBOutlet weak var nicknameLabel: UILabel!
+    
     // MARK: - Properties
-    private let disposeBag = DisposeBag()
+    private var disposeBag = DisposeBag()
+    private var nickname = Observable.just("Taekki")
     
     // MARK: - Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        nickname
+            .bind(to: nicknameLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            /// Observable의 한계 (약간 let 느낌이 아닌가)
+            /// 1) Observable은 전달만 가능 / 절대 할당을 못함
+            /// 2) Type이 다름
+            /// self.nickname = "HELLO"
+        }
         
         setTableView()
         setPickerView()
         setSwitch()
         setSign()
         setOperator()
+    }
+    
+    // ViewController deinit 되면, 알아서 disposed도 동작한다.
+    deinit {
+        print(#file, "deinit")
     }
     
     // MARK: - Private Functions
@@ -90,22 +109,34 @@ final class RxCocoaDemoViewController: UIViewController {
     }
     
     private func setPickerView() {
+        // let items = Observable.just([
+        //     "영화",
+        //     "애니메이션",
+        //     "드라마",
+        //     "기타"
+        // ])
+        //
+        // items
+        //     .bind(to: pickerView.rx.itemTitles) { (row, element) in
+        //         return element
+        //     }
+        //     .disposed(by: disposeBag)
+        //
+        // pickerView.rx.modelSelected(String.self)
+        //     .map { $0.first }
+        //     .bind(to: simpleLabel.rx.text)
+        //     .disposed(by: disposeBag)
         let items = Observable.just([
-            "영화",
-            "애니메이션",
-            "드라마",
-            "기타"
+            "First Item",
+            "Second Item",
+            "Third Item"
         ])
         
         items
-            .bind(to: pickerView.rx.itemTitles) { (row, element) in
-                return element
+            .bind(to: pickerView.rx.itemAttributedTitles) { (row, element) in
+                print(element)
+                return NSAttributedString(string: element)
             }
-            .disposed(by: disposeBag)
-        
-        pickerView.rx.modelSelected(String.self)
-            .map { $0.first }
-            .bind(to: simpleLabel.rx.text)
             .disposed(by: disposeBag)
     }
     
@@ -141,11 +172,12 @@ final class RxCocoaDemoViewController: UIViewController {
         // - 데이터 형식을 새롭게 만들어내서 맞춰준다거나 하는 식으로 해도 됨.
         // - 그러나 단순히 이벤트가 발생한 것에 대해서는 subscribe가 더 적절해보임.
         signUpButton.rx.tap
-            .subscribe { _ in
+            .withUnretained(self)
+            .subscribe { vc, _ in
                 let alert = UIAlertController(title: "Good", message: nil, preferredStyle: .alert)
                 let ok = UIAlertAction(title: "Ok", style: .cancel)
                 alert.addAction(ok)
-                self.present(alert, animated: true)
+                vc.present(alert, animated: true)
             }
         .disposed(by: disposeBag)
     }
@@ -200,24 +232,24 @@ extension RxCocoaDemoViewController {
         // 반복
         // 5번만 반복하겠다.
         // 네트워크 요청 횟수 제한.
-        Observable.repeatElement("Taekki")
-            .take(5)
+        Observable.repeatElement("Taekki")  // 다음 오퍼레이터는 무한한 상태 : Infinite Observable Sequence
+            .take(5)                        // Finite Observable Sequence
             .subscribe { value in
                 print("repeatElement - \(value)")
             } onError: { error in
                 print("repeatElement - \(error)")
             } onCompleted: {
                 print("repeatElement - completed")
-            } onDisposed: {
+            } onDisposed: {                 // deinit에 print 넣는 느낌
                 print("repeatElement - disposed")
             }
-            .disposed(by: disposeBag)
+            .disposed(by: disposeBag)       // 리소스 정리 객체
         
         // 무한한 시퀀스
         // 화면 전환되더라도 시퀀스는 살아있음.
         // error or completed되면 시퀀스 종료
         // 수동으로 dispose 시킬 필요가 있음.
-        let intervalObservable = Observable<Int>.interval(.seconds(1), scheduler: MainScheduler.instance)
+        Observable<Int>.interval(.seconds(1), scheduler: MainScheduler.instance)
             .subscribe { value in
                 print("interval - \(value)")
             } onError: { error in
@@ -227,10 +259,23 @@ extension RxCocoaDemoViewController {
             } onDisposed: {
                 print("interval - disposed")
             }
-            // .disposed(by: disposeBag)
+            .disposed(by: disposeBag)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            intervalObservable.dispose()
-        }
+        // DisposeBag: 리소스 해제 관리
+        // - 1. 시퀀스 끝날 때 / but bind
+        // - 2. class deinit이 된다면, 자동으로 해제 됨(bind 객체의 경우)
+        // - 3. dispose 직접 호출
+        // --- 구독하는 요소가 많다면 번거로움
+        // - 4. DisposeBag을 새롭게 할당하거나, nil 전달
+        // ☀️ dispose() 구독하는 것마다 별도로 관리가 필요하다.
+        
+        // /// 리소스 정리
+        // DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+        //     /// 리소스 정리를 수동으로 하는 것임
+        //     /// RootView 같은 경우는 리소스가 해제가 되지 않을 수 있다.
+        //     /// 그러므로 수동으로 처리를 해줘야 하는데
+        //     /// 이 때 DisposeBag을 교체해줌으로써 해결할 수 있다.
+        //     self.disposeBag = DisposeBag()  // 한 번에 리소스 정리
+        // }
     }
 }

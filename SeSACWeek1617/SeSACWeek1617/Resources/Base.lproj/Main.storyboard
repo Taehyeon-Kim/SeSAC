@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xel-bg-sS6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Z3U-gS-Agi">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -175,6 +175,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="reset"/>
+                                <connections>
+                                    <segue destination="Xel-bg-sS6" kind="show" id="UR2-W0-yUd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBA-X3-Zez">
                                 <rect key="frame" x="205" y="147" width="165" height="50"/>
@@ -212,14 +215,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pud-ZX-yql" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2754" y="82"/>
+            <point key="canvasLocation" x="2488" y="18"/>
         </scene>
         <!--Rx Cocoa Demo View Controller-->
         <scene sceneID="0kz-tj-99L">
             <objects>
                 <viewController id="Xel-bg-sS6" customClass="RxCocoaDemoViewController" customModule="SeSACWeek1617" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qQX-g3-Gph">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sKd-ow-kJN">
@@ -230,7 +233,7 @@
                                 </constraints>
                             </tableView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PtT-Co-SnF">
-                                <rect key="frame" x="0.0" y="648" width="390" height="162"/>
+                                <rect key="frame" x="0.0" y="625" width="390" height="162"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="162" id="S96-Q3-xjl"/>
                                 </constraints>
@@ -277,6 +280,12 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBK-9m-Sn1">
+                                <rect key="frame" x="10" y="577" width="370" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="p1h-2f-dhj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -288,24 +297,30 @@
                             <constraint firstItem="sKd-ow-kJN" firstAttribute="top" secondItem="p1h-2f-dhj" secondAttribute="top" id="FHw-2P-zL8"/>
                             <constraint firstItem="5lu-ZW-Loh" firstAttribute="top" secondItem="sKd-ow-kJN" secondAttribute="bottom" constant="20" id="PRK-Un-D8a"/>
                             <constraint firstItem="cao-hN-bYS" firstAttribute="leading" secondItem="p1h-2f-dhj" secondAttribute="leading" constant="20" id="UNf-lk-gzs"/>
+                            <constraint firstItem="p1h-2f-dhj" firstAttribute="trailing" secondItem="xBK-9m-Sn1" secondAttribute="trailing" constant="10" id="WD9-U4-keo"/>
                             <constraint firstItem="p1h-2f-dhj" firstAttribute="trailing" secondItem="cao-hN-bYS" secondAttribute="trailing" constant="20" id="bdA-6e-MZM"/>
                             <constraint firstItem="PtT-Co-SnF" firstAttribute="leading" secondItem="p1h-2f-dhj" secondAttribute="leading" id="d4X-52-d0N"/>
                             <constraint firstItem="p1h-2f-dhj" firstAttribute="bottom" secondItem="PtT-Co-SnF" secondAttribute="bottom" id="dog-Y1-6JO"/>
                             <constraint firstItem="VE0-8v-Sxt" firstAttribute="leading" secondItem="p1h-2f-dhj" secondAttribute="leading" constant="20" id="gdo-Bu-ap9"/>
+                            <constraint firstItem="PtT-Co-SnF" firstAttribute="top" secondItem="xBK-9m-Sn1" secondAttribute="bottom" constant="10" id="gpB-aN-Blr"/>
                             <constraint firstItem="TtS-qY-Kqa" firstAttribute="top" secondItem="5lu-ZW-Loh" secondAttribute="bottom" constant="80" id="hsb-5C-jx9"/>
                             <constraint firstItem="sKd-ow-kJN" firstAttribute="leading" secondItem="p1h-2f-dhj" secondAttribute="leading" id="j2m-E4-7Pm"/>
                             <constraint firstItem="p1h-2f-dhj" firstAttribute="trailing" secondItem="5lu-ZW-Loh" secondAttribute="trailing" constant="20" id="jQ1-Lr-XYh"/>
                             <constraint firstItem="cao-hN-bYS" firstAttribute="top" secondItem="VE0-8v-Sxt" secondAttribute="bottom" constant="20" id="jS8-cF-yhW"/>
+                            <constraint firstItem="xBK-9m-Sn1" firstAttribute="leading" secondItem="p1h-2f-dhj" secondAttribute="leading" constant="10" id="lax-2V-Cqx"/>
                             <constraint firstItem="X8k-mv-h6J" firstAttribute="leading" secondItem="p1h-2f-dhj" secondAttribute="leading" constant="20" id="lou-Ib-HHb"/>
+                            <constraint firstItem="xBK-9m-Sn1" firstAttribute="top" secondItem="cao-hN-bYS" secondAttribute="bottom" constant="10" id="mbg-UB-Wme"/>
                             <constraint firstItem="VE0-8v-Sxt" firstAttribute="top" secondItem="TtS-qY-Kqa" secondAttribute="bottom" constant="20" id="nVR-KK-cfK"/>
                             <constraint firstItem="p1h-2f-dhj" firstAttribute="trailing" secondItem="TtS-qY-Kqa" secondAttribute="trailing" constant="20" id="pHg-Q9-1Yh"/>
                             <constraint firstItem="X8k-mv-h6J" firstAttribute="top" secondItem="5lu-ZW-Loh" secondAttribute="bottom" constant="20" id="vTR-G5-g95"/>
                             <constraint firstItem="PtT-Co-SnF" firstAttribute="trailing" secondItem="p1h-2f-dhj" secondAttribute="trailing" id="w4J-zq-kal"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="aGx-hd-qbJ"/>
                     <connections>
                         <outlet property="emailTextField" destination="VE0-8v-Sxt" id="uZ0-es-ElI"/>
                         <outlet property="nameTextField" destination="TtS-qY-Kqa" id="Tlp-He-aU9"/>
+                        <outlet property="nicknameLabel" destination="xBK-9m-Sn1" id="cq0-t8-xcy"/>
                         <outlet property="pickerView" destination="PtT-Co-SnF" id="e1W-ji-IGb"/>
                         <outlet property="signUpButton" destination="cao-hN-bYS" id="lMR-r5-Vvb"/>
                         <outlet property="simpleLabel" destination="5lu-ZW-Loh" id="pNt-tg-5FI"/>
@@ -315,7 +330,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f3f-Fo-gMW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3810.7692307692305" y="91.706161137440759"/>
+            <point key="canvasLocation" x="3237" y="18"/>
         </scene>
     </scenes>
     <resources>
