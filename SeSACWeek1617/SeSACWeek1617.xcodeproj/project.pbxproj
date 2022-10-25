@@ -11,6 +11,7 @@
 		BD022261290622B200B07322 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BD022260290622B200B07322 /* RxSwift */; };
 		BD022268290625B300B07322 /* RxCocoaDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD022267290625B300B07322 /* RxCocoaDemoViewController.swift */; };
 		BD5CE67B29077AB100EF593F /* SubjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5CE67A29077AB100EF593F /* SubjectViewController.swift */; };
+		BD5CE67D290788BA00EF593F /* SubjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5CE67C290788BA00EF593F /* SubjectViewModel.swift */; };
 		BDA5FD9428FF906500B4E3DD /* DiffableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA5FD9328FF906500B4E3DD /* DiffableViewController.swift */; };
 		BDA5FD972900CF8100B4E3DD /* CObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA5FD962900CF8100B4E3DD /* CObservable.swift */; };
 		BDA5FD992900D14100B4E3DD /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA5FD982900D14100B4E3DD /* NewsViewController.swift */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		BD022267290625B300B07322 /* RxCocoaDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCocoaDemoViewController.swift; sourceTree = "<group>"; };
 		BD5CE67A29077AB100EF593F /* SubjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectViewController.swift; sourceTree = "<group>"; };
+		BD5CE67C290788BA00EF593F /* SubjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectViewModel.swift; sourceTree = "<group>"; };
 		BDA5FD9328FF906500B4E3DD /* DiffableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableViewController.swift; sourceTree = "<group>"; };
 		BDA5FD962900CF8100B4E3DD /* CObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CObservable.swift; sourceTree = "<group>"; };
 		BDA5FD982900D14100B4E3DD /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				BD5CE67A29077AB100EF593F /* SubjectViewController.swift */,
+				BD5CE67C290788BA00EF593F /* SubjectViewModel.swift */,
 			);
 			path = Subject;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				BDA5FDA62900EF7400B4E3DD /* SearchPhoto.swift in Sources */,
 				BDD289E128FE2E2B00EB6A8E /* SceneDelegate.swift in Sources */,
 				BDA5FD9B2900D26800B4E3DD /* NewsViewModel.swift in Sources */,
+				BD5CE67D290788BA00EF593F /* SubjectViewModel.swift in Sources */,
 				BDA5FDA42900EE3B00B4E3DD /* APIKey.swift in Sources */,
 				BDA5FDA02900ED6800B4E3DD /* DiffableViewModel.swift in Sources */,
 			);

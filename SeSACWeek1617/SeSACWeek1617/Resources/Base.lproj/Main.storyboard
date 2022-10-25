@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bla-Wc-EnY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tAh-Sz-zFN">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -339,13 +339,67 @@
                     <view key="view" contentMode="scaleToFill" id="NGY-HO-vXG">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="luw-fr-J4y">
+                                <rect key="frame" x="0.0" y="91" width="390" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="aCS-qO-hov"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Vcs-IH-cUx">
+                                <rect key="frame" x="0.0" y="135" width="390" height="675"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="OtK-Wb-s1q"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OtK-Wb-s1q" firstAttribute="trailing" secondItem="luw-fr-J4y" secondAttribute="trailing" id="2wU-e9-ocT"/>
+                            <constraint firstItem="OtK-Wb-s1q" firstAttribute="bottom" secondItem="Vcs-IH-cUx" secondAttribute="bottom" id="4B1-gN-XbP"/>
+                            <constraint firstItem="luw-fr-J4y" firstAttribute="top" secondItem="OtK-Wb-s1q" secondAttribute="top" id="As5-jc-Iba"/>
+                            <constraint firstItem="OtK-Wb-s1q" firstAttribute="trailing" secondItem="Vcs-IH-cUx" secondAttribute="trailing" id="XSH-l7-SQM"/>
+                            <constraint firstItem="Vcs-IH-cUx" firstAttribute="leading" secondItem="OtK-Wb-s1q" secondAttribute="leading" id="XcJ-KW-o1H"/>
+                            <constraint firstItem="luw-fr-J4y" firstAttribute="leading" secondItem="NGY-HO-vXG" secondAttribute="leading" id="ZkW-5U-AIq"/>
+                            <constraint firstItem="Vcs-IH-cUx" firstAttribute="top" secondItem="luw-fr-J4y" secondAttribute="bottom" id="a2z-cj-6Gk"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="sBu-lZ-1vc">
+                        <barButtonItem key="leftBarButtonItem" title="새로운 연락처" id="qkW-BD-sSQ"/>
+                        <rightBarButtonItems>
+                            <barButtonItem title="추가" id="uSM-Jk-jOd"/>
+                            <barButtonItem title="리셋" id="bTm-ye-cDM"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addButton" destination="uSM-Jk-jOd" id="b8w-D1-Vgc"/>
+                        <outlet property="newButton" destination="qkW-BD-sSQ" id="H5g-1M-S1F"/>
+                        <outlet property="resetButton" destination="bTm-ye-cDM" id="Z19-KD-mPX"/>
+                        <outlet property="searchBar" destination="luw-fr-J4y" id="COe-Tc-Xyc"/>
+                        <outlet property="tableView" destination="Vcs-IH-cUx" id="z1P-F2-KgH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mOF-b0-Mvr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4063" y="18"/>
+            <point key="canvasLocation" x="4725" y="18"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7Sy-wj-r08">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tAh-Sz-zFN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="l3r-Xo-64b">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Bla-Wc-EnY" kind="relationship" relationship="rootViewController" id="R1w-1B-wO0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ohC-qq-x1Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4061.5384615384614" y="17.772511848341232"/>
         </scene>
     </scenes>
     <resources>
