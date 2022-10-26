@@ -10,6 +10,11 @@ import Foundation
 struct Photo: Identifiable, Hashable {
     let id = UUID()
     let imagePath: String
+    var index = 0
+    
+    init(imagePath: String) {
+        self.imagePath = imagePath
+    }
 }
 
 extension Photo {
@@ -26,7 +31,7 @@ extension Photo {
             Photo(imagePath: ""),
             Photo(imagePath: ""),
             Photo(imagePath: ""),
-            Photo(imagePath: ""),
+            Photo(imagePath: "")
         ]
     }
 }
