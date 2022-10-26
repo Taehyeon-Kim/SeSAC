@@ -1,0 +1,90 @@
+//
+//  SubscribeViewController.swift
+//  SeSACWeek1617
+//
+//  Created by taekki on 2022/10/26.
+//
+
+import UIKit
+
+import RxSwift
+import RxCocoa
+
+final class SubscribeViewController: UIViewController {
+    
+    @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var label2: UILabel!
+    
+    let disposeBag = DisposeBag()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // mine
+        // button.rx.tap
+        //     .map { "안녕 반가워" }
+        //     .bind(to: label.rx.text)
+        //     .disposed(by: disposeBag)
+        
+        // case 1.
+        button.rx.tap
+            .subscribe { [weak self] _ in
+                self?.label.text = "안녕 반가워 "
+            }
+            .disposed(by: disposeBag)
+        
+        // case 2.
+        button.rx.tap
+            .withUnretained(self)
+            .subscribe { vc, _ in
+                vc.label.text = "안녕 반가워 "
+            }
+            .disposed(by: disposeBag)
+        
+        // case 3. 메인 쓰레드 동작(UI 업데이트)
+        // 네트워크 통신이나 파일 다운로드 등의 백그라운드 작업도 같이 진행될 수 있음
+        button.rx.tap
+            .map {}
+            .map {}
+            .map {}
+            .observe(on: MainScheduler.instance) // 메인 쓰레드로 동작하게 변경
+            .map {}
+            .map {}
+            .map {}
+            .withUnretained(self)
+            .subscribe { vc, _ in
+                vc.label.text = "안녕 반가워 "
+            }
+            .disposed(by: disposeBag)
+        
+        // case 4. bind
+        // subscribe, mainScheduler, error X
+        // UI 동작의 경우 사용이 적합
+        button.rx.tap
+            .withUnretained(self)
+            .bind { vc, _ in
+                vc.label.text = "안녕 반가워 "
+            }
+            .disposed(by: disposeBag)
+        
+        // case 5.
+        button.rx.tap
+            .map { "안녕 반가워" }
+            .bind(to: label.rx.text, label2.rx.text)
+            .disposed(by: disposeBag)
+        
+        // case 6.
+        // driver traits: bind + stream 공유(리소스 낭비 방지, share()_)
+        // driver 객체가 share를 포함하고 있음.
+        button.rx.tap
+            .map { "안녕 반가워" }
+            .asDriver(onErrorJustReturn: "")
+            .drive(label.rx.text, label2.rx.text)
+            .disposed(by: disposeBag)
+    }
+}
+
+extension SubscribeViewController {
+    
+}

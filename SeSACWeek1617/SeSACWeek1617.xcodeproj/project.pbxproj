@@ -17,6 +17,7 @@
 		BD5CE688290886CB00EF593F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BD5CE687290886CB00EF593F /* SnapKit */; };
 		BD5CE68A2908873C00EF593F /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5CE6892908873C00EF593F /* Photo.swift */; };
 		BD5CE68C290888E000EF593F /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5CE68B290888E000EF593F /* PhotoCell.swift */; };
+		BD65D45B2908CBDD0032C8AB /* SubscribeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65D45A2908CBDD0032C8AB /* SubscribeViewController.swift */; };
 		BDA5FD9428FF906500B4E3DD /* DiffableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA5FD9328FF906500B4E3DD /* DiffableViewController.swift */; };
 		BDA5FD972900CF8100B4E3DD /* CObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA5FD962900CF8100B4E3DD /* CObservable.swift */; };
 		BDA5FD992900D14100B4E3DD /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA5FD982900D14100B4E3DD /* NewsViewController.swift */; };
@@ -45,6 +46,7 @@
 		BD5CE6842908867500EF593F /* AlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
 		BD5CE6892908873C00EF593F /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		BD5CE68B290888E000EF593F /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		BD65D45A2908CBDD0032C8AB /* SubscribeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeViewController.swift; sourceTree = "<group>"; };
 		BDA5FD9328FF906500B4E3DD /* DiffableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableViewController.swift; sourceTree = "<group>"; };
 		BDA5FD962900CF8100B4E3DD /* CObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CObservable.swift; sourceTree = "<group>"; };
 		BDA5FD982900D14100B4E3DD /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +148,14 @@
 			path = Album;
 			sourceTree = "<group>";
 		};
+		BD65D4592908CBCB0032C8AB /* Rx */ = {
+			isa = PBXGroup;
+			children = (
+				BD65D45A2908CBDD0032C8AB /* SubscribeViewController.swift */,
+			);
+			path = Rx;
+			sourceTree = "<group>";
+		};
 		BDA5FD952900CDAF00B4E3DD /* MVVMSample */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +198,7 @@
 		BDD289DD28FE2E2B00EB6A8E /* SeSACWeek1617 */ = {
 			isa = PBXGroup;
 			children = (
+				BD65D4592908CBCB0032C8AB /* Rx */,
 				BD5CE6812908861600EF593F /* Album */,
 				BDD289EC28FE2E2D00EB6A8E /* Info.plist */,
 				BD022262290622BC00B07322 /* App */,
@@ -289,6 +300,7 @@
 				BD5CE6852908867500EF593F /* AlbumViewModel.swift in Sources */,
 				BDA5FD972900CF8100B4E3DD /* CObservable.swift in Sources */,
 				BDD289F328FE398900EB6A8E /* SimpleCollectionViewController.swift in Sources */,
+				BD65D45B2908CBDD0032C8AB /* SubscribeViewController.swift in Sources */,
 				BDD289E328FE2E2B00EB6A8E /* SimpleTableViewController.swift in Sources */,
 				BD022268290625B300B07322 /* RxCocoaDemoViewController.swift in Sources */,
 				BDA5FD9D2900D7F800B4E3DD /* News.swift in Sources */,

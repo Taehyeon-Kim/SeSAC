@@ -57,7 +57,7 @@ final class DiffableViewController: UIViewController {
             } onDisposed: {
                 print("disposeBag")
             }
-            .disposed(by: DisposeBag())
+            .disposed(by: disposeBag)
 
         searchBar.rx.text.orEmpty
             .debounce(.seconds(1), scheduler: MainScheduler.instance)
