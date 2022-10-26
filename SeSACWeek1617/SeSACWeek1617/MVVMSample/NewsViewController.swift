@@ -33,7 +33,7 @@ final class NewsViewController: UIViewController {
     private func bind() {
         viewModel.news
             .withUnretained(self)
-            .subscribe { vc, news in
+            .bind { vc, news in
                 var snapshot = NSDiffableDataSourceSnapshot<Int, News.NewsItem>()
                 snapshot.appendSections([0])
                 snapshot.appendItems(news)
@@ -54,14 +54,14 @@ final class NewsViewController: UIViewController {
         
         loadButton.rx.tap
             .withUnretained(self)
-            .subscribe { vc, elem in
+            .bind { vc, elem in
                 vc.viewModel.loadNews()
             }
             .disposed(by: disposeBag)
         
         resetButton.rx.tap
             .withUnretained(self)
-            .subscribe { vc, elem in
+            .bind { vc, elem in
                 vc.viewModel.resetNews()
             }
             .disposed(by: disposeBag)
