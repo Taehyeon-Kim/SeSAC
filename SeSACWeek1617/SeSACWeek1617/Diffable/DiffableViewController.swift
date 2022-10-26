@@ -8,6 +8,8 @@
 import UIKit
 
 import Kingfisher
+import RxCocoa
+import RxSwift
 
 final class DiffableViewController: UIViewController {
     
@@ -15,6 +17,7 @@ final class DiffableViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     
     var viewModel = DiffableViewModel()
+    var disposeBag = DisposeBag()
     
     /// <SectionIdentifierType, ItemIdentifierType>
     /// <Section, Row에 들어갈 아이템>
@@ -27,18 +30,43 @@ final class DiffableViewController: UIViewController {
         collectionView.collectionViewLayout = createLayout()
         configureDataSource()
         collectionView.delegate = self
-        searchBar.delegate = self
+        // searchBar.delegate = self
         
         bind()
     }
     
     func bind() {
-        viewModel.photoList.bind { photo in
-            var snapshot = NSDiffableDataSourceSnapshot<Int, SearchResult>()
-            snapshot.appendSections([0])
-            snapshot.appendItems(photo.results)
-            self.dataSource.apply(snapshot)
-        }
+        // viewModel.photoList.bind { photo in
+        //     var snapshot = NSDiffableDataSourceSnapshot<Int, SearchResult>()
+        //     snapshot.appendSections([0])
+        //     snapshot.appendItems(photo.results)
+        //     self.dataSource.apply(snapshot)
+        // }
+        
+        viewModel.photoList
+            .withUnretained(self)
+            .subscribe { vc, photo in
+                var snapshot = NSDiffableDataSourceSnapshot<Int, SearchResult>()
+                snapshot.appendSections([0])
+                snapshot.appendItems(photo.results)
+                vc.dataSource.apply(snapshot)
+            } onError: { error in
+                print("=====Error:", error)
+            } onCompleted: {
+                print("completed")
+            } onDisposed: {
+                print("disposeBag")
+            }
+            .disposed(by: DisposeBag())
+
+        searchBar.rx.text.orEmpty
+            .debounce(.seconds(1), scheduler: MainScheduler.instance)
+            .distinctUntilChanged()
+            .withUnretained(self)
+            .subscribe { vc, value in
+                vc.viewModel.requestSearchPhoto(query: value)
+            }
+            .disposed(by: disposeBag)
     }
 }
 
@@ -54,12 +82,12 @@ extension DiffableViewController: UICollectionViewDelegate {
     }
 }
 
-extension DiffableViewController: UISearchBarDelegate {
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        viewModel.requestSearchPhoto(query: searchBar.text!)
-    }
-}
+// extension DiffableViewController: UISearchBarDelegate {
+//
+//     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+//         viewModel.requestSearchPhoto(query: searchBar.text!)
+//     }
+// }
 
 extension DiffableViewController {
     
