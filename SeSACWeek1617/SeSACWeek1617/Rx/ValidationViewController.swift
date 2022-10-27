@@ -54,7 +54,7 @@ extension ValidationViewController {
             .disposed(by: disposeBag)
         
         viewModel.validText
-            .asDriver() // Driver Traits로 변경, 특화된 옵저버블
+            .asDriver() // Driver Traits로 변경, 특화된 옵저버블 / drive에서는 에러방출이 불가하기 때문에 윗단에서 에러핸들링이 필요함.
             .drive(validationLabel.rx.text)
             .disposed(by: disposeBag)
     }
