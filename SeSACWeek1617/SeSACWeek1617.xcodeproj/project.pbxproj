@@ -10,6 +10,8 @@
 		BD02225F290622B200B07322 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = BD02225E290622B200B07322 /* RxCocoa */; };
 		BD022261290622B200B07322 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BD022260290622B200B07322 /* RxSwift */; };
 		BD022268290625B300B07322 /* RxCocoaDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD022267290625B300B07322 /* RxCocoaDemoViewController.swift */; };
+		BD15299C290A080200FFE3D2 /* ValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD15299B290A080200FFE3D2 /* ValidationViewController.swift */; };
+		BD15299E290A087E00FFE3D2 /* ValidationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD15299D290A087E00FFE3D2 /* ValidationViewModel.swift */; };
 		BD5CE67B29077AB100EF593F /* SubjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5CE67A29077AB100EF593F /* SubjectViewController.swift */; };
 		BD5CE67D290788BA00EF593F /* SubjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5CE67C290788BA00EF593F /* SubjectViewModel.swift */; };
 		BD5CE6832908862000EF593F /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5CE6822908862000EF593F /* AlbumViewController.swift */; };
@@ -40,6 +42,8 @@
 
 /* Begin PBXFileReference section */
 		BD022267290625B300B07322 /* RxCocoaDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCocoaDemoViewController.swift; sourceTree = "<group>"; };
+		BD15299B290A080200FFE3D2 /* ValidationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationViewController.swift; sourceTree = "<group>"; };
+		BD15299D290A087E00FFE3D2 /* ValidationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationViewModel.swift; sourceTree = "<group>"; };
 		BD5CE67A29077AB100EF593F /* SubjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectViewController.swift; sourceTree = "<group>"; };
 		BD5CE67C290788BA00EF593F /* SubjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectViewModel.swift; sourceTree = "<group>"; };
 		BD5CE6822908862000EF593F /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +156,8 @@
 			isa = PBXGroup;
 			children = (
 				BD65D45A2908CBDD0032C8AB /* SubscribeViewController.swift */,
+				BD15299B290A080200FFE3D2 /* ValidationViewController.swift */,
+				BD15299D290A087E00FFE3D2 /* ValidationViewModel.swift */,
 			);
 			path = Rx;
 			sourceTree = "<group>";
@@ -198,13 +204,13 @@
 		BDD289DD28FE2E2B00EB6A8E /* SeSACWeek1617 */ = {
 			isa = PBXGroup;
 			children = (
-				BD65D4592908CBCB0032C8AB /* Rx */,
-				BD5CE6812908861600EF593F /* Album */,
 				BDD289EC28FE2E2D00EB6A8E /* Info.plist */,
+				BD5CE6812908861600EF593F /* Album */,
 				BD022262290622BC00B07322 /* App */,
 				BDA5FDA72900EF9400B4E3DD /* Diffable */,
 				BDA5FD952900CDAF00B4E3DD /* MVVMSample */,
 				BD022263290622E100B07322 /* Resources */,
+				BD65D4592908CBCB0032C8AB /* Rx */,
 				BD0222662906258B00B07322 /* RxDemo */,
 				BD0222652906230A00B07322 /* Secrets */,
 				BD5CE67929077AA100EF593F /* Subject */,
@@ -310,12 +316,14 @@
 				BD5CE67B29077AB100EF593F /* SubjectViewController.swift in Sources */,
 				BDA5FD992900D14100B4E3DD /* NewsViewController.swift in Sources */,
 				BDA5FD9428FF906500B4E3DD /* DiffableViewController.swift in Sources */,
+				BD15299E290A087E00FFE3D2 /* ValidationViewModel.swift in Sources */,
 				BD5CE68A2908873C00EF593F /* Photo.swift in Sources */,
 				BDA5FDA62900EF7400B4E3DD /* SearchPhoto.swift in Sources */,
 				BDD289E128FE2E2B00EB6A8E /* SceneDelegate.swift in Sources */,
 				BDA5FD9B2900D26800B4E3DD /* NewsViewModel.swift in Sources */,
 				BD5CE68C290888E000EF593F /* PhotoCell.swift in Sources */,
 				BD5CE67D290788BA00EF593F /* SubjectViewModel.swift in Sources */,
+				BD15299C290A080200FFE3D2 /* ValidationViewController.swift in Sources */,
 				BDA5FDA42900EE3B00B4E3DD /* APIKey.swift in Sources */,
 				BDA5FDA02900ED6800B4E3DD /* DiffableViewModel.swift in Sources */,
 			);

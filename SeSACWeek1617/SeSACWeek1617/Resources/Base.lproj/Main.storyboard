@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DnO-jG-Cl9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WNJ-eE-TfB">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -99,6 +99,64 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sy9-v4-2VE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="357" y="692"/>
+        </scene>
+        <!--Validation View Controller-->
+        <scene sceneID="IxZ-qX-RH9">
+            <objects>
+                <viewController storyboardIdentifier="ValidationViewController" id="WNJ-eE-TfB" customClass="ValidationViewController" customModule="SeSACWeek1617" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BWj-fw-9QA">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="고래밥" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6aH-4c-6gT">
+                                <rect key="frame" x="20" y="67" width="350" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="yVQ-be-TwF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOj-Cl-7SI">
+                                <rect key="frame" x="20" y="207" width="350" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Eus-19-Q6g"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8자 이상!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBS-nd-aTp">
+                                <rect key="frame" x="20" y="137" width="350" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3Py-Ym-SKk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="H3M-ez-9WV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zOj-Cl-7SI" firstAttribute="leading" secondItem="H3M-ez-9WV" secondAttribute="leading" constant="20" id="Beg-Pc-CYt"/>
+                            <constraint firstItem="zOj-Cl-7SI" firstAttribute="top" secondItem="DBS-nd-aTp" secondAttribute="bottom" constant="20" id="CDh-dP-C4c"/>
+                            <constraint firstItem="6aH-4c-6gT" firstAttribute="top" secondItem="H3M-ez-9WV" secondAttribute="top" constant="20" id="CxS-jk-S0Y"/>
+                            <constraint firstItem="H3M-ez-9WV" firstAttribute="trailing" secondItem="6aH-4c-6gT" secondAttribute="trailing" constant="20" id="K2q-XI-3C6"/>
+                            <constraint firstItem="DBS-nd-aTp" firstAttribute="leading" secondItem="H3M-ez-9WV" secondAttribute="leading" constant="20" id="gUk-lg-vEu"/>
+                            <constraint firstItem="H3M-ez-9WV" firstAttribute="trailing" secondItem="zOj-Cl-7SI" secondAttribute="trailing" constant="20" id="j5C-VT-QJi"/>
+                            <constraint firstItem="H3M-ez-9WV" firstAttribute="trailing" secondItem="DBS-nd-aTp" secondAttribute="trailing" constant="20" id="juI-7X-PeQ"/>
+                            <constraint firstItem="6aH-4c-6gT" firstAttribute="leading" secondItem="H3M-ez-9WV" secondAttribute="leading" constant="20" id="myB-4v-lgL"/>
+                            <constraint firstItem="DBS-nd-aTp" firstAttribute="top" secondItem="6aH-4c-6gT" secondAttribute="bottom" constant="20" id="yYL-Ze-Qzh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="6aH-4c-6gT" id="1EE-6j-k8h"/>
+                        <outlet property="stepButton" destination="zOj-Cl-7SI" id="lob-lm-UtP"/>
+                        <outlet property="validationLabel" destination="DBS-nd-aTp" id="vjp-bj-esi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Y1-eu-tC3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1062" y="692"/>
         </scene>
         <!--Simple Collection View Controller-->
         <scene sceneID="89G-jb-edQ">
