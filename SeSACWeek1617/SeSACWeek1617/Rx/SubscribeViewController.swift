@@ -21,6 +21,21 @@ final class SubscribeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        Observable.of(1, 2, 3, 4, 5, 6, 7, 8, 9 , 10)
+            .skip(3)
+            .filter { $0 % 2 == 0 }
+            .map { $0 * 2 }
+            // .debug()
+            .subscribe {
+                print("값 : \($0)")
+            } onCompleted: {
+                print("Completed")
+            } onDisposed: {
+                print("Disposed")
+            }
+            .disposed(by: disposeBag)
+
+        
         // mine
         // button.rx.tap
         //     .map { "안녕 반가워" }
