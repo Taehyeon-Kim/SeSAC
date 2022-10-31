@@ -7,6 +7,7 @@
 
 import UIKit
 
+import RxAlamofire
 import RxSwift
 import RxCocoa
 
@@ -21,11 +22,15 @@ final class SubscribeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        rxAlamofire()
+    }
+    
+    private func rx() {
         Observable.of(1, 2, 3, 4, 5, 6, 7, 8, 9 , 10)
             .skip(3)
             .filter { $0 % 2 == 0 }
             .map { $0 * 2 }
-            // .debug()
+        // .debug()
             .subscribe {
                 print("값 : \($0)")
             } onCompleted: {
@@ -34,7 +39,7 @@ final class SubscribeViewController: UIViewController {
                 print("Disposed")
             }
             .disposed(by: disposeBag)
-
+        
         
         // mine
         // button.rx.tap
@@ -102,4 +107,22 @@ final class SubscribeViewController: UIViewController {
 
 extension SubscribeViewController {
     
+    private func rxAlamofire() {
+        let url = APIKey.searchURL + "apple"
+        request(.get, url, headers: ["Authorizatio": APIKey.authorization])
+            .debug("DEBUG")
+            .data()
+            .decode(type: SearchPhoto.self, decoder: JSONDecoder())
+            .subscribe { data in
+                print("rxAlamofire + \(data)")
+            } onError: { [weak self] error in
+                self?.alert(with: error.localizedDescription)
+            }.disposed(by: disposeBag)
+    }
+    
+    private func alert(with message: String) {
+        let alertController = UIAlertController(title: "에러 발생", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "확인", style: .cancel)
+        present(alertController, animated: true)
+    }
 }
