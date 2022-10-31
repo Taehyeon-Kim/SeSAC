@@ -36,8 +36,10 @@ final class SubjectViewController: UIViewController {
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "ContactCell")
         
+        // 원래는 초기에는 빈 값 : [] >> 서치바에 값이 들어가면서 업데이트
         viewModel.list
-            .bind(to: tableView.rx.items(
+            .asDriver(onErrorJustReturn: [])
+            .drive(tableView.rx.items(
                 cellIdentifier: "ContactCell",
                 cellType: UITableViewCell.self)
             ) { row, elem, cell in
@@ -66,15 +68,16 @@ final class SubjectViewController: UIViewController {
             }
             .disposed(by: disposeBag)
         
-        searchBar.rx.text.orEmpty
-            .debounce(.milliseconds(500), scheduler: MainScheduler.instance)
-            .distinctUntilChanged()
-            .withUnretained(self)
-            .subscribe { vc, query in
-                print(query)
-                vc.viewModel.filterData(query: query)
-            }
-            .disposed(by: disposeBag)
+        // 해당 부분에서 데이터에 대한 처리가 되지 않으면, 초기 화면에 아무것도 보여지지 않음
+        // searchBar.rx.text.orEmpty
+        //     .debounce(.milliseconds(500), scheduler: MainScheduler.instance)
+        //     .distinctUntilChanged()
+        //     .withUnretained(self)
+        //     .subscribe { vc, query in
+        //         print("검색어: \(query)")
+        //         vc.viewModel.filterData(query: query)
+        //     }
+        //     .disposed(by: disposeBag)
     }
     
     private func subject() {

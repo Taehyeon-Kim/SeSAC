@@ -22,7 +22,7 @@ final class SubjectViewModel {
         Contact(name: "Hue", age: 21, number: "01034534562")
     ]
     
-    var list = PublishSubject<[Contact]>()
+    var list = PublishSubject<[Contact]>()  // 구독 전에 이벤트를 전달한다면?
 
     func fetchData() {
         list.onNext(contactData)
