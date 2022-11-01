@@ -9,9 +9,32 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-final class ValidationViewModel {
-
-    // 절대적으로 변경되지 않을 값이라면 Rx를 사용하지 않아도 됨.
-    // 실시간으로 변경될 가능성이 있다면 Rx 적합
-    let validText = BehaviorRelay(value: "닉네임은 최소 8자 이상 필요해요")
+struct ValidationViewModel {
+    
+    struct Input {
+        let text: ControlProperty<String?>
+        let stepButtonDidTap: ControlEvent<Void>
+    }
+    
+    struct Output {
+        let validText: Driver<String>
+        let validation: Observable<Bool>
+        let stepButtonDidTap: ControlEvent<Void>
+    }
+    
+    func transform(input: Input) -> Output {
+        let validText = BehaviorRelay(value: "닉네임은 최소 8자 이상 필요해요").asDriver()
+        
+        // 데이터스트림을 바꿔가는 작업도 ViewModel로 숨겨놓음
+        let validation = input.text
+            .orEmpty
+            .map { $0.count >= 8 }
+            .share()
+        
+        return Output(
+            validText: validText,
+            validation: validation,
+            stepButtonDidTap: input.stepButtonDidTap
+        )
+    }
 }

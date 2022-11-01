@@ -30,32 +30,30 @@ final class ValidationViewController: UIViewController {
 extension ValidationViewController {
     
     private func bind() {
+        let input = ValidationViewModel.Input(
+            text: nameTextField.rx.text,
+            stepButtonDidTap: stepButton.rx.tap)
+        let output = viewModel.transform(input: input)
         
-        let validation = nameTextField.rx.text // String?
-            .orEmpty // String
-            .map { $0.count >= 8 }  // Bool
-            .share()
-        
-        validation
-            .bind(to: stepButton.rx.isEnabled, validationLabel.rx.isHidden) // next 이벤트만 방출(물론 subscribe 사용해도 됨. 그런데 목적상 맞는 것은 bind, 가변 매개변수를 받을 수 있음.
-            .disposed(by: disposeBag)
-        
-        validation
-            .withUnretained(self)
-            .bind { vc, value in
-                vc.stepButton.backgroundColor = value ? .systemPink : .lightGray
-            }
-            .disposed(by: disposeBag)
-        
-        stepButton.rx.tap
+        output.stepButtonDidTap
             .bind { _ in
                 print("SHOW ALERT")
             }
             .disposed(by: disposeBag)
         
-        viewModel.validText
-            .asDriver() // Driver Traits로 변경, 특화된 옵저버블 / drive에서는 에러방출이 불가하기 때문에 윗단에서 에러핸들링이 필요함.
+        output.validText
             .drive(validationLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        output.validation
+            .bind(to: stepButton.rx.isEnabled, validationLabel.rx.isHidden) // next 이벤트만 방출(물론 subscribe 사용해도 됨. 그런데 목적상 맞는 것은 bind, 가변 매개변수를 받을 수 있음.
+            .disposed(by: disposeBag)
+        
+        output.validation
+            .withUnretained(self)
+            .bind { vc, value in
+                vc.stepButton.backgroundColor = value ? .systemPink : .lightGray
+            }
             .disposed(by: disposeBag)
     }
     
