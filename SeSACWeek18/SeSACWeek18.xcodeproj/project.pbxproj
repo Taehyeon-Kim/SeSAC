@@ -30,6 +30,13 @@
 		BDDC20112913520000825AA6 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC20102913520000825AA6 /* Network.swift */; };
 		BDDC20132913533E00825AA6 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC20122913533D00825AA6 /* ProfileViewModel.swift */; };
 		BDDC2017291362F100825AA6 /* SubscriptExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC2016291362F100825AA6 /* SubscriptExample.swift */; };
+		BDDC201B2913F25D00825AA6 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC201A2913F25D00825AA6 /* HTTPMethod.swift */; };
+		BDDC201D2913F47200825AA6 /* URLSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC201C2913F47200825AA6 /* URLSessionManager.swift */; };
+		BDDC201F2913F4D000825AA6 /* DataEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC201E2913F4D000825AA6 /* DataEncoder.swift */; };
+		BDDC20212913F4F100825AA6 /* DataDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC20202913F4F100825AA6 /* DataDecoder.swift */; };
+		BDDC20232913F5E900825AA6 /* URLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC20222913F5E900825AA6 /* URLRequestBuilder.swift */; };
+		BDDC20252914000700825AA6 /* BaseSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC20242914000700825AA6 /* BaseSessionManager.swift */; };
+		BDDC20272914028800825AA6 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC20262914028800825AA6 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +59,13 @@
 		BDDC20102913520000825AA6 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		BDDC20122913533D00825AA6 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		BDDC2016291362F100825AA6 /* SubscriptExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptExample.swift; sourceTree = "<group>"; };
+		BDDC201A2913F25D00825AA6 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		BDDC201C2913F47200825AA6 /* URLSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionManager.swift; sourceTree = "<group>"; };
+		BDDC201E2913F4D000825AA6 /* DataEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataEncoder.swift; sourceTree = "<group>"; };
+		BDDC20202913F4F100825AA6 /* DataDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDecoder.swift; sourceTree = "<group>"; };
+		BDDC20222913F5E900825AA6 /* URLRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestBuilder.swift; sourceTree = "<group>"; };
+		BDDC20242914000700825AA6 /* BaseSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSessionManager.swift; sourceTree = "<group>"; };
+		BDDC20262914028800825AA6 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,12 +105,13 @@
 			isa = PBXGroup;
 			children = (
 				BD89B8E629120AF1007C804F /* Info.plist */,
+				BDDC2016291362F100825AA6 /* SubscriptExample.swift */,
 				BD89B901291258F2007C804F /* App */,
 				BD89B8FD291258DB007C804F /* Core */,
 				BD89B8F129121C3E007C804F /* Network */,
 				BD89B900291258E8007C804F /* Resources */,
 				BD89B90229125903007C804F /* Scenes */,
-				BDDC2016291362F100825AA6 /* SubscriptExample.swift */,
+				BDDC20182913F24700825AA6 /* URLSessionNetwork */,
 			);
 			path = SeSACWeek18;
 			sourceTree = "<group>";
@@ -174,6 +189,28 @@
 				BD89B8F5291258AC007C804F /* SignUp */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		BDDC20182913F24700825AA6 /* URLSessionNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				BDDC20192913F25300825AA6 /* Foundation */,
+			);
+			path = URLSessionNetwork;
+			sourceTree = "<group>";
+		};
+		BDDC20192913F25300825AA6 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				BDDC20202913F4F100825AA6 /* DataDecoder.swift */,
+				BDDC201E2913F4D000825AA6 /* DataEncoder.swift */,
+				BDDC201A2913F25D00825AA6 /* HTTPMethod.swift */,
+				BDDC20222913F5E900825AA6 /* URLRequestBuilder.swift */,
+				BDDC201C2913F47200825AA6 /* URLSessionManager.swift */,
+				BDDC20242914000700825AA6 /* BaseSessionManager.swift */,
+				BDDC20262914028800825AA6 /* NetworkError.swift */,
+			);
+			path = Foundation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,14 +302,21 @@
 				BD89B8FA291258CD007C804F /* SignUpViewController.swift in Sources */,
 				BDDC20112913520000825AA6 /* Network.swift in Sources */,
 				BD89B8D929120AF0007C804F /* AppDelegate.swift in Sources */,
+				BDDC201D2913F47200825AA6 /* URLSessionManager.swift in Sources */,
 				BD89B8F029120EF7007C804F /* APIService.swift in Sources */,
 				BD89B91529125EB7007C804F /* Bindable.swift in Sources */,
 				BD89B8FF291258E2007C804F /* BaseViewController.swift in Sources */,
 				BD89B8DB29120AF0007C804F /* SceneDelegate.swift in Sources */,
+				BDDC20232913F5E900825AA6 /* URLRequestBuilder.swift in Sources */,
+				BDDC201B2913F25D00825AA6 /* HTTPMethod.swift in Sources */,
 				BDDC2017291362F100825AA6 /* SubscriptExample.swift in Sources */,
 				BD89B8FC291258D7007C804F /* ProfileViewController.swift in Sources */,
+				BDDC20252914000700825AA6 /* BaseSessionManager.swift in Sources */,
+				BDDC20212913F4F100825AA6 /* DataDecoder.swift in Sources */,
+				BDDC20272914028800825AA6 /* NetworkError.swift in Sources */,
 				BD89B8F329121C4A007C804F /* Endpoint.swift in Sources */,
 				BDDC20132913533E00825AA6 /* ProfileViewModel.swift in Sources */,
+				BDDC201F2913F4D000825AA6 /* DataEncoder.swift in Sources */,
 				BD89B91329125E5C007C804F /* LoginViewModel.swift in Sources */,
 				BD89B91129125E3C007C804F /* ViewModelType.swift in Sources */,
 			);

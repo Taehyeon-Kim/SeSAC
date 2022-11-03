@@ -21,12 +21,23 @@ final class ProfileViewController: BaseViewController, Bindable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let base = URL(string: SeSACAPI.profile.baseURL)
+        let sessionManager = BaseSessionManager(base: base, session: URLSession.shared)
         
-        let phone = Phone()
-        print(phone[2])
-        
-        bind()
-        checkCOW()
+        sessionManager.request()
+            .add(path: SeSACAPI.profile.path)
+            .add(headers: [
+                "Authorization": "Bearer \(UserDefaults.standard.string(forKey: "token") ?? "")"
+            ])
+            .method(.get)
+            .data(type: UserResponse.self, decoder: JSONDecoder())
+            .subscribe { response in
+                print(response)
+                print("🎊 :: 프로필 불로오기 성공 :: \(response.user)")
+            } onFailure: { error in
+                print("😿 :: 프로필 불로오기 실패 :: \(error.localizedDescription)")
+            }.disposed(by: disposeBag)
     }
     
     override func attributes() {
