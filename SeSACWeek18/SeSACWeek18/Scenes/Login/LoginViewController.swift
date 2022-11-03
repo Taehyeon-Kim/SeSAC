@@ -24,6 +24,11 @@ final class LoginViewController: BaseViewController, Bindable {
         static let loginButtonRadius = 4.0
     }
     
+    enum LoginState: String {
+        case success = "로그인 성공"
+        case fail = "로그인 실패"
+    }
+    
     // MARK: - UI
     
     private let messageLabel = UILabel()
@@ -116,28 +121,30 @@ extension LoginViewController {
             .bind(to: loginButton.rx.backgroundColor)
             .disposed(by: disposeBag)
         
-        output.doLogin
-            .withUnretained(self)
-            .subscribe()
-            .disposed(by: disposeBag)
+        // output.doLogin
+        //     .withUnretained(self)
+        //     .subscribe()
+        //     .disposed(by: disposeBag)
         
         output.result
-            .bind { result in
+            .withUnretained(self)
+            .bind { vc, result in
                 print("🕹 성공 시 :: \(result) :: 화면전환하자")
-                // TODO: 화면전환코드 작성
+                vc.presentAlert(with: LoginState.success.rawValue, message: result.token)
+                
             }.disposed(by: disposeBag)
         
         output.error
             .withUnretained(self)
             .bind { vc, error in
                 print("✂️ 실패 시 :: \(error)")
-                vc.presentAlert(with: error)
+                vc.presentAlert(with: LoginState.fail.rawValue, message: error)
                 
             }.disposed(by: disposeBag)
     }
     
-    private func presentAlert(with title: String) {
-        let alertController = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+    private func presentAlert(with title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "확인", style: .cancel)
         alertController.addAction(okAction)
         present(alertController, animated: true)

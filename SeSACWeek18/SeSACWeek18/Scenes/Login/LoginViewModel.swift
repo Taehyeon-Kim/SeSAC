@@ -26,12 +26,15 @@ final class LoginViewModel: ViewModelType {
     
     struct Output {
         let isEnabled: Observable<Bool>
-        let doLogin: Observable<Void?>
+        // let doLogin: Observable<Void?>
         let result: PublishRelay<APIService.LoginResponse>
         let error: PublishRelay<String>
     }
     
-    // https://velog.io/@horeng2/Swift-RxSwift-map-flatMap%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90%EA%B3%BC-%EC%9A%A9%EB%8F%84
+    // ======================================================
+    // Network(Login API Call) -> ViewModel -> Output -> View
+    // ======================================================
+    
     func transform(input: Input) -> Output {
         let credential = Observable.combineLatest(
             input.emailText.orEmpty.asObservable(),
@@ -39,12 +42,15 @@ final class LoginViewModel: ViewModelType {
         let isEnabled = credential.map { $0.count > 6 && $1.count > 6 }
         
         // 통신을 map 부분에서 진행한다.
-        let result = input.loginButtonTap
+        input.loginButtonTap
             .asObservable()
             .withLatestFrom(credential)
             .map { [weak self] email, password in self?.attemptLogin(email: email, password: password) }
+            .withUnretained(self)
+            .subscribe()
+            .disposed(by: disposeBag)
 
-        return Output(isEnabled: isEnabled, doLogin: result, result: self.result, error: self.error)
+        return Output(isEnabled: isEnabled, result: self.result, error: self.error)
     }
     
     func attemptLogin(email: String, password: String) {
@@ -63,3 +69,5 @@ final class LoginViewModel: ViewModelType {
             }.disposed(by: disposeBag)
     }
 }
+
+
