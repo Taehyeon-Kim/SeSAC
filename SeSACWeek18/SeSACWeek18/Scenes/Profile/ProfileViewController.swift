@@ -22,6 +22,9 @@ final class ProfileViewController: BaseViewController, Bindable {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let phone = Phone()
+        print(phone[2])
+        
         bind()
         checkCOW()
     }
@@ -74,6 +77,9 @@ extension ProfileViewController {
         // ㄴ * Collection 타입(Array, Dictionary, Set)에 대해서 Copy On Write로 성능을 최적화하고 있음
         
         newArray[0] = "B"
+        
+        print(array[safe: 99])
+        print(array[safe: 199])
         
         address(&array)
         address(&newArray)
