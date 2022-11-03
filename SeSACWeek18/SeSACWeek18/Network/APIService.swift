@@ -10,6 +10,25 @@ import Foundation
 import Alamofire
 import RxSwift
 
+enum SeSACError: Int, Error {
+    case invalidAuthorization = 401
+    case takenEmail = 406
+    case emptyParameters = 501
+}
+
+extension SeSACError: LocalizedError {
+    var errorDescription: String? {
+        switch self {
+        case .invalidAuthorization:
+            return "토큰이 만료되었습니다. 다시 로그인 해주세요."
+        case .takenEmail:
+            return "이미 가입된 회원입니다. 로그인 해주세요."
+        case .emptyParameters:
+            return "필요한 정보가 없습니다."
+        }
+    }
+}
+
 final class APIService {
     
     static let shared = APIService()
@@ -77,6 +96,30 @@ final class APIService {
                     print("🎉 \(data.user.username)님, 환영합니다")
                 case let .failure(error):
                     print("\(response.response?.statusCode ?? 0) fail :: \(error.localizedDescription)")
+                }
+            }
+    }
+}
+
+extension APIService {
+    func request<T: Decodable>(
+        _ type: T.Type = T.self,
+        url: URL,
+        method: HTTPMethod = .get,
+        parameters: [String: String]? = nil,
+        headers: HTTPHeaders,
+        completion: @escaping (Result<T, Error>) -> Void
+    ) {
+        AF.request(url, method: .get, parameters: parameters, headers: headers)
+            .responseDecodable(of: T.self) { response in
+                switch response.result {
+                case .success(let data):
+                    completion(.success(data))
+                case .failure:
+                    guard let statusCode = response.response?.statusCode else { return }
+                    guard let error = SeSACError(rawValue: statusCode) else { return }
+                    
+                    completion(.failure(error))
                 }
             }
     }
