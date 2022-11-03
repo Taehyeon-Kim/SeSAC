@@ -27,6 +27,8 @@
 		BD89B91129125E3C007C804F /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD89B91029125E3C007C804F /* ViewModelType.swift */; };
 		BD89B91329125E5C007C804F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD89B91229125E5C007C804F /* LoginViewModel.swift */; };
 		BD89B91529125EB7007C804F /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD89B91429125EB7007C804F /* Bindable.swift */; };
+		BDDC20112913520000825AA6 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC20102913520000825AA6 /* Network.swift */; };
+		BDDC20132913533E00825AA6 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC20122913533D00825AA6 /* ProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		BD89B91029125E3C007C804F /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		BD89B91229125E5C007C804F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		BD89B91429125EB7007C804F /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
+		BDDC20102913520000825AA6 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		BDDC20122913533D00825AA6 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 			children = (
 				BD89B8EF29120EF7007C804F /* APIService.swift */,
 				BD89B8F229121C4A007C804F /* Endpoint.swift */,
+				BDDC20102913520000825AA6 /* Network.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -124,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				BD89B8FB291258D7007C804F /* ProfileViewController.swift */,
+				BDDC20122913533D00825AA6 /* ProfileViewModel.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -254,6 +260,7 @@
 			files = (
 				BD89B8F8291258C3007C804F /* LoginViewController.swift in Sources */,
 				BD89B8FA291258CD007C804F /* SignUpViewController.swift in Sources */,
+				BDDC20112913520000825AA6 /* Network.swift in Sources */,
 				BD89B8D929120AF0007C804F /* AppDelegate.swift in Sources */,
 				BD89B8F029120EF7007C804F /* APIService.swift in Sources */,
 				BD89B91529125EB7007C804F /* Bindable.swift in Sources */,
@@ -261,6 +268,7 @@
 				BD89B8DB29120AF0007C804F /* SceneDelegate.swift in Sources */,
 				BD89B8FC291258D7007C804F /* ProfileViewController.swift in Sources */,
 				BD89B8F329121C4A007C804F /* Endpoint.swift in Sources */,
+				BDDC20132913533E00825AA6 /* ProfileViewModel.swift in Sources */,
 				BD89B91329125E5C007C804F /* LoginViewModel.swift in Sources */,
 				BD89B91129125E3C007C804F /* ViewModelType.swift in Sources */,
 			);

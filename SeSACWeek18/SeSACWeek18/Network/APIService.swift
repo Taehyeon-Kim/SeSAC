@@ -29,6 +29,17 @@ extension SeSACError: LocalizedError {
     }
 }
 
+struct UserResponse: Decodable {
+    let user: UserInfo
+    
+    struct UserInfo: Decodable {
+        let photo: String
+        let email: String
+        let username: String
+        let id: String
+    }
+}
+
 final class APIService {
     
     static let shared = APIService()
@@ -36,17 +47,6 @@ final class APIService {
     
     struct LoginResponse: Codable {
         let token: String
-    }
-    
-    struct UserResponse: Decodable {
-        let user: UserInfo
-        
-        struct UserInfo: Decodable {
-            let photo: String
-            let email: String
-            let username: String
-            let id: String
-        }
     }
     
     func singup(username: String, email: String, password: String) {
@@ -90,7 +90,7 @@ final class APIService {
         
         AF.request(url, method: .get, headers: header)
             .validate(statusCode: 200...299)
-            .responseDecodable(of: APIService.UserResponse.self) { response in
+            .responseDecodable(of: UserResponse.self) { response in
                 switch response.result {
                 case let .success(data):
                     print("🎉 \(data.user.username)님, 환영합니다")
