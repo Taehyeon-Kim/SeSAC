@@ -8,6 +8,13 @@
 import UIKit
 import Alamofire
 
+/*
+ - 과거의 채팅 내용 - DB
+ +-----------+      +-----------+      +---------------+
+ |.DB(Realm).| ===> |  .fetch.  | ===> | Socket server |
+ +-----------+      +-----------+      +---------------+
+ */
+
 /// scrollToBottom
 /// pagenation + database
 class ViewController: UIViewController {
@@ -25,15 +32,42 @@ class ViewController: UIViewController {
         
         fetchChats()
         configureTableView()
+        
+        SocketIOManager.shared.listener = { [weak self] dict in
+            print("🚕", dict)
+            self?.getMessage(dict: dict)
+        }
+    }
+    
+    func getMessage(dict: NSDictionary) {
+            
+        let chat = dict["chat"] as! String
+        let name = dict["name"] as! String
+        let createdAt = dict["createdAt"] as! String
+        let userID = dict["userId"] as! String
+        
+        let value = Chat(text: chat, userID: userID, name: name, username: "", id: "", createdAt: createdAt, updatedAt: "", v: 0, ID: "")
+        
+        self.chat.append(value)
+        tableView.reloadData()
+        tableView.scrollToRow(at: IndexPath(row: self.chat.count - 1, section: 0), at: .bottom, animated: false)
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        SocketIOManager.shared.closeConnection()
     }
     
     @IBAction func sendButtonClicked(_ sender: UIButton) {
-        // dummy.append(contentTextField.text ?? "")
-        // tableView.reloadData()
-        // tableView.scrollToRow(at: IndexPath(row: chat.count - 1, section: 0), at: .bottom, animated: false)
-        // contentTextField.text?.removeAll()
-        
         postChat(text: contentTextField.text ?? "")
+        contentTextField.text?.removeAll()
+    }
+}
+
+extension ViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        print ("enter")
+        return true
     }
 }
     
@@ -89,6 +123,10 @@ extension ViewController {
                 self?.chat = value
                 self?.tableView.reloadData()
                 self?.tableView.scrollToRow(at: IndexPath(row: self!.chat.count - 1, section: 0), at: .bottom, animated: false)
+                
+                /// 쌓여있는 데이터를 모두 처리한 뒤 소켓 통신 시작
+                /// ex) 카카오톡 안 읽은 메시지 처리 후에 통신 시작 (시점 맞추기 위해)
+                SocketIOManager.shared.establishConnection()
                 
             case .failure(let error):
                 print("FAIL", error)

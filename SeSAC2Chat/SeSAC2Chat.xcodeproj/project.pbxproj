@@ -19,6 +19,7 @@
 		04E8EDF1292B8BAB007DC7EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E8EDEF292B8BAB007DC7EB /* LaunchScreen.storyboard */; };
 		04E8EDF9292B9579007DC7EB /* MyChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E8EDF8292B9579007DC7EB /* MyChatTableViewCell.swift */; };
 		04E8EDFB292B95B5007DC7EB /* YourChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E8EDFA292B95B5007DC7EB /* YourChatTableViewCell.swift */; };
+		BDF0D30C292DAF9600A6DA94 /* SocketIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0D30B292DAF9600A6DA94 /* SocketIOManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		04E8EDF2292B8BAB007DC7EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04E8EDF8292B9579007DC7EB /* MyChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChatTableViewCell.swift; sourceTree = "<group>"; };
 		04E8EDFA292B95B5007DC7EB /* YourChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourChatTableViewCell.swift; sourceTree = "<group>"; };
+		BDF0D30B292DAF9600A6DA94 /* SocketIOManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketIOManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				048C0BA2292BC79A008C8B27 /* Chat.swift */,
 				04E8EDFA292B95B5007DC7EB /* YourChatTableViewCell.swift */,
 				048C0BA4292BD0C3008C8B27 /* APIKey.swift */,
+				BDF0D30B292DAF9600A6DA94 /* SocketIOManager.swift */,
 			);
 			path = SeSAC2Chat;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 				048C0BA5292BD0C3008C8B27 /* APIKey.swift in Sources */,
 				048C0BA3292BC79A008C8B27 /* Chat.swift in Sources */,
 				04E8EDFB292B95B5007DC7EB /* YourChatTableViewCell.swift in Sources */,
+				BDF0D30C292DAF9600A6DA94 /* SocketIOManager.swift in Sources */,
 				04E8EDF9292B9579007DC7EB /* MyChatTableViewCell.swift in Sources */,
 				04E8EDE5292B8BA6007DC7EB /* AppDelegate.swift in Sources */,
 				04E8EDE7292B8BA6007DC7EB /* SceneDelegate.swift in Sources */,
