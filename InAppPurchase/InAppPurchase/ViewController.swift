@@ -10,8 +10,6 @@ import StoreKit
 
 class ViewController: UIViewController {
 
-    
-    
     // 1. 인앱 상품 ID 정의
     var productIdentifiers: Set<String> = ["com.taekki.InAppPurchase.removeAd"]
     
