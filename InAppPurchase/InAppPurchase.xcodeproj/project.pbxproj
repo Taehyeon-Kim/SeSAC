@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD39D4BB2936FB4A000B73A9 /* ValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD39D4BA2936FB4A000B73A9 /* ValidatorTests.swift */; };
 		BD7751F52934468E00895CF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7751F42934468E00895CF5 /* AppDelegate.swift */; };
 		BD7751F72934468E00895CF5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7751F62934468E00895CF5 /* SceneDelegate.swift */; };
 		BD7751F92934468E00895CF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7751F82934468E00895CF5 /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BD39D4BA2936FB4A000B73A9 /* ValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorTests.swift; sourceTree = "<group>"; };
 		BD7751F12934468E00895CF5 /* InAppPurchase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InAppPurchase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD7751F42934468E00895CF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD7751F62934468E00895CF5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				BD8737F529359D1800F51CD9 /* InAppPurchaseTests.swift */,
+				BD39D4BA2936FB4A000B73A9 /* ValidatorTests.swift */,
 			);
 			path = InAppPurchaseTests;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD39D4BB2936FB4A000B73A9 /* ValidatorTests.swift in Sources */,
 				BD8737F629359D1800F51CD9 /* InAppPurchaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

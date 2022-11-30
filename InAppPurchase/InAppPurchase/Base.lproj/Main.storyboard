@@ -37,7 +37,7 @@
         <!--Login View Controller-->
         <scene sceneID="0R7-8U-NZ9">
             <objects>
-                <viewController id="W0o-Xj-q8o" customClass="LoginViewController" customModule="InAppPurchase" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="W0o-Xj-q8o" customClass="LoginViewController" customModule="InAppPurchase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Jb-ne-V4e">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -120,6 +120,9 @@
                     </view>
                     <connections>
                         <outlet property="descLabel" destination="9iH-sm-xhu" id="VPl-Wk-6oh"/>
+                        <outlet property="emailTextField" destination="Ubi-Pl-rEF" id="JTq-dH-wBC"/>
+                        <outlet property="passwordCheckTextField" destination="CzE-aj-O79" id="PgU-uJ-gR2"/>
+                        <outlet property="passwordTextField" destination="2fZ-5r-KpD" id="DDR-3F-Hi7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Pm-UO-DHQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
