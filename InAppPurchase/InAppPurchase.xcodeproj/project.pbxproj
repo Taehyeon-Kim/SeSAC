@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD0521172938397E0070AEE7 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0521162938397E0070AEE7 /* APIService.swift */; };
+		BD05211929383BDB0070AEE7 /* APIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD05211829383BDB0070AEE7 /* APIServiceTests.swift */; };
 		BD39D4BB2936FB4A000B73A9 /* ValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD39D4BA2936FB4A000B73A9 /* ValidatorTests.swift */; };
 		BD7751F52934468E00895CF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7751F42934468E00895CF5 /* AppDelegate.swift */; };
 		BD7751F72934468E00895CF5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7751F62934468E00895CF5 /* SceneDelegate.swift */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BD0521162938397E0070AEE7 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		BD05211829383BDB0070AEE7 /* APIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceTests.swift; sourceTree = "<group>"; };
 		BD39D4BA2936FB4A000B73A9 /* ValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorTests.swift; sourceTree = "<group>"; };
 		BD7751F12934468E00895CF5 /* InAppPurchase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InAppPurchase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD7751F42934468E00895CF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +118,7 @@
 				BD7751FF2934469000895CF5 /* LaunchScreen.storyboard */,
 				BD7752022934469000895CF5 /* Info.plist */,
 				BDD783762935AB8000B5D1FF /* LoginViewController.swift */,
+				BD0521162938397E0070AEE7 /* APIService.swift */,
 			);
 			path = InAppPurchase;
 			sourceTree = "<group>";
@@ -140,6 +145,7 @@
 			children = (
 				BD8737F529359D1800F51CD9 /* InAppPurchaseTests.swift */,
 				BD39D4BA2936FB4A000B73A9 /* ValidatorTests.swift */,
+				BD05211829383BDB0070AEE7 /* APIServiceTests.swift */,
 			);
 			path = InAppPurchaseTests;
 			sourceTree = "<group>";
@@ -276,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDD783772935AB8000B5D1FF /* LoginViewController.swift in Sources */,
+				BD0521172938397E0070AEE7 /* APIService.swift in Sources */,
 				BD7751F92934468E00895CF5 /* ViewController.swift in Sources */,
 				BD7751F52934468E00895CF5 /* AppDelegate.swift in Sources */,
 				BD7751F72934468E00895CF5 /* SceneDelegate.swift in Sources */,
@@ -296,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD05211929383BDB0070AEE7 /* APIServiceTests.swift in Sources */,
 				BD39D4BB2936FB4A000B73A9 /* ValidatorTests.swift in Sources */,
 				BD8737F629359D1800F51CD9 /* InAppPurchaseTests.swift in Sources */,
 			);
