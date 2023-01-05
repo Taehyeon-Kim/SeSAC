@@ -35,6 +35,14 @@ struct GrowButton: View {
   }
 }
 
+// View가 다시 렌더링되지 않음
+struct ExampleText: View {
+  var body: some View {
+    Text("방실방실 다마고치 \(Int.random(in: 1...100))")
+      .bold()
+  }
+}
+
 struct Tamagotchi: View {
   
   // 구조체 내부적으로 값을 변경하고 싶다.
@@ -51,6 +59,7 @@ struct Tamagotchi: View {
   var body: some View {
     VStack(spacing: 10) {
       characterName
+      ExampleText()
       Text("Lv 1. 물방울 \(waterCount)개 · 밥알 \(riceCount)개")
         .foregroundColor(.gray)
       
