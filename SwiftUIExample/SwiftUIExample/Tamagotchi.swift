@@ -46,8 +46,9 @@ struct ExampleText: View {
 struct Tamagotchi: View {
   
   // 구조체 내부적으로 값을 변경하고 싶다.
-  @State var waterCount: Int = 0
-  @State var riceCount: Int = 0
+  @State private var waterCount: Int = 0
+  @State private var riceCount: Int = 0
+  @State private var isPresented: Bool = false
   
   // 연산 프로퍼티로 View 분리
   // 재연산
@@ -67,8 +68,14 @@ struct Tamagotchi: View {
         GrowButton(sfSymbol: "drop", content: "물주기") {
           waterCount += 10
         }
-        GrowButton(sfSymbol: "star", content: "밥주기") {
+        GrowButton(sfSymbol: "circle", content: "밥주기") {
           riceCount += 5
+        }
+        GrowButton(sfSymbol: "pencil", content: "통계보기") {
+          isPresented = true
+        }
+        .sheet(isPresented: $isPresented) {         // $ -> Convert into binding type
+          ExampleView()
         }
       }
     }
