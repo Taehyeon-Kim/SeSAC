@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD387DD9296667380074C544 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD387DD8296667380074C544 /* InputView.swift */; };
 		BD79D894296511DA009478BE /* Tamagotchi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD79D893296511DA009478BE /* Tamagotchi.swift */; };
 		BDA5A1F1294FF43000BD3DD1 /* SwiftUIExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA5A1F0294FF43000BD3DD1 /* SwiftUIExampleApp.swift */; };
 		BDA5A1F3294FF43000BD3DD1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA5A1F2294FF43000BD3DD1 /* ContentView.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD387DD8296667380074C544 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		BD79D893296511DA009478BE /* Tamagotchi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tamagotchi.swift; sourceTree = "<group>"; };
 		BDA5A1ED294FF43000BD3DD1 /* SwiftUIExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDA5A1F0294FF43000BD3DD1 /* SwiftUIExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIExampleApp.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				BD79D893296511DA009478BE /* Tamagotchi.swift */,
 				BDA5A1F4294FF43100BD3DD1 /* Assets.xcassets */,
 				BDA5A1F6294FF43100BD3DD1 /* Preview Content */,
+				BD387DD8296667380074C544 /* InputView.swift */,
 			);
 			path = SwiftUIExample;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 				BDA5A201295002F600BD3DD1 /* ListView.swift in Sources */,
 				BDA5A1F3294FF43000BD3DD1 /* ContentView.swift in Sources */,
 				BDA5A1F1294FF43000BD3DD1 /* SwiftUIExampleApp.swift in Sources */,
+				BD387DD9296667380074C544 /* InputView.swift in Sources */,
 				BDA5A1FF294FF8B600BD3DD1 /* ExampleView.swift in Sources */,
 				BD79D894296511DA009478BE /* Tamagotchi.swift in Sources */,
 			);
