@@ -41,11 +41,16 @@ struct Tamagotchi: View {
   @State var waterCount: Int = 0
   @State var riceCount: Int = 0
   
+  // 연산 프로퍼티로 View 분리
+  // 재연산
+  var characterName: some View {
+    Text("방실방실 다마고치 \(Int.random(in: 1...100))")
+      .bold()
+  }
+  
   var body: some View {
     VStack(spacing: 10) {
-      Text("방실방실 다마고치 \(Int.random(in: 1...100))")
-        .bold()
-      
+      characterName
       Text("Lv 1. 물방울 \(waterCount)개 · 밥알 \(riceCount)개")
         .foregroundColor(.gray)
       
@@ -58,7 +63,6 @@ struct Tamagotchi: View {
         }
       }
     }
-    .background(.green)
   }
 }
 
