@@ -15,8 +15,19 @@ import SwiftUI
 
 // some -> 컴파일시에 실제 값을 찾아서 반환해줌
 
+/*
+ 1. 구조체
+ 2. 연산 프로퍼티 -> 항상 body가 그려질 때 전부 다시 그려야 함
+ -> 다시 그려지는 패턴이 다름
+ */
+
+/*
+ * 재사용 메커니즘이 동작하는가 아닌가
+ - V H Z Stack : 전체 데이터를 메모리에 담아두고 스크롤 할 때 보여줌 / 스크롤 시에는 적합한 객체가 아닐 수 있음
+ - LazyVStack LazyHStack : 화면에 렌더링 될 때 데이터를 메모리에 담고 그린다.
+ */
+
 struct GrowButton: View {
-  
   var sfSymbol: String = "star"
   var content: String
   var action: (() -> Void)
@@ -59,6 +70,17 @@ struct Tamagotchi: View {
   
   var body: some View {
     VStack(spacing: 10) {
+      // 3D
+      ZStack {
+        characterName
+          .padding(100)
+          .background(.red)
+        
+        characterName
+          .padding(50)
+          .background(.yellow)
+      }
+      
       characterName
       ExampleText()
       Text("Lv 1. 물방울 \(waterCount)개 · 밥알 \(riceCount)개")
