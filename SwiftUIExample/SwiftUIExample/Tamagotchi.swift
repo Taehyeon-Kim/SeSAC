@@ -43,7 +43,7 @@ struct Tamagotchi: View {
   
   var body: some View {
     VStack(spacing: 10) {
-      Text("방실방실 다마고치")
+      Text("방실방실 다마고치 \(Int.random(in: 1...100))")
         .bold()
       
       Text("Lv 1. 물방울 \(waterCount)개 · 밥알 \(riceCount)개")
@@ -58,6 +58,7 @@ struct Tamagotchi: View {
         }
       }
     }
+    .background(.green)
   }
 }
 
