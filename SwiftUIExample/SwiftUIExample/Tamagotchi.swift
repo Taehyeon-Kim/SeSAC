@@ -72,6 +72,13 @@ struct Tamagotchi: View {
         }
       }
     }
+    .onAppear {
+      // ViewDidLoad에서 하고 싶은 일들을 여기서 실행시킨다면 오류가 생길 수 있음
+      print("ViewDidAppear")
+    }
+    .onDisappear {
+      print("ViewDidDisappear")
+    }
   }
 }
 
