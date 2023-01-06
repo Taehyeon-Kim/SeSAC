@@ -60,6 +60,7 @@ struct Tamagotchi: View {
   @State private var waterCount: Int = 0
   @State private var riceCount: Int = 0
   @State private var isPresented: Bool = false
+  @State private var isAnimating = false
   
   // 연산 프로퍼티로 View 분리
   // 재연산
@@ -70,6 +71,19 @@ struct Tamagotchi: View {
   
   var body: some View {
     VStack(spacing: 10) {
+      Image(systemName: "star")
+        .resizable()
+        .frame(width: 200, height: 200)
+        .background(.green)
+        .offset(x: isAnimating ? -100 : 100, y: isAnimating ? 0 : 100)
+        .animation(
+          .linear(duration: 0.5)
+          .speed(5)
+          .repeatCount(5)
+          .delay(2)
+          ,value: isAnimating
+        )
+      
       // 3D
       ZStack {
         characterName
@@ -104,6 +118,7 @@ struct Tamagotchi: View {
     .onAppear {
       // ViewDidLoad에서 하고 싶은 일들을 여기서 실행시킨다면 오류가 생길 수 있음
       print("ViewDidAppear")
+      isAnimating = true
     }
     .onDisappear {
       print("ViewDidDisappear")
