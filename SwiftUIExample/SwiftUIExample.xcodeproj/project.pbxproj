@@ -15,6 +15,8 @@
 		BDA5A1F8294FF43100BD3DD1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDA5A1F7294FF43100BD3DD1 /* Preview Assets.xcassets */; };
 		BDA5A1FF294FF8B600BD3DD1 /* ExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA5A1FE294FF8B600BD3DD1 /* ExampleView.swift */; };
 		BDA5A201295002F600BD3DD1 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA5A200295002F600BD3DD1 /* ListView.swift */; };
+		BDB4FFBF2967B33F000BA491 /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB4FFBE2967B33F000BA491 /* SampleViewController.swift */; };
+		BDB4FFC12967B388000BA491 /* RepresentableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB4FFC02967B388000BA491 /* RepresentableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		BDA5A1F7294FF43100BD3DD1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BDA5A1FE294FF8B600BD3DD1 /* ExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleView.swift; sourceTree = "<group>"; };
 		BDA5A200295002F600BD3DD1 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		BDB4FFBE2967B33F000BA491 /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
+		BDB4FFC02967B388000BA491 /* RepresentableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepresentableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,8 @@
 				BDA5A1F4294FF43100BD3DD1 /* Assets.xcassets */,
 				BDA5A1F6294FF43100BD3DD1 /* Preview Content */,
 				BD387DD8296667380074C544 /* InputView.swift */,
+				BDB4FFBE2967B33F000BA491 /* SampleViewController.swift */,
+				BDB4FFC02967B388000BA491 /* RepresentableView.swift */,
 			);
 			path = SwiftUIExample;
 			sourceTree = "<group>";
@@ -150,11 +156,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDA5A201295002F600BD3DD1 /* ListView.swift in Sources */,
+				BDB4FFC12967B388000BA491 /* RepresentableView.swift in Sources */,
 				BDA5A1F3294FF43000BD3DD1 /* ContentView.swift in Sources */,
 				BDA5A1F1294FF43000BD3DD1 /* SwiftUIExampleApp.swift in Sources */,
 				BD387DD9296667380074C544 /* InputView.swift in Sources */,
 				BDA5A1FF294FF8B600BD3DD1 /* ExampleView.swift in Sources */,
 				BD79D894296511DA009478BE /* Tamagotchi.swift in Sources */,
+				BDB4FFBF2967B33F000BA491 /* SampleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
